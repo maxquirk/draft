@@ -1,6 +1,6 @@
 """Team draft-history pipeline for the 2026 MLB Draft Hub.
 
-Scrapes Baseball-Reference's per-year June Amateur Draft pages (2015-2025) and the
+Scrapes Baseball-Reference's per-year June Amateur Draft pages (2018-2025) and the
 2025 final standings, then writes three small static JSON files into app/data/ that
 the shinylive app reads offline:
 
@@ -30,7 +30,7 @@ DATA_DIR = ROOT.parent / "app" / "data"
 DRAFT_URL = "https://www.baseball-reference.com/draft/"
 STANDINGS_URL = "https://www.baseball-reference.com/leagues/majors/{year}-standings.shtml"
 
-YEARS = list(range(2015, 2026))  # 2015..2025 inclusive
+YEARS = list(range(2018, 2026))  # 2018..2025 inclusive (current front-office era)
 ROUNDS = [1]  # 1st round is the priority; widen here if more depth is ever needed.
 
 # Baseball-Reference prints team nicknames (no city) in the draft tables, and uses the

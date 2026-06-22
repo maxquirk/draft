@@ -1,127 +1,191 @@
 {
-  "note": "Projected 2026 MLB first-round order. This is a DEFENSIBLE PROJECTION, not the official order: it is the inverse of the 2025 final regular-season standings (worst record picks first), scraped from Baseball-Reference. The real first six picks are set by MLB's draft lottery and are not reflected here.",
-  "method": "inverse_of_2025_final_standings",
-  "standings_year": 2025,
+  "note": "Actual 2026 MLB Draft first-round order (post Dec 9, 2025 lottery), including PPI/penalty picks and Competitive Balance Round A.",
+  "source": "MLB.com draft order + 2026 MLB Draft (Wikipedia)",
   "order": [
     {
       "pick": 1,
-      "team": "Colorado Rockies"
+      "team": "Chicago White Sox",
+      "note": "won the 2026 draft lottery"
     },
     {
       "pick": 2,
-      "team": "Chicago White Sox"
+      "team": "Tampa Bay Rays",
+      "note": ""
     },
     {
       "pick": 3,
-      "team": "Washington Nationals"
+      "team": "Minnesota Twins",
+      "note": ""
     },
     {
       "pick": 4,
-      "team": "Minnesota Twins"
+      "team": "San Francisco Giants",
+      "note": ""
     },
     {
       "pick": 5,
-      "team": "Pittsburgh Pirates"
+      "team": "Pittsburgh Pirates",
+      "note": ""
     },
     {
       "pick": 6,
-      "team": "Los Angeles Angels"
+      "team": "Kansas City Royals",
+      "note": ""
     },
     {
       "pick": 7,
-      "team": "Baltimore Orioles"
+      "team": "Baltimore Orioles",
+      "note": ""
     },
     {
       "pick": 8,
-      "team": "Athletics"
+      "team": "Athletics",
+      "note": ""
     },
     {
       "pick": 9,
-      "team": "Atlanta Braves"
+      "team": "Atlanta Braves",
+      "note": ""
     },
     {
       "pick": 10,
-      "team": "Tampa Bay Rays"
+      "team": "Colorado Rockies",
+      "note": ""
     },
     {
       "pick": 11,
-      "team": "St. Louis Cardinals"
+      "team": "Washington Nationals",
+      "note": ""
     },
     {
       "pick": 12,
-      "team": "Miami Marlins"
+      "team": "Los Angeles Angels",
+      "note": ""
     },
     {
       "pick": 13,
-      "team": "Arizona Diamondbacks"
+      "team": "St. Louis Cardinals",
+      "note": ""
     },
     {
       "pick": 14,
-      "team": "San Francisco Giants"
+      "team": "Miami Marlins",
+      "note": ""
     },
     {
       "pick": 15,
-      "team": "Texas Rangers"
+      "team": "Arizona Diamondbacks",
+      "note": ""
     },
     {
       "pick": 16,
-      "team": "Kansas City Royals"
+      "team": "Texas Rangers",
+      "note": ""
     },
     {
       "pick": 17,
-      "team": "Cincinnati Reds"
+      "team": "Houston Astros",
+      "note": ""
     },
     {
       "pick": 18,
-      "team": "New York Mets"
+      "team": "Cincinnati Reds",
+      "note": ""
     },
     {
       "pick": 19,
-      "team": "Detroit Tigers"
+      "team": "Cleveland Guardians",
+      "note": ""
     },
     {
       "pick": 20,
-      "team": "Houston Astros"
+      "team": "Boston Red Sox",
+      "note": ""
     },
     {
       "pick": 21,
-      "team": "Cleveland Guardians"
+      "team": "San Diego Padres",
+      "note": ""
     },
     {
       "pick": 22,
-      "team": "Boston Red Sox"
+      "team": "Detroit Tigers",
+      "note": ""
     },
     {
       "pick": 23,
-      "team": "San Diego Padres"
+      "team": "Chicago Cubs",
+      "note": ""
     },
     {
       "pick": 24,
-      "team": "Seattle Mariners"
+      "team": "Seattle Mariners",
+      "note": ""
     },
     {
       "pick": 25,
-      "team": "Chicago Cubs"
+      "team": "Milwaukee Brewers",
+      "note": ""
     },
     {
       "pick": 26,
-      "team": "Los Angeles Dodgers"
+      "team": "Atlanta Braves",
+      "note": "Prospect Promotion Incentive (Drake Baldwin, NL ROY)"
     },
     {
       "pick": 27,
-      "team": "New York Yankees"
+      "team": "New York Mets",
+      "note": "moved back for exceeding the top CBT threshold"
     },
     {
       "pick": 28,
-      "team": "Toronto Blue Jays"
+      "team": "Houston Astros",
+      "note": "Prospect Promotion Incentive (Hunter Brown, top-3 Cy Young)"
     },
     {
       "pick": 29,
-      "team": "Philadelphia Phillies"
+      "team": "San Francisco Giants",
+      "note": "Competitive Balance Round A (acquired from Cleveland)"
     },
     {
       "pick": 30,
-      "team": "Milwaukee Brewers"
+      "team": "Kansas City Royals",
+      "note": "Competitive Balance Round A"
+    },
+    {
+      "pick": 31,
+      "team": "Arizona Diamondbacks",
+      "note": "Competitive Balance Round A"
+    },
+    {
+      "pick": 32,
+      "team": "St. Louis Cardinals",
+      "note": "Competitive Balance Round A"
+    },
+    {
+      "pick": 33,
+      "team": "Tampa Bay Rays",
+      "note": "Competitive Balance Round A (acquired from Baltimore)"
+    },
+    {
+      "pick": 34,
+      "team": "Pittsburgh Pirates",
+      "note": "Competitive Balance Round A"
+    },
+    {
+      "pick": 35,
+      "team": "New York Yankees",
+      "note": "moved back for exceeding the top CBT threshold"
+    },
+    {
+      "pick": 36,
+      "team": "Philadelphia Phillies",
+      "note": "moved back for exceeding the top CBT threshold"
+    },
+    {
+      "pick": 37,
+      "team": "Colorado Rockies",
+      "note": "Competitive Balance Round A"
     }
   ]
 }

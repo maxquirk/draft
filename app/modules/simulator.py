@@ -9,7 +9,8 @@ from shiny import module, reactive, render, ui
 from logic import dataio
 from logic.sim_engine import simulate
 
-_BOARD = (dataio.consensus().sort_values("consensus_rank").to_dict("records")
+# First-round mock: only the top 50 consensus players are in the draftable pool.
+_BOARD = (dataio.consensus().sort_values("consensus_rank").head(50).to_dict("records")
           if len(dataio.consensus()) else [])
 _ORDER = dataio.draft_order()
 _TEND = dataio.team_tendencies()

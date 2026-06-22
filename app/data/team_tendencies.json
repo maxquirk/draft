@@ -1,15 +1,15 @@
 [
   {
     "team": "Arizona Diamondbacks",
-    "n_picks": 20,
-    "pct_college": 55.0,
-    "pct_hs": 45.0,
-    "pct_pitcher": 35.0,
-    "pct_hitter": 65.0,
+    "n_picks": 17,
+    "pct_college": 47.1,
+    "pct_hs": 52.9,
+    "pct_pitcher": 41.2,
+    "pct_hitter": 58.8,
     "position_breakdown": {
       "C": 0,
-      "IF": 7,
-      "OF": 6,
+      "IF": 5,
+      "OF": 5,
       "P": 7
     },
     "recent_first_round": [
@@ -57,16 +57,16 @@
   },
   {
     "team": "Athletics",
-    "n_picks": 14,
-    "pct_college": 71.4,
-    "pct_hs": 28.6,
-    "pct_pitcher": 21.4,
-    "pct_hitter": 78.6,
+    "n_picks": 9,
+    "pct_college": 66.7,
+    "pct_hs": 33.3,
+    "pct_pitcher": 11.1,
+    "pct_hitter": 88.9,
     "position_breakdown": {
       "C": 2,
-      "IF": 7,
-      "OF": 2,
-      "P": 3
+      "IF": 5,
+      "OF": 1,
+      "P": 1
     },
     "recent_first_round": [
       {
@@ -113,16 +113,16 @@
   },
   {
     "team": "Atlanta Braves",
-    "n_picks": 16,
-    "pct_college": 37.5,
-    "pct_hs": 62.5,
-    "pct_pitcher": 75.0,
-    "pct_hitter": 25.0,
+    "n_picks": 10,
+    "pct_college": 50.0,
+    "pct_hs": 50.0,
+    "pct_pitcher": 70.0,
+    "pct_hitter": 30.0,
     "position_breakdown": {
       "C": 1,
-      "IF": 3,
+      "IF": 2,
       "OF": 0,
-      "P": 12
+      "P": 7
     },
     "recent_first_round": [
       {
@@ -169,16 +169,16 @@
   },
   {
     "team": "Baltimore Orioles",
-    "n_picks": 19,
-    "pct_college": 73.7,
-    "pct_hs": 26.3,
-    "pct_pitcher": 15.8,
-    "pct_hitter": 84.2,
+    "n_picks": 15,
+    "pct_college": 80.0,
+    "pct_hs": 20.0,
+    "pct_pitcher": 6.7,
+    "pct_hitter": 93.3,
     "position_breakdown": {
       "C": 3,
-      "IF": 6,
-      "OF": 7,
-      "P": 3
+      "IF": 5,
+      "OF": 6,
+      "P": 1
     },
     "recent_first_round": [
       {
@@ -225,16 +225,16 @@
   },
   {
     "team": "Boston Red Sox",
-    "n_picks": 11,
-    "pct_college": 54.5,
-    "pct_hs": 45.5,
-    "pct_pitcher": 36.4,
-    "pct_hitter": 63.6,
+    "n_picks": 8,
+    "pct_college": 50.0,
+    "pct_hs": 50.0,
+    "pct_pitcher": 25.0,
+    "pct_hitter": 75.0,
     "position_breakdown": {
       "C": 1,
       "IF": 4,
-      "OF": 2,
-      "P": 4
+      "OF": 1,
+      "P": 2
     },
     "recent_first_round": [
       {
@@ -281,16 +281,16 @@
   },
   {
     "team": "Chicago Cubs",
-    "n_picks": 11,
-    "pct_college": 81.8,
-    "pct_hs": 9.1,
-    "pct_pitcher": 45.5,
-    "pct_hitter": 54.5,
+    "n_picks": 8,
+    "pct_college": 87.5,
+    "pct_hs": 12.5,
+    "pct_pitcher": 37.5,
+    "pct_hitter": 62.5,
     "position_breakdown": {
       "C": 0,
       "IF": 4,
-      "OF": 2,
-      "P": 5
+      "OF": 1,
+      "P": 3
     },
     "recent_first_round": [
       {
@@ -337,16 +337,16 @@
   },
   {
     "team": "Chicago White Sox",
-    "n_picks": 12,
-    "pct_college": 75.0,
-    "pct_hs": 25.0,
-    "pct_pitcher": 41.7,
-    "pct_hitter": 58.3,
+    "n_picks": 8,
+    "pct_college": 62.5,
+    "pct_hs": 37.5,
+    "pct_pitcher": 37.5,
+    "pct_hitter": 62.5,
     "position_breakdown": {
-      "C": 1,
-      "IF": 6,
+      "C": 0,
+      "IF": 5,
       "OF": 0,
-      "P": 5
+      "P": 3
     },
     "recent_first_round": [
       {
@@ -393,16 +393,16 @@
   },
   {
     "team": "Cincinnati Reds",
-    "n_picks": 17,
-    "pct_college": 47.1,
-    "pct_hs": 47.1,
-    "pct_pitcher": 29.4,
-    "pct_hitter": 70.6,
+    "n_picks": 12,
+    "pct_college": 58.3,
+    "pct_hs": 33.3,
+    "pct_pitcher": 33.3,
+    "pct_hitter": 66.7,
     "position_breakdown": {
-      "C": 2,
-      "IF": 7,
-      "OF": 3,
-      "P": 5
+      "C": 1,
+      "IF": 5,
+      "OF": 2,
+      "P": 4
     },
     "recent_first_round": [
       {
@@ -449,16 +449,16 @@
   },
   {
     "team": "Cleveland Guardians",
-    "n_picks": 16,
-    "pct_college": 37.5,
-    "pct_hs": 62.5,
-    "pct_pitcher": 56.2,
-    "pct_hitter": 43.8,
+    "n_picks": 13,
+    "pct_college": 46.2,
+    "pct_hs": 53.8,
+    "pct_pitcher": 53.8,
+    "pct_hitter": 46.2,
     "position_breakdown": {
       "C": 2,
       "IF": 2,
-      "OF": 3,
-      "P": 9
+      "OF": 2,
+      "P": 7
     },
     "recent_first_round": [
       {
@@ -505,16 +505,16 @@
   },
   {
     "team": "Colorado Rockies",
-    "n_picks": 18,
-    "pct_college": 50.0,
-    "pct_hs": 50.0,
-    "pct_pitcher": 38.9,
-    "pct_hitter": 61.1,
+    "n_picks": 13,
+    "pct_college": 61.5,
+    "pct_hs": 38.5,
+    "pct_pitcher": 30.8,
+    "pct_hitter": 69.2,
     "position_breakdown": {
       "C": 1,
-      "IF": 5,
+      "IF": 3,
       "OF": 5,
-      "P": 7
+      "P": 4
     },
     "recent_first_round": [
       {
@@ -561,16 +561,16 @@
   },
   {
     "team": "Detroit Tigers",
-    "n_picks": 15,
-    "pct_college": 40.0,
-    "pct_hs": 60.0,
-    "pct_pitcher": 40.0,
-    "pct_hitter": 60.0,
+    "n_picks": 11,
+    "pct_college": 36.4,
+    "pct_hs": 63.6,
+    "pct_pitcher": 27.3,
+    "pct_hitter": 72.7,
     "position_breakdown": {
       "C": 1,
       "IF": 5,
-      "OF": 3,
-      "P": 6
+      "OF": 2,
+      "P": 3
     },
     "recent_first_round": [
       {
@@ -617,16 +617,16 @@
   },
   {
     "team": "Houston Astros",
-    "n_picks": 11,
-    "pct_college": 63.6,
-    "pct_hs": 36.4,
-    "pct_pitcher": 18.2,
-    "pct_hitter": 81.8,
+    "n_picks": 6,
+    "pct_college": 83.3,
+    "pct_hs": 16.7,
+    "pct_pitcher": 0.0,
+    "pct_hitter": 100.0,
     "position_breakdown": {
       "C": 2,
-      "IF": 3,
-      "OF": 4,
-      "P": 2
+      "IF": 2,
+      "OF": 2,
+      "P": 0
     },
     "recent_first_round": [
       {
@@ -673,16 +673,16 @@
   },
   {
     "team": "Kansas City Royals",
-    "n_picks": 16,
-    "pct_college": 50.0,
-    "pct_hs": 50.0,
-    "pct_pitcher": 56.2,
-    "pct_hitter": 43.8,
+    "n_picks": 13,
+    "pct_college": 61.5,
+    "pct_hs": 38.5,
+    "pct_pitcher": 53.8,
+    "pct_hitter": 46.2,
     "position_breakdown": {
       "C": 1,
-      "IF": 4,
+      "IF": 3,
       "OF": 2,
-      "P": 9
+      "P": 7
     },
     "recent_first_round": [
       {
@@ -729,15 +729,15 @@
   },
   {
     "team": "Los Angeles Angels",
-    "n_picks": 11,
-    "pct_college": 81.8,
-    "pct_hs": 18.2,
-    "pct_pitcher": 27.3,
-    "pct_hitter": 72.7,
+    "n_picks": 8,
+    "pct_college": 87.5,
+    "pct_hs": 12.5,
+    "pct_pitcher": 37.5,
+    "pct_hitter": 62.5,
     "position_breakdown": {
-      "C": 2,
+      "C": 0,
       "IF": 4,
-      "OF": 2,
+      "OF": 1,
       "P": 3
     },
     "recent_first_round": [
@@ -785,16 +785,16 @@
   },
   {
     "team": "Los Angeles Dodgers",
-    "n_picks": 15,
-    "pct_college": 66.7,
-    "pct_hs": 33.3,
-    "pct_pitcher": 46.7,
-    "pct_hitter": 53.3,
+    "n_picks": 9,
+    "pct_college": 55.6,
+    "pct_hs": 44.4,
+    "pct_pitcher": 44.4,
+    "pct_hitter": 55.6,
     "position_breakdown": {
-      "C": 1,
-      "IF": 4,
-      "OF": 3,
-      "P": 7
+      "C": 0,
+      "IF": 3,
+      "OF": 2,
+      "P": 4
     },
     "recent_first_round": [
       {
@@ -841,16 +841,16 @@
   },
   {
     "team": "Miami Marlins",
-    "n_picks": 16,
-    "pct_college": 43.8,
-    "pct_hs": 56.2,
-    "pct_pitcher": 31.2,
-    "pct_hitter": 68.8,
+    "n_picks": 12,
+    "pct_college": 50.0,
+    "pct_hs": 50.0,
+    "pct_pitcher": 25.0,
+    "pct_hitter": 75.0,
     "position_breakdown": {
       "C": 1,
-      "IF": 4,
-      "OF": 6,
-      "P": 5
+      "IF": 3,
+      "OF": 5,
+      "P": 3
     },
     "recent_first_round": [
       {
@@ -897,16 +897,16 @@
   },
   {
     "team": "Milwaukee Brewers",
-    "n_picks": 17,
-    "pct_college": 64.7,
-    "pct_hs": 35.3,
-    "pct_pitcher": 17.6,
-    "pct_hitter": 82.4,
+    "n_picks": 12,
+    "pct_college": 66.7,
+    "pct_hs": 33.3,
+    "pct_pitcher": 16.7,
+    "pct_hitter": 83.3,
     "position_breakdown": {
       "C": 0,
-      "IF": 8,
-      "OF": 6,
-      "P": 3
+      "IF": 7,
+      "OF": 3,
+      "P": 2
     },
     "recent_first_round": [
       {
@@ -953,16 +953,16 @@
   },
   {
     "team": "Minnesota Twins",
-    "n_picks": 17,
-    "pct_college": 58.8,
-    "pct_hs": 41.2,
-    "pct_pitcher": 23.5,
-    "pct_hitter": 76.5,
+    "n_picks": 13,
+    "pct_college": 61.5,
+    "pct_hs": 38.5,
+    "pct_pitcher": 23.1,
+    "pct_hitter": 76.9,
     "position_breakdown": {
       "C": 0,
-      "IF": 8,
-      "OF": 5,
-      "P": 4
+      "IF": 7,
+      "OF": 3,
+      "P": 3
     },
     "recent_first_round": [
       {
@@ -1009,16 +1009,16 @@
   },
   {
     "team": "New York Mets",
-    "n_picks": 12,
-    "pct_college": 58.3,
-    "pct_hs": 41.7,
-    "pct_pitcher": 41.7,
-    "pct_hitter": 58.3,
+    "n_picks": 9,
+    "pct_college": 44.4,
+    "pct_hs": 55.6,
+    "pct_pitcher": 22.2,
+    "pct_hitter": 77.8,
     "position_breakdown": {
       "C": 1,
       "IF": 3,
       "OF": 3,
-      "P": 5
+      "P": 2
     },
     "recent_first_round": [
       {
@@ -1065,16 +1065,16 @@
   },
   {
     "team": "New York Yankees",
-    "n_picks": 13,
-    "pct_college": 61.5,
-    "pct_hs": 38.5,
-    "pct_pitcher": 30.8,
-    "pct_hitter": 69.2,
+    "n_picks": 9,
+    "pct_college": 55.6,
+    "pct_hs": 44.4,
+    "pct_pitcher": 22.2,
+    "pct_hitter": 77.8,
     "position_breakdown": {
       "C": 2,
-      "IF": 5,
-      "OF": 2,
-      "P": 4
+      "IF": 4,
+      "OF": 1,
+      "P": 2
     },
     "recent_first_round": [
       {
@@ -1121,15 +1121,15 @@
   },
   {
     "team": "Philadelphia Phillies",
-    "n_picks": 11,
-    "pct_college": 36.4,
-    "pct_hs": 63.6,
-    "pct_pitcher": 27.3,
-    "pct_hitter": 72.7,
+    "n_picks": 8,
+    "pct_college": 37.5,
+    "pct_hs": 62.5,
+    "pct_pitcher": 37.5,
+    "pct_hitter": 62.5,
     "position_breakdown": {
       "C": 0,
-      "IF": 4,
-      "OF": 4,
+      "IF": 3,
+      "OF": 2,
       "P": 3
     },
     "recent_first_round": [
@@ -1177,16 +1177,16 @@
   },
   {
     "team": "Pittsburgh Pirates",
-    "n_picks": 18,
-    "pct_college": 44.4,
-    "pct_hs": 55.6,
-    "pct_pitcher": 50.0,
-    "pct_hitter": 50.0,
+    "n_picks": 13,
+    "pct_college": 46.2,
+    "pct_hs": 53.8,
+    "pct_pitcher": 53.8,
+    "pct_hitter": 46.2,
     "position_breakdown": {
       "C": 1,
-      "IF": 6,
+      "IF": 3,
       "OF": 2,
-      "P": 9
+      "P": 7
     },
     "recent_first_round": [
       {
@@ -1233,16 +1233,16 @@
   },
   {
     "team": "San Diego Padres",
-    "n_picks": 15,
-    "pct_college": 13.3,
-    "pct_hs": 86.7,
-    "pct_pitcher": 60.0,
-    "pct_hitter": 40.0,
+    "n_picks": 11,
+    "pct_college": 0.0,
+    "pct_hs": 100.0,
+    "pct_pitcher": 54.5,
+    "pct_hitter": 45.5,
     "position_breakdown": {
       "C": 0,
-      "IF": 4,
+      "IF": 3,
       "OF": 2,
-      "P": 9
+      "P": 6
     },
     "recent_first_round": [
       {
@@ -1289,16 +1289,16 @@
   },
   {
     "team": "San Francisco Giants",
-    "n_picks": 11,
-    "pct_college": 72.7,
-    "pct_hs": 18.2,
-    "pct_pitcher": 36.4,
-    "pct_hitter": 63.6,
+    "n_picks": 8,
+    "pct_college": 87.5,
+    "pct_hs": 12.5,
+    "pct_pitcher": 37.5,
+    "pct_hitter": 62.5,
     "position_breakdown": {
       "C": 2,
-      "IF": 2,
-      "OF": 3,
-      "P": 4
+      "IF": 1,
+      "OF": 2,
+      "P": 3
     },
     "recent_first_round": [
       {
@@ -1345,15 +1345,15 @@
   },
   {
     "team": "Seattle Mariners",
-    "n_picks": 13,
-    "pct_college": 61.5,
-    "pct_hs": 38.5,
-    "pct_pitcher": 38.5,
-    "pct_hitter": 61.5,
+    "n_picks": 11,
+    "pct_college": 54.5,
+    "pct_hs": 45.5,
+    "pct_pitcher": 45.5,
+    "pct_hitter": 54.5,
     "position_breakdown": {
       "C": 2,
-      "IF": 4,
-      "OF": 2,
+      "IF": 3,
+      "OF": 1,
       "P": 5
     },
     "recent_first_round": [
@@ -1401,16 +1401,16 @@
   },
   {
     "team": "St. Louis Cardinals",
-    "n_picks": 14,
-    "pct_college": 57.1,
-    "pct_hs": 42.9,
-    "pct_pitcher": 50.0,
-    "pct_hitter": 50.0,
+    "n_picks": 9,
+    "pct_college": 77.8,
+    "pct_hs": 22.2,
+    "pct_pitcher": 55.6,
+    "pct_hitter": 44.4,
     "position_breakdown": {
       "C": 0,
-      "IF": 4,
-      "OF": 3,
-      "P": 7
+      "IF": 3,
+      "OF": 1,
+      "P": 5
     },
     "recent_first_round": [
       {
@@ -1457,16 +1457,16 @@
   },
   {
     "team": "Tampa Bay Rays",
-    "n_picks": 20,
-    "pct_college": 40.0,
-    "pct_hs": 60.0,
-    "pct_pitcher": 30.0,
-    "pct_hitter": 70.0,
+    "n_picks": 16,
+    "pct_college": 37.5,
+    "pct_hs": 62.5,
+    "pct_pitcher": 31.2,
+    "pct_hitter": 68.8,
     "position_breakdown": {
       "C": 0,
-      "IF": 10,
-      "OF": 4,
-      "P": 6
+      "IF": 8,
+      "OF": 3,
+      "P": 5
     },
     "recent_first_round": [
       {
@@ -1513,16 +1513,16 @@
   },
   {
     "team": "Texas Rangers",
-    "n_picks": 13,
-    "pct_college": 53.8,
-    "pct_hs": 38.5,
-    "pct_pitcher": 38.5,
-    "pct_hitter": 61.5,
+    "n_picks": 9,
+    "pct_college": 66.7,
+    "pct_hs": 22.2,
+    "pct_pitcher": 33.3,
+    "pct_hitter": 66.7,
     "position_breakdown": {
       "C": 1,
-      "IF": 5,
-      "OF": 2,
-      "P": 5
+      "IF": 4,
+      "OF": 1,
+      "P": 3
     },
     "recent_first_round": [
       {
@@ -1569,16 +1569,16 @@
   },
   {
     "team": "Toronto Blue Jays",
-    "n_picks": 12,
-    "pct_college": 58.3,
-    "pct_hs": 33.3,
-    "pct_pitcher": 58.3,
-    "pct_hitter": 41.7,
+    "n_picks": 8,
+    "pct_college": 50.0,
+    "pct_hs": 50.0,
+    "pct_pitcher": 50.0,
+    "pct_hitter": 50.0,
     "position_breakdown": {
       "C": 0,
-      "IF": 5,
+      "IF": 4,
       "OF": 0,
-      "P": 7
+      "P": 4
     },
     "recent_first_round": [
       {
@@ -1625,16 +1625,16 @@
   },
   {
     "team": "Washington Nationals",
-    "n_picks": 12,
-    "pct_college": 50.0,
-    "pct_hs": 41.7,
-    "pct_pitcher": 41.7,
-    "pct_hitter": 58.3,
+    "n_picks": 9,
+    "pct_college": 44.4,
+    "pct_hs": 44.4,
+    "pct_pitcher": 33.3,
+    "pct_hitter": 66.7,
     "position_breakdown": {
       "C": 1,
-      "IF": 4,
+      "IF": 3,
       "OF": 2,
-      "P": 5
+      "P": 3
     },
     "recent_first_round": [
       {

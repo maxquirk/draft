@@ -42,8 +42,9 @@ count from the last scrape (`app/data/run_report.json`). Paywalled gaps appear t
 rather than being silently dropped. Rankings are stored as factual data points
 attributed to their source; this is an educational/research project.
 
-> The 2026 draft order is a **standings-inverse projection** (worst 2025 record picks
-> first), not the official lottery order.
+> The simulator uses the **actual 2026 first-round order** (set by the Dec 2025 draft
+> lottery), including Competitive Balance Round A and PPI/penalty picks — see
+> `scraper/draft_order.py`.
 
 ## Local development
 

@@ -33,8 +33,12 @@ def strip_accents(s: str) -> str:
 
 
 def canon_name(name: str) -> str:
-    """A normalized matching key: lowercase, no accents/punct, no suffix."""
-    s = strip_accents(name or "").lower()
+    """A normalized matching key: lowercase, no accents/punct, no suffix.
+
+    Periods are deleted (not spaced) so initials collapse: "A.J." -> "aj",
+    matching a source that prints "AJ". Remaining punctuation becomes spaces.
+    """
+    s = strip_accents(name or "").lower().replace(".", "")
     s = re.sub(r"[^a-z0-9 ]", " ", s)
     parts = [p for p in s.split() if p and p not in _SUFFIXES]
     return " ".join(parts)

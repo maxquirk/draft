@@ -55,3 +55,11 @@ h3 { margin-top: 1.2rem; font-size: 1.05rem; color: var(--ink); }
 .cov-table th, .cov-table td { border: 1px solid var(--border); padding: .35rem .7rem; text-align: left; }
 .cov-ok { color: var(--good); } .cov-gap { color: var(--bad); }
 .btn-sm { margin-top: .4rem; }
+
+/* projections */
+.pj-pick { font-weight: 700; color: var(--gold); }
+.pj-name { text-align: left; font-weight: 600; }
+.p1-track { display: inline-block; width: 70px; height: 10px; background: #21262d;
+  border-radius: 4px; overflow: hidden; vertical-align: middle; margin-right: .4rem; }
+.p1-fill { display: block; height: 100%; background: var(--good); }
+.p1-num { font-size: .8rem; color: var(--muted); }

@@ -81,7 +81,25 @@ def main() -> None:
     except Exception as e:  # noqa: BLE001
         print(f"   ! team_history failed: {e}")
 
+    # Real post-lottery 2026 order — written last so it supersedes any projection
+    # team_history may have produced.
+    try:
+        from . import draft_order
+        print("\n== Writing actual 2026 draft order ==")
+        draft_order.build()
+    except Exception as e:  # noqa: BLE001
+        print(f"   ! draft_order failed: {e}")
+
     _write("consensus_2026.json", consensus)
+
+    # Monte Carlo draft projections (needs consensus + order + tendencies on disk).
+    try:
+        from . import projections
+        print("\n== Projecting the draft (Monte Carlo) ==")
+        projections.build()
+    except Exception as e:  # noqa: BLE001
+        print(f"   ! projections failed: {e}")
+
     _write("run_report.json", {
         "generated_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "n_players": len(consensus),

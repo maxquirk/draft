@@ -102,6 +102,20 @@ def team_tendencies() -> dict:
 
 
 @lru_cache(maxsize=1)
+def projections() -> pd.DataFrame:
+    d = _read_json("draft_projections_2026.json") or {}
+    players = d.get("players", []) if isinstance(d, dict) else (d or [])
+    cols = ["proj_pick", "player", "position", "school", "consensus_rank",
+            "p_round1", "proj_low", "proj_high", "likely_team", "likely_team_pct"]
+    return pd.DataFrame(players) if players else pd.DataFrame(columns=cols)
+
+
+def projections_meta() -> dict:
+    d = _read_json("draft_projections_2026.json") or {}
+    return {"runs": d.get("runs", 0), "note": d.get("note", "")} if isinstance(d, dict) else {}
+
+
+@lru_cache(maxsize=1)
 def draft_order() -> list[dict]:
     d = _read_json("draft_order_2026.json")
     if isinstance(d, dict):

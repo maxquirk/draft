@@ -54,7 +54,7 @@ def team_strategy_server(input, output, session):
         recent = _HIST[(_HIST["team"] == input.team())] if len(_HIST) else _HIST
         if len(recent):
             recent = recent[recent.get("round").fillna(1) == 1] if "round" in recent else recent
-            recent = recent.sort_values("year", ascending=False).head(12)
+            recent = recent.sort_values(["year", "overall"], ascending=[False, True])
         rows = "".join(
             f'<tr><td>{int(r["year"])}</td><td>{int(r.get("overall", 0)) or ""}</td>'
             f'<td>{r["player"]}</td><td>{r.get("position","")}</td>'
@@ -72,7 +72,7 @@ def team_strategy_server(input, output, session):
             ui.h3("Position mix (historical 1st rounders)"),
             bars(sorted(pb.items(), key=lambda kv: -kv[1]), color="#1f6feb") if pb
             else ui.p("—", class_="muted"),
-            ui.h3("Recent first-round picks"),
+            ui.h3("First-round picks (2018–2025)"),
             ui.HTML('<table class="hist-table"><thead><tr><th>Year</th><th>Overall</th>'
                     '<th>Player</th><th>Pos</th><th>School</th><th>Level</th></tr></thead>'
                     f'<tbody>{rows}</tbody></table>') if rows

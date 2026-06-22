@@ -10,6 +10,7 @@ from shiny import App, ui
 from logic import dataio
 from modules.bigboard import bigboard_server, bigboard_ui
 from modules.explorer import explorer_server, explorer_ui
+from modules.projections import projections_server, projections_ui
 from modules.simulator import simulator_server, simulator_ui
 from modules.team_strategy import team_strategy_server, team_strategy_ui
 
@@ -41,8 +42,8 @@ def about_panel():
             ui.tags.li("'Volatility' (SD) measures how much the boards disagree on a player."),
             ui.tags.li("The simulator blends the consensus board with each team's historical "
                        "position/level tendencies, plus optional unpredictability."),
-            ui.tags.li("The 2026 draft order is a standings-inverse projection, not the "
-                       "official lottery order."),
+            ui.tags.li("The simulator uses the actual 2026 first-round order (post Dec 2025 "
+                       "lottery), including Competitive Balance Round A and PPI/penalty picks."),
         ),
         ui.h3("Source coverage (last scrape)"),
         ui.p(f"Generated: {rep.get('generated_at', 'never')} · "
@@ -60,6 +61,7 @@ def about_panel():
 app_ui = ui.page_navbar(
     ui.nav_panel("Prospect Explorer", explorer_ui("explorer")),
     ui.nav_panel("Big Board", bigboard_ui("bigboard")),
+    ui.nav_panel("Projections", projections_ui("proj")),
     ui.nav_panel("Mock Simulator", simulator_ui("sim")),
     ui.nav_panel("Team Strategy", team_strategy_ui("teams")),
     ui.nav_panel("About", about_panel()),
