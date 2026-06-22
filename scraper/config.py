@@ -9,8 +9,10 @@ from .base import SourceMeta
 SOURCES: list[tuple[str, SourceMeta]] = [
     ("mlb_pipeline", SourceMeta("mlb_pipeline", "MLB.com Pipeline",
         "https://www.mlb.com/news/top-200-draft-prospects-for-2026", "free", weight=1.2)),
-    ("just_baseball", SourceMeta("just_baseball", "Just Baseball",
-        "https://www.justbaseball.com/prospects/2026-mlb-draft-rankings/", "free", weight=1.0)),
+    ("just_baseball", SourceMeta("just_baseball", "Just Baseball (College)",
+        "https://www.justbaseball.com/mlb-draft/mlb-draft-top-college-prospects/", "free", weight=1.0)),
+    ("just_baseball_prep", SourceMeta("just_baseball_prep", "Just Baseball (Prep)",
+        "https://www.justbaseball.com/mlb-draft/2026-mlb-draft-top-prep-prospects/", "free", weight=1.0)),
     ("eleven_point7", SourceMeta("eleven_point7", "11Point7",
         "https://www.11point7.com/mlb-draft/2026-prospect-big-board", "free", weight=1.0)),
     ("espn_mcdaniel", SourceMeta("espn_mcdaniel", "ESPN / Kiley McDaniel",
