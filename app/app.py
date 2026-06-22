@@ -65,7 +65,12 @@ app_ui = ui.page_navbar(
     ui.nav_panel("About", about_panel()),
     title="⚾ 2026 MLB Draft Hub",
     id="nav",
-    header=ui.include_css(CSS),
+    # Bootstrap 5.3's built-in dark mode (no SASS compile -> works in shinylive/Pyodide).
+    # Setting the attribute in <head> applies it before first paint (no flash).
+    header=ui.head_content(
+        ui.tags.script("document.documentElement.setAttribute('data-bs-theme','dark');"),
+        ui.include_css(CSS),
+    ),
     fillable=False,
 )
 

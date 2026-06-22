@@ -1,9 +1,10 @@
+/* Palette harmonized with the Bootstrap "darkly" theme (set in app.py).
+   The theme owns body/navbar/inputs/table chrome; these vars just style our
+   custom accent components (chips, bars, stat cards, sim/board tables). */
 :root {
-  --bg: #0d1117; --panel: #161b22; --border: #30363d; --ink: #e6edf3;
-  --muted: #8b949e; --accent: #1f6feb; --gold: #d97706; --good: #2ea043; --bad: #da3633;
+  --panel: #2b3035; --border: #444c56; --ink: #dee2e6;
+  --muted: #adb5bd; --accent: #3498db; --gold: #f39c12; --good: #00bc8c; --bad: #e74c3c;
 }
-body { background: var(--bg); color: var(--ink); }
-.navbar { background: #010409 !important; border-bottom: 1px solid var(--border); }
 .navbar-brand { font-weight: 700; letter-spacing: .2px; }
 .muted { color: var(--muted); font-size: .9rem; }
 h3 { margin-top: 1.2rem; font-size: 1.05rem; color: var(--ink); }
