@@ -28,7 +28,7 @@ from ..base import SourceMeta, get_json, ranking_row
 
 SOURCE = SourceMeta(
     key="just_baseball",
-    name="Just Baseball 2026 Top 100 College Prospects",
+    name="Just Baseball",
     url="https://www.justbaseball.com/mlb-draft/mlb-draft-top-college-prospects/",
     access="free",
 )
@@ -91,7 +91,14 @@ def _parse_post(slug: str, class_level: str) -> list[dict]:
 
 
 def fetch() -> list[dict]:
-    return _parse_post("mlb-draft-top-college-prospects", "College")
+    """Both Just Baseball lists combined into one board (college + prep).
+
+    Each list is its own 1..100 ranking, so a college player and a prep player can
+    share a rank number — that's fine: they are different players, each keeps their
+    own list rank. This gives Just Baseball coverage of HS prospects (Grady Emerson,
+    Jacob Lombard, ...) who are absent from the college list.
+    """
+    return _parse_post("mlb-draft-top-college-prospects", "College") + fetch_prep()
 
 
 def fetch_prep() -> list[dict]:

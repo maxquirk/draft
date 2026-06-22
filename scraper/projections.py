@@ -50,15 +50,13 @@ def build() -> None:
                 r[k] = v / 100.0
         tend[r["team"]] = r
     by_id = {p["player_id"]: p for p in board}
+    pick_team = {s["pick"]: s["team"] for s in order}  # actual 2026 order: pick -> team
 
     picks_of: dict[str, list[int]] = {}
-    teams_of: dict[str, Counter] = {}
     for seed in range(N_RUNS):
         for r in simulate(board, order, tend, mode="realistic",
                           randomness=RANDOMNESS, seed=seed):
-            pid = r["player_id"]
-            picks_of.setdefault(pid, []).append(r["pick"])
-            teams_of.setdefault(pid, Counter())[r["team"]] += 1
+            picks_of.setdefault(r["player_id"], []).append(r["pick"])
 
     rows = []
     for pid, picks in picks_of.items():
@@ -66,7 +64,9 @@ def build() -> None:
         if not p:
             continue
         picks_sorted = sorted(picks)
-        team, cnt = teams_of[pid].most_common(1)[0]
+        # top-3 most likely landing SPOTS, each an actual pick# -> its real team
+        top3 = [{"pick": pk, "team": pick_team.get(pk, ""), "pct": round(cnt / len(picks), 2)}
+                for pk, cnt in Counter(picks).most_common(3)]
         rows.append({
             "player_id": pid,
             "player": p["player"],
@@ -80,8 +80,7 @@ def build() -> None:
             "proj_mean": round(statistics.mean(picks_sorted), 1),
             "proj_low": picks_sorted[max(0, int(0.10 * len(picks_sorted)) - 1)],
             "proj_high": picks_sorted[min(len(picks_sorted) - 1, int(0.90 * len(picks_sorted)))],
-            "likely_team": team,
-            "likely_team_pct": round(cnt / len(picks), 2),
+            "landing": top3,
         })
 
     # order by projected slot, then by how often they actually land in R1

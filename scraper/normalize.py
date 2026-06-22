@@ -76,6 +76,29 @@ def _best(values: list[str]) -> str:
     return max(set(vals), key=vals.count)
 
 
+def _likely_same(ka: str, kb: str, rows_a: list[dict], rows_b: list[dict]) -> bool:
+    """Decide if two name clusters are the same player.
+
+    Pure name similarity misses nicknames whose spelling differs a lot
+    (Eric "EJ" Booth vs Eric Booth Jr.; "EJ Booth" vs "Eric Booth"), so we add
+    structural rules confirmed by school. Different last names stay strict.
+    """
+    ta, tb = ka.split(), kb.split()
+    if not ta or not tb:
+        return False
+    if ta[-1] != tb[-1]:
+        # different surnames: only a near-identical full string (typo/accent)
+        return fuzz.token_sort_ratio(ka, kb) >= 95
+    # same surname:
+    if ta[0] == tb[0]:
+        return True  # first + last match -> middle name / nickname / suffix differences
+    if ta[0][0] == tb[0][0]:  # same first initial (Eric vs EJ)
+        sa, sb = _best([r["school"] for r in rows_a]), _best([r["school"] for r in rows_b])
+        if sa and sb and fuzz.partial_ratio(sa.lower(), sb.lower()) >= 80:
+            return True
+    return fuzz.token_sort_ratio(ka, kb) >= 93
+
+
 def merge_players(rows: list[dict], *, fuzz_threshold: int = 93) -> list[dict]:
     """Group RankingRows into one record per player across sources.
 
@@ -88,7 +111,8 @@ def merge_players(rows: list[dict], *, fuzz_threshold: int = 93) -> list[dict]:
     for r in rows:
         clusters.setdefault(canon_name(r["player"]), []).append(r)
 
-    # fuzzy-merge near-identical canonical keys (handles typos like Cholowsky/Cholowski)
+    # merge clusters that are the same player (typos, nicknames, suffixes) using
+    # name structure + school confirmation, not a single similarity threshold.
     keys = list(clusters)
     merged_into: dict[str, str] = {}
     for i, a in enumerate(keys):
@@ -97,7 +121,7 @@ def merge_players(rows: list[dict], *, fuzz_threshold: int = 93) -> list[dict]:
         for b in keys[i + 1:]:
             if b in merged_into:
                 continue
-            if fuzz.token_sort_ratio(a, b) >= fuzz_threshold:
+            if _likely_same(a, b, clusters[a], clusters[b]):
                 clusters[a].extend(clusters[b])
                 merged_into[b] = a
     for b, a in merged_into.items():

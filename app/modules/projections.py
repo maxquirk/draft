@@ -1,8 +1,8 @@
 """Tab — Draft Projections: Monte Carlo expected outcome per player.
 
-Built with the SAME structure that renders reliably in shinylive/Pyodide on the
-Mock Simulator tab: a top-level layout_sidebar (not wrapped in a div) whose main
-area is a render.ui returning an ui.HTML table.
+Same render shape as the Mock Simulator tab (top-level layout_sidebar + a
+render.ui ui.HTML table), which renders reliably in shinylive/Pyodide.
+Each player's landing is the top-3 most likely ACTUAL-order pick slots.
 """
 from __future__ import annotations
 
@@ -12,7 +12,14 @@ from logic import dataio
 
 _DF = dataio.projections()
 _META = dataio.projections_meta()
-_TEAMS = sorted(_DF["likely_team"].dropna().unique()) if len(_DF) else []
+
+
+def _landing_list(v):
+    return v if isinstance(v, list) else []
+
+
+_TEAMS = sorted({l["team"] for v in (_DF["landing"] if "landing" in _DF else [])
+                 for l in _landing_list(v) if l.get("team")}) if len(_DF) else []
 _MAXPICK = int(_DF["proj_pick"].max()) if len(_DF) else 40
 
 
@@ -25,9 +32,10 @@ def projections_ui():
         ui.sidebar(
             ui.input_slider("maxpick", "Show players projected within pick",
                             5, max(_MAXPICK, 6), _MAXPICK),
-            ui.input_selectize("team", "Likely landing team", ["(all)"] + _TEAMS),
-            ui.help_text("Round-1 % = share of simulations the player was taken in "
-                         "round 1. Range = 10th–90th-percentile pick across sims."),
+            ui.input_selectize("team", "Lands with team", ["(all)"] + _TEAMS),
+            ui.help_text("Round-1 % = share of simulations the player went in round 1. "
+                         "Landing spots are the 3 most likely ACTUAL-order picks "
+                         "(pick # → team) with how often the sims sent him there."),
             width=340,
         ),
         ui.output_ui("table"),
@@ -40,7 +48,8 @@ def projections_server(input, output, session):
     def filtered():
         d = _DF[_DF["proj_pick"] <= input.maxpick()]
         if input.team() and input.team() != "(all)":
-            d = d[d["likely_team"] == input.team()]
+            d = d[d["landing"].apply(
+                lambda v: input.team() in [l["team"] for l in _landing_list(v)])]
         return d
 
     @render.ui
@@ -51,7 +60,11 @@ def projections_server(input, output, session):
         rows = []
         for _, r in d.iterrows():
             pr1 = int(round(100 * float(r["p_round1"])))
-            pct = int(round(100 * float(r["likely_team_pct"])))
+            spots = " · ".join(
+                f"<b>{l['pick']}</b> {l['team']} "
+                f"<span class='muted'>{int(round(100 * l['pct']))}%</span>"
+                for l in _landing_list(r["landing"])
+            )
             rows.append(
                 "<tr>"
                 f"<td>{int(r['proj_pick'])}</td>"
@@ -60,14 +73,14 @@ def projections_server(input, output, session):
                 f"<td style='text-align:left'>{r['school']}</td>"
                 f"<td>{int(r['consensus_rank'])}</td>"
                 f"<td>{int(r['proj_low'])}-{int(r['proj_high'])}</td>"
-                f"<td>{r['likely_team']} <span class='muted'>({pct}%)</span></td>"
                 f"<td>{pr1}%</td>"
+                f"<td style='text-align:left'>{spots}</td>"
                 "</tr>"
             )
         note = f"<p class='muted'>{_META.get('note', '')}</p>"
         return ui.HTML(
             note + "<div class='sim-wrap'><table class='sim-table'><thead><tr>"
             "<th>Proj.</th><th>Player</th><th>Pos</th><th>School</th><th>Cons.</th>"
-            "<th>Range</th><th>Likely landing</th><th>Round-1 %</th>"
+            "<th>Range</th><th>Round-1 %</th><th>Top-3 likely landing spots (pick → team)</th>"
             "</tr></thead><tbody>" + "".join(rows) + "</tbody></table></div>"
         )

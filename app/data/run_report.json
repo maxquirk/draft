@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-22 05:17 UTC",
-  "n_players": 526,
+  "generated_at": "2026-06-22 05:41 UTC",
+  "n_players": 522,
   "sources": [
     {
       "key": "mlb_pipeline",
@@ -13,20 +13,11 @@
     },
     {
       "key": "just_baseball",
-      "name": "Just Baseball (College)",
+      "name": "Just Baseball",
       "access": "free",
       "weight": 1.0,
       "status": "ok",
-      "rows": 100,
-      "error": ""
-    },
-    {
-      "key": "just_baseball_prep",
-      "name": "Just Baseball (Prep)",
-      "access": "free",
-      "weight": 1.0,
-      "status": "ok",
-      "rows": 100,
+      "rows": 200,
       "error": ""
     },
     {
@@ -73,12 +64,7 @@
       "weight": 1.2
     },
     "just_baseball": {
-      "name": "Just Baseball (College)",
-      "access": "free",
-      "weight": 1.0
-    },
-    "just_baseball_prep": {
-      "name": "Just Baseball (Prep)",
+      "name": "Just Baseball",
       "access": "free",
       "weight": 1.0
     },
