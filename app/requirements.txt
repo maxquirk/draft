@@ -1,0 +1,4 @@
+# Pyodide packages the shinylive runtime must load for this app.
+# pandas is imported in logic/dataio.py (a submodule); shinylive's auto-detection
+# only reliably scans the entry app.py, so we declare it explicitly here.
+pandas

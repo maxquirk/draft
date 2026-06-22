@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-06-22 04:28 UTC",
+  "n_players": 562,
+  "sources": [
+    {
+      "key": "mlb_pipeline",
+      "name": "MLB.com Pipeline",
+      "access": "free",
+      "weight": 1.2,
+      "status": "ok",
+      "rows": 200,
+      "error": ""
+    },
+    {
+      "key": "fangraphs",
+      "name": "FanGraphs The Board",
+      "access": "free",
+      "weight": 1.3,
+      "status": "empty",
+      "rows": 0,
+      "error": ""
+    },
+    {
+      "key": "perfect_game",
+      "name": "Perfect Game",
+      "access": "free",
+      "weight": 1.0,
+      "status": "ok",
+      "rows": 301,
+      "error": ""
+    },
+    {
+      "key": "just_baseball",
+      "name": "Just Baseball",
+      "access": "free",
+      "weight": 1.0,
+      "status": "ok",
+      "rows": 100,
+      "error": ""
+    },
+    {
+      "key": "eleven_point7",
+      "name": "11Point7",
+      "access": "free",
+      "weight": 1.0,
+      "status": "ok",
+      "rows": 100,
+      "error": ""
+    },
+    {
+      "key": "espn_mcdaniel",
+      "name": "ESPN / Kiley McDaniel",
+      "access": "paywall",
+      "weight": 1.4,
+      "status": "ok",
+      "rows": 155,
+      "error": ""
+    },
+    {
+      "key": "keith_law",
+      "name": "The Athletic / Keith Law",
+      "access": "paywall",
+      "weight": 1.4,
+      "status": "ok",
+      "rows": 100,
+      "error": ""
+    },
+    {
+      "key": "baseball_america",
+      "name": "Baseball America",
+      "access": "paywall",
+      "weight": 1.4,
+      "status": "ok",
+      "rows": 500,
+      "error": ""
+    }
+  ],
+  "source_meta": {
+    "mlb_pipeline": {
+      "name": "MLB.com Pipeline",
+      "access": "free",
+      "weight": 1.2
+    },
+    "fangraphs": {
+      "name": "FanGraphs The Board",
+      "access": "free",
+      "weight": 1.3
+    },
+    "perfect_game": {
+      "name": "Perfect Game",
+      "access": "free",
+      "weight": 1.0
+    },
+    "just_baseball": {
+      "name": "Just Baseball",
+      "access": "free",
+      "weight": 1.0
+    },
+    "eleven_point7": {
+      "name": "11Point7",
+      "access": "free",
+      "weight": 1.0
+    },
+    "espn_mcdaniel": {
+      "name": "ESPN / Kiley McDaniel",
+      "access": "paywall",
+      "weight": 1.4
+    },
+    "keith_law": {
+      "name": "The Athletic / Keith Law",
+      "access": "paywall",
+      "weight": 1.4
+    },
+    "baseball_america": {
+      "name": "Baseball America",
+      "access": "paywall",
+      "weight": 1.4
+    }
+  }
+}

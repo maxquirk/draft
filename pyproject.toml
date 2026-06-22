@@ -1,0 +1,34 @@
+[project]
+name = "mlb-draft-2026-hub"
+version = "0.1.0"
+description = "2026 MLB Draft Simulator & Prospect Hub — a static Shiny-for-Python app (shinylive) with an offline multi-source scraper pipeline."
+readme = "README.md"
+requires-python = ">=3.11"
+
+# Runtime deps for the in-browser (Pyodide/shinylive) app are intentionally minimal:
+# only `shiny` + `pandas`, both shipped as Pyodide wheels. Everything heavier lives in
+# the [scraper] extra and runs OFFLINE only.
+dependencies = [
+    "shiny>=1.0",
+    "pandas>=2.0",
+]
+
+[project.optional-dependencies]
+scraper = [
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+    "html5lib>=1.1",
+    "selenium>=4.20",
+    "rapidfuzz>=3.9",
+]
+dev = [
+    "shinylive>=0.5",
+]
+
+[tool.setuptools]
+packages = []
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

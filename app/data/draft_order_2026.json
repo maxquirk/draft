@@ -1,0 +1,127 @@
+{
+  "note": "Projected 2026 MLB first-round order. This is a DEFENSIBLE PROJECTION, not the official order: it is the inverse of the 2025 final regular-season standings (worst record picks first), scraped from Baseball-Reference. The real first six picks are set by MLB's draft lottery and are not reflected here.",
+  "method": "inverse_of_2025_final_standings",
+  "standings_year": 2025,
+  "order": [
+    {
+      "pick": 1,
+      "team": "Colorado Rockies"
+    },
+    {
+      "pick": 2,
+      "team": "Chicago White Sox"
+    },
+    {
+      "pick": 3,
+      "team": "Washington Nationals"
+    },
+    {
+      "pick": 4,
+      "team": "Minnesota Twins"
+    },
+    {
+      "pick": 5,
+      "team": "Pittsburgh Pirates"
+    },
+    {
+      "pick": 6,
+      "team": "Los Angeles Angels"
+    },
+    {
+      "pick": 7,
+      "team": "Baltimore Orioles"
+    },
+    {
+      "pick": 8,
+      "team": "Athletics"
+    },
+    {
+      "pick": 9,
+      "team": "Atlanta Braves"
+    },
+    {
+      "pick": 10,
+      "team": "Tampa Bay Rays"
+    },
+    {
+      "pick": 11,
+      "team": "St. Louis Cardinals"
+    },
+    {
+      "pick": 12,
+      "team": "Miami Marlins"
+    },
+    {
+      "pick": 13,
+      "team": "Arizona Diamondbacks"
+    },
+    {
+      "pick": 14,
+      "team": "San Francisco Giants"
+    },
+    {
+      "pick": 15,
+      "team": "Texas Rangers"
+    },
+    {
+      "pick": 16,
+      "team": "Kansas City Royals"
+    },
+    {
+      "pick": 17,
+      "team": "Cincinnati Reds"
+    },
+    {
+      "pick": 18,
+      "team": "New York Mets"
+    },
+    {
+      "pick": 19,
+      "team": "Detroit Tigers"
+    },
+    {
+      "pick": 20,
+      "team": "Houston Astros"
+    },
+    {
+      "pick": 21,
+      "team": "Cleveland Guardians"
+    },
+    {
+      "pick": 22,
+      "team": "Boston Red Sox"
+    },
+    {
+      "pick": 23,
+      "team": "San Diego Padres"
+    },
+    {
+      "pick": 24,
+      "team": "Seattle Mariners"
+    },
+    {
+      "pick": 25,
+      "team": "Chicago Cubs"
+    },
+    {
+      "pick": 26,
+      "team": "Los Angeles Dodgers"
+    },
+    {
+      "pick": 27,
+      "team": "New York Yankees"
+    },
+    {
+      "pick": 28,
+      "team": "Toronto Blue Jays"
+    },
+    {
+      "pick": 29,
+      "team": "Philadelphia Phillies"
+    },
+    {
+      "pick": 30,
+      "team": "Milwaukee Brewers"
+    }
+  ]
+}

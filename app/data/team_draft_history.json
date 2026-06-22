@@ -1,0 +1,4362 @@
+[
+  {
+    "year": 2015,
+    "overall": 1,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Dansby Swanson",
+    "position": "SS",
+    "school": "Vanderbilt University",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 2,
+    "round": 1,
+    "team": "Houston Astros",
+    "player": "Alex Bregman",
+    "position": "SS",
+    "school": "Louisiana State University",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 3,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Brendan Rodgers",
+    "position": "SS",
+    "school": "Lake Mary HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 4,
+    "round": 1,
+    "team": "Texas Rangers",
+    "player": "Dillon Tate",
+    "position": "RHP",
+    "school": "University of California, Santa Barbara",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 5,
+    "round": 1,
+    "team": "Houston Astros",
+    "player": "Kyle Tucker",
+    "position": "OF",
+    "school": "H. B. Plant HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 6,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Tyler Jay",
+    "position": "LHP",
+    "school": "University of Illinois at Urbana-Champaign",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 7,
+    "round": 1,
+    "team": "Boston Red Sox",
+    "player": "Andrew Benintendi",
+    "position": "OF",
+    "school": "University of Arkansas",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 8,
+    "round": 1,
+    "team": "Chicago White Sox",
+    "player": "Carson Fulmer",
+    "position": "RHP",
+    "school": "Vanderbilt University",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 9,
+    "round": 1,
+    "team": "Chicago Cubs",
+    "player": "Ian Happ",
+    "position": "OF",
+    "school": "University of Cincinnati",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 10,
+    "round": 1,
+    "team": "Philadelphia Phillies",
+    "player": "Cornelius Randolph",
+    "position": "SS",
+    "school": "Griffin HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 11,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Tyler Stephenson",
+    "position": "C",
+    "school": "Kennesaw Mountain HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 12,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "Josh Naylor",
+    "position": "1B",
+    "school": "St. Joan of Arc Catholic SS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 13,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Garrett Whitley",
+    "position": "OF",
+    "school": "Niskayuna HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 14,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Kolby Allard",
+    "position": "LHP",
+    "school": "San Clemente HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 15,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Trent Grisham",
+    "position": "OF",
+    "school": "Richland HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 16,
+    "round": 1,
+    "team": "New York Yankees",
+    "player": "James Kaprielian",
+    "position": "RHP",
+    "school": "University of California, Los Angeles",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 17,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Brady Aiken",
+    "position": "LHP",
+    "school": "IMG Academy",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 18,
+    "round": 1,
+    "team": "San Francisco Giants",
+    "player": "Phil Bickford",
+    "position": "RHP",
+    "school": "College of Southern Nevada",
+    "level": "JUCO"
+  },
+  {
+    "year": 2015,
+    "overall": 19,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Kevin Newman",
+    "position": "SS",
+    "school": "University of Arizona",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 20,
+    "round": 1,
+    "team": "Athletics",
+    "player": "Richie Martin",
+    "position": "SS",
+    "school": "University of Florida",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 21,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Ashe Russell",
+    "position": "RHP",
+    "school": "Cathedral HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 22,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Beau Burrows",
+    "position": "RHP",
+    "school": "Weatherford HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 23,
+    "round": 1,
+    "team": "St. Louis Cardinals",
+    "player": "Nick Plummer",
+    "position": "OF",
+    "school": "Brother Rice HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 24,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "Walker Buehler",
+    "position": "RHP",
+    "school": "Vanderbilt University",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 25,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "DJ Stewart",
+    "position": "OF",
+    "school": "Florida State University",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 26,
+    "round": 1,
+    "team": "Los Angeles Angels",
+    "player": "Taylor Ward",
+    "position": "C",
+    "school": "California State University, Fresno",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 27,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Mike Nikorak",
+    "position": "RHP",
+    "school": "Stroudsburg HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 28,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Michael Soroka",
+    "position": "RHP",
+    "school": "Bishop Carroll HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 29,
+    "round": 1,
+    "team": "Toronto Blue Jays",
+    "player": "Jon Harris",
+    "position": "RHP",
+    "school": "Missouri State University",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 30,
+    "round": 1,
+    "team": "New York Yankees",
+    "player": "Kyle Holder",
+    "position": "SS",
+    "school": "University of San Diego",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 31,
+    "round": 1,
+    "team": "San Francisco Giants",
+    "player": "Chris Shaw",
+    "position": "1B",
+    "school": "Boston College",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 32,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Ke'Bryan Hayes",
+    "position": "3B",
+    "school": "Concordia Lutheran HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 33,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Nolan Watson",
+    "position": "RHP",
+    "school": "Lawrence North HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 34,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Christin Stewart",
+    "position": "OF",
+    "school": "University of Tennessee",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 35,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "Kyle Funkhouser",
+    "position": "RHP",
+    "school": "University of Louisville",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 36,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Ryan Mountcastle",
+    "position": "SS",
+    "school": "Paul J. Hagerty HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 37,
+    "round": 1,
+    "team": "Houston Astros",
+    "player": "Daz Cameron",
+    "position": "OF",
+    "school": "Eagle's Landing Christian Academy",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 38,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Tyler Nevin",
+    "position": "3B",
+    "school": "Poway HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 39,
+    "round": 1,
+    "team": "St. Louis Cardinals",
+    "player": "Jake Woodford",
+    "position": "RHP",
+    "school": "H. B. Plant HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 40,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Nathan Kirby",
+    "position": "LHP",
+    "school": "University of Virginia",
+    "level": "College"
+  },
+  {
+    "year": 2015,
+    "overall": 41,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Austin Riley",
+    "position": "3B",
+    "school": "DeSoto Central HS",
+    "level": "HS"
+  },
+  {
+    "year": 2015,
+    "overall": 42,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Triston McKenzie",
+    "position": "RHP",
+    "school": "Royal Palm Beach Community HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 1,
+    "round": 1,
+    "team": "Philadelphia Phillies",
+    "player": "Mickey Moniak",
+    "position": "OF",
+    "school": "La Costa Canyon HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 2,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Nick Senzel",
+    "position": "3B",
+    "school": "University of Tennessee",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 3,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Ian Anderson",
+    "position": "RHP",
+    "school": "Shenendehowa HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 4,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Riley Pint",
+    "position": "RHP",
+    "school": "St. Thomas Aquinas HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 5,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Corey Ray",
+    "position": "OF",
+    "school": "University of Louisville",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 6,
+    "round": 1,
+    "team": "Athletics",
+    "player": "A.J. Puk",
+    "position": "LHP",
+    "school": "University of Florida",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 7,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "Braxton Garrett",
+    "position": "LHP",
+    "school": "Florence HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 8,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "Cal Quantrill",
+    "position": "RHP",
+    "school": "Stanford University",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 9,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Matt Manning",
+    "position": "RHP",
+    "school": "Sheldon HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 10,
+    "round": 1,
+    "team": "Chicago White Sox",
+    "player": "Zack Collins",
+    "position": "C",
+    "school": "University of Miami",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 11,
+    "round": 1,
+    "team": "Seattle Mariners",
+    "player": "Kyle Lewis",
+    "position": "OF",
+    "school": "Mercer University",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 12,
+    "round": 1,
+    "team": "Boston Red Sox",
+    "player": "Jay Groome",
+    "position": "LHP",
+    "school": "Barnegat HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 13,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Josh Lowe",
+    "position": "3B",
+    "school": "Pope HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 14,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Will Benson",
+    "position": "OF",
+    "school": "Westminster HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 15,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Alex Kirilloff",
+    "position": "OF",
+    "school": "Plum HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 16,
+    "round": 1,
+    "team": "Los Angeles Angels",
+    "player": "Matt Thaiss",
+    "position": "C",
+    "school": "University of Virginia",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 17,
+    "round": 1,
+    "team": "Houston Astros",
+    "player": "Forrest Whitley",
+    "position": "RHP",
+    "school": "Alamo Heights HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 18,
+    "round": 1,
+    "team": "New York Yankees",
+    "player": "Blake Rutherford",
+    "position": "OF",
+    "school": "Chaminade College Preparatory School",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 19,
+    "round": 1,
+    "team": "New York Mets",
+    "player": "Justin Dunn",
+    "position": "RHP",
+    "school": "Boston College",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 20,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "Gavin Lux",
+    "position": "SS",
+    "school": "Indian Trail HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 21,
+    "round": 1,
+    "team": "Toronto Blue Jays",
+    "player": "T.J. Zeuch",
+    "position": "RHP",
+    "school": "University of Pittsburgh",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 22,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Will Craig",
+    "position": "3B",
+    "school": "Wake Forest University",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 23,
+    "round": 1,
+    "team": "St. Louis Cardinals",
+    "player": "Delvin P\u00e9rez",
+    "position": "SS",
+    "school": "International Baseball Academy",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 24,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "Hudson Potts",
+    "position": "SS",
+    "school": "Carroll HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 25,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "Eric Lauer",
+    "position": "LHP",
+    "school": "Kent State University",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 26,
+    "round": 1,
+    "team": "Chicago White Sox",
+    "player": "Zack Burdi",
+    "position": "RHP",
+    "school": "University of Louisville",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 27,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Cody Sedlock",
+    "position": "RHP",
+    "school": "University of Illinois at Urbana-Champaign",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 28,
+    "round": 1,
+    "team": "Washington Nationals",
+    "player": "Carter Kieboom",
+    "position": "SS",
+    "school": "Walton HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 29,
+    "round": 1,
+    "team": "Washington Nationals",
+    "player": "Dane Dunning",
+    "position": "RHP",
+    "school": "University of Florida",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 30,
+    "round": 1,
+    "team": "Texas Rangers",
+    "player": "Cole Ragans",
+    "position": "LHP",
+    "school": "North Florida Christian HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 31,
+    "round": 1,
+    "team": "New York Mets",
+    "player": "Anthony Kay",
+    "position": "LHP",
+    "school": "University of Connecticut",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 32,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "Will Smith",
+    "position": "C",
+    "school": "University of Louisville",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 33,
+    "round": 1,
+    "team": "St. Louis Cardinals",
+    "player": "Dylan Carlson",
+    "position": "OF",
+    "school": "Elk Grove HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 34,
+    "round": 1,
+    "team": "St. Louis Cardinals",
+    "player": "Dakota Hudson",
+    "position": "RHP",
+    "school": "Mississippi State University",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 35,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Taylor Trammell",
+    "position": "OF",
+    "school": "Mount Paran Christian School",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 36,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "Jordan Sheffield",
+    "position": "RHP",
+    "school": "Vanderbilt University",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 37,
+    "round": 1,
+    "team": "Athletics",
+    "player": "Daulton Jefferies",
+    "position": "RHP",
+    "school": "University of California, Berkeley",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 38,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Robert Tyler",
+    "position": "RHP",
+    "school": "University of Georgia",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 39,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Anfernee Grier",
+    "position": "OF",
+    "school": "Auburn University",
+    "level": "College"
+  },
+  {
+    "year": 2016,
+    "overall": 40,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Joey Wentz",
+    "position": "LHP",
+    "school": "Shawnee Mission East HS",
+    "level": "HS"
+  },
+  {
+    "year": 2016,
+    "overall": 41,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Nick Lodolo",
+    "position": "LHP",
+    "school": "Damien HS",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 1,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Royce Lewis",
+    "position": "SS",
+    "school": "JSerra Catholic HS",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 2,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Hunter Greene",
+    "position": "RHP",
+    "school": "Notre Dame HS",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 3,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "MacKenzie Gore",
+    "position": "LHP",
+    "school": "Whiteville HS",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 4,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Brendan McKay",
+    "position": "1B",
+    "school": "University of Louisville",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 5,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Kyle Wright",
+    "position": "RHP",
+    "school": "Vanderbilt University",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 6,
+    "round": 1,
+    "team": "Athletics",
+    "player": "Austin Beck",
+    "position": "OF",
+    "school": "North Davidson HS",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 7,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Pavin Smith",
+    "position": "1B",
+    "school": "University of Virginia",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 8,
+    "round": 1,
+    "team": "Philadelphia Phillies",
+    "player": "Adam Haseley",
+    "position": "OF",
+    "school": "University of Virginia",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 9,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Keston Hiura",
+    "position": "2B",
+    "school": "University of California, Irvine",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 10,
+    "round": 1,
+    "team": "Los Angeles Angels",
+    "player": "Jo Adell",
+    "position": "OF",
+    "school": "Ballard HS",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 11,
+    "round": 1,
+    "team": "Chicago White Sox",
+    "player": "Jake Burger",
+    "position": "3B",
+    "school": "Missouri State University",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 12,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Shane Baz",
+    "position": "RHP",
+    "school": "Concordia Lutheran HS",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 13,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "Trevor Rogers",
+    "position": "LHP",
+    "school": "Carlsbad HS",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 14,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Nick Pratto",
+    "position": "1B",
+    "school": "Huntington Beach HS",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 15,
+    "round": 1,
+    "team": "Houston Astros",
+    "player": "JB Bukauskas",
+    "position": "RHP",
+    "school": "University of North Carolina at Chapel Hill",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 16,
+    "round": 1,
+    "team": "New York Yankees",
+    "player": "Clarke Schmidt",
+    "position": "RHP",
+    "school": "University of South Carolina",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 17,
+    "round": 1,
+    "team": "Seattle Mariners",
+    "player": "Evan White",
+    "position": "1B",
+    "school": "University of Kentucky",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 18,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Alex Faedo",
+    "position": "RHP",
+    "school": "University of Florida",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 19,
+    "round": 1,
+    "team": "San Francisco Giants",
+    "player": "Heliot Ramos",
+    "position": "OF",
+    "school": "Leadership Christian Academy",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 20,
+    "round": 1,
+    "team": "New York Mets",
+    "player": "David Peterson",
+    "position": "LHP",
+    "school": "University of Oregon",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 21,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "DL Hall",
+    "position": "LHP",
+    "school": "Valdosta HS",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 22,
+    "round": 1,
+    "team": "Toronto Blue Jays",
+    "player": "Logan Warmoth",
+    "position": "SS",
+    "school": "University of North Carolina at Chapel Hill",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 23,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "Jeren Kendall",
+    "position": "OF",
+    "school": "Vanderbilt University",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 24,
+    "round": 1,
+    "team": "Boston Red Sox",
+    "player": "Tanner Houck",
+    "position": "RHP",
+    "school": "University of Missouri",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 25,
+    "round": 1,
+    "team": "Washington Nationals",
+    "player": "Seth Romero",
+    "position": "LHP",
+    "school": "University of Houston",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 26,
+    "round": 1,
+    "team": "Texas Rangers",
+    "player": "Bubba Thompson",
+    "position": "OF",
+    "school": "McGill-Toolen Catholic HS",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 27,
+    "round": 1,
+    "team": "Chicago Cubs",
+    "player": "Brendon Little",
+    "position": "LHP",
+    "school": "State College of Florida, Manatee-Sarasota",
+    "level": "JUCO"
+  },
+  {
+    "year": 2017,
+    "overall": 28,
+    "round": 1,
+    "team": "Toronto Blue Jays",
+    "player": "Nate Pearson",
+    "position": "RHP",
+    "school": "College of Central Florida",
+    "level": "JUCO"
+  },
+  {
+    "year": 2017,
+    "overall": 29,
+    "round": 1,
+    "team": "Texas Rangers",
+    "player": "Chris Seise",
+    "position": "SS",
+    "school": "West Orange HS",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 30,
+    "round": 1,
+    "team": "Chicago Cubs",
+    "player": "Alex Lange",
+    "position": "RHP",
+    "school": "Louisiana State University",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 31,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Drew Rasmussen",
+    "position": "RHP",
+    "school": "Oregon State University",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 32,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Jeter Downs",
+    "position": "SS",
+    "school": "Monsignor Edward Pace HS",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 33,
+    "round": 1,
+    "team": "Athletics",
+    "player": "Kevin Merrell",
+    "position": "SS",
+    "school": "University of South Florida",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 34,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Tristen Lutz",
+    "position": "OF",
+    "school": "James W. Martin HS",
+    "level": "HS"
+  },
+  {
+    "year": 2017,
+    "overall": 35,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Brent Rooker",
+    "position": "OF",
+    "school": "Mississippi State University",
+    "level": "College"
+  },
+  {
+    "year": 2017,
+    "overall": 36,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "Brian Miller",
+    "position": "OF",
+    "school": "University of North Carolina at Chapel Hill",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 1,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Casey Mize",
+    "position": "RHP",
+    "school": "Auburn University",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 2,
+    "round": 1,
+    "team": "San Francisco Giants",
+    "player": "Joey Bart",
+    "position": "C",
+    "school": "Georgia Institute of Technology",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 3,
+    "round": 1,
+    "team": "Philadelphia Phillies",
+    "player": "Alec Bohm",
+    "position": "3B",
+    "school": "Wichita State University",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 4,
+    "round": 1,
+    "team": "Chicago White Sox",
+    "player": "Nick Madrigal",
+    "position": "SS",
+    "school": "Oregon State University",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 5,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Jonathan India",
+    "position": "3B",
+    "school": "University of Florida",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 6,
+    "round": 1,
+    "team": "New York Mets",
+    "player": "Jarred Kelenic",
+    "position": "OF",
+    "school": "Waukesha West HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 7,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "Ryan Weathers",
+    "position": "LHP",
+    "school": "Loretto HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 8,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Carter Stewart",
+    "position": "RHP",
+    "school": "Eau Gallie HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 9,
+    "round": 1,
+    "team": "Athletics",
+    "player": "Kyler Murray",
+    "position": "CF",
+    "school": "University of Oklahoma",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 10,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Travis Swaggerty",
+    "position": "OF",
+    "school": "University of South Alabama",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 11,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Grayson Rodriguez",
+    "position": "RHP",
+    "school": "Central Heights HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 12,
+    "round": 1,
+    "team": "Toronto Blue Jays",
+    "player": "Jordan Groshans",
+    "position": "SS",
+    "school": "Magnolia HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 13,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "Connor Scott",
+    "position": "OF",
+    "school": "H. B. Plant HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 14,
+    "round": 1,
+    "team": "Seattle Mariners",
+    "player": "Logan Gilbert",
+    "position": "RHP",
+    "school": "Stetson University",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 15,
+    "round": 1,
+    "team": "Texas Rangers",
+    "player": "Cole Winn",
+    "position": "RHP",
+    "school": "Orange Lutheran HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 16,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Matthew Liberatore",
+    "position": "LHP",
+    "school": "Mountain Ridge HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 17,
+    "round": 1,
+    "team": "Los Angeles Angels",
+    "player": "Jordyn Adams",
+    "position": "OF",
+    "school": "Green Hope HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 18,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Brady Singer",
+    "position": "RHP",
+    "school": "University of Florida",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 19,
+    "round": 1,
+    "team": "St. Louis Cardinals",
+    "player": "Nolan Gorman",
+    "position": "3B",
+    "school": "Sandra Day O'Connor HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 20,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Trevor Larnach",
+    "position": "RF",
+    "school": "Oregon State University",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 21,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Brice Turang",
+    "position": "SS",
+    "school": "Santiago HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 22,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Ryan Rolison",
+    "position": "LHP",
+    "school": "University of Mississippi",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 23,
+    "round": 1,
+    "team": "New York Yankees",
+    "player": "Anthony Seigler",
+    "position": "C",
+    "school": "Cartersville HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 24,
+    "round": 1,
+    "team": "Chicago Cubs",
+    "player": "Nico Hoerner",
+    "position": "SS",
+    "school": "Stanford University",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 25,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Matt McLain",
+    "position": "2B",
+    "school": "Arnold O. Beckman HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 26,
+    "round": 1,
+    "team": "Boston Red Sox",
+    "player": "Triston Casas",
+    "position": "3B",
+    "school": "American Heritage HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 27,
+    "round": 1,
+    "team": "Washington Nationals",
+    "player": "Mason Denaburg",
+    "position": "RHP",
+    "school": "Merritt Island HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 28,
+    "round": 1,
+    "team": "Houston Astros",
+    "player": "Seth Beer",
+    "position": "OF",
+    "school": "Clemson University",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 29,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Bo Naylor",
+    "position": "C",
+    "school": "St. Joan of Arc Catholic SS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 30,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "J.T. Ginn",
+    "position": "RHP",
+    "school": "Brandon HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 31,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Shane McClanahan",
+    "position": "LHP",
+    "school": "University of South Florida",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 32,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Nick Schnell",
+    "position": "CF",
+    "school": "Roncalli HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 33,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Jackson Kowar",
+    "position": "RHP",
+    "school": "University of Florida",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 34,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Daniel Lynch IV",
+    "position": "LHP",
+    "school": "University of Virginia",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 35,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Ethan Hankins",
+    "position": "RHP",
+    "school": "Forsyth Central HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 36,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Gunnar Hoglund",
+    "position": "RHP",
+    "school": "Fivay HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 37,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Cadyn Grenier",
+    "position": "SS",
+    "school": "Oregon State University",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 38,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "Xavier Edwards",
+    "position": "SS",
+    "school": "North Broward Preparatory School",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 39,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Jake McCarthy",
+    "position": "OF",
+    "school": "University of Virginia",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 40,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Kris Bubic",
+    "position": "LHP",
+    "school": "Stanford University",
+    "level": "College"
+  },
+  {
+    "year": 2018,
+    "overall": 41,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Lenny Torres",
+    "position": "RHP",
+    "school": "Beacon HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 42,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Grant Lavigne",
+    "position": "1B",
+    "school": "Bedford HS",
+    "level": "HS"
+  },
+  {
+    "year": 2018,
+    "overall": 43,
+    "round": 1,
+    "team": "St. Louis Cardinals",
+    "player": "Griffin Roberts",
+    "position": "RHP",
+    "school": "Wake Forest University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 1,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Adley Rutschman",
+    "position": "C",
+    "school": "Oregon State University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 2,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Bobby Witt Jr.",
+    "position": "SS",
+    "school": "Colleyville Heritage HS",
+    "level": "HS"
+  },
+  {
+    "year": 2019,
+    "overall": 3,
+    "round": 1,
+    "team": "Chicago White Sox",
+    "player": "Andrew Vaughn",
+    "position": "1B",
+    "school": "University of California, Berkeley",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 4,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "JJ Bleday",
+    "position": "OF",
+    "school": "Vanderbilt University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 5,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Riley Greene",
+    "position": "OF",
+    "school": "Paul J. Hagerty HS",
+    "level": "HS"
+  },
+  {
+    "year": 2019,
+    "overall": 6,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "CJ Abrams",
+    "position": "SS",
+    "school": "Blessed Trinity Catholic HS",
+    "level": "HS"
+  },
+  {
+    "year": 2019,
+    "overall": 7,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Nick Lodolo",
+    "position": "P",
+    "school": "Texas Christian University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 8,
+    "round": 1,
+    "team": "Texas Rangers",
+    "player": "Josh Jung",
+    "position": "3B",
+    "school": "Texas Tech University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 9,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Shea Langeliers",
+    "position": "C",
+    "school": "Baylor University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 10,
+    "round": 1,
+    "team": "San Francisco Giants",
+    "player": "Hunter Bishop",
+    "position": "OF",
+    "school": "Arizona State University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 11,
+    "round": 1,
+    "team": "Toronto Blue Jays",
+    "player": "Alek Manoah",
+    "position": "P",
+    "school": "West Virginia University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 12,
+    "round": 1,
+    "team": "New York Mets",
+    "player": "Brett Baty",
+    "position": "3B",
+    "school": "Lake Travis HS",
+    "level": "HS"
+  },
+  {
+    "year": 2019,
+    "overall": 13,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Keoni Cavaco",
+    "position": "SS",
+    "school": "Eastlake HS",
+    "level": "HS"
+  },
+  {
+    "year": 2019,
+    "overall": 14,
+    "round": 1,
+    "team": "Philadelphia Phillies",
+    "player": "Bryson Stott",
+    "position": "SS",
+    "school": "University of Nevada, Las Vegas",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 15,
+    "round": 1,
+    "team": "Los Angeles Angels",
+    "player": "Will Wilson",
+    "position": "SS",
+    "school": "North Carolina State University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 16,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Corbin Carroll",
+    "position": "CF",
+    "school": "Lakeside School",
+    "level": "HS"
+  },
+  {
+    "year": 2019,
+    "overall": 17,
+    "round": 1,
+    "team": "Washington Nationals",
+    "player": "Jackson Rutledge",
+    "position": "P",
+    "school": "San Jacinto College, North Campus",
+    "level": "JUCO"
+  },
+  {
+    "year": 2019,
+    "overall": 18,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Quinn Priester",
+    "position": "P",
+    "school": "Cary-Grove HS",
+    "level": "HS"
+  },
+  {
+    "year": 2019,
+    "overall": 19,
+    "round": 1,
+    "team": "St. Louis Cardinals",
+    "player": "Zack Thompson",
+    "position": "P",
+    "school": "University of Kentucky",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 20,
+    "round": 1,
+    "team": "Seattle Mariners",
+    "player": "George Kirby",
+    "position": "P",
+    "school": "Elon University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 21,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Braden Shewmake",
+    "position": "SS",
+    "school": "Texas A&M University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 22,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Greg Jones",
+    "position": "SS",
+    "school": "University of North Carolina at Wilmington",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 23,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Michael Toglia",
+    "position": "1B",
+    "school": "University of California, Los Angeles",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 24,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Daniel Espino",
+    "position": "P",
+    "school": "Georgia Premier Academy",
+    "level": "HS"
+  },
+  {
+    "year": 2019,
+    "overall": 25,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "Kody Hoese",
+    "position": "3B",
+    "school": "Tulane University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 26,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Blake Walston",
+    "position": "P",
+    "school": "New Hanover HS",
+    "level": "HS"
+  },
+  {
+    "year": 2019,
+    "overall": 27,
+    "round": 1,
+    "team": "Chicago Cubs",
+    "player": "Ryan Jensen",
+    "position": "P",
+    "school": "California State University, Fresno",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 28,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Ethan Small",
+    "position": "P",
+    "school": "Mississippi State University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 29,
+    "round": 1,
+    "team": "Athletics",
+    "player": "Logan Davidson",
+    "position": "SS",
+    "school": "Clemson University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 30,
+    "round": 1,
+    "team": "New York Yankees",
+    "player": "Anthony Volpe",
+    "position": "SS",
+    "school": "Delbarton School",
+    "level": "HS"
+  },
+  {
+    "year": 2019,
+    "overall": 31,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "Michael Busch",
+    "position": "2B",
+    "school": "University of North Carolina at Chapel Hill",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 32,
+    "round": 1,
+    "team": "Houston Astros",
+    "player": "Korey Lee",
+    "position": "C",
+    "school": "University of California, Berkeley",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 33,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Brennan Malone",
+    "position": "P",
+    "school": "IMG Academy",
+    "level": "HS"
+  },
+  {
+    "year": 2019,
+    "overall": 34,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Drey Jameson",
+    "position": "P",
+    "school": "Ball State University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 35,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "Kameron Misner",
+    "position": "CF",
+    "school": "University of Missouri",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 36,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "JJ Goss",
+    "position": "P",
+    "school": "Cypress Ranch HS",
+    "level": "HS"
+  },
+  {
+    "year": 2019,
+    "overall": 37,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Sammy Siani",
+    "position": "CF",
+    "school": "William Penn Charter School",
+    "level": "HS"
+  },
+  {
+    "year": 2019,
+    "overall": 38,
+    "round": 1,
+    "team": "New York Yankees",
+    "player": "T.J. Sikkema",
+    "position": "P",
+    "school": "University of Missouri",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 39,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Matt Wallner",
+    "position": "RF",
+    "school": "University of Southern Mississippi",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 40,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Seth Johnson",
+    "position": "P",
+    "school": "Campbell University",
+    "level": "College"
+  },
+  {
+    "year": 2019,
+    "overall": 41,
+    "round": 1,
+    "team": "Texas Rangers",
+    "player": "Davis Wendzel",
+    "position": "3B",
+    "school": "Baylor University",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 1,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Spencer Torkelson",
+    "position": "3B",
+    "school": "Arizona State University",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 2,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Heston Kjerstad",
+    "position": "OF",
+    "school": "University of Arkansas",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 3,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "Max Meyer",
+    "position": "P",
+    "school": "University of Minnesota",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 4,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Asa Lacy",
+    "position": "P",
+    "school": "Texas A&M University",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 5,
+    "round": 1,
+    "team": "Toronto Blue Jays",
+    "player": "Austin Martin",
+    "position": "SS",
+    "school": "Vanderbilt University",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 6,
+    "round": 1,
+    "team": "Seattle Mariners",
+    "player": "Emerson Hancock",
+    "position": "P",
+    "school": "University of Georgia",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 7,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Nick Gonzales",
+    "position": "SS",
+    "school": "New Mexico State University",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 8,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "Robert Hassell III",
+    "position": "OF",
+    "school": "Independence HS",
+    "level": "HS"
+  },
+  {
+    "year": 2020,
+    "overall": 9,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Zac Veen",
+    "position": "OF",
+    "school": "Spruce Creek HS",
+    "level": "HS"
+  },
+  {
+    "year": 2020,
+    "overall": 10,
+    "round": 1,
+    "team": "Los Angeles Angels",
+    "player": "Reid Detmers",
+    "position": "P",
+    "school": "University of Louisville",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 11,
+    "round": 1,
+    "team": "Chicago White Sox",
+    "player": "Garrett Crochet",
+    "position": "P",
+    "school": "University of Tennessee",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 12,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Austin Hendrick",
+    "position": "OF",
+    "school": "West Allegheny HS",
+    "level": "HS"
+  },
+  {
+    "year": 2020,
+    "overall": 13,
+    "round": 1,
+    "team": "San Francisco Giants",
+    "player": "Patrick Bailey",
+    "position": "C",
+    "school": "North Carolina State University",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 14,
+    "round": 1,
+    "team": "Texas Rangers",
+    "player": "Justin Foscue",
+    "position": "2B",
+    "school": "Mississippi State University",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 15,
+    "round": 1,
+    "team": "Philadelphia Phillies",
+    "player": "Mick Abel",
+    "position": "P",
+    "school": "Jesuit HS",
+    "level": "HS"
+  },
+  {
+    "year": 2020,
+    "overall": 16,
+    "round": 1,
+    "team": "Chicago Cubs",
+    "player": "Ed Howard",
+    "position": "SS",
+    "school": "Mount Carmel HS",
+    "level": "HS"
+  },
+  {
+    "year": 2020,
+    "overall": 17,
+    "round": 1,
+    "team": "Boston Red Sox",
+    "player": "Nick Yorke",
+    "position": "2B",
+    "school": "Archbishop Mitty HS",
+    "level": "HS"
+  },
+  {
+    "year": 2020,
+    "overall": 18,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Bryce Jarvis",
+    "position": "P",
+    "school": "Duke University",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 19,
+    "round": 1,
+    "team": "New York Mets",
+    "player": "Pete Crow-Armstrong",
+    "position": "OF",
+    "school": "Harvard-Westlake HS",
+    "level": "HS"
+  },
+  {
+    "year": 2020,
+    "overall": 20,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Garrett Mitchell",
+    "position": "OF",
+    "school": "University of California, Los Angeles",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 21,
+    "round": 1,
+    "team": "St. Louis Cardinals",
+    "player": "Jordan Walker",
+    "position": "3B",
+    "school": "Decatur HS",
+    "level": "HS"
+  },
+  {
+    "year": 2020,
+    "overall": 22,
+    "round": 1,
+    "team": "Washington Nationals",
+    "player": "Cade Cavalli",
+    "position": "P",
+    "school": "University of Oklahoma",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 23,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Carson Tucker",
+    "position": "SS",
+    "school": "Mountain Pointe HS",
+    "level": "HS"
+  },
+  {
+    "year": 2020,
+    "overall": 24,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Nick Bitsko",
+    "position": "P",
+    "school": "Central Bucks HS East",
+    "level": "HS"
+  },
+  {
+    "year": 2020,
+    "overall": 25,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Jared Shuster",
+    "position": "P",
+    "school": "Wake Forest University",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 26,
+    "round": 1,
+    "team": "Athletics",
+    "player": "Tyler Soderstrom",
+    "position": "C",
+    "school": "Turlock HS",
+    "level": "HS"
+  },
+  {
+    "year": 2020,
+    "overall": 27,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Aaron Sabato",
+    "position": "1B",
+    "school": "University of North Carolina at Chapel Hill",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 28,
+    "round": 1,
+    "team": "New York Yankees",
+    "player": "Austin Wells",
+    "position": "C",
+    "school": "University of Arizona",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 29,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "Bobby Miller",
+    "position": "P",
+    "school": "University of Louisville",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 30,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Jordan Westburg",
+    "position": "SS",
+    "school": "Mississippi State University",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 31,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Carmen Mlodzinski",
+    "position": "P",
+    "school": "University of South Carolina",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 32,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Nick Loftin",
+    "position": "SS",
+    "school": "Baylor University",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 33,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Slade Cecconi",
+    "position": "P",
+    "school": "University of Miami",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 34,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "Justin Lange",
+    "position": "P",
+    "school": "Llano HS",
+    "level": "HS"
+  },
+  {
+    "year": 2020,
+    "overall": 35,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Drew Romo",
+    "position": "C",
+    "school": "The Woodlands HS",
+    "level": "HS"
+  },
+  {
+    "year": 2020,
+    "overall": 36,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Tanner Burns",
+    "position": "P",
+    "school": "Auburn University",
+    "level": "College"
+  },
+  {
+    "year": 2020,
+    "overall": 37,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Alika Williams",
+    "position": "SS",
+    "school": "Arizona State University",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 1,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Henry Davis",
+    "position": "C",
+    "school": "University of Louisville",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 2,
+    "round": 1,
+    "team": "Texas Rangers",
+    "player": "Jack Leiter",
+    "position": "P",
+    "school": "Vanderbilt University",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 3,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Jackson Jobe",
+    "position": "P",
+    "school": "Heritage Hall School",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 4,
+    "round": 1,
+    "team": "Boston Red Sox",
+    "player": "Marcelo Mayer",
+    "position": "SS",
+    "school": "Eastlake HS",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 5,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Colton Cowser",
+    "position": "OF",
+    "school": "Sam Houston State University",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 6,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Jordan Lawlar",
+    "position": "SS",
+    "school": "Jesuit College Preparatory School of Dallas",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 7,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Frank Mozzicato",
+    "position": "P",
+    "school": "East Catholic HS",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 8,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Benny Montgomery",
+    "position": "OF",
+    "school": "Red Land HS",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 9,
+    "round": 1,
+    "team": "Los Angeles Angels",
+    "player": "Sam Bachman",
+    "position": "P",
+    "school": "Miami University of Ohio",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 10,
+    "round": 1,
+    "team": "New York Mets",
+    "player": "Kumar Rocker",
+    "position": "P",
+    "school": "Vanderbilt University",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 11,
+    "round": 1,
+    "team": "Washington Nationals",
+    "player": "Brady House",
+    "position": "SS",
+    "school": "Winder-Barrow HS",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 12,
+    "round": 1,
+    "team": "Seattle Mariners",
+    "player": "Harry Ford",
+    "position": "C",
+    "school": "North Cobb HS",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 13,
+    "round": 1,
+    "team": "Philadelphia Phillies",
+    "player": "Andrew Painter",
+    "position": "P",
+    "school": "Calvary Christian Academy",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 14,
+    "round": 1,
+    "team": "San Francisco Giants",
+    "player": "Will Bednar",
+    "position": "P",
+    "school": "Mississippi State University",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 15,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Sal Frelick",
+    "position": "OF",
+    "school": "Boston College",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 16,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "Kahlil Watson",
+    "position": "SS",
+    "school": "Wake Forest HS",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 17,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Matt McLain",
+    "position": "SS",
+    "school": "University of California, Los Angeles",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 18,
+    "round": 1,
+    "team": "St. Louis Cardinals",
+    "player": "Michael McGreevy",
+    "position": "P",
+    "school": "University of California, Santa Barbara",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 19,
+    "round": 1,
+    "team": "Toronto Blue Jays",
+    "player": "Gunnar Hoglund",
+    "position": "P",
+    "school": "University of Mississippi",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 20,
+    "round": 1,
+    "team": "New York Yankees",
+    "player": "Trey Sweeney",
+    "position": "SS",
+    "school": "Eastern Illinois University",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 21,
+    "round": 1,
+    "team": "Chicago Cubs",
+    "player": "Jordan Wicks",
+    "position": "P",
+    "school": "Kansas State University",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 22,
+    "round": 1,
+    "team": "Chicago White Sox",
+    "player": "Colson Montgomery",
+    "position": "SS",
+    "school": "Southridge HS",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 23,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Gavin Williams",
+    "position": "P",
+    "school": "East Carolina University",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 24,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Ryan Cusick",
+    "position": "P",
+    "school": "Wake Forest University",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 25,
+    "round": 1,
+    "team": "Athletics",
+    "player": "Max Muncy",
+    "position": "SS",
+    "school": "Thousand Oaks HS",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 26,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Chase Petty",
+    "position": "P",
+    "school": "Mainland Regional HS",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 27,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "Jackson Merrill",
+    "position": "SS",
+    "school": "Severna Park HS",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 28,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Carson Williams",
+    "position": "SS",
+    "school": "Torrey Pines HS",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 29,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "Maddux Bruns",
+    "position": "P",
+    "school": "UMS-Wright Prep",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 30,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Jay Allen",
+    "position": "OF",
+    "school": "John Carroll Catholic HS",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 31,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "Joe Mack",
+    "position": "C",
+    "school": "Williamsville East HS",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 32,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Ty Madden",
+    "position": "P",
+    "school": "University of Texas at Austin",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 33,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Tyler Black",
+    "position": "2B",
+    "school": "Wright State University",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 34,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Cooper Kinney",
+    "position": "2B",
+    "school": "Baylor School",
+    "level": "HS"
+  },
+  {
+    "year": 2021,
+    "overall": 35,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Mat Nelson",
+    "position": "C",
+    "school": "Florida State University",
+    "level": "College"
+  },
+  {
+    "year": 2021,
+    "overall": 36,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Noah Miller",
+    "position": "SS",
+    "school": "Ozaukee HS",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 1,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Jackson Holliday",
+    "position": "SS",
+    "school": "Stillwater HS",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 2,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Druw Jones",
+    "position": "OF",
+    "school": "Wesleyan School",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 3,
+    "round": 1,
+    "team": "Texas Rangers",
+    "player": "Kumar Rocker",
+    "position": "P",
+    "school": "",
+    "level": ""
+  },
+  {
+    "year": 2022,
+    "overall": 4,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Termarr Johnson",
+    "position": "SS",
+    "school": "Benjamin E. Mays HS",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 5,
+    "round": 1,
+    "team": "Washington Nationals",
+    "player": "Elijah Green",
+    "position": "OF",
+    "school": "IMG Academy",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 6,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "Jacob Berry",
+    "position": "3B",
+    "school": "Louisiana State University",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 7,
+    "round": 1,
+    "team": "Chicago Cubs",
+    "player": "Cade Horton",
+    "position": "P",
+    "school": "University of Oklahoma",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 8,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Brooks Lee",
+    "position": "SS",
+    "school": "California Polytechnic State University, San Luis Obispo",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 9,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Gavin Cross",
+    "position": "OF",
+    "school": "Virginia Polytechnic Institute and State University",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 10,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Gabriel Hughes",
+    "position": "P",
+    "school": "Gonzaga University",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 11,
+    "round": 1,
+    "team": "New York Mets",
+    "player": "Kevin Parada",
+    "position": "C",
+    "school": "Georgia Institute of Technology",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 12,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Jace Jung",
+    "position": "2B",
+    "school": "Texas Tech University",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 13,
+    "round": 1,
+    "team": "Los Angeles Angels",
+    "player": "Zach Neto",
+    "position": "SS",
+    "school": "Campbell University",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 14,
+    "round": 1,
+    "team": "New York Mets",
+    "player": "Jett Williams",
+    "position": "SS",
+    "school": "Rockwall-Heath HS",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 15,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "Dylan Lesko",
+    "position": "P",
+    "school": "Buford HS",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 16,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Chase DeLauter",
+    "position": "OF",
+    "school": "James Madison University",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 17,
+    "round": 1,
+    "team": "Philadelphia Phillies",
+    "player": "Justin Crawford",
+    "position": "OF",
+    "school": "Bishop Gorman HS",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 18,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Cam Collier",
+    "position": "3B",
+    "school": "Chipola College",
+    "level": "JUCO"
+  },
+  {
+    "year": 2022,
+    "overall": 19,
+    "round": 1,
+    "team": "Athletics",
+    "player": "Daniel Susac",
+    "position": "C",
+    "school": "University of Arizona",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 20,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Owen Murphy",
+    "position": "P",
+    "school": "Riverside-Brookfield HS",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 21,
+    "round": 1,
+    "team": "Seattle Mariners",
+    "player": "Cole Young",
+    "position": "SS",
+    "school": "North Allegheny HS",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 22,
+    "round": 1,
+    "team": "St. Louis Cardinals",
+    "player": "Cooper Hjerpe",
+    "position": "P",
+    "school": "Oregon State University",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 23,
+    "round": 1,
+    "team": "Toronto Blue Jays",
+    "player": "Brandon Barriera",
+    "position": "P",
+    "school": "American Heritage HS",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 24,
+    "round": 1,
+    "team": "Boston Red Sox",
+    "player": "Mikey Romero",
+    "position": "SS",
+    "school": "Orange Lutheran HS",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 25,
+    "round": 1,
+    "team": "New York Yankees",
+    "player": "Spencer Jones",
+    "position": "OF",
+    "school": "Vanderbilt University",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 26,
+    "round": 1,
+    "team": "Chicago White Sox",
+    "player": "Noah Schultz",
+    "position": "P",
+    "school": "Oswego East HS",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 27,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Eric Brown",
+    "position": "SS",
+    "school": "Coastal Carolina University",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 28,
+    "round": 1,
+    "team": "Houston Astros",
+    "player": "Drew Gilbert",
+    "position": "OF",
+    "school": "University of Tennessee",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 29,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Xavier Isaac",
+    "position": "1B",
+    "school": "East Forsyth HS",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 30,
+    "round": 1,
+    "team": "San Francisco Giants",
+    "player": "Reggie Crawford",
+    "position": "TWP",
+    "school": "University of Connecticut",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 31,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Sterlin Thompson",
+    "position": "OF",
+    "school": "University of Florida",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 32,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Sal Stewart",
+    "position": "3B",
+    "school": "Westminster Christian School",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 33,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Dylan Beavers",
+    "position": "OF",
+    "school": "University of California, Berkeley",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 34,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Landon Sims",
+    "position": "P",
+    "school": "Mississippi State University",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 35,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "JR Ritchie",
+    "position": "P",
+    "school": "Bainbridge HS",
+    "level": "HS"
+  },
+  {
+    "year": 2022,
+    "overall": 36,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Tom Harrington",
+    "position": "P",
+    "school": "Campbell University",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 37,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Justin Campbell",
+    "position": "P",
+    "school": "Oklahoma State University",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 38,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Jordan Beck",
+    "position": "OF",
+    "school": "University of Tennessee",
+    "level": "College"
+  },
+  {
+    "year": 2022,
+    "overall": 39,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "Robby Snelling",
+    "position": "P",
+    "school": "Robert McQueen HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 1,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Paul Skenes",
+    "position": "P",
+    "school": "Louisiana State University",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 2,
+    "round": 1,
+    "team": "Washington Nationals",
+    "player": "Dylan Crews",
+    "position": "OF",
+    "school": "Louisiana State University",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 3,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Max Clark",
+    "position": "OF",
+    "school": "Franklin Community HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 4,
+    "round": 1,
+    "team": "Texas Rangers",
+    "player": "Wyatt Langford",
+    "position": "OF",
+    "school": "University of Florida",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 5,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Walker Jenkins",
+    "position": "OF",
+    "school": "South Brunswick HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 6,
+    "round": 1,
+    "team": "Athletics",
+    "player": "Jacob Wilson",
+    "position": "SS",
+    "school": "Grand Canyon University",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 7,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Rhett Lowder",
+    "position": "P",
+    "school": "Wake Forest University",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 8,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Blake Mitchell",
+    "position": "C",
+    "school": "Sinton HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 9,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Chase Dollander",
+    "position": "P",
+    "school": "University of Tennessee",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 10,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "Noble Meyer",
+    "position": "P",
+    "school": "Jesuit HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 11,
+    "round": 1,
+    "team": "Los Angeles Angels",
+    "player": "Nolan Schanuel",
+    "position": "1B",
+    "school": "Florida Atlantic University",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 12,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Tommy Troy",
+    "position": "SS",
+    "school": "Stanford University",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 13,
+    "round": 1,
+    "team": "Chicago Cubs",
+    "player": "Matt Shaw",
+    "position": "SS",
+    "school": "University of Maryland",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 14,
+    "round": 1,
+    "team": "Boston Red Sox",
+    "player": "Kyle Teel",
+    "position": "C",
+    "school": "University of Virginia",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 15,
+    "round": 1,
+    "team": "Chicago White Sox",
+    "player": "Jacob Gonzalez",
+    "position": "SS",
+    "school": "University of Mississippi",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 16,
+    "round": 1,
+    "team": "San Francisco Giants",
+    "player": "Bryce Eldridge",
+    "position": "TWP",
+    "school": "James Madison HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 17,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Enrique Bradfield",
+    "position": "OF",
+    "school": "Vanderbilt University",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 18,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Brock Wilken",
+    "position": "3B",
+    "school": "Wake Forest University",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 19,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Brayden Taylor",
+    "position": "SS",
+    "school": "Texas Christian University",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 20,
+    "round": 1,
+    "team": "Toronto Blue Jays",
+    "player": "Arjun Nimmala",
+    "position": "SS",
+    "school": "Strawberry Crest HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 21,
+    "round": 1,
+    "team": "St. Louis Cardinals",
+    "player": "Chase Davis",
+    "position": "OF",
+    "school": "University of Arizona",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 22,
+    "round": 1,
+    "team": "Seattle Mariners",
+    "player": "Colt Emerson",
+    "position": "SS",
+    "school": "John Glenn HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 23,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Ralphy Velazquez",
+    "position": "C",
+    "school": "Huntington Beach HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 24,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Hurston Waldrep",
+    "position": "P",
+    "school": "University of Florida",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 25,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "Dillon Head",
+    "position": "OF",
+    "school": "Homewood-Flossmoor Community HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 26,
+    "round": 1,
+    "team": "New York Yankees",
+    "player": "George Lombard Jr.",
+    "position": "SS",
+    "school": "Gulliver Preparatory School",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 27,
+    "round": 1,
+    "team": "Philadelphia Phillies",
+    "player": "Aidan Miller",
+    "position": "SS",
+    "school": "J. W. Mitchell HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 28,
+    "round": 1,
+    "team": "Houston Astros",
+    "player": "Brice Matthews",
+    "position": "SS",
+    "school": "University of Nebraska-Lincoln",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 29,
+    "round": 1,
+    "team": "Seattle Mariners",
+    "player": "Jonny Farmelo",
+    "position": "OF",
+    "school": "Westfield HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 30,
+    "round": 1,
+    "team": "Seattle Mariners",
+    "player": "Tai Peete",
+    "position": "SS",
+    "school": "Trinity Christian School",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 31,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Adrian Santana",
+    "position": "SS",
+    "school": "Doral Academy Preparatory School",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 32,
+    "round": 1,
+    "team": "New York Mets",
+    "player": "Colin Houck",
+    "position": "SS",
+    "school": "Parkview HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 33,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Josh Knoth",
+    "position": "P",
+    "school": "Patchogue-Medford HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 34,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Charlee Soto",
+    "position": "P",
+    "school": "Reborn Christian Academy",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 35,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "Thomas White",
+    "position": "P",
+    "school": "Phillips Academy Andover",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 36,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "Kendall George",
+    "position": "OF",
+    "school": "Atascocita HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 37,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Kevin McGonigle",
+    "position": "SS",
+    "school": "Monsignor Bonner and Archbishop Prendergast HS",
+    "level": "HS"
+  },
+  {
+    "year": 2023,
+    "overall": 38,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Ty Floyd",
+    "position": "P",
+    "school": "Louisiana State University",
+    "level": "College"
+  },
+  {
+    "year": 2023,
+    "overall": 39,
+    "round": 1,
+    "team": "Athletics",
+    "player": "Myles Naylor",
+    "position": "3B",
+    "school": "St. Joan of Arc Catholic SS",
+    "level": "HS"
+  },
+  {
+    "year": 2024,
+    "overall": 1,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Travis Bazzana",
+    "position": "2B",
+    "school": "Oregon State University",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 2,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Chase Burns",
+    "position": "P",
+    "school": "Wake Forest University",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 3,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Charlie Condon",
+    "position": "OF",
+    "school": "University of Georgia",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 4,
+    "round": 1,
+    "team": "Athletics",
+    "player": "Nick Kurtz",
+    "position": "1B",
+    "school": "Wake Forest University",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 5,
+    "round": 1,
+    "team": "Chicago White Sox",
+    "player": "Hagen Smith",
+    "position": "P",
+    "school": "University of Arkansas",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 6,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Jac Caglianone",
+    "position": "TWP",
+    "school": "University of Florida",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 7,
+    "round": 1,
+    "team": "St. Louis Cardinals",
+    "player": "JJ Wetherholt",
+    "position": "SS",
+    "school": "West Virginia University",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 8,
+    "round": 1,
+    "team": "Los Angeles Angels",
+    "player": "Christian Moore",
+    "position": "2B",
+    "school": "University of Tennessee",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 9,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Konnor Griffin",
+    "position": "SS",
+    "school": "Jackson Preparatory School",
+    "level": "HS"
+  },
+  {
+    "year": 2024,
+    "overall": 10,
+    "round": 1,
+    "team": "Washington Nationals",
+    "player": "Seaver King",
+    "position": "SS",
+    "school": "Wake Forest University",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 11,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Bryce Rainer",
+    "position": "SS",
+    "school": "Harvard-Westlake HS",
+    "level": "HS"
+  },
+  {
+    "year": 2024,
+    "overall": 12,
+    "round": 1,
+    "team": "Boston Red Sox",
+    "player": "Braden Montgomery",
+    "position": "OF",
+    "school": "Texas A&M University",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 13,
+    "round": 1,
+    "team": "San Francisco Giants",
+    "player": "James Tibbs III",
+    "position": "OF",
+    "school": "Florida State University",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 14,
+    "round": 1,
+    "team": "Chicago Cubs",
+    "player": "Cam Smith",
+    "position": "3B",
+    "school": "Florida State University",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 15,
+    "round": 1,
+    "team": "Seattle Mariners",
+    "player": "Jurrangelo Cijntje",
+    "position": "P",
+    "school": "Mississippi State University",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 16,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "PJ Morlando",
+    "position": "OF",
+    "school": "Summerville HS",
+    "level": "HS"
+  },
+  {
+    "year": 2024,
+    "overall": 17,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Braylon Payne",
+    "position": "OF",
+    "school": "Lawrence E. Elkins HS",
+    "level": "HS"
+  },
+  {
+    "year": 2024,
+    "overall": 18,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Theo Gillen",
+    "position": "OF",
+    "school": "Westlake HS",
+    "level": "HS"
+  },
+  {
+    "year": 2024,
+    "overall": 19,
+    "round": 1,
+    "team": "New York Mets",
+    "player": "Carson Benge",
+    "position": "OF",
+    "school": "Oklahoma State University",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 20,
+    "round": 1,
+    "team": "Toronto Blue Jays",
+    "player": "Trey Yesavage",
+    "position": "P",
+    "school": "East Carolina University",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 21,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Kaelen Culpepper",
+    "position": "SS",
+    "school": "Kansas State University",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 22,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Vance Honeycutt",
+    "position": "OF",
+    "school": "University of North Carolina at Chapel Hill",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 23,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "Kellon Lindsey",
+    "position": "SS",
+    "school": "Hardee HS",
+    "level": "HS"
+  },
+  {
+    "year": 2024,
+    "overall": 24,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Cam Caminiti",
+    "position": "P",
+    "school": "Saguaro HS",
+    "level": "HS"
+  },
+  {
+    "year": 2024,
+    "overall": 25,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "Kash Mayfield",
+    "position": "P",
+    "school": "Elk City HS",
+    "level": "HS"
+  },
+  {
+    "year": 2024,
+    "overall": 26,
+    "round": 1,
+    "team": "New York Yankees",
+    "player": "Ben Hess",
+    "position": "P",
+    "school": "University of Alabama",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 27,
+    "round": 1,
+    "team": "Philadelphia Phillies",
+    "player": "Dante Nori",
+    "position": "OF",
+    "school": "Northville HS",
+    "level": "HS"
+  },
+  {
+    "year": 2024,
+    "overall": 28,
+    "round": 1,
+    "team": "Houston Astros",
+    "player": "Walker Janek",
+    "position": "C",
+    "school": "Sam Houston State University",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 29,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Slade Caldwell",
+    "position": "OF",
+    "school": "Valley View HS",
+    "level": "HS"
+  },
+  {
+    "year": 2024,
+    "overall": 30,
+    "round": 1,
+    "team": "Texas Rangers",
+    "player": "Malcolm Moore",
+    "position": "C",
+    "school": "Stanford University",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 31,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Ryan Waldschmidt",
+    "position": "OF",
+    "school": "University of Kentucky",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 32,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Griff O'Ferrall",
+    "position": "SS",
+    "school": "University of Virginia",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 33,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Kyle DeBarge",
+    "position": "SS",
+    "school": "University of Louisiana at Lafayette",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 34,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Blake Burke",
+    "position": "1B",
+    "school": "University of Tennessee",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 35,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "JD Dix",
+    "position": "SS",
+    "school": "Whitefish Bay HS",
+    "level": "HS"
+  },
+  {
+    "year": 2024,
+    "overall": 36,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Braylon Doughty",
+    "position": "P",
+    "school": "Chaparral HS",
+    "level": "HS"
+  },
+  {
+    "year": 2024,
+    "overall": 37,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Levi Sterling",
+    "position": "P",
+    "school": "Notre Dame HS",
+    "level": "HS"
+  },
+  {
+    "year": 2024,
+    "overall": 38,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Brody Brecht",
+    "position": "P",
+    "school": "University of Iowa",
+    "level": "College"
+  },
+  {
+    "year": 2024,
+    "overall": 39,
+    "round": 1,
+    "team": "Washington Nationals",
+    "player": "Caleb Lomavita",
+    "position": "C",
+    "school": "University of California, Berkeley",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 1,
+    "round": 1,
+    "team": "Washington Nationals",
+    "player": "Eli Willits",
+    "position": "SS",
+    "school": "Fort Cobb-Broxton HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 2,
+    "round": 1,
+    "team": "Los Angeles Angels",
+    "player": "Tyler Bremner",
+    "position": "P",
+    "school": "University of California, Santa Barbara",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 3,
+    "round": 1,
+    "team": "Seattle Mariners",
+    "player": "Kade Anderson",
+    "position": "P",
+    "school": "Louisiana State University",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 4,
+    "round": 1,
+    "team": "Colorado Rockies",
+    "player": "Ethan Holliday",
+    "position": "SS",
+    "school": "Stillwater HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 5,
+    "round": 1,
+    "team": "St. Louis Cardinals",
+    "player": "Liam Doyle",
+    "position": "P",
+    "school": "University of Tennessee",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 6,
+    "round": 1,
+    "team": "Pittsburgh Pirates",
+    "player": "Seth Hernandez",
+    "position": "P",
+    "school": "Corona HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 7,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "Aiva Arquette",
+    "position": "SS",
+    "school": "Oregon State University",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 8,
+    "round": 1,
+    "team": "Toronto Blue Jays",
+    "player": "JoJo Parker",
+    "position": "SS",
+    "school": "Purvis HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 9,
+    "round": 1,
+    "team": "Cincinnati Reds",
+    "player": "Steele Hall",
+    "position": "SS",
+    "school": "Hewitt-Trussville HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 10,
+    "round": 1,
+    "team": "Chicago White Sox",
+    "player": "Billy Carlson",
+    "position": "SS",
+    "school": "Corona HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 11,
+    "round": 1,
+    "team": "Athletics",
+    "player": "Jamie Arnold",
+    "position": "P",
+    "school": "Florida State University",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 12,
+    "round": 1,
+    "team": "Texas Rangers",
+    "player": "Gavin Fien",
+    "position": "SS",
+    "school": "Great Oak HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 13,
+    "round": 1,
+    "team": "San Francisco Giants",
+    "player": "Gavin Kilen",
+    "position": "SS",
+    "school": "University of Tennessee",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 14,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Daniel Pierce",
+    "position": "SS",
+    "school": "Mill Creek HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 15,
+    "round": 1,
+    "team": "Boston Red Sox",
+    "player": "Kyson Witherspoon",
+    "position": "P",
+    "school": "University of Oklahoma",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 16,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Marek Houston",
+    "position": "SS",
+    "school": "Wake Forest University",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 17,
+    "round": 1,
+    "team": "Chicago Cubs",
+    "player": "Ethan Conrad",
+    "position": "OF",
+    "school": "Wake Forest University",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 18,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Kayson Cunningham",
+    "position": "SS",
+    "school": "Lady Bird Johnson HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 19,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Ike Irish",
+    "position": "C",
+    "school": "Auburn University",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 20,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Andrew Fischer",
+    "position": "3B",
+    "school": "University of Tennessee",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 21,
+    "round": 1,
+    "team": "Houston Astros",
+    "player": "Xavier Neyens",
+    "position": "SS",
+    "school": "Mount Vernon HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 22,
+    "round": 1,
+    "team": "Atlanta Braves",
+    "player": "Tate Southisene",
+    "position": "SS",
+    "school": "Basic HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 23,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Sean Gamble",
+    "position": "OF",
+    "school": "IMG Academy",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 24,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Jordan Yost",
+    "position": "SS",
+    "school": "Walter L. Sickles HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 25,
+    "round": 1,
+    "team": "San Diego Padres",
+    "player": "Kruz Schoolcraft",
+    "position": "P",
+    "school": "Sunset HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 26,
+    "round": 1,
+    "team": "Philadelphia Phillies",
+    "player": "Gage Wood",
+    "position": "P",
+    "school": "University of Arkansas",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 27,
+    "round": 1,
+    "team": "Cleveland Guardians",
+    "player": "Jace LaViolette",
+    "position": "OF",
+    "school": "Texas A&M University",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 28,
+    "round": 1,
+    "team": "Kansas City Royals",
+    "player": "Josh Hammond",
+    "position": "SS",
+    "school": "Wesleyan Christian Academy",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 29,
+    "round": 1,
+    "team": "Arizona Diamondbacks",
+    "player": "Patrick Forbes",
+    "position": "P",
+    "school": "University of Louisville",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 30,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Caden Bodine",
+    "position": "C",
+    "school": "Coastal Carolina University",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 31,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Wehiwa Aloy",
+    "position": "SS",
+    "school": "University of Arkansas",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 32,
+    "round": 1,
+    "team": "Milwaukee Brewers",
+    "player": "Brady Ebel",
+    "position": "SS",
+    "school": "Corona HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 33,
+    "round": 1,
+    "team": "Boston Red Sox",
+    "player": "Marcus Phillips",
+    "position": "P",
+    "school": "University of Tennessee",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 34,
+    "round": 1,
+    "team": "Detroit Tigers",
+    "player": "Michael Oliveto",
+    "position": "C",
+    "school": "Hauppauge HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 35,
+    "round": 1,
+    "team": "Seattle Mariners",
+    "player": "Luke Stevenson",
+    "position": "C",
+    "school": "University of North Carolina at Chapel Hill",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 36,
+    "round": 1,
+    "team": "Minnesota Twins",
+    "player": "Riley Quick",
+    "position": "P",
+    "school": "University of Alabama",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 37,
+    "round": 1,
+    "team": "Baltimore Orioles",
+    "player": "Slater de Brun",
+    "position": "OF",
+    "school": "Summit HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 38,
+    "round": 1,
+    "team": "New York Mets",
+    "player": "Mitch Voit",
+    "position": "TWP",
+    "school": "University of Michigan",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 39,
+    "round": 1,
+    "team": "New York Yankees",
+    "player": "Dax Kilby",
+    "position": "SS",
+    "school": "Newnan HS",
+    "level": "HS"
+  },
+  {
+    "year": 2025,
+    "overall": 40,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "Zach Root",
+    "position": "P",
+    "school": "University of Arkansas",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 41,
+    "round": 1,
+    "team": "Los Angeles Dodgers",
+    "player": "Charles Davalan",
+    "position": "OF",
+    "school": "University of Arkansas",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 42,
+    "round": 1,
+    "team": "Tampa Bay Rays",
+    "player": "Brendan Summerhill",
+    "position": "OF",
+    "school": "University of Arizona",
+    "level": "College"
+  },
+  {
+    "year": 2025,
+    "overall": 43,
+    "round": 1,
+    "team": "Miami Marlins",
+    "player": "Cam Cannarella",
+    "position": "OF",
+    "school": "Clemson University",
+    "level": "College"
+  }
+]

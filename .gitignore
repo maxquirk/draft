@@ -1,0 +1,28 @@
+# Caesar harness state (not part of this project)
+brain/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Scraper artifacts
+scraper/.cache/
+scraper/_raw/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# shinylive build output (~43MB Pyodide runtime). Rebuilt fresh by the deploy
+# workflow in CI, so we don't commit it. If you prefer the Pages "Deploy from
+# branch -> /docs" route instead of GitHub Actions, force-add it: git add -f docs
+docs/
+.shinylive/
+
+# manual data drops are local to the operator
+scraper/manual/*.csv
