@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-22 05:41 UTC",
-  "n_players": 522,
+  "generated_at": "2026-06-22 15:51 UTC",
+  "n_players": 269,
   "sources": [
     {
       "key": "mlb_pipeline",
@@ -52,8 +52,8 @@
       "name": "Baseball America",
       "access": "paywall",
       "weight": 1.4,
-      "status": "ok",
-      "rows": 500,
+      "status": "empty",
+      "rows": 0,
       "error": ""
     }
   ],
