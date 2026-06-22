@@ -2,6 +2,8 @@
 
 Aggregates many simulated drafts (consensus board x real 2026 order x team
 tendencies) into each player's projected slot, landing team, and round-1 odds.
+Uses the same render.data_frame grid the Explorer uses (renders reliably in
+shinylive/Pyodide).
 """
 from __future__ import annotations
 
@@ -13,6 +15,13 @@ from logic import dataio
 _DF = dataio.projections()
 _META = dataio.projections_meta()
 _TEAMS = sorted(_DF["likely_team"].dropna().unique()) if len(_DF) else []
+_MAXPICK = int(_DF["proj_pick"].max()) if len(_DF) else 40
+
+_DISPLAY = ["proj_pick", "player", "position", "school", "consensus_rank",
+            "range", "round1_pct", "landing"]
+_RENAME = {"proj_pick": "Proj", "player": "Player", "position": "Pos",
+           "school": "School", "consensus_rank": "Consensus", "range": "Pick range",
+           "round1_pct": "Round-1 %", "landing": "Likely landing (freq)"}
 
 
 @module.ui
@@ -20,19 +29,17 @@ def projections_ui():
     if not len(_DF):
         return ui.p("No projections yet — run the scraper (it runs the Monte Carlo "
                     "after building the board and team data).", class_="muted")
-    return ui.div(
-        ui.p(_META.get("note", ""), class_="muted"),
-        ui.layout_sidebar(
-            ui.sidebar(
-                ui.input_slider("maxpick", "Show players projected within pick", 5,
-                                int(_DF["proj_pick"].max()), min(40, int(_DF["proj_pick"].max()))),
-                ui.input_selectize("team", "Likely landing team", ["(all)"] + _TEAMS),
-                ui.help_text("R1% = share of simulations the player was taken in round 1. "
-                             "Range = 10th–90th-percentile pick across sims."),
-                width=320,
-            ),
-            ui.output_ui("table"),
+    return ui.layout_sidebar(
+        ui.sidebar(
+            ui.input_slider("maxpick", "Show players projected within pick",
+                            5, max(_MAXPICK, 6), min(_MAXPICK, _MAXPICK)),
+            ui.input_selectize("team", "Likely landing team", ["(all)"] + _TEAMS),
+            ui.help_text("Round-1 % = share of simulations the player was taken in "
+                         "the first round. Pick range = 10th–90th-percentile pick."),
+            width=340,
         ),
+        ui.p(_META.get("note", ""), class_="muted"),
+        ui.output_data_frame("grid"),
     )
 
 
@@ -45,28 +52,16 @@ def projections_server(input, output, session):
             d = d[d["likely_team"] == input.team()]
         return d
 
-    @render.ui
-    def table():
-        d = filtered()
+    @render.data_frame
+    def grid():
+        d = filtered().copy()
         if not len(d):
-            return ui.p("No players match.", class_="muted")
-        rows = []
-        for _, r in d.iterrows():
-            pr1 = int(round(100 * r["p_round1"]))
-            bar = (f'<span class="p1-track"><span class="p1-fill" '
-                   f'style="width:{pr1}%"></span></span>')
-            rows.append(
-                f'<tr><td class="pj-pick">{int(r["proj_pick"])}</td>'
-                f'<td class="pj-name">{r["player"]}</td><td>{r["position"]}</td>'
-                f'<td>{r["school"]}</td><td>{int(r["consensus_rank"])}</td>'
-                f'<td>{int(r["proj_low"])}–{int(r["proj_high"])}</td>'
-                f'<td>{r["likely_team"]} '
-                f'<span class="muted">({int(round(100*r["likely_team_pct"]))}%)</span></td>'
-                f'<td>{bar}<span class="p1-num">{pr1}%</span></td></tr>'
-            )
-        return ui.HTML(
-            '<div class="sim-wrap"><table class="sim-table"><thead><tr>'
-            '<th>Proj.</th><th>Player</th><th>Pos</th><th>School</th><th>Cons.</th>'
-            '<th>Range</th><th>Likely landing</th><th>Round-1 odds</th>'
-            '</tr></thead><tbody>' + "".join(rows) + "</tbody></table></div>"
-        )
+            return render.DataGrid(pd.DataFrame({"info": ["No players match."]}))
+        d["range"] = (d["proj_low"].astype(int).astype(str) + "–"
+                      + d["proj_high"].astype(int).astype(str))
+        d["round1_pct"] = (d["p_round1"] * 100).round().astype(int).astype(str) + "%"
+        d["landing"] = (d["likely_team"] + " ("
+                        + (d["likely_team_pct"] * 100).round().astype(int).astype(str)
+                        + "%)")
+        out = d[_DISPLAY].rename(columns=_RENAME)
+        return render.DataGrid(out, height="600px", width="100%")
