@@ -80,6 +80,7 @@ app_ui = ui.page_navbar(
 def server(input, output, session):
     explorer_server("explorer")
     bigboard_server("bigboard")
+    projections_server("proj")
     simulator_server("sim")
     team_strategy_server("teams")
 
