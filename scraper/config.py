@@ -11,8 +11,6 @@ SOURCES: list[tuple[str, SourceMeta]] = [
         "https://www.mlb.com/news/top-200-draft-prospects-for-2026", "free", weight=1.2)),
     ("just_baseball", SourceMeta("just_baseball", "Just Baseball",
         "https://www.justbaseball.com/mlb-draft/mlb-draft-top-college-prospects/", "free", weight=1.0)),
-    ("eleven_point7", SourceMeta("eleven_point7", "11Point7",
-        "https://www.11point7.com/mlb-draft/2026-prospect-big-board", "free", weight=1.0)),
     ("espn_mcdaniel", SourceMeta("espn_mcdaniel", "ESPN / Kiley McDaniel",
         "https://www.espn.com/mlb/story/_/id/48778463/2026-mlb-draft-rankings-update-top-150-prospects",
         "paywall", weight=1.4)),

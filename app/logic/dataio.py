@@ -44,11 +44,26 @@ def consensus() -> pd.DataFrame:
 
 def source_keys() -> list[str]:
     df = consensus()
-    return [c[4:] for c in df.columns if c.startswith("src_")]
+    keys = [c[4:] for c in df.columns if c.startswith("src_")]
+    # MLB Pipeline first, Baseball America second
+    priority = ["mlb_pipeline", "baseball_america"]
+    rest = [k for k in keys if k not in priority]
+    return [k for k in priority if k in keys] + rest
+
+
+_SOURCE_LABELS = {
+    "mlb_pipeline": "MLB Pipeline",
+    "baseball_america": "BA",
+    "espn_mcdaniel": "ESPN/McDaniel",
+    "keith_law": "Keith Law",
+    "just_baseball": "Just Baseball",
+    "perfect_game": "Perfect Game",
+    "fangraphs": "FanGraphs",
+}
 
 
 def source_label(key: str) -> str:
-    return key.replace("_", " ").title()
+    return _SOURCE_LABELS.get(key, key.replace("_", " ").title())
 
 
 @lru_cache(maxsize=1)

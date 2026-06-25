@@ -305,3 +305,17 @@ label, .control-label {
   color: #05090f !important;
   font-weight: 700;
 }
+
+/* ── Player search cards ────────────────────────────────── */
+.player-card-grid { display: flex; flex-direction: column; gap: .5rem; max-width: 560px; }
+.player-card {
+  padding: .6rem .9rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: border-color .15s, background .15s;
+}
+.player-card:hover {
+  background: var(--surface3, var(--surface2));
+  border-color: var(--accent);
+}

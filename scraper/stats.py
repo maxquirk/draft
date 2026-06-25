@@ -1,7 +1,7 @@
-"""Scrape 2025 college player stats for draft prospects from Baseball Reference.
+"""Scrape 2025 college player stats for draft prospects from The Baseball Cube.
 
-Uses BR search to find each college player's register page, then extracts
-their most recent season stats. HS players are skipped (no college stats).
+Uses TBC's AJAX search to find player IDs, then fetches per-player pages for
+NCAA stats. HS players are skipped (no college stats). JUCO players included.
 
 Writes app/data/player_stats_2026.csv.
 Run standalone:  python -m scraper.stats
@@ -10,8 +10,9 @@ from __future__ import annotations
 
 import csv
 import re
-import time
 from pathlib import Path
+
+from rapidfuzz import fuzz
 
 from .base import get
 from .normalize import canon_name
@@ -19,7 +20,11 @@ from .normalize import canon_name
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT.parent / "app" / "data"
 
-_BR_SEARCH = "https://www.baseball-reference.com/search/search.fcgi"
+_TBC_SEARCH = "https://www.thebaseballcube.com/code_2026/ajax/search_top.asp"
+_TBC_PLAYER = "https://www.thebaseballcube.com/content/player/{}/"
+
+_NCAA_LEVELS = {"NCAA-1", "NCAA-2", "NCAA-3", "NAIA", "NJCAA", "JUCO", "COLL", "CCBC"}
+
 _COLS = [
     "player_id", "player", "stat_type",
     "avg", "obp", "slg", "ops", "hr", "rbi", "sb",
@@ -27,107 +32,108 @@ _COLS = [
 ]
 
 
-def _safe_float(val: str) -> str:
-    try:
-        return str(round(float(val), 3))
-    except (TypeError, ValueError):
-        return ""
-
-
-def _fetch_br_player_url(name: str) -> str | None:
-    """Search BR for the player and return the first matching register URL."""
-    search_url = f"{_BR_SEARCH}?search={name.replace(' ', '+')}"
-    html = get(search_url, tag=f"br_search_{canon_name(name)[:20]}", cache=True)
+def _tbc_id_for(name: str) -> str | None:
+    """Search TBC by last name, return the TBC player ID for the best match."""
+    parts = name.strip().split()
+    if len(parts) < 2:
+        return None
+    last = parts[-1]
+    html = get(_TBC_SEARCH, params={"Q": last}, tag=f"tbc_search_{canon_name(last)[:20]}", cache=True)
     if not html:
         return None
 
-    # Direct match: BR redirected to a player page
-    if "/players/" in html and "register" in html.lower():
-        reg = re.search(r'href="(/register/player\.fcgi[^"]+)"', html)
-        if reg:
-            return "https://www.baseball-reference.com" + reg.group(1)
+    # Parse rows: id, display_name from onclick and <a> text
+    entries = re.findall(
+        r"goto_url\(['\"][^'\"]+/player/(\d+)/['\"].*?<a[^>]+>([^<]+)</a>",
+        html, re.S
+    )
+    if not entries:
+        return None
 
-    # Search result page: find the register link
-    links = re.findall(r'href="(/register/player\.fcgi[^"]+)"', html)
-    if links:
-        return "https://www.baseball-reference.com" + links[0]
+    canon = canon_name(name)
+    best_id, best_score = None, 0
+    for tbc_id, tbc_name in entries:
+        score = fuzz.token_sort_ratio(canon, canon_name(tbc_name))
+        if score > best_score:
+            best_score, best_id = score, tbc_id
 
-    return None
+    return best_id if best_score >= 80 else None
 
 
-def _parse_stats_from_register(url: str, season: int = 2025) -> dict | None:
-    """Fetch the BR register page and extract the specified season's batting or pitching stats."""
-    html = get(url, tag=f"br_reg_{hash(url) & 0xFFFF}", cache=True)
+def _parse_player_page(tbc_id: str) -> dict | None:
+    """Fetch TBC player page and return 2025 NCAA batting or pitching stats."""
+    url = _TBC_PLAYER.format(tbc_id)
+    html = get(url, tag=f"tbc_player_{tbc_id}", cache=True)
     if not html:
         return None
 
-    # Determine stat type — does this page have a batting or pitching table?
-    has_bat = bool(re.search(r'<table[^>]+id="(batting_standard|bat_stats)"', html))
-    has_pit = bool(re.search(r'<table[^>]+id="(pitching_standard|pit_stats)"', html))
+    tables = re.findall(r"<table[^>]*>(.*?)</table>", html, re.S | re.I)
+    batting, pitching = None, None
 
-    def _extract_row(table_id_pattern: str) -> dict:
-        table_m = re.search(rf'<table[^>]+id="{table_id_pattern}"[^>]*>(.*?)</table>', html, re.S | re.I)
-        if not table_m:
-            return {}
-        tbody = re.search(r'<tbody>(.*?)</tbody>', table_m.group(1), re.S)
-        if not tbody:
-            return {}
-        rows = re.findall(r'<tr[^>]*>(.*?)</tr>', tbody.group(1), re.S)
-        # Find most recent season matching `season`
-        for row in reversed(rows):
-            year_m = re.search(r'data-stat="year_ID"[^>]*>([^<]+)', row)
-            if not year_m:
+    for t in tables:
+        header = re.search(r"<tr[^>]*class=['\"]header-row[^>]*>(.*?)</tr>", t, re.S)
+        if not header:
+            continue
+        cols = re.findall(r"<td[^>]*>([^<]+)</td>", header.group(1))
+        cols = [c.strip().lower() for c in cols]
+
+        is_bat = "avg" in cols and "ab" in cols
+        is_pit = "era" in cols and "ip" in cols
+
+        if not is_bat and not is_pit:
+            continue
+
+        data_rows = re.findall(r"<tr[^>]*class=['\"]data-row[^>]*>(.*?)</tr>", t, re.S)
+        # Collect all rows, prefer 2025, fallback to most recent college season
+        candidate_rows: list[dict] = []
+        for row in data_rows:
+            cells = re.findall(r"<td[^>]*>(?:<a[^>]*>)?([^<]*)(?:</a>)?</td>", row)
+            d = dict(zip(cols, cells))
+            level = d.get("level", "").strip()
+            if not any(lvl in level for lvl in _NCAA_LEVELS):
                 continue
-            yr = year_m.group(1).strip()
-            if str(season) in yr or str(season - 1) in yr:
-                cells = re.findall(r'data-stat="([^"]+)"[^>]*>([^<]*)', row)
-                return {k: re.sub(r"<[^>]+>", "", v).strip() for k, v in cells}
-        # Fall back to last row with data
-        for row in reversed(rows):
-            if "<td" in row:
-                cells = re.findall(r'data-stat="([^"]+)"[^>]*>([^<]*)', row)
-                d = {k: re.sub(r"<[^>]+>", "", v).strip() for k, v in cells}
-                if any(d.get(k) for k in ("batting_avg", "onbase_plus_slugging", "earned_run_avg")):
-                    return d
-        return {}
+            candidate_rows.append(d)
 
-    if has_bat:
-        d = _extract_row(r"batting_standard|bat_stats|standard_batting")
-        if d:
-            return {
-                "stat_type": "BATTER",
-                "avg": _safe_float(d.get("batting_avg", "")),
-                "obp": _safe_float(d.get("onbase_perc", d.get("onbase_pct", ""))),
-                "slg": _safe_float(d.get("slugging_perc", d.get("slugging_pct", ""))),
-                "ops": _safe_float(d.get("onbase_plus_slugging", "")),
-                "hr": d.get("HR", ""),
-                "rbi": d.get("RBI", ""),
-                "sb": d.get("SB", ""),
-            }
-    if has_pit:
-        d = _extract_row(r"pitching_standard|pit_stats|standard_pitching")
-        if d:
-            ip = d.get("IP", "")
-            so = float(d.get("SO", 0) or 0)
-            bb = float(d.get("BB", 0) or 0)
-            ip_f = float(ip) if ip else 0.0
-            k9 = f"{9 * so / ip_f:.2f}" if ip_f > 0 else ""
-            bb9 = f"{9 * bb / ip_f:.2f}" if ip_f > 0 else ""
-            return {
-                "stat_type": "PITCHER",
-                "era": _safe_float(d.get("earned_run_avg", "")),
-                "whip": _safe_float(d.get("whip", "")),
-                "k_9": k9,
-                "bb_9": bb9,
-                "ip": ip,
-                "w": d.get("W", ""),
-                "sv": d.get("SV", ""),
-            }
+        if not candidate_rows:
+            continue
+
+        # Prefer 2025, then take last in list
+        chosen = next((d for d in reversed(candidate_rows) if "2025" in d.get("year", "")), None)
+        if chosen is None:
+            chosen = candidate_rows[-1]
+
+        if is_bat and batting is None:
+            batting = chosen
+        elif is_pit and pitching is None:
+            pitching = chosen
+
+    if batting:
+        return {
+            "stat_type": "BATTER",
+            "avg": batting.get("avg", ""),
+            "obp": batting.get("obp", ""),
+            "slg": batting.get("slg", ""),
+            "ops": batting.get("ops", ""),
+            "hr": batting.get("hr", ""),
+            "rbi": batting.get("rbi", ""),
+            "sb": batting.get("sb", ""),
+        }
+    if pitching:
+        return {
+            "stat_type": "PITCHER",
+            "era": pitching.get("era", ""),
+            "whip": pitching.get("whip", ""),
+            "k_9": pitching.get("so9", ""),
+            "bb_9": pitching.get("bb9", ""),
+            "ip": pitching.get("ip", ""),
+            "w": pitching.get("w", ""),
+            "sv": pitching.get("sv", ""),
+        }
     return None
 
 
 def build() -> None:
-    """Fetch stats for all college prospects and write player_stats_2026.csv."""
+    """Fetch stats for all college/JUCO prospects and write player_stats_2026.csv."""
     consensus_fp = DATA / "consensus_2026.csv"
     if not consensus_fp.exists():
         print("   ! consensus_2026.csv not found")
@@ -136,36 +142,29 @@ def build() -> None:
     prospects: list[dict] = []
     with open(consensus_fp, encoding="utf-8") as f:
         for row in csv.DictReader(f):
-            if str(row.get("class_level", "")).strip().lower() in ("college", "juco"):
+            lvl = str(row.get("class_level", "")).strip().lower()
+            if lvl in ("college", "juco"):
                 prospects.append({
                     "player_id": row.get("player_id", ""),
                     "player": row.get("player", ""),
-                    "position": row.get("position", "").upper(),
                 })
 
-    print(f"   Fetching BR stats for {len(prospects)} college prospects ...")
+    print(f"   Fetching TBC stats for {len(prospects)} college/JUCO prospects ...")
 
     out_rows: list[dict] = []
     matched = 0
+    empty = {k: "" for k in _COLS if k not in ("player_id", "player", "stat_type")}
 
     for p in prospects:
-        player_url = _fetch_br_player_url(p["player"])
-        if not player_url:
+        name = p["player"]
+        tbc_id = _tbc_id_for(name)
+        if not tbc_id:
             continue
-
-        stats = _parse_stats_from_register(player_url)
+        stats = _parse_player_page(tbc_id)
         if not stats:
             continue
-
         matched += 1
-        empty = {"avg": "", "obp": "", "slg": "", "ops": "", "hr": "", "rbi": "", "sb": "",
-                 "era": "", "whip": "", "k_9": "", "bb_9": "", "ip": "", "w": "", "sv": ""}
-        out_rows.append({
-            "player_id": p["player_id"],
-            "player": p["player"],
-            **{**empty, **stats},
-        })
-        time.sleep(3.0)  # BR rate-limits aggressively — 3s between requests
+        out_rows.append({"player_id": p["player_id"], "player": name, **{**empty, **stats}})
 
     print(f"   Matched stats for {matched}/{len(prospects)} college prospects")
 

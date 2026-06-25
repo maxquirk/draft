@@ -1,4 +1,4 @@
-"""Tab — Player Search: searchable / filterable board with player modal."""
+"""Tab — Player Search: search-first with recent players."""
 from __future__ import annotations
 
 import pandas as pd
@@ -8,111 +8,98 @@ from logic import dataio
 from modules.player_modal import player_modal
 
 _DF = dataio.consensus()
-_STATS = dataio.player_stats()
-_SRC_KEYS = dataio.source_keys()
-_MAXR = int(_DF["consensus_rank"].max()) if len(_DF) else 1
-_MAXS = int(_DF["n_sources"].max()) if len(_DF) else 1
-
-# Expand multi-position entries (e.g. "SS,OF" → SS and OF as separate filter options)
-if len(_DF):
-    _all_pos: set[str] = set()
-    for _p in _DF["position"].dropna():
-        for _part in str(_p).replace("/", ",").split(","):
-            _part = _part.strip()
-            if _part:
-                _all_pos.add(_part)
-    _POS = sorted(_all_pos)
-else:
-    _POS = []
-
-_CLS = sorted([c for c in _DF["class_level"].dropna().unique() if c and str(c) != "nan"]) if len(_DF) else []
-
-# Per-source rank columns
-_SRC_COLS = [f"src_{k}" for k in _SRC_KEYS]
-_SRC_LABELS = {f"src_{k}": dataio.source_label(k) for k in _SRC_KEYS}
-_BASE_COLS = ["consensus_rank", "player", "position", "school", "class_level"] + _SRC_COLS
-
-_BATTER_STATS = ["avg", "obp", "slg", "ops", "hr", "rbi", "sb"]
-_PITCHER_STATS = ["era", "whip", "k_9", "bb_9", "ip"]
 
 
-def _build_display(df: pd.DataFrame) -> pd.DataFrame:
-    out = df[_BASE_COLS].copy()
-    out = out.rename(columns=_SRC_LABELS)
-    if len(_STATS):
-        merged = out.merge(
-            _STATS[["player_id", "stat_type", "avg", "obp", "slg", "ops",
-                    "hr", "rbi", "sb", "era", "whip", "k_9", "bb_9", "ip"]],
-            left_on="player_id" if "player_id" in out.columns else None,
-            right_on="player_id",
-            how="left",
-        ) if "player_id" in df.columns else out
-        return merged if len(merged) == len(out) else out
-    return out
+def _player_card(name: str, rank: int, pos: str, school: str, input_id: str) -> ui.Tag:
+    safe_name = name.replace("'", "\\'").replace('"', '\\"')
+    return ui.div(
+        ui.div(
+            ui.span(f"#{rank}", class_="src-chip"),
+            ui.strong(name),
+            ui.span(f" · {pos}", class_="muted"),
+        ),
+        ui.div(school, class_="muted", style="font-size:.83rem;"),
+        class_="player-card",
+        style="cursor:pointer;",
+        onclick=f"Shiny.setInputValue('{input_id}', '{safe_name}', {{priority:'event'}});",
+    )
 
 
 @module.ui
 def explorer_ui():
-    return ui.layout_sidebar(
-        ui.sidebar(
-            ui.input_text("q", "Search player / school"),
-            ui.input_selectize("pos", "Position", choices=_POS, multiple=True),
-            ui.input_selectize("cls", "Class", choices=_CLS, multiple=True),
-            ui.input_slider("min_sources", "Min boards", 1, max(_MAXS, 2), 1),
-            ui.input_slider("max_rank", "Max rank", 1, max(_MAXR, 2), max(_MAXR, 2)),
-            ui.help_text("Click any row to open a player's full scouting profile."),
-            width=280,
+    return ui.div(
+        ui.div(
+            ui.input_text("q", None, placeholder="Search by name or school…", width="100%"),
+            style="max-width:460px;margin-bottom:1.2rem;",
         ),
-        ui.output_ui("count"),
-        ui.output_data_frame("grid"),
+        ui.output_ui("results"),
         ui.output_ui("modal_host"),
     )
 
 
 @module.server
 def explorer_server(input, output, session):
+    recent: reactive.Value[list[str]] = reactive.Value([])
+    input_id = session.ns("select_player")
+
     @reactive.calc
-    def filtered() -> pd.DataFrame:
-        d = _DF
-        if not len(d):
-            return d
-        q = input.q().strip().lower()
-        if q:
-            d = d[d["player"].str.lower().str.contains(q, na=False)
-                  | d["school"].str.lower().str.contains(q, na=False)]
-        if input.pos():
-            # Handle multi-position strings like "SS,OF" — player matches if ANY position matches
-            pos_set = set(input.pos())
-            d = d[d["position"].apply(
-                lambda p: bool(pos_set.intersection(
-                    str(p).replace("/", ",").replace(" ", "").split(",")
-                ))
-            )]
-        if input.cls():
-            d = d[d["class_level"].isin(input.cls())]
-        d = d[d["n_sources"] >= input.min_sources()]
-        d = d[d["consensus_rank"] <= input.max_rank()]
-        return d
+    def matches() -> list[dict]:
+        q = (input.q() or "").strip().lower()
+        if len(q) < 2:
+            return []
+        mask = (
+            _DF["player"].str.lower().str.contains(q, na=False)
+            | _DF["school"].str.lower().str.contains(q, na=False)
+        )
+        return _DF[mask].nsmallest(20, "consensus_rank")[
+            ["player", "consensus_rank", "position", "school"]
+        ].to_dict("records")
 
     @render.ui
-    def count():
-        n = len(filtered())
-        return ui.p(ui.strong(f"{n}"), " players shown", class_="muted")
+    def results():
+        q = (input.q() or "").strip()
 
-    @render.data_frame
-    def grid():
-        d = filtered()
-        if not len(d):
-            return render.DataGrid(d, selection_mode="row", height="520px", width="100%")
-        display = _build_display(d)
-        return render.DataGrid(display, selection_mode="row", height="520px", width="100%")
+        if len(q) >= 2:
+            hits = matches()
+            if not hits:
+                return ui.p("No players found.", class_="muted")
+            return ui.div(
+                *[_player_card(r["player"], int(r["consensus_rank"]),
+                               str(r["position"]), str(r["school"]), input_id)
+                  for r in hits],
+                class_="player-card-grid",
+            )
+
+        rec = recent.get()
+        if not rec:
+            return ui.p("Search for a player above to see their scouting profile.", class_="muted")
+
+        rows = []
+        for name in rec:
+            row = _DF[_DF["player"] == name]
+            if not row.empty:
+                r = row.iloc[0]
+                rows.append(_player_card(
+                    name, int(r["consensus_rank"]), str(r["position"]), str(r["school"]), input_id,
+                ))
+
+        return ui.div(
+            ui.p("Recent", class_="muted",
+                 style="font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.6rem;"),
+            ui.div(*rows, class_="player-card-grid"),
+        )
 
     @render.ui
     def modal_host():
-        sel = grid.data_view(selected=True)
-        if sel is None or not len(sel):
+        try:
+            name = input.select_player()
+        except Exception:
             return ui.div()
-        name = sel.iloc[0]["player"]
-        m = player_modal(name)
-        ui.modal_show(m)
+        if not name:
+            return ui.div()
+
+        rec = [n for n in recent.get() if n != name]
+        recent.set([name] + rec[:7])
+
+        ui.modal_show(player_modal(name))
         return ui.div()
