@@ -222,6 +222,8 @@ def simulator_server(input, output, session):
             picks=clean_picks,
         )
         save_status.set(msg)
+        if ok:
+            ui.modal_remove()
 
     # -- Download ------------------------------------------------------------
 
