@@ -135,6 +135,7 @@ def merge_players(rows: list[dict], *, fuzz_threshold: int = 93) -> list[dict]:
         schools = [r["school"] for r in group]
         school = _best(schools)
         class_level = _best([r["class_level"] for r in group]) or infer_class(school)
+        mlb_ids = [r.get("mlb_id", "") for r in group if r.get("mlb_id")]
         players.append({
             "player_id": f"p{idx:04d}",
             "player": _best([r["player"] for r in group]) or group[0]["player"],
@@ -143,6 +144,7 @@ def merge_players(rows: list[dict], *, fuzz_threshold: int = 93) -> list[dict]:
             "class_level": class_level,
             "state": _best([r["state"] for r in group]),
             "notes": _best([r["notes"] for r in group]),
+            "mlb_id": mlb_ids[0] if mlb_ids else "",
             "rankings": {r["source"]: r["rank"] for r in sorted(group, key=lambda x: x["rank"])},
         })
     return players

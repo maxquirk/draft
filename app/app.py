@@ -38,8 +38,8 @@ def about_panel():
 
 
 app_ui = ui.page_navbar(
-    ui.nav_panel("Prospects", explorer_ui("explorer")),
     ui.nav_panel("Rankings", bigboard_ui("bigboard")),
+    ui.nav_panel("Search", explorer_ui("explorer")),
     ui.nav_panel("Projections", projections_ui("proj")),
     ui.nav_panel("Simulator", simulator_ui("sim")),
     ui.nav_panel("Team Strategy", team_strategy_ui("teams")),
@@ -60,8 +60,8 @@ app_ui = ui.page_navbar(
 
 
 def server(input, output, session):
-    explorer_server("explorer")
     bigboard_server("bigboard")
+    explorer_server("explorer")
     projections_server("proj")
     simulator_server("sim")
     team_strategy_server("teams")

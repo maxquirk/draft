@@ -16,6 +16,20 @@ def _br_link(name: str) -> ui.Tag:
                      class_="btn btn-outline-secondary btn-sm", style="font-size:.8rem;")
 
 
+def _grade_chip(label: str, value) -> str:
+    if value is None or (isinstance(value, float) and pd.isna(value)) or str(value).strip() in ("", "nan"):
+        return ""
+    v = str(value).strip()
+    try:
+        g = int(float(v))
+        color = ("var(--good)" if g >= 55 else
+                 ("var(--accent)" if g >= 45 else "var(--muted)"))
+    except (ValueError, TypeError):
+        color = "var(--muted)"
+    return (f'<span class="src-chip" style="color:{color};font-family:\'JetBrains Mono\',monospace;'
+            f'font-weight:700;">{label} <span style="color:var(--ink)">{v}</span></span>')
+
+
 def player_modal(player_name: str) -> ui.Tag:
     """Return a fully-populated modal for `player_name`."""
     df = dataio.consensus()
@@ -31,6 +45,65 @@ def player_modal(player_name: str) -> ui.Tag:
         ui.span(f"{dataio.source_label(k)}: #{v}", class_="src-chip")
         for k, v in sorted(ranks.items(), key=lambda kv: kv[1])
     ] if ranks else [ui.span("No source ranks available.", class_="muted")]
+
+    # Grades section
+    grades_df = dataio.player_grades()
+    grades_section = ui.div()
+    if len(grades_df):
+        g_row = grades_df[grades_df["player"] == player_name]
+        if not g_row.empty:
+            gr = g_row.iloc[0]
+            fv = str(gr.get("fv", "")).strip()
+
+            pos = str(r.get("position", "")).upper()
+            is_pitcher = any(p in pos for p in ("RHP", "LHP", "P"))
+
+            if is_pitcher:
+                fb_velo_val = str(gr.get("fb_velo", "")).strip()
+                fb_velo_chip = (_grade_chip(f"{fb_velo_val} mph", gr.get("fb_grade"))
+                                if fb_velo_val and fb_velo_val != "nan" else "")
+                tool_chips = "".join(filter(None, [
+                    _grade_chip("FB", gr.get("fb_grade")),
+                    fb_velo_chip,
+                    _grade_chip("CB", gr.get("cb_grade")),
+                    _grade_chip("SL", gr.get("sl_grade")),
+                    _grade_chip("CH", gr.get("ch_grade")),
+                    _grade_chip("CTL", gr.get("control")),
+                ]))
+            else:
+                tool_chips = "".join(filter(None, [
+                    _grade_chip("HIT", gr.get("hit")),
+                    _grade_chip("PWR", gr.get("power")),
+                    _grade_chip("RUN", gr.get("run")),
+                    _grade_chip("ARM", gr.get("arm")),
+                    _grade_chip("FLD", gr.get("field")),
+                ]))
+
+            commits = str(gr.get("commits_to", "")).strip()
+            writeup = str(gr.get("writeup", "")).strip()
+
+            parts = []
+            if fv and fv != "nan":
+                parts.append(ui.div(
+                    ui.span(f"FV {fv}", class_="big-chip"),
+                    ui.HTML(f'<span class="chip-row" style="display:inline-flex">{tool_chips}</span>') if tool_chips else ui.div(),
+                    style="margin-bottom:.6rem;",
+                ))
+            elif tool_chips:
+                parts.append(ui.HTML(f'<div class="chip-row">{tool_chips}</div>'))
+
+            if commits and commits != "nan":
+                parts.append(ui.p(f"Committed to: {commits}", class_="muted",
+                                  style="font-size:.83rem;margin:.3rem 0;"))
+            if writeup and writeup != "nan":
+                parts.append(ui.p(writeup, style="font-size:.84rem;line-height:1.55;margin:.5rem 0;"))
+
+            if parts:
+                grades_section = ui.div(
+                    ui.hr(),
+                    ui.h4("Scouting Profile", style="font-size:.95rem;margin-bottom:.5rem;"),
+                    *parts,
+                )
 
     # Projection section
     proj_df = dataio.projections()
@@ -105,6 +178,7 @@ def player_modal(player_name: str) -> ui.Tag:
             ui.hr(),
             ui.h4("Board Rankings", style="font-size:.95rem;margin-bottom:.5rem;"),
             ui.div(*chips, class_="chip-row"),
+            grades_section,
             proj_section,
             stats_section,
             ui.hr(),

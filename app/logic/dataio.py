@@ -123,3 +123,16 @@ def player_stats() -> pd.DataFrame:
                                       "avg", "obp", "slg", "ops", "hr", "rbi", "sb",
                                       "era", "whip", "k_9", "bb_9", "ip", "w", "sv"])
     return df
+
+
+@lru_cache(maxsize=1)
+def player_grades() -> pd.DataFrame:
+    """Scouting grades from MLB.com: FV, tool grades, writeup. Empty if not scraped."""
+    df = _read_csv("player_grades_2026.csv")
+    if df is None or df.empty:
+        return pd.DataFrame(columns=[
+            "player", "mlb_id", "fv", "hit", "power", "run", "arm", "field",
+            "fb_grade", "fb_velo", "cb_grade", "sl_grade", "ch_grade", "control",
+            "writeup", "commits_to",
+        ])
+    return df

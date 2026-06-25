@@ -75,7 +75,7 @@ def main() -> None:
     # Flatten per-source rankings into src_* columns
     src_keys = sorted({k for p in consensus for k in (p.get("rankings") or {})})
     base_cols = ["player_id", "player", "position", "school", "class_level", "state",
-                 "notes", "consensus_rank", "avg_rank", "median_rank", "best_rank",
+                 "notes", "mlb_id", "consensus_rank", "avg_rank", "median_rank", "best_rank",
                  "worst_rank", "spread", "stdev", "n_sources"]
     src_col_names = [f"src_{k}" for k in src_keys]
     rows_flat = []
@@ -113,6 +113,14 @@ def main() -> None:
         projections.build()
     except Exception as e:
         print(f"   ! projections failed: {e}")
+
+    # MLB Pipeline scouting grades
+    try:
+        from . import grades
+        print("\n== Fetching MLB.com scouting grades ==")
+        grades.build()
+    except Exception as e:
+        print(f"   ! grades scraper failed: {e}")
 
     _write_csv("run_report.csv", [{
         "generated_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),

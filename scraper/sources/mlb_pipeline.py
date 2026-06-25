@@ -97,7 +97,8 @@ def fetch() -> list[dict]:
         throws = person.get("pitchHandCode") or ""
         notes = f"B/T: {bats}/{throws}" if (bats or throws) else ""
 
-        rows.append(ranking_row(
+        mlb_id = ref.split(":")[-1] if ref else ""
+        row = ranking_row(
             rank=entry.get("rank"),
             player=name,
             position=pe.get("position") or (person.get("primaryPosition") or {}).get("abbreviation", ""),
@@ -106,7 +107,9 @@ def fetch() -> list[dict]:
             state=state,
             notes=notes,
             source=SOURCE.key,
-        ))
+        )
+        row["mlb_id"] = mlb_id
+        rows.append(row)
 
     rows.sort(key=lambda r: r["rank"])
     return rows

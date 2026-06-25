@@ -32,6 +32,10 @@ def _in_pyodide() -> bool:
     return "pyodide" in sys.modules or hasattr(sys, "_pyodide_core_protocol")
 
 
+def _token_ok() -> bool:
+    return bool(GITHUB_TOKEN) and GITHUB_TOKEN != "DRAFT_PAT_PLACEHOLDER"
+
+
 _FIELDS = ["draft_id", "draft_name", "author", "saved_at", "mode", "seed", "picks_json"]
 
 
@@ -85,8 +89,8 @@ async def save_draft(
     draft_name: str, author: str, mode: str, seed: int, picks: list[dict]
 ) -> tuple[bool, str]:
     """Append a new draft row to the repo CSV. Returns (success, message)."""
-    if not GITHUB_TOKEN:
-        return False, "GitHub token not set — add it to app/config.py and redeploy."
+    if not _token_ok():
+        return False, "Save not configured — GitHub token missing. Contact the site admin."
 
     new_row = {
         "draft_id": str(uuid.uuid4())[:8],
@@ -99,14 +103,21 @@ async def save_draft(
     }
 
     if not _in_pyodide():
-        return False, "Saving only works in the deployed browser app."
+        return False, "Saving only works in the deployed browser app (not local dev)."
 
     from pyodide.http import pyfetch
 
     # 1. GET current file to obtain SHA + existing content
     try:
-        resp = await pyfetch(_API, headers=_headers())
-        data = await resp.json()
+        get_resp = await pyfetch(
+            _API,
+            method="GET",
+            headers={"Authorization": f"token {GITHUB_TOKEN}",
+                     "Accept": "application/vnd.github.v3+json"},
+        )
+        data = await get_resp.json()
+        if isinstance(data, dict) and "message" in data:
+            return False, f"GitHub error reading file: {data['message']}"
         sha = data["sha"]
         raw_b64 = data.get("content", "").replace("\n", "").replace("\r", "")
         current_text = base64.b64decode(raw_b64).decode("utf-8")
@@ -117,22 +128,25 @@ async def save_draft(
     new_text = current_text.rstrip("\n") + "\n" + _row_to_csv_line(new_row) + "\n"
 
     # 3. PUT updated file back
-    body = json.dumps({
+    put_body = json.dumps({
         "message": f"Add mock draft: {new_row['draft_name']} by {new_row['author']}",
         "content": base64.b64encode(new_text.encode("utf-8")).decode("ascii"),
         "sha": sha,
         "branch": GITHUB_BRANCH,
     })
     try:
-        resp = await pyfetch(
+        put_resp = await pyfetch(
             _API,
             method="PUT",
-            headers={**_headers(), "Content-Type": "application/json"},
-            body=body,
+            headers={"Authorization": f"token {GITHUB_TOKEN}",
+                     "Accept": "application/vnd.github.v3+json",
+                     "Content-Type": "application/json"},
+            body=put_body,
         )
-        result = await resp.json()
-        if "content" in result:
+        result = await put_resp.json()
+        if isinstance(result, dict) and "content" in result:
             return True, f"Draft \"{new_row['draft_name']}\" saved!"
-        return False, f"GitHub error: {result.get('message', 'unknown')}"
+        msg = result.get("message", "unknown error") if isinstance(result, dict) else str(result)
+        return False, f"GitHub error: {msg}"
     except Exception as e:
         return False, f"Save failed: {e}"
