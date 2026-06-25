@@ -1,8 +1,11 @@
-# ⚾ 2026 MLB Draft Hub
+# 2026 MLB Draft Hub
+
+**[→ Live site](https://maxquirk.github.io/draft/)**
 
 A self-contained, GitHub-hosted site for researching the **2026 MLB Draft**: an
 aggregated consensus big board built from many public rankings, a mock-draft
-simulator, big-board disagreement analysis, and historical team draft tendencies.
+simulator, big-board disagreement analysis, historical team draft tendencies,
+and community-shared mock drafts.
 
 The site is a **Shiny for Python** app exported with **shinylive**, so it runs
 entirely in the browser (Python compiled to WebAssembly via Pyodide) — **no server,
