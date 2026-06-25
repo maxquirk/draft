@@ -367,19 +367,6 @@ label, .control-label {
 .cd-title { font-weight: 700; color: var(--ink); font-size: .92rem; }
 .cd-byline { font-size: .8rem; }
 .cd-actions { display: flex; gap: .4rem; flex-shrink: 0; align-items: center; }
-.cd-vote {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  color: var(--muted);
-  font-size: .78rem;
-  padding: .2rem .55rem;
-  cursor: pointer;
-  font-family: 'JetBrains Mono', monospace;
-  transition: border-color .12s, color .12s;
-}
-.cd-up:hover { border-color: var(--good); color: var(--good); }
-.cd-dn:hover { border-color: var(--bad); color: var(--bad); }
 .cd-expand {
   background: transparent;
   border: 1px solid var(--border);

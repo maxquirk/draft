@@ -1,17 +1,10 @@
-"""Community Drafts tab — cards with likes/dislikes and sort."""
+"""Community Drafts tab — cards with expand/collapse."""
 from __future__ import annotations
 
 import html
 import json
 
-from shiny import module, reactive, render, req, ui
-
-
-def _safe_int(v, default=0) -> int:
-    try:
-        return int(v)
-    except (TypeError, ValueError):
-        return default
+from shiny import module, reactive, render, ui
 
 
 def _parse_picks(raw: str) -> list[dict]:
@@ -24,22 +17,15 @@ def _parse_picks(raw: str) -> list[dict]:
 def _sort_drafts(rows: list[dict], sort_by: str) -> list[dict]:
     if sort_by == "oldest":
         return sorted(rows, key=lambda r: r.get("saved_at", ""))
-    if sort_by == "upvotes":
-        return sorted(rows, key=lambda r: _safe_int(r.get("upvotes", 0)), reverse=True)
-    if sort_by == "downvotes":
-        return sorted(rows, key=lambda r: _safe_int(r.get("downvotes", 0)), reverse=True)
-    # default: most recent
     return sorted(rows, key=lambda r: r.get("saved_at", ""), reverse=True)
 
 
-def _draft_card_html(d: dict, expanded: bool, ns_up: str, ns_dn: str, ns_exp: str) -> str:
+def _draft_card_html(d: dict, expanded: bool, ns_exp: str) -> str:
     picks = _parse_picks(d.get("picks_json", "[]"))
     n_picks = len(picks)
-    up = _safe_int(d.get("upvotes", 0))
-    dn = _safe_int(d.get("downvotes", 0))
     did = d.get("draft_id", "")
 
-    e = html.escape  # shorthand — escape all user-supplied strings before HTML insertion
+    e = html.escape
 
     top5 = " &nbsp;·&nbsp; ".join(
         f"<b>{p['pick']}.</b> {e(str(p.get('player','?')))} "
@@ -77,8 +63,6 @@ def _draft_card_html(d: dict, expanded: bool, ns_up: str, ns_dn: str, ns_exp: st
         f"<span class='muted cd-byline'> · {e(d.get('author','?'))} · {e(d.get('saved_at',''))} · {e(d.get('mode',''))} · {n_picks} picks</span>"
         f"</div>"
         f"<div class='cd-actions'>"
-        f"<button class='cd-vote cd-up' onclick=\"Shiny.setInputValue('{ns_up}', '{did}', {{priority:'event'}});\">▲ {up}</button>"
-        f"<button class='cd-vote cd-dn' onclick=\"Shiny.setInputValue('{ns_dn}', '{did}', {{priority:'event'}});\">▼ {dn}</button>"
         f"<button class='cd-expand' onclick=\"Shiny.setInputValue('{ns_exp}', '{did}', {{priority:'event'}});\">{exp_label}</button>"
         f"</div>"
         f"</div>"
@@ -99,8 +83,7 @@ def community_drafts_ui():
         ui.div(
             ui.input_radio_buttons(
                 "sort_by", None,
-                choices={"recent": "Most Recent", "oldest": "Oldest",
-                         "upvotes": "Most Liked", "downvotes": "Most Disliked"},
+                choices={"recent": "Most Recent", "oldest": "Oldest"},
                 selected="recent", inline=True,
             ),
             style="margin-bottom:1rem;",
@@ -116,8 +99,6 @@ def community_drafts_server(input, output, session):
     load_counter: reactive.Value[int] = reactive.Value(0)
     load_error: reactive.Value[str] = reactive.Value("")
 
-    ns_up  = session.ns("upvote")
-    ns_dn  = session.ns("downvote")
     ns_exp = session.ns("expand_draft")
 
     @reactive.effect
@@ -127,8 +108,7 @@ def community_drafts_server(input, output, session):
         load_error.set("")
         load_counter.set(load_counter() + 1)
         try:
-            result = await load_drafts()
-            drafts.set(result)
+            drafts.set(await load_drafts())
         except Exception as e:
             load_error.set(str(e))
             drafts.set([])
@@ -142,32 +122,6 @@ def community_drafts_server(input, output, session):
         with reactive.isolate():
             current = expanded_id()
         expanded_id.set(None if current == did else did)
-
-    @reactive.effect
-    @reactive.event(input.upvote)
-    async def _on_upvote():
-        did = input.upvote()
-        if not did:
-            return
-        from logic.github_storage import vote_draft, load_drafts
-        await vote_draft(did, "up")
-        try:
-            drafts.set(await load_drafts())
-        except Exception:
-            pass
-
-    @reactive.effect
-    @reactive.event(input.downvote)
-    async def _on_downvote():
-        did = input.downvote()
-        if not did:
-            return
-        from logic.github_storage import vote_draft, load_drafts
-        await vote_draft(did, "down")
-        try:
-            drafts.set(await load_drafts())
-        except Exception:
-            pass
 
     @render.ui
     def draft_list():
@@ -183,7 +137,7 @@ def community_drafts_server(input, output, session):
         sorted_rows = _sort_drafts(rows, input.sort_by())
         exp = expanded_id()
         cards_html = "".join(
-            _draft_card_html(d, d.get("draft_id") == exp, ns_up, ns_dn, ns_exp)
+            _draft_card_html(d, d.get("draft_id") == exp, ns_exp)
             for d in sorted_rows
         )
         return ui.HTML(f"<div class='cd-list'>{cards_html}</div>")
