@@ -1,7 +1,8 @@
-"""Scrape 2025 college player stats for draft prospects from The Baseball Cube.
+"""Scrape 2026 college stats for draft prospects from The Baseball Cube.
 
-Uses TBC's AJAX search to find player IDs, then fetches per-player pages for
-NCAA stats. HS players are skipped (no college stats). JUCO players included.
+Fetches per-school team stats pages at stats_college/2026~{tbc_id}/ and matches
+players by name within the correct roster. School→TBC ID mapping is hardcoded
+from TBC's school list pages (/content/schools/, /content/schools/juco/, etc.).
 
 Writes app/data/player_stats_2026.csv.
 Run standalone:  python -m scraper.stats
@@ -20,10 +21,80 @@ from .normalize import canon_name
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT.parent / "app" / "data"
 
-_TBC_SEARCH = "https://www.thebaseballcube.com/code_2026/ajax/search_top.asp"
-_TBC_PLAYER = "https://www.thebaseballcube.com/content/player/{}/"
+_TBC_TEAM_STATS = "https://www.thebaseballcube.com/content/stats_college/2026~{}/"
 
-_NCAA_LEVELS = {"NCAA-1", "NCAA-2", "NCAA-3", "NAIA", "NJCAA", "JUCO", "COLL", "CCBC"}
+# School name (as it appears in consensus_2026.csv) → TBC college_history ID
+# IDs sourced from https://www.thebaseballcube.com/content/schools/ (D1/D2/JUCO/NAIA lists)
+_SCHOOL_ID_MAP: dict[str, str] = {
+    "Alabama":                      "20048",
+    "Arizona":                      "20026",
+    "Arizona State":                "20021",
+    "Arkansas":                     "20344",
+    "Auburn":                       "20071",
+    "Blinn (Texas) JC":             "20349",
+    "Central Florida":              "20443",
+    "Cincinnati":                   "20357",
+    "Clemson":                      "20089",
+    "Coastal Carolina":             "20319",
+    "Connecticut":                  "20223",
+    "Copiah-Lincoln (MS) JC":       "21003",
+    "East Carolina":                "20384",
+    "Enterprise (Ala.) JC":         "20724",
+    "Everett (Wash.) JC":           "21020",
+    "Florida":                      "20177",
+    "Florida Gulf Coast":           "21988",
+    "Florida State":                "20022",
+    "George Washington":            "20070",
+    "Georgia":                      "20350",
+    "Georgia Tech":                 "20124",
+    "Heartland (Ill.) JC":          "22406",
+    "Houston":                      "20254",
+    "Indiana State":                "20256",
+    "Jacksonville State":           "20131",
+    "Kansas":                       "20454",
+    "Kansas State":                 "20398",
+    "Kentucky":                     "20017",
+    "LSU":                          "20004",
+    "Liberty":                      "20403",
+    "Louisville":                   "20457",
+    "McLennan JC (TX)":             "20068",
+    "Miami":                        "20182",
+    "Minnesota":                    "20011",
+    "Mississippi":                  "20085",
+    "Mississippi State":            "20147",
+    "Missouri":                     "20458",
+    "Missouri State":               "20219",
+    "Monterey Peninsula (Calif.) JC": "21185",
+    "Nebraska":                     "20066",
+    "North Carolina":               "20006",
+    "North Carolina State":         "20235",
+    "Notre Dame":                   "20151",
+    "Oklahoma":                     "20214",
+    "Oklahoma State":               "20093",
+    "Ole Miss":                     "20085",
+    "Oregon":                       "20465",
+    "Oregon State":                 "20272",
+    "Pittsburgh":                   "20358",
+    "Rutgers":                      "20097",
+    "Sacramento City (Calif.) JC":  "20243",
+    "Sam Houston State":            "20258",
+    "South Carolina":               "20091",
+    "TCU":                          "20433",
+    "Tennessee":                    "20015",
+    "Texas":                        "20193",
+    "Texas A&M":                    "20023",
+    "Texas Tech":                   "20169",
+    "UC Irvine":                    "20029",
+    "UC San Diego":                 "20644",
+    "UC Santa Barbara":             "20304",
+    "UCLA":                         "20054",
+    "USC":                          "20064",
+    "Vanderbilt":                   "20231",
+    "Virginia":                     "20194",
+    "Virginia Tech":                "20293",
+    "Wake Forest":                  "20094",
+    "West Virginia":                "20195",
+}
 
 _COLS = [
     "player_id", "player", "stat_type",
@@ -31,109 +102,82 @@ _COLS = [
     "era", "whip", "k_9", "bb_9", "ip", "w", "sv",
 ]
 
+# Cache: tbc_id → {canon_name: stats_dict}
+_team_cache: dict[str, dict[str, dict]] = {}
 
-def _tbc_id_for(name: str) -> str | None:
-    """Search TBC by last name, return the TBC player ID for the best match."""
-    parts = name.strip().split()
-    if len(parts) < 2:
-        return None
-    last = parts[-1]
-    html = get(_TBC_SEARCH, params={"Q": last}, tag=f"tbc_search_{canon_name(last)[:20]}", cache=True)
+
+def _load_team(tbc_id: str) -> dict[str, dict]:
+    if tbc_id in _team_cache:
+        return _team_cache[tbc_id]
+
+    html = get(_TBC_TEAM_STATS.format(tbc_id), tag=f"tbc_team_{tbc_id}_2026", cache=True)
     if not html:
-        return None
+        _team_cache[tbc_id] = {}
+        return {}
 
-    # Parse rows: id, display_name from onclick and <a> text
-    entries = re.findall(
-        r"goto_url\(['\"][^'\"]+/player/(\d+)/['\"].*?<a[^>]+>([^<]+)</a>",
-        html, re.S
-    )
-    if not entries:
-        return None
-
-    canon = canon_name(name)
-    best_id, best_score = None, 0
-    for tbc_id, tbc_name in entries:
-        score = fuzz.token_sort_ratio(canon, canon_name(tbc_name))
-        if score > best_score:
-            best_score, best_id = score, tbc_id
-
-    return best_id if best_score >= 80 else None
-
-
-def _parse_player_page(tbc_id: str) -> dict | None:
-    """Fetch TBC player page and return 2025 NCAA batting or pitching stats."""
-    url = _TBC_PLAYER.format(tbc_id)
-    html = get(url, tag=f"tbc_player_{tbc_id}", cache=True)
-    if not html:
-        return None
-
+    result: dict[str, dict] = {}
     tables = re.findall(r"<table[^>]*>(.*?)</table>", html, re.S | re.I)
-    batting, pitching = None, None
 
     for t in tables:
         header = re.search(r"<tr[^>]*class=['\"]header-row[^>]*>(.*?)</tr>", t, re.S)
         if not header:
             continue
-        cols = re.findall(r"<td[^>]*>([^<]+)</td>", header.group(1))
-        cols = [c.strip().lower() for c in cols]
-
+        cols = [c.strip().lower() for c in re.findall(r"<td[^>]*>([^<]+)</td>", header.group(1))]
         is_bat = "avg" in cols and "ab" in cols
         is_pit = "era" in cols and "ip" in cols
-
         if not is_bat and not is_pit:
             continue
 
-        data_rows = re.findall(r"<tr[^>]*class=['\"]data-row[^>]*>(.*?)</tr>", t, re.S)
-        # Collect all rows, prefer 2025, fallback to most recent college season
-        candidate_rows: list[dict] = []
-        for row in data_rows:
+        for row in re.findall(r"<tr[^>]*class=['\"]data-row[^>]*>(.*?)</tr>", t, re.S):
             cells = re.findall(r"<td[^>]*>(?:<a[^>]*>)?([^<]*)(?:</a>)?</td>", row)
             d = dict(zip(cols, cells))
-            level = d.get("level", "").strip()
-            if not any(lvl in level for lvl in _NCAA_LEVELS):
+            raw_name = d.get("player", "").strip()
+            if not raw_name or raw_name == "&nbsp;":
                 continue
-            candidate_rows.append(d)
+            key = canon_name(raw_name)
+            if key in result:
+                continue
+            if is_bat:
+                result[key] = {
+                    "stat_type": "BATTER",
+                    "avg": d.get("avg", ""),
+                    "obp": d.get("obp", ""),
+                    "slg": d.get("slg", ""),
+                    "ops": d.get("ops", ""),
+                    "hr":  d.get("hr", ""),
+                    "rbi": d.get("rbi", ""),
+                    "sb":  d.get("sb", ""),
+                }
+            else:
+                result[key] = {
+                    "stat_type": "PITCHER",
+                    "era":  d.get("era", ""),
+                    "whip": d.get("whip", ""),
+                    "k_9":  d.get("so9", ""),
+                    "bb_9": d.get("bb9", ""),
+                    "ip":   d.get("ip", ""),
+                    "w":    d.get("w", ""),
+                    "sv":   d.get("sv", ""),
+                }
 
-        if not candidate_rows:
-            continue
+    _team_cache[tbc_id] = result
+    return result
 
-        # Prefer 2025, then take last in list
-        chosen = next((d for d in reversed(candidate_rows) if "2025" in d.get("year", "")), None)
-        if chosen is None:
-            chosen = candidate_rows[-1]
 
-        if is_bat and batting is None:
-            batting = chosen
-        elif is_pit and pitching is None:
-            pitching = chosen
-
-    if batting:
-        return {
-            "stat_type": "BATTER",
-            "avg": batting.get("avg", ""),
-            "obp": batting.get("obp", ""),
-            "slg": batting.get("slg", ""),
-            "ops": batting.get("ops", ""),
-            "hr": batting.get("hr", ""),
-            "rbi": batting.get("rbi", ""),
-            "sb": batting.get("sb", ""),
-        }
-    if pitching:
-        return {
-            "stat_type": "PITCHER",
-            "era": pitching.get("era", ""),
-            "whip": pitching.get("whip", ""),
-            "k_9": pitching.get("so9", ""),
-            "bb_9": pitching.get("bb9", ""),
-            "ip": pitching.get("ip", ""),
-            "w": pitching.get("w", ""),
-            "sv": pitching.get("sv", ""),
-        }
-    return None
+def _find_player(player: str, roster: dict[str, dict]) -> dict | None:
+    target = canon_name(player)
+    if target in roster:
+        return roster[target]
+    # Fuzzy fallback for nicknames / initials
+    best_key, best_score = None, 0
+    for key in roster:
+        score = fuzz.token_sort_ratio(target, key)
+        if score > best_score:
+            best_score, best_key = score, key
+    return roster[best_key] if best_score >= 80 else None
 
 
 def build() -> None:
-    """Fetch stats for all college/JUCO prospects and write player_stats_2026.csv."""
     consensus_fp = DATA / "consensus_2026.csv"
     if not consensus_fp.exists():
         print("   ! consensus_2026.csv not found")
@@ -142,31 +186,43 @@ def build() -> None:
     prospects: list[dict] = []
     with open(consensus_fp, encoding="utf-8") as f:
         for row in csv.DictReader(f):
-            lvl = str(row.get("class_level", "")).strip().lower()
-            if lvl in ("college", "juco"):
+            if str(row.get("class_level", "")).strip().lower() in ("college", "juco"):
                 prospects.append({
                     "player_id": row.get("player_id", ""),
-                    "player": row.get("player", ""),
+                    "player":    row.get("player", ""),
+                    "school":    row.get("school", "").strip(),
                 })
 
-    print(f"   Fetching TBC stats for {len(prospects)} college/JUCO prospects ...")
+    print(f"   Fetching TBC 2026 team stats for {len(prospects)} college/JUCO prospects ...")
+
+    # Pre-fetch unique school pages
+    unique_schools = sorted({p["school"] for p in prospects if p["school"] in _SCHOOL_ID_MAP})
+    print(f"   Loading {len(unique_schools)}/{len({p['school'] for p in prospects})} school rosters ...")
+    for school in unique_schools:
+        _load_team(_SCHOOL_ID_MAP[school])
 
     out_rows: list[dict] = []
-    matched = 0
+    matched, no_map, no_player = 0, [], []
     empty = {k: "" for k in _COLS if k not in ("player_id", "player", "stat_type")}
 
     for p in prospects:
-        name = p["player"]
-        tbc_id = _tbc_id_for(name)
+        tbc_id = _SCHOOL_ID_MAP.get(p["school"])
         if not tbc_id:
+            no_map.append(f"{p['player']} ({p['school']})")
             continue
-        stats = _parse_player_page(tbc_id)
+        roster = _team_cache.get(tbc_id, {})
+        stats = _find_player(p["player"], roster)
         if not stats:
+            no_player.append(f"{p['player']} ({p['school']})")
             continue
         matched += 1
-        out_rows.append({"player_id": p["player_id"], "player": name, **{**empty, **stats}})
+        out_rows.append({"player_id": p["player_id"], "player": p["player"], **{**empty, **stats}})
 
-    print(f"   Matched stats for {matched}/{len(prospects)} college prospects")
+    print(f"   Matched 2026 stats for {matched}/{len(prospects)} college prospects")
+    if no_map:
+        print(f"   No school mapping ({len(no_map)}): {', '.join(no_map)}")
+    if no_player:
+        print(f"   Not on 2026 roster ({len(no_player)}): {', '.join(no_player)}")
 
     out_fp = DATA / "player_stats_2026.csv"
     with open(out_fp, "w", newline="", encoding="utf-8") as f:
