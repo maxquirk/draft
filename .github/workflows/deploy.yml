@@ -1,13 +1,12 @@
 name: Deploy to GitHub Pages
 
-# Exports the Shiny app to a static (shinylive/Pyodide) site and publishes it to
-# GitHub Pages. Runs on pushes that touch the app or its data, and on demand.
-
 on:
   push:
     branches: [main]
     paths:
       - "app/**"
+      - "static/**"
+      - "scripts/build_static.py"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
 
@@ -31,13 +30,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install shinylive exporter
-        run: pip install shiny shinylive
+      - name: Build data JSONs
+        run: python scripts/build_static.py
+      - name: Copy static site
+        run: cp -r static/. _site/
       - name: Inject GitHub PAT for community drafts
-        run: |
-          sed -i "s/DRAFT_PAT_PLACEHOLDER/${{ secrets.DRAFT_PAT }}/g" app/config.py
-      - name: Export static site
-        run: shinylive export app _site
+        run: sed -i "s/DRAFT_PAT_PLACEHOLDER/${{ secrets.DRAFT_PAT }}/g" _site/js/config.js
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

@@ -1,0 +1,366 @@
+/* 2026 MLB Draft Hub */
+/* Inter (UI) + JetBrains Mono (data/ranks) loaded via Google Fonts */
+
+:root {
+  --bg:        #080d14;
+  --surface:   #0f1520;
+  --surface2:  #1a2232;
+  --border:    #243050;
+  --dim:       #374560;
+  --ink:       #dde4f0;
+  --muted:     #6b7d96;
+  --accent:    #e8b55a;
+  --accent-d:  #b8882e;
+  --accent-bg: rgba(232,181,90,.1);
+  --good:      #4ade80;
+  --good-bg:   rgba(74,222,128,.12);
+  --bad:       #f87171;
+  --bad-bg:    rgba(248,113,113,.12);
+  --link:      #60a5fa;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+/* ── Navbar ─────────────────────────────────────────────── */
+.navbar {
+  background: var(--surface) !important;
+  border-bottom: 1px solid var(--border);
+  padding: .45rem 1.5rem;
+}
+.navbar-brand {
+  font-weight: 800;
+  font-size: .88rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--ink) !important;
+  text-decoration: none;
+}
+[data-tab] {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  padding: .45rem .85rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color .12s, background .12s;
+}
+[data-tab]:hover { color: var(--ink); }
+[data-tab].active {
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+
+/* ── Main content ────────────────────────────────────────── */
+.main-content { padding: 1.2rem 1.5rem; }
+
+/* ── Tab panels ─────────────────────────────────────────── */
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ── Typography ─────────────────────────────────────────── */
+.muted { color: var(--muted); font-size: .84rem; }
+h3 {
+  margin: 1.4rem 0 .5rem;
+  font-size: .68rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+h4 { color: var(--ink); font-weight: 700; font-size: .88rem; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+strong { color: var(--ink); }
+hr { border-color: var(--border); opacity: 1; margin: .9rem 0; }
+
+/* ── Cards ──────────────────────────────────────────────── */
+.detail-card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  margin-top: 1rem;
+}
+
+/* ── Modal ──────────────────────────────────────────────── */
+.modal-content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.modal-header {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.4rem;
+}
+.modal-header .btn-close { filter: invert(.7) brightness(1.6); }
+.modal-title { font-size: .9rem; font-weight: 700; color: var(--ink); }
+.modal-body { padding: 1.2rem 1.4rem; max-height: min(70vh, calc(100dvh - 180px)); overflow-y: auto; }
+
+/* ── Chips ──────────────────────────────────────────────── */
+.chip-row { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .4rem; }
+.src-chip {
+  display: inline-block;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: .1rem .5rem;
+  font-size: .77rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.big-chip {
+  display: inline-block;
+  background: var(--accent);
+  color: #05090f;
+  border-radius: 4px;
+  padding: .15rem .65rem;
+  font-weight: 800;
+  font-size: .82rem;
+  letter-spacing: .2px;
+  margin-right: .4rem;
+  font-family: 'JetBrains Mono', 'Fira Mono', monospace;
+}
+
+/* ── Tables ─────────────────────────────────────────────── */
+.bb-wrap, .sim-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.bb-table, .sim-table, .hist-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: .83rem;
+  font-variant-numeric: tabular-nums;
+}
+.bb-table th, .sim-table th, .hist-table th {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  padding: .5rem .65rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  font-size: .67rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+.bb-table td, .sim-table td, .hist-table td {
+  padding: .38rem .65rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(36,48,80,.45);
+}
+.bb-table tr:hover td, .sim-table tr:hover td {
+  background: var(--accent-bg);
+  cursor: pointer;
+}
+.bb-name, .pj-name { text-align: left !important; font-weight: 600; color: var(--ink); }
+.bb-pos { color: var(--muted); font-size: .77rem; font-weight: 500; }
+.pj-name:hover { color: var(--accent); }
+.bb-na  { color: var(--dim); }
+.bb-hi  { background: var(--good-bg); color: var(--good); font-weight: 600; }
+.bb-lo  { background: var(--bad-bg);  color: var(--bad); }
+.bb-rank, .pj-pick {
+  font-family: 'JetBrains Mono', 'Fira Mono', monospace;
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--accent);
+}
+.bb-src { font-size: .7rem; max-width: 70px; }
+.bb-sd  { color: var(--muted); font-size: .78rem; }
+
+/* ── Simulator ──────────────────────────────────────────── */
+.clock-box {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+}
+.clock-done { color: var(--good); font-weight: 700; }
+.sim-you td  { background: rgba(232,181,90,.07) !important; }
+.sim-proj    { opacity: .4; }
+.sim-locked  { opacity: 1; }
+.val-pos { color: var(--good); font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+.val-neg { color: var(--bad);  font-family: 'JetBrains Mono', monospace; }
+
+/* ── Simulator pick search ──────────────────────────────── */
+.sim-pick-list {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  max-height: 260px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: .3rem;
+  background: var(--surface2);
+}
+.sim-pick-row {
+  padding: .38rem .65rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: .84rem;
+  transition: background .1s, border-color .1s;
+}
+.sim-pick-row:hover { background: var(--accent-bg); border-color: var(--accent); }
+
+/* ── Stat cards ─────────────────────────────────────────── */
+.stat-row { display: flex; flex-wrap: wrap; gap: .55rem; margin: .6rem 0; }
+.stat-card {
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  border-radius: 8px;
+  padding: .65rem .95rem;
+  min-width: 95px;
+}
+.stat-value {
+  font-family: 'JetBrains Mono', 'Fira Mono', monospace;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.stat-label {
+  color: var(--muted);
+  font-size: .67rem;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  margin-top: .1rem;
+}
+
+/* ── Horizontal bars ────────────────────────────────────── */
+.hbar { display: flex; flex-direction: column; gap: .35rem; max-width: 680px; }
+.hbar-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 55px;
+  align-items: center;
+  gap: .55rem;
+  font-size: .83rem;
+}
+.hbar-track {
+  background: var(--surface2);
+  border-radius: 3px;
+  height: 9px;
+  overflow: hidden;
+}
+.hbar-fill  { display: block; height: 100%; }
+.hbar-val   { text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* ── Player search cards ────────────────────────────────── */
+.player-card-grid { display: flex; flex-direction: column; gap: .5rem; max-width: 560px; }
+.player-card {
+  padding: .6rem .9rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: border-color .15s, background .15s;
+}
+.player-card:hover { border-color: var(--accent); }
+
+/* ── Community Draft Cards ──────────────────────────────── */
+.cd-list { display: flex; flex-direction: column; gap: .75rem; }
+.cd-card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .8rem 1rem;
+}
+.cd-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-bottom: .4rem;
+}
+.cd-meta { flex: 1; min-width: 0; }
+.cd-title { font-weight: 700; color: var(--ink); font-size: .92rem; }
+.cd-byline { font-size: .8rem; }
+.cd-actions { display: flex; gap: .4rem; flex-shrink: 0; align-items: center; }
+.cd-expand {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--accent);
+  font-size: .78rem;
+  padding: .2rem .55rem;
+  cursor: pointer;
+  transition: border-color .12s;
+}
+.cd-expand:hover { border-color: var(--accent); }
+.cd-preview {
+  font-size: .82rem;
+  color: var(--muted);
+  line-height: 1.6;
+  border-top: 1px solid var(--border);
+  padding-top: .4rem;
+}
+.cd-detail { margin-top: .6rem; }
+
+/* ── Buttons ────────────────────────────────────────────── */
+.btn-primary {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #05090f !important;
+  font-weight: 700;
+  font-size: .83rem;
+}
+.btn-primary:hover {
+  background: var(--accent-d) !important;
+  border-color: var(--accent-d) !important;
+}
+.btn-primary:disabled {
+  background: var(--dim) !important;
+  border-color: var(--dim) !important;
+  color: var(--muted) !important;
+}
+.btn-outline-secondary {
+  border-color: var(--border) !important;
+  color: var(--muted) !important;
+  font-size: .81rem;
+}
+.btn-outline-secondary:hover {
+  background: var(--surface2) !important;
+  color: var(--ink) !important;
+  border-color: var(--dim) !important;
+}
+.btn-sm { font-size: .79rem; }
+
+/* ── Form controls ──────────────────────────────────────── */
+.form-control, .form-select {
+  background: var(--surface2) !important;
+  border-color: var(--border) !important;
+  color: var(--ink) !important;
+  font-size: .84rem;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--accent-bg) !important;
+}
+label, .control-label {
+  display: block;
+  color: var(--muted);
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+  margin-bottom: .2rem;
+}
