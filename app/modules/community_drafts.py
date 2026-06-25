@@ -1,6 +1,7 @@
 """Community Drafts tab — cards with likes/dislikes and sort."""
 from __future__ import annotations
 
+import html
 import json
 
 from shiny import module, reactive, render, req, ui
@@ -38,9 +39,11 @@ def _draft_card_html(d: dict, expanded: bool, ns_up: str, ns_dn: str, ns_exp: st
     dn = _safe_int(d.get("downvotes", 0))
     did = d.get("draft_id", "")
 
+    e = html.escape  # shorthand — escape all user-supplied strings before HTML insertion
+
     top5 = " &nbsp;·&nbsp; ".join(
-        f"<b>{p['pick']}.</b> {p.get('player','?')} "
-        f"<span class='muted'>({p.get('position','')})</span>"
+        f"<b>{p['pick']}.</b> {e(str(p.get('player','?')))} "
+        f"<span class='muted'>({e(str(p.get('position','')))})</span>"
         for p in picks[:5]
     )
 
@@ -49,10 +52,10 @@ def _draft_card_html(d: dict, expanded: bool, ns_up: str, ns_dn: str, ns_exp: st
         rows_html = "".join(
             f"<tr>"
             f"<td class='bb-rank'>{p.get('pick','')}</td>"
-            f"<td>{p.get('team','')}</td>"
-            f"<td style='text-align:left;font-weight:600'>{p.get('player','')}</td>"
-            f"<td class='bb-pos'>{p.get('position','')}</td>"
-            f"<td style='text-align:left'>{p.get('school','')}</td>"
+            f"<td>{e(str(p.get('team','')))}</td>"
+            f"<td style='text-align:left;font-weight:600'>{e(str(p.get('player','')))}</td>"
+            f"<td class='bb-pos'>{e(str(p.get('position','')))}</td>"
+            f"<td style='text-align:left'>{e(str(p.get('school','')))}</td>"
             f"<td>{p.get('consensus_rank','')}</td>"
             f"</tr>"
             for p in picks
@@ -70,8 +73,8 @@ def _draft_card_html(d: dict, expanded: bool, ns_up: str, ns_dn: str, ns_exp: st
         f"<div class='cd-card'>"
         f"<div class='cd-header'>"
         f"<div class='cd-meta'>"
-        f"<span class='cd-title'>{d.get('draft_name','Untitled')}</span>"
-        f"<span class='muted cd-byline'> · {d.get('author','?')} · {d.get('saved_at','')} · {d.get('mode','')} · {n_picks} picks</span>"
+        f"<span class='cd-title'>{e(d.get('draft_name','Untitled'))}</span>"
+        f"<span class='muted cd-byline'> · {e(d.get('author','?'))} · {e(d.get('saved_at',''))} · {e(d.get('mode',''))} · {n_picks} picks</span>"
         f"</div>"
         f"<div class='cd-actions'>"
         f"<button class='cd-vote cd-up' onclick=\"Shiny.setInputValue('{ns_up}', '{did}', {{priority:'event'}});\">▲ {up}</button>"

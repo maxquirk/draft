@@ -237,11 +237,15 @@ async def vote_draft(draft_id: str, direction: str) -> tuple[bool, str]:
         if "409" in str(e) or "conflict" in str(e).lower():
             try:
                 sha, rows = await _api_get()
+                retried = False
                 for row in rows:
                     if row.get("draft_id") == draft_id:
                         field = "upvotes" if direction == "up" else "downvotes"
                         row[field] = str(_safe_int(row.get(field, 0)) + 1)
+                        retried = True
                         break
+                if not retried:
+                    return False, "Draft not found"
                 new_sha = await _api_put(rows, sha, f"Vote on draft {draft_id}")
                 _cache = {"rows": rows, "sha": new_sha}
                 return True, "ok"

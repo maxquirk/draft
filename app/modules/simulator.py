@@ -1,6 +1,7 @@
 """Tab 3 -- Mock-Draft Simulator. Auto-sim or go on-the-clock for one team."""
 from __future__ import annotations
 
+import html
 import io
 
 import pandas as pd
@@ -145,8 +146,8 @@ def simulator_server(input, output, session):
                 f"<div class='sim-pick-row' style='{style}' "
                 f"onclick=\"Shiny.setInputValue('{input_id}', '{safe_pid}', {{priority:'event'}});\">"
                 f"<span class='bb-rank'>#{int(p['consensus_rank'])}</span> "
-                f"<strong>{p['player']}</strong> "
-                f"<span class='bb-pos'>{p.get('position','')} · {p.get('school','')}</span>"
+                f"<strong>{html.escape(p['player'])}</strong> "
+                f"<span class='bb-pos'>{html.escape(p.get('position',''))} · {html.escape(p.get('school',''))}</span>"
                 f"</div>"
             )
         if not rows:
@@ -239,9 +240,9 @@ def simulator_server(input, output, session):
             vtxt = (f'<span class="val-neg">+{val}</span>' if isinstance(val, (int, float)) and val > 0
                     else (f'<span class="val-pos">{val}</span>' if isinstance(val, (int, float)) and val < 0 else ""))
             rows.append(
-                f'<tr class="{cls}"><td>{r["pick"]}</td><td>{r["team"]}</td>'
-                f'<td>{r["player"]}</td><td>{r["position"]}</td>'
-                f'<td>{r["school"]}</td><td>{r["consensus_rank"]}</td><td>{vtxt}</td></tr>'
+                f'<tr class="{cls}"><td>{r["pick"]}</td><td>{html.escape(str(r["team"]))}</td>'
+                f'<td>{html.escape(str(r["player"]))}</td><td>{html.escape(str(r["position"]))}</td>'
+                f'<td>{html.escape(str(r["school"]))}</td><td>{r["consensus_rank"]}</td><td>{vtxt}</td></tr>'
             )
         return ui.div(
             ui.help_text("Solid rows are finalized; faded rows are projected. "
