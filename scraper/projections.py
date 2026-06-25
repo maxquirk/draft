@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT.parent / "app"))
 from logic.sim_engine import simulate  # noqa: E402
 
 N_RUNS = 1000
-RANDOMNESS = 0.32
+RANDOMNESS = 0.50  # raised from 0.32 so avg_rank gaps can be overcome by noise
 
 
 def _load_csv(name: str) -> list[dict]:
@@ -50,15 +50,17 @@ def build() -> None:
                     rankings[sc[4:]] = int(float(v))
                 except ValueError:
                     pass
+        avg = float(r.get("avg_rank", 0) or 0)
         players.append({
             "player_id": r["player_id"],
             "player": r["player"],
             "position": r.get("position", ""),
             "school": r.get("school", ""),
             "class_level": r.get("class_level", ""),
-            "consensus_rank": int(float(r["consensus_rank"])),
+            # use avg_rank as the sim score so board disagreement creates real uncertainty
+            "consensus_rank": avg if avg > 0 else int(float(r["consensus_rank"])),
             "n_sources": int(float(r.get("n_sources", 0) or 0)),
-            "avg_rank": float(r.get("avg_rank", 0) or 0),
+            "avg_rank": avg,
             "rankings": rankings,
         })
     board = sorted(players, key=lambda p: p["consensus_rank"])[:80]
