@@ -98,7 +98,6 @@ export function initSimulator(G, showModal) {
   const el = document.getElementById('tab-simulator');
   const order = G.draft_order;
   const teams = [...new Set(order.map(s => s.team))].sort();
-  const defaultSeed = Math.floor(Math.random() * 100000);
 
   el.innerHTML = `
     <div style="display:flex;gap:1.5rem;flex-wrap:wrap;align-items:flex-end;margin-bottom:1rem;">
@@ -122,10 +121,6 @@ export function initSimulator(G, showModal) {
         <input type="range" id="sim-rand" min="0" max="0.5" step="0.05" value="0.15" style="width:120px;vertical-align:middle;margin-left:.4rem;">
         <span id="sim-rand-val" style="font-family:'JetBrains Mono',monospace;margin-left:.3rem;">0.15</span>
       </div>
-      <div>
-        <label class="control-label">Seed</label>
-        <input type="number" id="sim-seed" class="form-control" value="${defaultSeed}" style="width:110px;">
-      </div>
       <button id="sim-start" class="btn btn-primary" style="align-self:flex-end;">Start Simulation</button>
     </div>
     <div id="sim-clock"></div>
@@ -137,25 +132,26 @@ export function initSimulator(G, showModal) {
     el.querySelector('#sim-rand-val').textContent = e.target.value;
   });
 
-  let state = null; // {order, committed, myTeam, mode, randomness, seed}
+  let state = null; // {committed, myTeam, mode, randomness, seed}
 
   function getOpts() {
     return {
       myTeam: el.querySelector('#sim-team').value,
       mode: el.querySelector('#sim-mode').value,
       randomness: parseFloat(el.querySelector('#sim-rand').value),
-      seed: parseInt(el.querySelector('#sim-seed').value, 10) || 0,
+      seed: Math.floor(Math.random() * 100000),
     };
   }
 
-  function nextMyPick(results, committed, myTeam) {
+  // Returns the pick number of the next uncommitted user pick, or null.
+  // Only checks committed — not results — because simulate() always fills
+  // every slot (including user slots), so checking results would hide the clock.
+  function nextMyPick(committed, myTeam) {
     if (!myTeam) return null;
     for (const slot of order) {
       if (slot.team !== myTeam) continue;
       if (committed[slot.pick] || committed[String(slot.pick)]) continue;
-      // check if this slot has been reached in results
-      const done = results.find(r => r.pick === slot.pick);
-      if (!done) return slot.pick;
+      return slot.pick;
     }
     return null;
   }
@@ -221,10 +217,10 @@ export function initSimulator(G, showModal) {
       locked: state.committed,
     });
 
-    const myPick = nextMyPick(results, state.committed, state.myTeam);
+    const myPick = nextMyPick(state.committed, state.myTeam);
 
     if (myPick) {
-      // Run sim up to (but not including) myPick
+      // Show picks before the user's next pick, then the clock
       const partial = results.filter(r => r.pick < myPick);
       renderResults(partial, true);
       renderClock(myPick, partial, state.committed);

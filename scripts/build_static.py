@@ -94,17 +94,22 @@ write_json("projections.json", {"runs": int(meta.get("runs", 0)), "players": pla
 tend_rows = read_csv("team_tendencies.csv")
 tendencies = {}
 for r in tend_rows:
-    pb = r.get("position_breakdown", "{}")
-    try:
-        pb = json.loads(pb) if isinstance(pb, str) else pb
-    except Exception:
-        pb = {}
+    # Build position breakdown from individual pb_* columns (avoids Python-dict-literal parsing)
+    pb = {}
+    for pos in ("C", "IF", "OF", "P"):
+        v = r.get(f"pb_{pos}", "")
+        if v and v.strip():
+            try:
+                pb[pos] = int(float(v))
+            except ValueError:
+                pass
     team = r.get("team", "")
+    # CSV stores pct as 0-100; divide by 100 so JS can use them as 0-1 fractions
     tendencies[team] = {
         "n_picks": int(float(r.get("n_picks") or 0)),
-        "pct_college": round(float(r.get("pct_college") or 0), 4),
-        "pct_hs": round(float(r.get("pct_hs") or 0), 4),
-        "pct_pitcher": round(float(r.get("pct_pitcher") or 0), 4),
+        "pct_college": round(float(r.get("pct_college") or 0) / 100, 4),
+        "pct_hs": round(float(r.get("pct_hs") or 0) / 100, 4),
+        "pct_pitcher": round(float(r.get("pct_pitcher") or 0) / 100, 4),
         "position_breakdown": pb,
     }
 write_json("tendencies.json", tendencies)
