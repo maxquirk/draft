@@ -322,6 +322,31 @@ label, .control-label {
   border-color: var(--accent);
 }
 
+/* ── Simulator pick search ──────────────────────────────── */
+.sim-pick-list {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  max-height: 260px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: .3rem;
+  background: var(--surface2);
+}
+.sim-pick-row {
+  padding: .38rem .65rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: .84rem;
+  transition: background .1s, border-color .1s;
+}
+.sim-pick-row:hover {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+}
+
 /* ── Community Draft Cards ──────────────────────────────── */
 .cd-list { display: flex; flex-direction: column; gap: .75rem; }
 .cd-card {

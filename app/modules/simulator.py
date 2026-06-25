@@ -45,6 +45,7 @@ def simulator_ui():
             width=320,
         ),
         ui.output_ui("clock"),
+        ui.output_ui("pick_panel"),
         ui.output_ui("results"),
     )
 
@@ -87,13 +88,13 @@ def simulator_server(input, output, session):
         head = ui.h3(f"Pick {slot.get('pick')} -- {slot.get('team')} "
                      f"{'(you)' if on_user else 'on the clock'}")
         if on_user:
-            taken = set(committed().values())
-            avail = [p for p in _BOARD if p["player_id"] not in taken][:60]
             return ui.div(
                 head,
-                ui.input_selectize("pickfor", "Draft a player",
-                                   {p["player_id"]: _choice_label(p) for p in avail}),
-                ui.input_action_button("draft", "Draft", class_="btn-primary"),
+                ui.input_text("pick_search", None,
+                              placeholder="Search players by name, school, or position…",
+                              width="100%"),
+                ui.output_text_verbatim("pick_selection", placeholder=True),
+                ui.input_action_button("draft", "Draft selected", class_="btn-primary"),
                 class_="clock-box",
             )
         return ui.div(
@@ -104,14 +105,87 @@ def simulator_server(input, output, session):
             class_="clock-box",
         )
 
+    # -- Player search for on-clock picks -----------------------------------
+
+    selected_pid: reactive.Value[str] = reactive.Value("")
+    input_id = session.ns("pickfor")
+
+    @reactive.calc
+    def _avail() -> list[dict]:
+        taken = set(committed().values())
+        return [p for p in _BOARD if p["player_id"] not in taken]
+
+    @render.ui
+    def pick_panel():
+        idx = _on_clock_idx()
+        if idx is None:
+            return ui.div()
+        slot = _ORDER[idx]
+        my_team = input.team()
+        if not (my_team in _TEAMS and slot.get("team") == my_team):
+            return ui.div()
+        q = (input.pick_search() or "").strip().lower()
+        avail = _avail()
+        if q:
+            avail = [p for p in avail
+                     if q in p["player"].lower()
+                     or q in p.get("school", "").lower()
+                     or q in p.get("position", "").lower()][:20]
+        else:
+            avail = avail[:20]
+        sel = selected_pid()
+        rows = []
+        for p in avail:
+            pid = p["player_id"]
+            is_sel = pid == sel
+            safe_pid = pid.replace("'", "\\'")
+            style = ("background:var(--accent-bg);border-color:var(--accent);"
+                     if is_sel else "")
+            rows.append(
+                f"<div class='sim-pick-row' style='{style}' "
+                f"onclick=\"Shiny.setInputValue('{input_id}', '{safe_pid}', {{priority:'event'}});\">"
+                f"<span class='bb-rank'>#{int(p['consensus_rank'])}</span> "
+                f"<strong>{p['player']}</strong> "
+                f"<span class='bb-pos'>{p.get('position','')} · {p.get('school','')}</span>"
+                f"</div>"
+            )
+        if not rows:
+            return ui.div(ui.p("No players found.", class_="muted"),
+                          style="margin-top:.5rem;")
+        return ui.div(
+            ui.HTML("<div class='sim-pick-list'>" + "".join(rows) + "</div>"),
+            style="margin-top:.5rem;",
+        )
+
+    @reactive.effect
+    @reactive.event(input.pickfor)
+    def _on_pick_select():
+        pid = input.pickfor()
+        if pid:
+            selected_pid.set(pid)
+
+    @render.text
+    def pick_selection():
+        pid = selected_pid()
+        if not pid:
+            return "No player selected"
+        p = next((x for x in _BOARD if x["player_id"] == pid), None)
+        if not p:
+            return "No player selected"
+        return f"Selected: #{int(p['consensus_rank'])} {p['player']} ({p.get('position','')})"
+
     @reactive.effect
     @reactive.event(input.draft)
     def _draft():
         idx = _on_clock_idx()
         if idx is None:
             return
+        pid = selected_pid()
+        if not pid:
+            return
         c = dict(committed())
-        c[_ORDER[idx].get("pick")] = input.pickfor()
+        c[_ORDER[idx].get("pick")] = pid
+        selected_pid.set("")
         committed.set(c)
 
     @reactive.effect
@@ -161,16 +235,17 @@ def simulator_server(input, output, session):
             cls = " sim-you" if tag else ""
             cls += " sim-locked" if done else " sim-proj"
             val = r["value"]
-            vtxt = (f'<span class="val-pos">+{val}</span>' if isinstance(val, (int, float)) and val > 0
-                    else (f'<span class="val-neg">{val}</span>' if isinstance(val, (int, float)) and val < 0 else ""))
+            # val = consensus_rank - pick; negative = value (player fell), positive = reach
+            vtxt = (f'<span class="val-neg">+{val}</span>' if isinstance(val, (int, float)) and val > 0
+                    else (f'<span class="val-pos">{val}</span>' if isinstance(val, (int, float)) and val < 0 else ""))
             rows.append(
                 f'<tr class="{cls}"><td>{r["pick"]}</td><td>{r["team"]}</td>'
                 f'<td>{r["player"]}</td><td>{r["position"]}</td>'
                 f'<td>{r["school"]}</td><td>{r["consensus_rank"]}</td><td>{vtxt}</td></tr>'
             )
         return ui.div(
-            ui.help_text("Solid rows are finalized; faded rows are the engine's projection. "
-                         "'Value' = consensus rank minus pick (positive = value pick)."),
+            ui.help_text("Solid rows are finalized; faded rows are projected. "
+                         "Green = value (player fell); Red = reach (taken early)."),
             ui.HTML('<div class="sim-wrap"><table class="sim-table"><thead><tr>'
                     '<th>Pick</th><th>Team</th><th>Player</th><th>Pos</th><th>School</th>'
                     '<th>Cons.</th><th>Value</th></tr></thead><tbody>'
