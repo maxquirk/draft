@@ -1,26 +1,25 @@
-"""Scrape 2025 college player stats for draft prospects.
+"""Scrape 2025 college player stats for draft prospects from Baseball Reference.
 
-Tries FanGraphs college stats leaderboard first (JSON API, no auth needed),
-then falls back to the MLB Stats API draft prospects endpoint for any data available.
-Matches players by name to consensus_2026.csv and writes player_stats_2026.csv.
+Uses BR search to find each college player's register page, then extracts
+their most recent season stats. HS players are skipped (no college stats).
 
+Writes app/data/player_stats_2026.csv.
 Run standalone:  python -m scraper.stats
 """
 from __future__ import annotations
 
 import csv
 import re
+import time
 from pathlib import Path
 
-from .base import get_json
+from .base import get
 from .normalize import canon_name
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT.parent / "app" / "data"
 
-_FG_BAT_URL = "https://www.fangraphs.com/api/leaders/college-stats"
-_FG_PIT_URL = "https://www.fangraphs.com/api/leaders/college-stats"
-
+_BR_SEARCH = "https://www.baseball-reference.com/search/search.fcgi"
 _COLS = [
     "player_id", "player", "stat_type",
     "avg", "obp", "slg", "ops", "hr", "rbi", "sb",
@@ -28,90 +27,112 @@ _COLS = [
 ]
 
 
-def _safe(v, fmt=None) -> str:
-    if v is None:
-        return ""
+def _safe_float(val: str) -> str:
     try:
-        f = float(v)
-        if fmt == "avg":
-            return f"{f:.3f}"
-        if fmt == "era":
-            return f"{f:.2f}"
-        return str(round(f, 2))
+        return str(round(float(val), 3))
     except (TypeError, ValueError):
-        return str(v)
+        return ""
 
 
-def _fetch_fg_batters(season: int = 2025) -> list[dict]:
-    data = get_json(_FG_BAT_URL, params={
-        "pos": "all", "season": season, "stat": "bat",
-        "lg": "all", "qual": "0", "type": "0",
-    })
-    if not data or not isinstance(data, (list, dict)):
-        return []
-    rows = data if isinstance(data, list) else data.get("data", [])
-    out = []
-    for r in rows:
-        name = (r.get("PlayerName") or r.get("Name") or r.get("name") or "").strip()
-        if not name:
-            continue
-        out.append({
-            "_canon": canon_name(name),
-            "_name": name,
-            "stat_type": "BATTER",
-            "avg": _safe(r.get("AVG") or r.get("BA"), "avg"),
-            "obp": _safe(r.get("OBP"), "avg"),
-            "slg": _safe(r.get("SLG"), "avg"),
-            "ops": _safe(r.get("OPS"), "avg"),
-            "hr": _safe(r.get("HR")),
-            "rbi": _safe(r.get("RBI")),
-            "sb": _safe(r.get("SB")),
-        })
-    return out
+def _fetch_br_player_url(name: str) -> str | None:
+    """Search BR for the player and return the first matching register URL."""
+    search_url = f"{_BR_SEARCH}?search={name.replace(' ', '+')}"
+    html = get(search_url, tag=f"br_search_{canon_name(name)[:20]}", cache=True)
+    if not html:
+        return None
+
+    # Direct match: BR redirected to a player page
+    if "/players/" in html and "register" in html.lower():
+        reg = re.search(r'href="(/register/player\.fcgi[^"]+)"', html)
+        if reg:
+            return "https://www.baseball-reference.com" + reg.group(1)
+
+    # Search result page: find the register link
+    links = re.findall(r'href="(/register/player\.fcgi[^"]+)"', html)
+    if links:
+        return "https://www.baseball-reference.com" + links[0]
+
+    return None
 
 
-def _fetch_fg_pitchers(season: int = 2025) -> list[dict]:
-    data = get_json(_FG_PIT_URL, params={
-        "pos": "all", "season": season, "stat": "pit",
-        "lg": "all", "qual": "0", "type": "0",
-    })
-    if not data or not isinstance(data, (list, dict)):
-        return []
-    rows = data if isinstance(data, list) else data.get("data", [])
-    out = []
-    for r in rows:
-        name = (r.get("PlayerName") or r.get("Name") or r.get("name") or "").strip()
-        if not name:
-            continue
-        try:
-            ip = float(r.get("IP") or 0)
-            k9 = _safe(float(r.get("K/9") or r.get("K_9") or 0))
-            bb9 = _safe(float(r.get("BB/9") or r.get("BB_9") or 0))
-        except (TypeError, ValueError):
-            k9, bb9, ip = "", "", ""
-        out.append({
-            "_canon": canon_name(name),
-            "_name": name,
-            "stat_type": "PITCHER",
-            "era": _safe(r.get("ERA"), "era"),
-            "whip": _safe(r.get("WHIP")),
-            "k_9": k9,
-            "bb_9": bb9,
-            "ip": _safe(ip),
-            "w": _safe(r.get("W")),
-            "sv": _safe(r.get("SV")),
-        })
-    return out
+def _parse_stats_from_register(url: str, season: int = 2025) -> dict | None:
+    """Fetch the BR register page and extract the specified season's batting or pitching stats."""
+    html = get(url, tag=f"br_reg_{hash(url) & 0xFFFF}", cache=True)
+    if not html:
+        return None
+
+    # Determine stat type — does this page have a batting or pitching table?
+    has_bat = bool(re.search(r'<table[^>]+id="(batting_standard|bat_stats)"', html))
+    has_pit = bool(re.search(r'<table[^>]+id="(pitching_standard|pit_stats)"', html))
+
+    def _extract_row(table_id_pattern: str) -> dict:
+        table_m = re.search(rf'<table[^>]+id="{table_id_pattern}"[^>]*>(.*?)</table>', html, re.S | re.I)
+        if not table_m:
+            return {}
+        tbody = re.search(r'<tbody>(.*?)</tbody>', table_m.group(1), re.S)
+        if not tbody:
+            return {}
+        rows = re.findall(r'<tr[^>]*>(.*?)</tr>', tbody.group(1), re.S)
+        # Find most recent season matching `season`
+        for row in reversed(rows):
+            year_m = re.search(r'data-stat="year_ID"[^>]*>([^<]+)', row)
+            if not year_m:
+                continue
+            yr = year_m.group(1).strip()
+            if str(season) in yr or str(season - 1) in yr:
+                cells = re.findall(r'data-stat="([^"]+)"[^>]*>([^<]*)', row)
+                return {k: re.sub(r"<[^>]+>", "", v).strip() for k, v in cells}
+        # Fall back to last row with data
+        for row in reversed(rows):
+            if "<td" in row:
+                cells = re.findall(r'data-stat="([^"]+)"[^>]*>([^<]*)', row)
+                d = {k: re.sub(r"<[^>]+>", "", v).strip() for k, v in cells}
+                if any(d.get(k) for k in ("batting_avg", "onbase_plus_slugging", "earned_run_avg")):
+                    return d
+        return {}
+
+    if has_bat:
+        d = _extract_row(r"batting_standard|bat_stats|standard_batting")
+        if d:
+            return {
+                "stat_type": "BATTER",
+                "avg": _safe_float(d.get("batting_avg", "")),
+                "obp": _safe_float(d.get("onbase_perc", d.get("onbase_pct", ""))),
+                "slg": _safe_float(d.get("slugging_perc", d.get("slugging_pct", ""))),
+                "ops": _safe_float(d.get("onbase_plus_slugging", "")),
+                "hr": d.get("HR", ""),
+                "rbi": d.get("RBI", ""),
+                "sb": d.get("SB", ""),
+            }
+    if has_pit:
+        d = _extract_row(r"pitching_standard|pit_stats|standard_pitching")
+        if d:
+            ip = d.get("IP", "")
+            so = float(d.get("SO", 0) or 0)
+            bb = float(d.get("BB", 0) or 0)
+            ip_f = float(ip) if ip else 0.0
+            k9 = f"{9 * so / ip_f:.2f}" if ip_f > 0 else ""
+            bb9 = f"{9 * bb / ip_f:.2f}" if ip_f > 0 else ""
+            return {
+                "stat_type": "PITCHER",
+                "era": _safe_float(d.get("earned_run_avg", "")),
+                "whip": _safe_float(d.get("whip", "")),
+                "k_9": k9,
+                "bb_9": bb9,
+                "ip": ip,
+                "w": d.get("W", ""),
+                "sv": d.get("SV", ""),
+            }
+    return None
 
 
 def build() -> None:
-    """Fetch stats and match to consensus players, writing player_stats_2026.csv."""
+    """Fetch stats for all college prospects and write player_stats_2026.csv."""
     consensus_fp = DATA / "consensus_2026.csv"
     if not consensus_fp.exists():
-        print("   ! consensus_2026.csv not found — run scraper.run first")
+        print("   ! consensus_2026.csv not found")
         return
 
-    # Load college players only
     prospects: list[dict] = []
     with open(consensus_fp, encoding="utf-8") as f:
         for row in csv.DictReader(f):
@@ -119,53 +140,32 @@ def build() -> None:
                 prospects.append({
                     "player_id": row.get("player_id", ""),
                     "player": row.get("player", ""),
-                    "_canon": canon_name(row.get("player", "")),
                     "position": row.get("position", "").upper(),
                 })
 
-    print(f"   {len(prospects)} college prospects to match stats for")
+    print(f"   Fetching BR stats for {len(prospects)} college prospects ...")
 
-    batters = _fetch_fg_batters()
-    pitchers = _fetch_fg_pitchers()
-    print(f"   FanGraphs returned {len(batters)} batter rows, {len(pitchers)} pitcher rows")
-
-    bat_lookup = {r["_canon"]: r for r in batters}
-    pit_lookup = {r["_canon"]: r for r in pitchers}
-
-    matched = 0
     out_rows: list[dict] = []
+    matched = 0
+
     for p in prospects:
-        ck = p["_canon"]
-        pos = p["position"]
-        is_pitcher = any(x in pos for x in ("RHP", "LHP", "P"))
+        player_url = _fetch_br_player_url(p["player"])
+        if not player_url:
+            continue
 
-        stats_row = pit_lookup.get(ck) if is_pitcher else bat_lookup.get(ck)
-        if not stats_row:
-            stats_row = bat_lookup.get(ck) or pit_lookup.get(ck)
-
-        if not stats_row:
+        stats = _parse_stats_from_register(player_url)
+        if not stats:
             continue
 
         matched += 1
+        empty = {"avg": "", "obp": "", "slg": "", "ops": "", "hr": "", "rbi": "", "sb": "",
+                 "era": "", "whip": "", "k_9": "", "bb_9": "", "ip": "", "w": "", "sv": ""}
         out_rows.append({
             "player_id": p["player_id"],
             "player": p["player"],
-            "stat_type": stats_row.get("stat_type", "BATTER"),
-            "avg": stats_row.get("avg", ""),
-            "obp": stats_row.get("obp", ""),
-            "slg": stats_row.get("slg", ""),
-            "ops": stats_row.get("ops", ""),
-            "hr": stats_row.get("hr", ""),
-            "rbi": stats_row.get("rbi", ""),
-            "sb": stats_row.get("sb", ""),
-            "era": stats_row.get("era", ""),
-            "whip": stats_row.get("whip", ""),
-            "k_9": stats_row.get("k_9", ""),
-            "bb_9": stats_row.get("bb_9", ""),
-            "ip": stats_row.get("ip", ""),
-            "w": stats_row.get("w", ""),
-            "sv": stats_row.get("sv", ""),
+            **{**empty, **stats},
         })
+        time.sleep(3.0)  # BR rate-limits aggressively — 3s between requests
 
     print(f"   Matched stats for {matched}/{len(prospects)} college prospects")
 

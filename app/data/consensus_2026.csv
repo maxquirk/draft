@@ -1,270 +1,511 @@
-player_id,player,position,school,class_level,state,notes,consensus_rank,avg_rank,median_rank,best_rank,worst_rank,spread,stdev,n_sources,src_eleven_point7,src_espn_mcdaniel,src_just_baseball,src_keith_law,src_mlb_pipeline
-p0000,Roch Cholowsky,SS,UCLA,College,AZ,B/T: R/R,1,1.0,1,1,1,0,0.0,5,1,1,1,1,1
-p0001,Grady Emerson,SS,Fort Worth Christian,HS,TX,B/T: L/R,2,2.64,2.0,1,5,4,1.5,4,,2,1,5,2
-p0002,Vahn Lackey,C,Georgia Tech,College,GA,B/T: R/R,3,2.93,3,2,5,3,1.1,5,5,3,2,2,3
-p0003,Jackson Flora,RHP,UC Santa Barbara,College,CA,B/T: R/R,4,3.47,3,2,5,3,1.02,5,2,4,3,3,5
-p0012,Eric Booth Jr.,OF,Oak Grove,HS,MS,B/T: L/L,5,6.36,5.5,5,9,4,1.64,4,,5,5,9,6
-p0008,Drew Burress,OF,Georgia Tech,College,GA,B/T: R/R,6,7.0,7,4,10,6,1.9,5,4,7,10,7,7
-p0007,Jacob Lombard,SS,"Gulliver Prep (Pinecrest, Fla.)",HS,FL,B/T: R/R,7,9.16,7.0,4,17,13,4.97,4,,8,6,17,4
-p0013,Cameron Flukey,RHP,Coastal Carolina,College,NJ,B/T: R/R,8,11.37,11,6,16,10,3.54,5,14,9,6,16,11
-p0015,Liam Peterson,RHP,Florida,College,FL,B/T: R/R,9,11.7,13,6,18,12,4.31,5,6,13,18,8,14
-p0020,Justin Lebron,SS,Alabama,College,FL,B/T: R/R,10,12.4,12,9,18,9,3.2,5,18,10,12,14,9
-p0014,Ryder Helfrick,C,Arkansas,College,CA,B/T: R/R,11,12.53,13,6,18,12,4.59,5,17,6,9,18,13
-p0024,Jared Grindlinger,LHP,Huntington Beach,HS,CA,B/T: L/L,12,12.76,11.5,10,18,8,3.11,4,,11,10,12,18
-p0010,Chris Hacopian,2B,Texas A&M,College,MD,B/T: R/R,13,13.17,10,4,21,17,6.68,5,7,19,4,21,10
-p0023,Derek Curiel,OF,LSU,College,CA,B/T: L/L,14,13.2,13,10,17,7,2.32,5,13,17,14,10,12
-p0009,Gio Rojas,LHP,"Stoneman Douglas HS (Parkland, Fla.)",HS,FL,B/T: R/L,15,13.64,11.0,4,25,21,7.92,4,,14,4,25,8
-p0011,Tyler Bell,SS,Kentucky,College,IL,B/T: S/R,16,15.03,12,4,29,25,8.94,5,12,29,8,4,20
-p0005,AJ Gracia,OF,Virginia,College,NJ,B/T: L/L,17,16.17,17,3,27,24,9.39,5,3,27,5,22,17
-p0017,Sawyer Strosnider,OF,TCU,College,TX,B/T: L/L,18,16.53,16,7,26,19,6.71,5,10,26,7,19,16
-p0016,Eric Becker,SS,Virginia,College,NY,B/T: L/R,19,17.47,11,6,33,27,10.72,5,8,33,11,6,26
-p0025,Cole Carlon,LHP,Arizona State,College,AZ,B/T: L/L,20,18.53,17,11,25,14,5.15,5,11,15,17,23,25
-p0030,Hunter Dietz,LHP,Arkansas,College,FL,"hometown: Trinity, FL; bat/throw: R/L",21,18.8,21,13,24,11,4.24,5,21,24,22,13,15
-p0026,Cade Townsend,RHP,Mississippi,College,CA,B/T: R/R,22,21.53,21,11,38,27,9.35,5,38,16,21,11,27
-p0031,Logan Reddemann,RHP,UCLA,College,CA,B/T: S/R,23,22.13,23,13,33,20,7.58,5,33,23,13,15,28
-p0028,Trevor Condon,OF,Etowah,HS,GA,B/T: L/R,24,24.52,18.5,12,46,34,13.35,4,,12,15,46,22
-p0021,Ace Reese,3B,Mississippi State,College,TX,B/T: L/R,25,24.53,21,9,49,40,13.74,5,9,21,15,49,21
-p0004,Carson Bolemon,LHP,Southside Christian HS (SC),HS,SC,Wake Forest commit; age 19.3,26,25.52,26.0,2,41,39,14.13,4,,41,2,29,23
-p0039,Tegan Kuhns,RHP,Tennessee,College,PA,B/T: S/R,27,25.67,24,18,34,16,5.51,5,34,18,24,30,24
-p0046,Bo Lowrance,3B,Christ Church Episcopal,HS,SC,B/T: L/R,28,26.08,24.0,20,38,18,6.98,4,,22,26,20,38
-p0045,Zion Rose,OF,Louisville,College,IL,B/T: R/R,29,28.57,26,20,39,19,6.54,5,20,39,26,24,31
-p0019,Logan Schmidt,LHP,Ganesha,HS,CA,B/T: L/L,30,29.0,30.5,8,43,35,12.75,4,,28,8,33,43
-p0047,Chase Brunson,OF,TCU,College,CA,B/T: R/R,31,30.23,28,20,44,24,7.96,5,26,31,20,28,44
-p0042,Mason Edwards,LHP,USC,College,CA,B/T: L/L,32,30.43,34,19,42,23,9.13,5,36,20,19,42,34
-p0041,Brody Bumila,LHP,"Bishop Feehan HS (Attleboro, Mass.)",HS,MA,B/T: L/L,33,31.4,29.5,19,44,25,9.45,4,,34,25,44,19
-p0038,Aiden Ruiz,SS,The Stony Brook,HS,NY,commitment: Vanderbilt; bat/throw: S/R,34,34.44,36.0,17,44,27,9.93,4,,44,17,36,36
-p0043,Chris Rembert,2B,Auburn,College,FL,B/T: R/R,35,34.87,29,19,53,34,11.91,5,19,53,29,27,41
-p0022,Will Brick,C,Christian Brothers Academy,HS,TN,B/T: R/R,36,37.84,42.5,9,51,42,16.21,4,,40,9,45,51
-p0018,James Clark,SS,St. John Bosco,HS,CA,B/T: L/R,37,37.92,42.5,7,53,46,17.71,4,,38,7,47,53
-p0035,Caden Sorrell,OF,Texas A&M,College,TX,B/T: L/L,38,38.83,31,16,63,47,16.0,5,16,45,31,63,29
-p0048,Archer Horn,SS,St. Ignatius College Prep,HS,CA,B/T: L/R,39,39.12,34.0,20,67,47,17.51,4,,30,20,38,67
-p0070,Cole Prosek,3B,Magnolia Heights,HS,MS,B/T: L/R,40,39.24,32.5,32,57,25,10.69,4,,32,32,57,33
-p0029,Coleman Borthwick,RHP,South Walton,HS,FL,B/T: R/R,41,39.64,35.0,12,68,56,19.96,4,,35,12,68,35
-p0071,Landon Thome,2B,Nazareth Academy,HS,IL,B/T: L/R,42,40.12,38.5,32,51,19,6.96,4,,51,40,32,37
-p0052,Kaden Waechter,RHP,Jesuit HS (FL),HS,FL,B/T: R/R,43,40.88,42.5,23,52,29,11.25,4,,48,23,37,52
-p0027,Tyler Spangler,SS,De La Salle,HS,CA,B/T: L/R,44,41.12,42.5,11,61,50,18.55,4,,36,11,61,49
-p0053,Jake Brown,OF,LSU,College,LA,B/T: L/L,45,41.37,41,23,55,32,12.49,5,29,52,23,41,55
-p0033,Jensen Hirschkorn,RHP,Kingsburg,HS,CA,B/T: L/R,46,41.56,50,14,54,40,17.99,3,,54,14,,50
-p0057,Aiden Robbins,OF,Texas,College,PA,B/T: R/R,47,42.5,30,25,85,60,22.44,5,27,25,38,85,30
-p0040,Sean Duncan,LHP,"Terry Fox Secondary School (Port Coquitlam, BC)",HS,BC,Vanderbilt commit<; age 18.2,48,43.68,42.0,18,69,51,21.3,4,,58,18,26,69
-p0100,Robert Omidi,"2B,OF",St. Martin,HS,ON,commitment: Kentucky; bat/throw: L/R,49,44.0,44,44,44,0,0.0,1,,,44,,
-p0101,Blake Morningstar,RHP,Wake Forest,College,PA,"Wyalusing, PA; 21.1 JR",50,44.0,44,44,44,0,0.0,1,44,,,,
-p0067,Gavin Grahovac,1B,Texas A&M,College,CA,B/T: R/R,51,44.5,39,31,70,39,14.24,5,31,70,45,39,32
-p0102,Eli Herst,RHP,Seattle Academy,HS,WA,commitment: Vanderbilt; bat/throw: R/R,52,45.0,45,45,45,0,0.0,1,,,45,,
-p0103,Nathan Aceves,RHP,UC Santa Barbara,College,CA,"Huntington Beach, CA; 20.8 SO",53,45.0,45,45,45,0,0.0,1,45,,,,
-p0077,Andrew Williamson,OF,Central Florida,College,FL,B/T: L/L,54,45.17,45.5,35,55,20,7.29,4,55,43,35,,48
-p0050,Connor Comeau,SS,Anderson,HS,TX,B/T: L/R,55,45.68,48.0,22,60,38,15.91,4,,37,22,59,60
-p0059,Ben Blair,RHP,Liberty,College,VA,B/T: R/R,56,46.47,49,25,58,33,11.6,5,49,42,25,58,54
-p0108,Jack Brenner,"C,SS",Fond Du Lac,HS,WI,commitment: Oklahoma; bat/throw: R/R,57,47.0,47,47,47,0,0.0,1,,,47,,
-p0061,Jack Radel,RHP,Notre Dame,College,SD,B/T: R/R,58,47.27,45,28,84,56,19.36,5,84,49,28,35,45
-p0036,Logan Hughes,OF,Texas Tech,College,FL,B/T: L/L,59,47.73,47,16,74,58,19.88,5,32,74,16,56,47
-p0006,Blake Bowen,OF,"JSerra HS (San Juan Capistrano, Calif.)",HS,CA,B/T: R/R,60,48.92,57.0,3,68,65,26.16,4,,68,3,48,66
-p0112,Isaiah Galason,SS,Houston County,HS,GA,commitment: Georgia Tech; bat/throw: R/R,61,49.0,49,49,49,0,0.0,1,,,49,,
-p0114,Tate Mckee,RHP,Georgia Tech,College,GA,"Kennesaw, GA; 21.7 JR",62,50.0,50,50,50,0,0.0,1,50,,,,
-p0088,Ethan Kleinschmit,LHP,Oregon State,College,OR,B/T: L/L,63,50.26,48.0,40,64,24,8.83,4,40,46,50,,64
-p0094,Lucas Moore,OF,Louisville,College,OH,"Hamilton, OH; 21.0 JR",64,50.5,50.5,42,59,17,8.5,2,42,,59,,
-p0051,Joey Volchko,RHP,Georgia,College,CA,B/T: R/R,65,51.8,51,22,73,51,18.97,5,22,67,36,51,73
-p0049,Joseph Contreras,RHP,Blessed Trinity Catholic,HS,GA,B/T: R/R,66,52.32,55.5,21,69,48,17.8,4,,69,21,54,57
-p0123,Eric Zdunek,"OF,1B",Orange Lutheran,HS,CA,commitment: Notre Dame; bat/throw: R/R,67,53.0,53,53,53,0,0.0,1,,,53,,
-p0068,Taj Marchand,SS,James Island Charter HS (SC),HS,SC,B/T: R/R,68,53.92,48.0,31,81,50,18.18,4,,81,31,50,46
-p0087,Wes Mendes,LHP,Florida State,College,FL,B/T: R/L,69,56.17,50,40,80,40,16.05,5,80,50,41,70,40
-p0073,Daniel Jackson,C,Georgia,College,GA,B/T: R/R,70,56.73,57,33,82,49,17.85,5,66,57,33,82,39
-p0135,Ricky Ojeda,LHP,UC Irvine,College,CA,"Valencia, CA; 20.5 JR",71,57.0,57,57,57,0,0.0,1,57,,,,
-p0032,Beau Peterson,3B,Mill Valley,HS,KS,B/T: L/R,72,57.92,60.0,13,86,73,26.35,4,,61,13,86,59
-p0075,Jacob Dudan,RHP,North Carolina State,College,NC,B/T: L/R,73,58.36,60.5,34,78,44,17.09,4,,78,51,34,70
-p0079,Kaiden McCarthy,RHP,Vermont Academy,HS,VT,B/T: R/R,74,58.67,59,35,78,43,17.59,3,,59,35,,78
-p0058,Jarren Advincula,2B,Georgia Tech,College,CA,B/T: L/R,75,59.77,42,25,118,93,33.17,5,25,118,34,60,42
-p0141,Jaden Jackson,OF,St. John Bosco,HS,CA,commitment: UCLA; bat/throw: L/R,76,60.0,60,60,60,0,0.0,1,,,60,,
-p0142,Braden Holcomb,OF,Vanderbilt,College,FL,"Orlando, FL; 21.5 JR",77,60.0,60,60,60,0,0.0,1,60,,,,
-p0106,Ty Head,OF,North Carolina State,College,FL,B/T: L/L,78,60.04,61.0,47,72,25,9.12,4,,47,64,72,58
-p0143,Eric Segura,RHP,Oregon State,College,CA,"Soledad, CA; 21.3 JR",79,61.0,61,61,61,0,0.0,1,61,,,,
-p0037,Cooper Sides,RHP,Orange Lutheran,HS,CA,B/T: R/R,80,61.27,57.5,16,99,83,41.5,2,,,16,,99
-p0054,Carson Tinney,C,Texas,College,CO,B/T: R/R,81,61.4,62,23,86,63,23.69,5,23,62,42,81,86
-p0148,Landon Brown,RHP,"Iowa Colony (Rosharon, Texas)",HS,TX,B/T: R/R,82,63.54,63.5,63,64,1,0.5,2,,,,64,63
-p0130,Rocco Maniscalco,SS,Oxford,HS,AL,B/T: S/R,83,63.72,62.0,56,75,19,8.14,4,,56,68,75,56
-p0072,Ruger Riojas,RHP,Texas,College,TX,B/T: R/R,84,63.78,71.0,32,78,46,18.61,4,78,65,32,,77
-p0034,Gabe Gaeckle,RHP,Arkansas,College,CA,B/T: R/R,85,64.0,61.5,15,98,83,38.24,4,15,98,27,,96
-p0152,Cooper Webb,RHP,Lake Travis,HS,TX,commitment: Texas; bat/throw: R/R,86,64.0,64,64,64,0,0.0,1,,,64,,
-p0154,Cole Stokes,RHP,Florida State,College,CA,"Redondo Beach, CA; 21.1 JR",87,64.0,64,64,64,0,0.0,1,64,,,,
-p0120,Cooper Harris,RHP,Flower Mound,HS,TX,B/T: R/R,88,64.88,61.5,53,82,29,10.69,4,,82,61,53,62
-p0159,Eric Guevara,3B,Auburn,College,,"hometown: Panama City, PMA; bat/throw: R/R",89,65.0,65,65,65,0,0.0,1,,,65,,
-p0162,Brody Schumaker,SS,Santa Margarita Catholic,HS,CA,commitment: Texas Christian; bat/throw: L/R,90,66.0,66,66,66,0,0.0,1,,,66,,
-p0062,Sean Dunlap,C,Crown Point,HS,IN,B/T: R/R,91,66.5,55,28,112,84,35.01,3,,55,28,,112
-p0065,Denton Lord,RHP,South Walton,HS,FL,B/T: R/R,92,66.94,72,30,89,59,24.8,3,,89,30,,72
-p0164,Christian Doty,SS,Magnolia Heights,HS,MS,commitment: Mississippi; bat/throw: R/R,93,67.0,67,67,67,0,0.0,1,,,67,,
-p0064,Luke Williams,SS,Franklin Regional HS (PA),HS,PA,B/T: R/R,94,67.39,66,29,101,72,29.4,3,,66,29,,101
-p0084,Bo Holloway,LHP,"Christ Presbyterian (Nashville, Tenn.)",HS,TN,B/T: L/L,95,67.48,74.0,39,76,37,15.53,4,,72,39,76,76
-p0080,Matt Ponatoski,RHP,Archbishop Moeller HS (OH),HS,OH,commitment: Kentucky; bat/throw: L/R,96,67.5,63.0,36,90,54,27.0,2,,90,36,,
-p0086,Brady Ballinger,1B,Kansas,College,NV,"Henderson, NV; 20.9 JR",97,68.0,68.0,39,97,58,29.0,2,39,,97,,
-p0167,Richie Roman,RHP,Houston,College,TX,"Corpus Christi, TX; 20.8 JR",98,69.0,69,69,69,0,0.0,1,69,,,,
-p0115,Blake Bryant,RHP,Citizens Christian Academy,HS,GA,B/T: R/R,99,70.2,56.5,51,110,59,24.27,4,,110,51,52,61
-p0089,Brett Renfrow,RHP,Virginia Tech,College,VA,B/T: R/R,100,70.87,61,40,119,79,26.59,5,59,76,61,40,119
-p0170,Reece Moroney,SS,Rhode Island,College,NJ,"hometown: Fair Haven, NJ; bat/throw: R/R",101,71.0,71,71,71,0,0.0,1,,,71,,
-p0171,Macon Winslow,C,North Carolina,College,NC,"Hertford, NC; 21.2 JR",102,71.0,71,71,71,0,0.0,1,71,,,,
-p0104,Will Yow,SS,St. Anne's Belfield HS (VA),HS,VA,B/T: R/R,103,71.28,63,46,102,56,23.44,3,,63,46,,102
-p0155,Carson Bailey,LHP,McLennan JC (TX),College,TX,B/T: R/L,104,71.46,71.0,65,77,12,6.0,2,,77,,,65
-p0109,Myles Bailey,1B,Florida State,College,FL,B/T: L/R,105,71.87,73.5,48,88,40,14.45,4,72,75,48,,88
-p0174,Gunner Skelton,"2B,3B",Columbia Academy,HS,TN,commitment: Vanderbilt; bat/throw: R/R,106,73.0,73,73,73,0,0.0,1,,,73,,
-p0175,Aj Evasco,OF,Kansas State,College,NE,"Lincoln, NE; 20.8 SO",107,73.0,73,73,73,0,0.0,1,73,,,,
-p0179,Jamir Johnson,OF,Locust Grove,HS,GA,commitment: Cincinnati; bat/throw: R/R,108,74.0,74,74,74,0,0.0,1,,,74,,
-p0066,Mulivai Levu,1B,UCLA,College,CA,B/T: L/R,109,74.33,79,30,128,98,36.72,5,30,128,30,80,79
-p0121,Jack Natili,C,Cincinnati,College,PA,B/T: R/R,110,74.96,79.0,53,88,35,14.25,4,88,71,53,,87
-p0182,Tristan Bissetta,OF,Ole Miss,College,SC,"Greenville, SC; 22.9 SR",111,75.0,75,75,75,0,0.0,1,75,,,,
-p0074,Cole Koeninger,SS,Keller,HS,TX,B/T: R/R,112,75.2,80.5,33,98,65,24.3,4,,84,33,77,98
-p0138,Nathan Taylor,RHP,Cincinnati,College,OH,"hometown: Amelia, OH; bat/throw: L/R",113,76.0,76.0,58,94,36,18.0,2,58,,94,,
-p0183,Steven Milam,"2B,SS",Louisiana State,College,NM,"hometown: Las Cruces, NM; bat/throw: S/R",114,76.0,76,76,76,0,0.0,1,,,76,,
-p0184,Louis Hernandez,3B,Lake Mary,HS,FL,commitment: Clemson; bat/throw: R/R,115,76.0,76,76,76,0,0.0,1,,,76,,
-p0163,Cal Randall,RHP,UCLA,College,CA,"hometown: Discovery Bay, CA; bat/throw: R/R",116,77.0,77.0,67,87,20,10.0,2,67,,87,,
-p0186,Erik Paulsen,1B,North Carolina,College,NY,"hometown: Massapequa, NY; bat/throw: L/L",117,77.0,77,77,77,0,0.0,1,,,77,,
-p0187,Isaiah Hearn,OF,Chaminade College Prep,HS,CA,commitment: Oregon; bat/throw: L/L,118,77.0,77,77,77,0,0.0,1,,,77,,
-p0144,Dee Kennedy,SS,Kansas State,College,TX,B/T: R/R,119,77.04,74.0,62,93,31,11.3,4,77,,62,93,71
-p0153,Jace Mataczynski,SS,Hudson,HS,WI,Auburn commit; age 18.3,120,77.33,80.0,64,96,32,16.0,2,,64,96,,
-p0127,Ethan Bass,SS,Glenbrook North,HS,IL,B/T: R/R,121,77.61,68,55,102,47,19.82,3,,102,55,,68
-p0124,Savion Sims,RHP,"Prestonwood Christian Academy (Plano, Texas)",HS,TX,B/T: R/R,122,78.16,76.5,54,99,45,16.1,4,,99,54,73,80
-p0145,Will Gasparino,OF,UCLA,College,CA,B/T: R/R,123,78.5,85,62,89,27,10.83,5,70,88,89,62,85
-p0081,Kollin Ritchie,OF,Oklahoma State,College,OK,B/T: L/R,124,78.67,89,37,113,76,31.38,5,37,113,37,95,89
-p0151,Dominic Voegele,RHP,Kansas,College,IL,"hometown: Columbia, IL; bat/throw: R/R",125,79.0,79.0,63,95,32,16.0,2,63,,95,,
-p0069,Roman Martin,3B,UCLA,College,CA,B/T: R/R,126,79.03,86,31,124,93,34.51,5,86,105,49,31,124
-p0095,Ryan Lynch,RHP,North Carolina,College,NJ,B/T: R/R,127,80.43,91,43,107,64,26.88,5,43,107,46,91,97
-p0194,Hudson Brown,1B,Kentucky,College,MS,"hometown: Olive Branch, MS; bat/throw: L/R",128,81.0,81,81,81,0,0.0,1,,,81,,
-p0136,Peyton Bonds,OF,Rutgers,College,NJ,B/T: R/R,129,81.52,83.5,58,98,40,15.9,4,98,93,58,,74
-p0198,Amp Phillips,RHP,South Carolina,College,SC,"Lancaster, SC; 21.8 JR",130,82.0,82,82,82,0,0.0,1,82,,,,
-p0055,Noah Wilson,OF,McCallie HS (TN),HS,TN,B/T: L/R,131,82.24,95.0,24,100,76,31.54,4,,96,24,100,94
-p0199,Shawn Sullivan,RHP,Walsh Jesuit,HS,OH,B/T: R/R,132,83.0,83,83,83,0,0.0,1,,,,,83
-p0200,Colin White,LHP,Harrison,HS,GA,commitment: Florida; bat/throw: L/L,133,83.0,83,83,83,0,0.0,1,,,83,,
-p0201,Ryan Zuckerman,3B,Georgia Tech,College,PA,"Yardley, PA; 21.5 JR",134,83.0,83,83,83,0,0.0,1,83,,,,
-p0128,Will Adams,OF,Hoover,HS,AL,B/T: L/L,135,84.0,91.5,55,103,48,18.09,4,,91,92,55,103
-p0202,Ryan Harwood,OF,Casteel,HS,AZ,commitment: Texas A&M; bat/throw: L/R,136,84.0,84,84,84,0,0.0,1,,,84,,
-p0044,Kevin Roberts Jr.,OF,Jackson Prep HS (MS),HS,MS,B/T: R/R,137,84.89,95,19,128,109,45.64,3,,95,19,,128
-p0113,Wilson Andersen,RHP,Jesuit HS (FL),HS,FL,B/T: R/R,138,84.92,87.5,50,108,58,25.47,4,,108,50,67,108
-p0139,Malachi Washington,OF,Parkview,HS,GA,B/T: R/R,139,85.67,83,59,111,52,21.25,3,,83,59,,111
-p0168,Keon Johnson,SS,First Presbyterian HS (GA),HS,GA,B/T: R/R,140,85.83,73,70,114,44,20.07,3,,73,70,,114
-p0208,Rock Arnold,SS,North Kingstown Senior,HS,RI,commitment: Oklahoma State; bat/throw: L/R,141,86.0,86,86,86,0,0.0,1,,,86,,
-p0160,Ethan Wachsmann,RHP,Grandview,HS,CO,B/T: R/R,142,86.12,75.5,66,122,56,22.33,4,,122,69,66,82
-p0192,Ryan Peterson,RHP,Sam Houston State,College,TX,B/T: R/R,143,86.2,84.0,80,100,20,7.97,4,,80,100,87,81
-p0188,Caden Bogenpohl,OF,Missouri State,College,MO,B/T: L/R,144,86.28,86.0,78,94,16,7.52,4,,94,79,78,93
-p0078,Tre Broussard,OF,Houston,College,TX,B/T: L/L,145,86.67,80,35,135,100,32.03,5,35,135,80,90,75
-p0209,Wessley Roberson,OF,Glynn Academy,HS,GA,commitment: Louisiana State; bat/throw: L/R,146,87.0,87,87,87,0,0.0,1,,,87,,
-p0210,Tyler Minick,3B,Connecticut,College,PA,"Reading, PA; 21.5 JR",147,87.0,87,87,87,0,0.0,1,87,,,,
-p0076,Nathaneal Davis,OF,Bishop Moore HS (FL),HS,FL,commitment: Louisiana State; bat/throw: L/L,148,87.08,79.5,34,125,91,45.5,2,,125,34,,
-p0176,Jake Schaffner,SS,North Carolina,College,WI,B/T: L/R,149,87.6,85.0,74,103,29,11.23,4,,103,74,79,91
-p0211,Drew Christine,LHP,St. John’s College,HS,MD,commitment: Tennessee; bat/throw: R/L,150,88.0,88,88,88,0,0.0,1,,,88,,
-p0116,Ethan Norby,LHP,East Carolina,College,NC,age 21.5,151,88.5,83,51,164,113,39.95,5,51,60,83,83,164
-p0099,Carter Beck,OF,Indiana State,College,SK,"hometown: Carnduff, SK; bat/throw: L/R",152,88.92,82.5,44,121,77,38.5,2,,121,44,,
-p0060,Gary Morse,RHP,Orange Lutheran,HS,CA,B/T: R/R,153,88.94,92,27,137,110,45.15,3,,92,27,,137
-p0213,Kuhio Aloy,OF,Arkansas,College,HI,"Wailuku, HI; 20.8 JR",154,89.0,89,89,89,0,0.0,1,89,,,,
-p0131,Julian Garcia,RHP,St. John Bosco,HS,CA,B/T: R/R,155,89.27,86.5,56,117,61,30.5,2,,,56,,117
-p0125,Kade Lewis,1B,Wake Forest,College,MN,B/T: L/R,156,89.43,88.5,54,114,60,23.98,4,54,114,73,,104
-p0216,Kael Barney,"OF,1B",Nolensville,HS,TN,commitment: Oregon State; bat/throw: L/L,157,90.0,90,90,90,0,0.0,1,,,90,,
-p0063,Daniel Cuvet,3B,Miami,College,FL,B/T: R/R,158,90.8,88,28,134,106,36.97,5,28,134,68,88,115
-p0218,Grant Govel,RHP,Southern California,College,CA,"hometown: Rolling Hill Estates, CA; bat/throw: R/R",159,91.0,91,91,91,0,0.0,1,,,91,,
-p0117,Carson Wiggins,RHP,Arkansas,College,OK,B/T: R/R,160,91.04,77.5,52,145,93,34.82,4,,145,52,71,84
-p0097,Kyle Johnson,LHP,Virginia,College,VA,B/T: R/L,161,91.46,95.5,43,148,105,52.5,2,,,,43,148
-p0091,Trey Beard,LHP,Florida State,College,FL,B/T: L/L,162,91.67,96,41,126,85,36.98,5,41,126,47,96,126
-p0085,Evan Dempsey,RHP,Florida Gulf Coast,College,FL,B/T: L/R,163,91.91,89.5,39,132,93,33.77,4,79,132,39,,100
-p0222,Sherman Johnson,"3B,OF",NC State,College,GA,"hometown: Loganville, GA; bat/throw: R/R",164,92.0,92,92,92,0,0.0,1,,,92,,
-p0056,Henry Ford,3B,Tennessee,College,VA,B/T: R/R,165,92.04,90.5,24,145,121,45.27,4,24,111,70,,145
-p0206,Shane Sdao,LHP,Texas A&M,College,TX,B/T: L/L,166,92.92,93.5,86,97,11,4.15,4,,97,86,92,95
-p0224,Josiah Kemp,OF,Choctaw,HS,OK,commitment: Oklahoma; bat/throw: R/R,167,93.0,93,93,93,0,0.0,1,,,93,,
-p0190,Hudson DeVaughan,RHP,Mooresville,HS,IN,B/T: R/R,168,93.31,94.5,79,110,31,15.5,2,,79,,,110
-p0196,Brendan Brock,C,Oklahoma,College,IL,B/T: R/R,169,93.39,91.0,82,109,27,10.21,4,95,87,82,,109
-p0226,Dominic Battista,OF,Oswego East,HS,IL,commitment: UIC; bat/throw: L/R,170,94.0,94,94,94,0,0.0,1,,,94,,
-p0137,Trey Ebel,SS,Corona,HS,CA,B/T: R/R,171,94.22,104,58,113,55,24.09,3,,104,58,,113
-p0110,Jason DeCaro,RHP,North Carolina,College,NY,B/T: R/R,172,94.43,94,48,125,77,29.46,5,48,120,69,94,125
-p0227,Tyson Grulkowski,RHP,Muskego,HS,WI,commitment: South Florida; bat/throw: R/R,173,95.0,95,95,95,0,0.0,1,,,95,,
-p0126,Carson Kerce,SS,Georgia Tech,College,GA,B/T: R/R,174,96.28,96.5,54,131,77,28.69,4,,109,54,84,131
-p0156,Cam Kozeal,IF,Arkansas,College,NE,B/T: L/R,175,96.37,85,65,132,67,28.08,3,65,,85,,132
-p0177,Tre Phelps,3B,Georgia,College,GA,B/T: R/R,176,96.91,95.0,74,116,42,21.0,2,74,,,,116
-p0231,Griffin Long,RHP,Sonoraville,HS,GA,commitment: Kennesaw State; bat/throw: R/R,177,97.0,97,97,97,0,0.0,1,,,97,,
-p0232,Lorenzo Carrier,OF,Pittsburgh,College,DE,"Bear, DE; 22.9 RSR",178,97.0,97,97,97,0,0.0,1,97,,,,
-p0111,Dominic Santarelli,1B,St. Joseph’s,HS,WI,B/T: L/L,179,97.22,100,48,135,87,35.74,3,,100,48,,135
-p0134,Jake Carbaugh,RHP,Plant City,HS,FL,commitment: Mississippi State; bat/throw: R/R,180,97.83,92.0,57,127,70,35.0,2,,127,57,,
-p0233,Anthony Chavez,1B,Mount Carmel,HS,IL,commitment: Illinois; bat/throw: L/L,181,98.0,98,98,98,0,0.0,1,,,98,,
-p0140,Tyson LeBlanc,SS,Kansas,College,LA,B/T: R/R,182,98.18,95.0,60,130,70,35.0,2,,,60,,130
-p0133,Ryan Cooney,"2B,SS",Oregon,College,OR,B/T: R/R,183,98.45,95.0,57,133,76,38.0,2,,,57,,133
-p0083,CJ Weinstein,"2B,SS",Orange Lutheran,HS,CA,B/T: L/R,184,98.55,93.5,38,149,111,55.5,2,,,38,,149
-p0122,LJ Mercurius,RHP,Oklahoma,College,NV,B/T: R/R,185,98.56,56,53,172,119,55.4,3,53,,56,,172
-p0166,Tyler Putnam,RHP,"Battle High School (Columbia, Mo.)",HS,MO,B/T: R/R,186,99.0,101.5,69,134,65,32.5,2,,,,69,134
-p0234,Eric Nachtsheim,RHP,McNeese State,College,NV,"hometown: Reno, NV; bat/throw: R/R",187,99.0,99,99,99,0,0.0,1,,,99,,
-p0235,Deacon Nelson,SS,University School,HS,OH,commitment: Auburn; bat/throw: L/R,188,99.0,99,99,99,0,0.0,1,,,99,,
-p0236,Beau Bryans,LHP,Jacksonville State,College,MS,"Madison, MS; 22.5 SR",189,99.0,99,99,99,0,0.0,1,99,,,,
-p0195,Noah Danza,SS,Gloucester Catholic,HS,NJ,commitment: Mississippi State; bat/throw: R/R,190,99.08,96.5,81,112,31,15.5,2,,112,81,,
-p0237,Braden Oliver,SS,Agoura,HS,CA,commitment: UC Irvine; bat/throw: R/R,191,100.0,100,100,100,0,0.0,1,,,100,,
-p0238,Jarren Purify,2B,Clemson,College,MI,"Detroit, MI; 20.5 JR",192,100.0,100,100,100,0,0.0,1,100,,,,
-p0185,Aidan Knaak,RHP,Clemson,College,FL,age 21.8,193,100.32,89,76,129,53,22.55,3,76,129,,89,
-p0098,Trey Rangel,RHP,The Colony,HS,TX,B/T: R/R,194,103.0,98.0,43,153,110,55.0,2,,,43,,153
-p0118,Jaxon Willits,SS,Oklahoma,College,OK,B/T: S/R,195,103.27,99.0,52,146,94,47.0,2,52,,,,146
-p0197,Logan Georges,RHP,Clovis,HS,CA,B/T: R/R,196,103.82,102.0,82,122,40,20.0,2,,,82,,122
-p0096,Alex Hernandez,OF,Georgia Tech,College,GA,B/T: R/R,197,105.65,108.5,43,143,100,41.09,4,81,136,43,,143
-p0119,Alex Weingartner,"OF,RHP",St. Augustine Preparatory,HS,NJ,B/T: R/R,198,105.72,101,52,156,104,42.48,3,,101,52,,156
-p0207,Deven Sheerin,RHP,Louisiana State,College,PA,B/T: R/R,199,106.28,93,86,141,55,24.44,3,,86,93,,141
-p0092,Lucas Nawrocki,LHP,Aledo,HS,TX,B/T: L/L,200,106.44,115,41,151,110,45.79,3,,115,41,,151
-p0165,Ethan McElvain,LHP,Arkansas,College,TN,B/T: S/L,201,107.27,104.0,68,140,72,36.0,2,68,,,,140
-p0147,Maddox Molony,SS,Oregon,College,OR,B/T: R/R,202,108.48,91.5,62,173,111,44.82,4,62,116,67,,173
-p0220,Jack Slightom,RHP,Lyons Township HS (IL),HS,IL,B/T: R/R,203,108.69,107.5,92,123,31,15.5,2,,123,,,92
-p0178,Kyle Jones,OF,Florida,College,GA,B/T: R/R,204,108.84,107.5,74,143,69,28.03,4,,143,88,74,127
-p0204,Ryan Marohn,LHP,North Carolina State,College,VA,B/T: L/L,205,109.28,98,85,147,62,26.7,3,,85,98,,147
-p0107,Tommy LaPour,RHP,TCU,College,MO,B/T: R/R,206,109.43,109.0,47,152,105,43.37,4,47,140,78,,152
-p0132,Owen Kramkowski,RHP,Arizona,College,AZ,B/T: R/R,207,110.87,90,56,174,118,49.59,3,56,,90,,174
-p0158,Dawson Montesa,RHP,West Virginia,College,,B/T: R/R,208,112.08,116.0,65,167,102,51.0,2,,,,65,167
-p0161,Cameron Johnson,LHP,Oklahoma,College,TX,B/T: L/R,209,112.17,99,66,166,100,41.6,3,,,66,99,166
-p0150,Elliot Lascelles,SS,Upper Canada,HS,ON,B/T: L/R,210,113.18,109.0,63,155,92,46.0,2,,,63,,155
-p0180,Anthony Murphy,OF,Corona,HS,CA,B/T: R/R,211,113.28,107,75,146,71,29.03,3,,146,75,,107
-p0149,Steele Murdock,RHP,UC San Diego,College,UT,B/T: R/R,212,113.39,130,63,136,73,33.09,3,,130,63,,136
-p0105,Gavin Gallaher,IF,North Carolina,College,NC,B/T: R/R,213,114.88,84,46,198,152,64.59,3,46,,84,,198
-p0181,Jake McCoy,LHP,South Carolina,College,SC,B/T: L/L,214,115.91,112.5,75,150,75,37.5,2,,,75,,150
-p0157,Brady Harris,OF,Trinity Christian Academy,HS,FL,B/T: R/R,215,116.82,112.5,65,160,95,47.5,2,,,65,,160
-p0203,Dalton Wentz,3B,Wake Forest,College,VA,B/T: S/R,216,117.16,118.0,85,142,57,24.72,4,85,138,,98,142
-p0212,Jack Dugan,SS,Lipscomb Academy,HS,TN,B/T: L/R,217,118.0,106,89,149,60,25.25,3,,149,89,,106
-p0240,Gavin Giese,RHP,Dana Hills,HS,CA,B/T: R/R,218,118.0,118,118,118,0,0.0,1,,,,,118
-p0129,Carson Jasa,RHP,Nebraska,College,CO,B/T: R/R,219,118.27,113.0,55,171,116,58.0,2,,,55,,171
-p0146,Brady Snow,RHP,American Heritage,HS,FL,B/T: R/R,220,119.82,115.0,62,168,106,53.0,2,,,62,,168
-p0172,Brayden Dowd,OF,Florida State,College,MI,B/T: L/L,221,119.89,106,72,176,104,43.3,3,,106,72,,176
-p0169,James Jorgensen,RHP,Jesuit Prep,HS,TX,B/T: R/R,222,120.22,117,71,165,94,38.38,3,,117,71,,165
-p0243,AJ Rice,RHP,Pickens,HS,GA,B/T: R/R,223,121.0,121,121,121,0,0.0,1,,,,,121
-p0219,Maxx Yehl,LHP,West Virginia,College,NY,age 22.1,224,121.92,117.5,91,144,53,26.5,2,91,144,,,
-p0242,Kolby Stringer,RHP,West Marion HS (MS),HS,MS,B/T: L/R,225,122.15,122.0,120,124,4,2.0,2,,124,,,120
-p0189,Cody Boshell,1B,Bishop Snyder HS (FL),HS,FL,Tennessee commit; age 19.2,226,122.92,116.5,78,155,77,38.5,2,,155,78,,
-p0244,Josiah Morris,SS,Clayton Valley,HS,CA,B/T: R/R,227,123.0,123,123,123,0,0.0,1,,,,,123
-p0214,Taylor Rabe,RHP,Mississippi,College,SC,B/T: R/R,228,123.38,121.0,90,152,62,31.0,2,,152,,,90
-p0093,Martin Shelar,OF,Marist,HS,GA,B/T: R/R,229,124.36,117.5,42,193,151,75.5,2,,,42,,193
-p0090,Caden Ferraro,OF,Texas Tech,College,TX,B/T: L/L,230,125.83,133,40,189,149,61.45,3,,133,40,,189
-p0082,Jorvorskie Lane Jr.,"OF,C",Grapevine,HS,TX,B/T: R/R,231,125.91,118.5,37,200,163,81.5,2,,,37,,200
-p0215,Alex Sosa,C,Miami (FL),College,FL,B/T: L/R,232,128.73,125.5,90,161,71,35.5,2,90,,,,161
-p0239,Dylan Bowen,SS,Hanover Central,HS,IN,B/T: R/R,233,129.23,127.5,105,150,45,22.5,2,,150,,,105
-p0228,Jaxon Jelkin,RHP,Kentucky,College,NE,B/T: R/R,234,132.0,129.0,96,162,66,33.0,2,96,,,,162
-p0229,Isaac Morton,RHP,Minnesota,College,MN,B/T: R/R,235,132.55,129.5,96,163,67,33.5,2,,,96,,163
-p0193,Coleton Brady,RHP,TXNL Academy,HS,FL,B/T: R/R,236,134.83,137,80,178,98,40.19,3,,137,80,,178
-p0241,Bryce Hill,RHP,Greenwich Country Day HS (CT),HS,CT,B/T: R/R,237,135.15,136.5,119,154,35,17.5,2,,119,,,154
-p0191,Genson Veras,OF,TXNL Academy,HS,FL,B/T: R/R,238,136.27,131.5,79,184,105,52.5,2,,,79,,184
-p0173,Jet Berry,"SS,OF",Queen Creek,HS,AZ,B/T: S/R,239,136.36,131.0,72,190,118,59.0,2,,,72,,190
-p0246,Nathaneal Davis-Cleary,OF,Bishop Moore,HS,FL,B/T: L/L,240,138.0,138,138,138,0,0.0,1,,,,,138
-p0225,Russell Sandefer,RHP,Florida,College,FL,B/T: R/R,241,138.18,134.5,94,175,81,40.5,2,94,,,,175
-p0247,Graham Schlicht,RHP,De La Salle,HS,CA,B/T: R/R,242,139.0,139,139,139,0,0.0,1,,,,,139
-p0230,Robbie Lavey,C,George Washington,College,,B/T: L/R,243,139.1,141,97,186,89,36.33,3,,141,,97,186
-p0249,Cole Dennis,RHP,Bishop Snyder HS (FL),HS,FL,Jacksonville commit; age 17.9,244,142.0,142,142,142,0,0.0,1,,142,,,
-p0250,Joe Tiroly,2B,Virginia,College,,B/T: R/R,245,144.0,144,144,144,0,0.0,1,,,,,144
-p0205,Grayson Willoughby,RHP,Trinity,HS,KY,B/T: L/R,246,146.09,141.0,85,197,112,56.0,2,,,85,,197
-p0221,Duncan Marsten,RHP,Wake Forest,College,CA,B/T: R/R,247,146.72,147,92,192,100,40.89,3,92,147,,,192
-p0217,Ryne Barker,"SS,OF",Casteel,HS,AZ,B/T: L/R,248,147.73,143.0,91,195,104,52.0,2,,,91,,195
-p0245,James Tronstein,OF,Harvard Westlake HS (CA),HS,CA,B/T: R/R,249,148.54,150.0,131,169,38,19.0,2,,131,,,169
-p0223,Dylan Vigue,RHP,Georgia,College,MA,B/T: R/R,250,150.82,146.0,93,199,106,53.0,2,93,,,,199
-p0252,Justin LeGuernic,LHP,Clemson,,,age 20.8,251,151.0,151,151,151,0,0.0,1,,151,,,
-p0253,Rintaro Sasaki,1B,Stanford,,,age 21.2,252,153.0,153,153,153,0,0.0,1,,153,,,
-p0254,Chris McHugh,1B,North Carolina State,,,age 21.0,253,154.0,154,154,154,0,0.0,1,,154,,,
-p0255,Jason Amalbert,OF,DePaul Catholic,HS,NJ,B/T: R/R,254,157.0,157,157,157,0,0.0,1,,,,,157
-p0256,Owen Hull,OF,North Carolina,College,,B/T: L/R,255,158.0,158,158,158,0,0.0,1,,,,,158
-p0257,Kyle Casteel,RHP,Butler,HS,PA,B/T: R/R,256,159.0,159,159,159,0,0.0,1,,,,,159
-p0248,Luke McNeillie,RHP,Florida,College,GA,B/T: L/R,257,159.31,161.0,139,183,44,22.0,2,,139,,,183
-p0251,Landon Thiel,LHP,Jackson,HS,OH,B/T: R/L,258,163.23,164.5,148,181,33,16.5,2,,148,,,181
-p0258,Jacob Madrid,C,Notre Dame,HS,CA,B/T: R/R,259,170.0,170,170,170,0,0.0,1,,,,,170
-p0259,Trevor Hansen,RHP,UC Irvine,College,CA,B/T: R/R,260,177.0,177,177,177,0,0.0,1,,,,,177
-p0260,Wil Libbert,LHP,Mississippi,College,MO,B/T: L/L,261,179.0,179,179,179,0,0.0,1,,,,,179
-p0261,Kaleb LaFavor,RHP,Bishop Heelan,HS,IA,B/T: L/R,262,180.0,180,180,180,0,0.0,1,,,,,180
-p0262,Jason Jutronich,LHP,Torrey Pines,HS,CA,B/T: L/L,263,182.0,182,182,182,0,0.0,1,,,,,182
-p0263,Sawyer Nelson,SS,South Salem,HS,OR,B/T: L/R,264,185.0,185,185,185,0,0.0,1,,,,,185
-p0264,Rylan Lujo,OF,Georgia,College,FL,B/T: R/R,265,187.0,187,187,187,0,0.0,1,,,,,187
-p0265,Garrett Wright,OF,Tennessee,College,,B/T: R/R,266,188.0,188,188,188,0,0.0,1,,,,,188
-p0266,Cal Scolari,RHP,Oregon,College,,B/T: R/R,267,191.0,191,191,191,0,0.0,1,,,,,191
-p0267,Spencer Evans,LHP,TNXL Academy,HS,FL,B/T: L/L,268,194.0,194,194,194,0,0.0,1,,,,,194
-p0268,Will Plunkett,SS,Mamaroneck,HS,NY,B/T: R/R,269,196.0,196,196,196,0,0.0,1,,,,,196
+player_id,player,position,school,class_level,state,notes,mlb_id,consensus_rank,avg_rank,median_rank,best_rank,worst_rank,spread,stdev,n_sources,src_baseball_america,src_eleven_point7,src_espn_mcdaniel,src_just_baseball,src_keith_law,src_mlb_pipeline
+p0000,Roch Cholowsky,SS,UCLA,College,AZ,"Chandler, AZ; 21.0 JR",800604,1,1.0,1.0,1,1,0,0.0,6,1,1,1,1,1,1
+p0001,Grady Emerson,SS,"Fort Worth Christian HS, North Richland Hills, Texas",HS,TX,Texas commit; age 18.4,815690,2,2.5,2,1,5,4,1.36,5,2,,2,1,5,2
+p0002,Vahn Lackey,C,Georgia Tech,College,GA,B/T: R/R,822518,3,2.95,3.0,2,5,3,1.0,6,3,5,3,2,2,3
+p0003,Jackson Flora,RHP,UC Santa Barbara,College,CA,"hometown: Pleasanton, CA; bat/throw: R/R",814176,4,3.57,3.5,2,5,3,0.96,6,4,2,4,3,3,5
+p0004,Eric Booth Jr.,OF,Oak Grove HS (MS),HS,MS,commitment: Vanderbilt; bat/throw: L/L,835727,5,5.81,6,2,9,7,2.24,5,6,,5,2,9,6
+p0007,Drew Burress,OF,Georgia Tech,College,GA,B/T: R/R,806039,6,6.38,7.0,4,8,4,1.57,6,8,4,7,4,7,7
+p0005,Jacob Lombard,SS,Gulliver Prep,HS,FL,commitment: Miami; bat/throw: R/R,813075,7,7.78,5,3,17,14,5.08,5,5,,8,3,17,4
+p0012,Ryder Helfrick,C,Arkansas,College,CA,"Livermore, CA; 21.2 JR",805785,8,11.35,10.5,6,18,12,4.79,6,7,17,6,8,18,13
+p0023,Derek Curiel,OF,LSU,College,CA,age 21.1,815156,9,12.05,11.0,10,17,7,2.52,6,10,13,17,10,10,12
+p0020,Cameron Flukey,RHP,Coastal Carolina,College,NJ,B/T: R/R,805619,10,12.62,13.0,9,16,7,2.21,6,13,14,9,13,16,11
+p0010,Chris Hacopian,2B,Texas A&M,College,MD,B/T: R/R,806680,11,12.89,10.5,5,21,16,5.9,6,11,7,19,5,21,10
+p0011,Jared Grindlinger,OF,Huntington Beach (Calif.) HS,HS,CA,Tennessee commit; age 17.2,828796,12,13.13,12,5,18,13,4.87,5,18,,11,5,12,18
+p0013,Liam Peterson,RHP,Florida,College,FL,"Clearwater, FL; 20.9 JR",805794,13,13.41,13.5,6,20,14,5.15,6,20,6,13,19,8,14
+p0019,Justin Lebron,SS,Alabama,College,FL,age 21.7,807311,14,13.51,12.5,9,19,10,3.86,6,19,18,10,11,14,9
+p0009,Tyler Bell,SS,Kentucky,College,IL,"Frankfort, IL; 20.8 SO",815628,15,13.76,10.5,4,29,25,8.54,6,9,12,29,7,4,20
+p0008,Gio Rojas,LHP,"Stoneman Douglas HS, Parkland, Fla",HS,FL,Miami commit; age 19.0,826061,16,14.38,14,4,25,21,7.28,5,17,,14,4,25,8
+p0014,Sawyer Strosnider,OF,TCU,College,TX,"Cincinnati, OH; 20.8 SO",820831,17,15.92,15.0,6,26,20,6.39,6,14,10,26,6,19,16
+p0006,AJ Gracia,OF,Virginia,College,NJ,"New Brunswick, NJ; 21.5 JR",806088,18,16.49,16.0,3,27,24,7.91,6,15,3,27,9,22,17
+p0025,Cole Carlon,LHP,Arizona State,College,AZ,age 21.1,814817,19,19.68,19.0,11,26,15,5.73,6,26,11,15,15,23,25
+p0018,Trevor Condon,OF,Etowah,HS,GA,commitment: Tennessee; bat/throw: L/R,825891,20,21.56,16,8,46,38,13.42,5,16,,12,8,46,22
+p0021,Ace Reese,3B,Mississippi State,College,TX,"Plano, TX; 21.0 JR",814505,21,21.76,16.5,9,49,40,13.47,6,12,9,21,12,49,21
+p0029,Hunter Dietz,LHP,Arkansas,College,FL,"Carmel, IN; 21.1 JR",806059,22,21.86,21.5,13,35,22,7.11,6,35,21,24,22,13,15
+p0026,Cade Townsend,RHP,Mississippi,College,CA,B/T: R/R,807254,23,22.59,22.0,11,38,27,9.3,6,30,38,16,17,11,27
+p0016,Eric Becker,SS,Virginia,College,NY,age 21.2,806027,24,24.65,23.0,6,49,43,14.75,6,49,8,33,20,6,26
+p0040,Tegan Kuhns,RHP,Tennessee,College,PA,age 21.1,815158,25,25.24,25.0,18,34,16,5.22,6,22,34,18,26,30,24
+p0033,Logan Reddemann,RHP,UCLA,College,CA,"hometown: Palmdale, CA; bat/throw: S/R",822298,26,26.38,26.5,15,36,21,6.85,6,36,33,23,25,15,28
+p0041,Zion Rose,OF,Louisville,College,IL,age 21.1,805799,27,26.81,24.5,18,39,21,7.06,6,25,20,39,18,24,31
+p0017,Bo Lowrance,3B,"Christ Church Episcopal (Greenville, SC)",HS,SC,Virginia commit; age 18.8,836574,28,27.25,22,7,45,38,13.54,5,45,,22,7,20,38
+p0027,Logan Schmidt,LHP,"Ganesha (Aliso Vieja, CA)",HS,CA,commit/drafted: LSU; age 17,835714,29,27.72,28,11,43,32,10.81,5,21,,28,11,33,43
+p0015,Brody Bumila,LHP,"Bishop Feehan HS, Attleboro, Mass",HS,MA,commit/drafted: Texas; age 18,837269,30,29.0,34,6,44,38,13.35,5,34,,34,6,44,19
+p0022,Carson Bolemon,LHP,"Southside Christian School (Simpsonville, SC)",HS,SC,Wake Forest commit; age 19.3,828789,31,30.22,29,9,42,33,12.24,5,42,,41,9,29,23
+p0045,Mason Edwards,LHP,USC,College,CA,age 21.0,821973,32,31.59,32.5,20,42,22,6.84,6,28,36,20,31,42,34
+p0047,Chase Brunson,OF,TCU,College,CA,"Los Alamitos, CA; 20.8 JR",815313,33,33.35,29.5,21,46,25,9.23,6,46,26,31,21,28,44
+p0042,Aiden Ruiz,SS,"The Stony Brook School (Long Island, NY)",HS,NY,commit/drafted: Vanderbilt; age 19,830855,34,34.06,36,18,44,26,8.54,5,32,,44,18,36,36
+p0036,Caden Sorrell,OF,Texas A&M,College,TX,"Flower Mound, TX; 21.1 JR",811294,35,34.89,26.5,16,63,47,15.97,6,23,16,45,24,63,29
+p0024,Coleman Borthwick,RHP,"South Walton HS (Santa Rosa Beach, Fla.)",HS,FL,commitment: Auburn; bat/throw: R/R,826852,36,36.56,35,10,68,58,18.86,5,27,,35,10,68,35
+p0054,Aiden Robbins,OF,Texas,College,PA,B/T: R/R,828657,37,37.51,27.0,24,85,61,21.85,6,24,27,25,27,85,30
+p0031,Cole Prosek,3B,"Magnolia Heights HS, Senatobia, Miss",HS,MS,B/T: L/R,828873,38,38.34,33,14,57,43,14.77,5,48,,32,14,57,33
+p0043,Chris Rembert,2B,Auburn,College,FL,B/T: R/R,807300,39,39.22,37.0,19,55,36,13.1,6,55,19,53,33,27,41
+p0038,Tyler Spangler,SS,"De La Salle (Concord, Calif.)",HS,CA,commit/drafted: Stanford; age 18,828811,40,39.69,36,16,61,45,15.4,5,31,,36,16,61,49
+p0030,Archer Horn,SS,"St. Ignatius College Prep, San Francisco",HS,CA,commit/drafted: Stanford; age 18,835704,41,40.41,38,13,67,54,18.23,5,50,,30,13,38,67
+p0034,James Clark,SS,St. John Bosco,HS,CA,commitment: Duke; bat/throw: L/R,835434,42,42.03,47,15,53,38,13.89,5,51,,38,15,47,53
+p0072,Landon Thome,SS,Nazareth Academy,HS,IL,commit/drafted: Florida State; age 18,829542,43,42.56,37,32,57,25,10.3,5,57,,51,32,32,37
+p0039,Jensen Hirschkorn,RHP,Kingsburg HS (CA),HS,CA,commit/drafted: LSU; age 18,835708,44,42.56,46.5,17,54,37,14.4,4,43,,54,17,,50
+p0051,Jack Radel,RHP,Notre Dame,College,SD,B/T: R/R,806481,45,44.84,41.5,23,84,61,19.01,6,38,84,49,23,35,45
+p0061,Ben Blair,RHP,Liberty,College,VA,B/T: R/R,835278,46,45.46,45.5,28,58,30,10.0,6,39,49,42,28,58,54
+p0049,Kaden Waechter,RHP,"Jesuit HS (Tampa, Fla.)",HS,FL,commit/drafted: Florida State; age 18,826388,47,45.56,48,22,63,41,13.95,5,63,,48,22,37,52
+p0080,Andrew Williamson,OF,Central Florida,College,FL,"St Petersburg, FL; 20.8 JR",824713,48,45.93,47,37,55,18,5.93,5,47,55,43,37,,48
+p0032,Logan Hughes,OF,Texas Tech,College,FL,"Winter Springs, FL; 21.0 JR",813314,49,46.76,45.5,14,74,60,18.69,6,44,32,74,14,56,47
+p0044,Connor Comeau,SS,"Anderson (Austin, TX)",HS,TX,Texas A&M commit; age 17.9,828792,50,47.03,54,19,60,41,15.74,5,54,,37,19,59,60
+p0074,Will Brick,C,Christian Brothers HS (TN),HS,TN,commitment: Mississippi State; bat/throw: R/R,836364,51,47.03,45,34,62,28,9.6,5,62,,40,34,45,51
+p0028,Sean Duncan,LHP,Terry Fox HS (CAN),HS,BC,commitment: Vanderbilt; bat/throw: R/L,807078,52,47.84,58,12,69,57,23.1,5,67,,58,12,26,69
+p0069,Gavin Grahovac,1B,Texas A&M,College,CA,"hometown: Orange, CA; bat/throw: R/R",800606,53,47.92,41.0,31,70,39,15.15,6,64,31,70,43,39,32
+p0037,Daniel Jackson,C,Georgia,College,GA,B/T: R/R,828714,54,50.7,48.0,16,82,66,21.5,6,37,66,57,16,82,39
+p0048,Joseph Contreras,RHP,Blessed Trinity,HS,GA,commitment: Vanderbilt; bat/throw: S/R,828631,55,53.13,56,21,69,48,16.08,5,56,,69,21,54,57
+p0057,Jarren Advincula,2B,Georgia Tech,College,CA,"hometown: Santa Clara, CA; bat/throw: L/R",814181,56,54.03,37.5,25,118,93,31.98,6,33,25,118,29,60,42
+p0064,Jake Brown,OF,LSU,College,LA,commit/drafted: Rangers ’23 (16); age 21,806701,57,54.14,53.5,29,81,52,16.28,6,81,29,52,62,41,55
+p0083,Ty Head,OF,North Carolina State,College,FL,age 21,813935,58,54.22,52,38,72,34,11.38,5,52,,47,38,72,58
+p0089,Ethan Kleinschmit,LHP,Oregon State,College,OR,"hometown: Mount Angel, OR; bat/throw: L/L",826543,59,55.4,46,40,78,38,14.7,5,78,40,46,42,,64
+p0055,Taj Marchand,SS,"James Island Charter (Charleston, SC)",HS,SC,commitment: Mississippi; bat/throw: R/R,837060,60,55.47,50,24,81,57,19.24,5,66,,81,24,50,46
+p0050,Joey Volchko,RHP,Georgia,College,CA,"Torrance, CA; 20.8 JR",811285,61,56.03,59.0,22,77,55,20.72,6,77,22,67,32,51,73
+p0046,Blake Bowen,OF,JSerra,HS,CA,commit/drafted: Oregon State; age 18,828790,62,56.19,66,20,70,50,18.91,5,70,,68,20,48,66
+p0052,Carson Tinney,C,Texas,College,CO,B/T: R/R,806245,63,56.27,51.0,23,86,63,23.71,6,40,23,62,34,81,86
+p0076,Wes Mendes,LHP,Florida State,College,FL,"hometown: Tampa, FL; bat/throw: R/L",803544,64,57.03,57.5,35,80,45,16.24,6,65,80,50,35,70,40
+p0060,Blake Bryant,RHP,Citizens Christian HS (GA),HS,GA,commitment: Clemson; bat/throw: R/R,835682,65,60.06,52,27,110,83,28.28,5,41,,110,27,52,61
+p0085,Kaiden McCarthy,RHP,Vermont Academy HS (VT),HS,VT,commit/drafted: Tennessee; age 17,836680,66,64.32,67.5,39,78,39,15.7,4,76,,59,39,,78
+p0062,Rocco Maniscalco,SS,Oxford (Ala.) HS,HS,AL,commit/drafted: Mississippi State; age 17,836548,67,64.97,56,28,98,70,23.2,5,98,,56,28,75,56
+p0088,Cooper Harris,RHP,Flower Mound (Texas) HS,HS,TX,commit/drafted: Texas; age 18,835839,68,65.56,62,40,83,43,16.65,5,83,,82,40,53,62
+p0058,Jace Mataczynski,SS,"Hudson (Hudson, WI)",HS,WI,Auburn commit; age 18.3,,69,66.63,64,25,99,74,30.23,3,99,,64,25,,
+p0090,Brett Renfrow,RHP,Virginia Tech,College,VA,B/T: R/R,814530,70,67.49,63.5,40,119,79,26.8,6,68,59,76,40,40,119
+p0075,Jacob Dudan,RHP,North Carolina State,College,NC,B/T: L/R,822705,71,67.66,70,34,88,54,18.23,5,88,,78,69,34,70
+p0086,Jack Natili,C,Cincinnati,College,PA,B/T: R/R,814385,72,68.67,71,39,88,49,18.49,5,58,88,71,39,,87
+p0167,Richie Roman,RHP,Houston,College,TX,"Corpus Christi, TX; 20.8 JR",,73,69.0,69,69,69,0,0.0,1,,69,,,,
+p0035,Gabe Gaeckle,RHP,Arkansas,College,CA,B/T: R/R,806076,74,69.7,82,15,98,83,33.7,5,82,15,98,36,,96
+p0116,Savion Sims,RHP,Prestonwood Christian HS (TX),HS,TX,commit/drafted: Oklahoma; age 19,828727,75,73.72,73,51,99,48,16.6,5,60,,99,51,73,80
+p0148,Ruger Riojas,RHP,Texas,College,TX,B/T: R/R,823162,76,74.13,77,63,86,23,8.61,5,86,78,65,63,,77
+p0070,Cole Koeninger,SS,Keller,HS,TX,Tennessee commit; age 18.9,828579,77,74.41,77,31,98,67,22.47,5,73,,84,31,77,98
+p0053,Luke Williams,SS,"Franklin Regional HS, Murrysville, Penn",HS,PA,commitment: Vanderbilt; bat/throw: R/R,828816,78,74.48,81.5,23,101,78,31.24,4,97,,66,23,,101
+p0182,Gunner Skelton,"2B,3B","Columbia Academy (Columbia, TN)",HS,,commitment: Vanderbilt; bat/throw: R/R,,79,75.0,75,75,75,0,0.0,1,,,,75,,
+p0183,Tristan Bissetta,OF,Ole Miss,College,SC,"Greenville, SC; 22.9 SR",,80,75.0,75,75,75,0,0.0,1,,75,,,,
+p0144,Will Gasparino,OF,UCLA,College,CA,age 21,800605,81,75.22,71,62,88,26,9.79,5,71,70,88,,62,85
+p0097,Will Adams,OF,Hoover HS (AL),HS,AL,LSU commit; age 18.3,828732,82,77.0,87,43,103,60,22.82,5,87,,91,43,55,103
+p0067,Mulivai Levu,1B,UCLA,College,CA,"Huntington Beach, CA; 21.7 JR",823050,83,77.11,79.0,30,128,98,31.19,6,79,30,128,44,80,79
+p0077,Tre Broussard,OF,Houston,College,TX,"hometown: Houston, TX; bat/throw: L/L",821507,84,77.32,66.5,35,135,100,32.13,6,53,35,135,58,90,75
+p0124,Beau Peterson,3B,"Mill Valley High School (Shawnee, Kan.)",HS,KS,commit/drafted: Texas; age 18,828679,85,77.47,61,54,118,64,23.92,5,118,,61,54,86,59
+p0066,Noah Wilson,OF,"McCallie HS, Chattanooga, Tenn",HS,TN,commit/drafted: Vanderbilt; age 19,828992,86,77.94,94,29,100,71,27.56,5,59,,96,29,100,94
+p0065,Taylor Rabe,RHP,Mississippi,College,SC,"hometown: Greenville, SC; bat/throw: R/R",815040,87,78.28,60.0,29,152,123,50.73,4,29,,152,30,,90
+p0141,Ryan Peterson,RHP,Sam Houston State,College,TX,"hometown: Shiner, TX; bat/throw: R/R",831713,88,79.63,81,61,87,26,9.13,5,84,,80,61,87,81
+p0152,Myles Bailey,1B,Florida State,College,FL,"hometown: Tallahassee, FL; bat/throw: L/R",815343,89,79.7,75,64,94,30,10.91,5,94,72,75,64,,88
+p0138,Dee Kennedy,SS,Kansas State,College,TX,"Fort Worth, TX; 21.0 JR",806131,90,79.97,77,60,93,33,12.39,5,91,77,,60,93,71
+p0149,Will Yow,SS,St. Anne's Belfield HS (VA),HS,VA,Virginia commit; age 18.6,837267,91,81.0,82.5,63,102,39,19.5,2,,,63,,,102
+p0126,Eric Guevara,3B,Auburn,College,,age 21,,92,82.0,78.0,54,102,48,24.0,2,102,,,54,,
+p0096,Ryan Lynch,RHP,North Carolina,College,NJ,age 21.1,827359,93,82.62,91.5,43,107,64,25.18,6,92,43,107,46,91,97
+p0114,Carter Beck,OF,Indiana State,College,SK,"hometown: Carnduff, SK; bat/throw: L/R",,94,83.16,69,50,121,71,30.01,3,69,,121,50,,
+p0099,Gavin Giese,RHP,Dana Hills,HS,CA,commitment: San Diego; bat/throw: R/R,840025,95,84.36,81.0,44,118,74,37.0,2,,,,44,,118
+p0081,Kollin Ritchie,OF,Oklahoma State,College,OK,age 21.8,806507,96,86.0,92.0,37,113,76,27.75,6,106,37,113,53,95,89
+p0119,Jake Schaffner,SS,North Carolina,College,WI,"hometown: Janesville, WI; bat/throw: L/R",835279,97,86.0,91,52,103,51,17.9,5,96,,103,52,79,91
+p0084,Ethan Wachsmann,RHP,"Grandview HS, Aurora, Colo",HS,CO,Wake Forest commit; age 18.1,840028,98,86.94,82,38,122,84,30.57,5,112,,122,38,66,82
+p0133,Bo Holloway,LHP,"Christ Presbyterian (Nashville, Tenn.)",HS,TN,commitment: Vanderbilt; bat/throw: L/L,828800,99,87.25,76,57,145,88,30.71,5,145,,72,57,76,76
+p0093,Owen Hull,OF,North Carolina,College,VA,B/T: L/R,833382,100,87.78,61,41,158,117,51.1,3,61,,,41,,158
+p0137,Eli Herst,RHP,"Seattle Academy (Seattle, WA)",HS,,commitment: Vanderbilt; bat/throw: R/R,,101,88.92,84.5,58,111,53,26.5,2,111,,,58,,
+p0212,Kuhio Aloy,OF,Arkansas,College,HI,"Wailuku, HI; 20.8 JR",,102,89.0,89,89,89,0,0.0,1,,89,,,,
+p0102,Jason DeCaro,RHP,North Carolina,College,NY,B/T: R/R,811311,103,89.41,89.5,45,125,80,31.27,6,85,48,120,45,94,125
+p0159,Caden Bogenpohl,OF,Missouri State,College,MO,"hometown: Jackson, MO; bat/throw: L/R",806470,104,89.44,93,66,110,44,15.03,5,110,,94,66,78,93
+p0107,Evan Dempsey,RHP,Florida Gulf Coast,College,FL,"Tampa, FL; 20.8 JR",805632,105,90.47,80,47,132,85,27.95,5,80,79,132,47,,100
+p0189,Shane Sdao,LHP,Texas A&M,College,TX,age 22,805658,106,91.19,92,79,97,18,6.28,5,90,,97,79,92,95
+p0161,Cal Randall,RHP,UCLA,College,CA,"hometown: Discovery Bay, CA; bat/throw: R/R",,107,91.41,80,67,117,50,21.18,3,117,67,,80,,
+p0063,Daniel Cuvet,3B,Miami,College,FL,commit/drafted: Pirates ’23 (17); age 21,804562,108,91.46,91.5,28,134,106,34.0,6,95,28,134,67,88,115
+p0156,Hudson DeVaughan,RHP,Mooresville (Ind.) HS,HS,IN,commit/drafted: Alabama; age 19,840026,109,91.48,93.0,65,110,45,18.94,4,107,,79,65,,110
+p0071,Roman Martin,3B,UCLA,College,CA,"Whittier, CA; 21.6 JR",800610,110,91.68,95.5,31,124,93,31.71,6,123,86,105,81,31,124
+p0094,Kevin Roberts Jr.,OF,"Jackson Preparatory (Meridian, MS)",HS,MS,Florida commit; age 18.0,828809,111,91.76,94.0,42,128,86,30.74,4,93,,95,42,,128
+p0113,Malachi Washington,OF,Parkview,HS,GA,commit/drafted: LSU; age 18,812506,112,92.08,97.0,50,115,65,26.05,4,115,,83,50,,111
+p0178,Peyton Bonds,OF,Rutgers,College,NJ,B/T: R/R,835227,113,92.27,93,74,109,35,11.94,5,109,98,93,84,,74
+p0130,Brendan Brock,C,Oklahoma,College,IL,B/T: R/R,833392,114,92.47,95,56,109,53,19.34,5,108,95,87,56,,109
+p0104,Ethan Bass,SS,Glenbrook North,HS,IL,commitment: Wake Forest; bat/throw: R/R,828983,115,93.28,85.0,46,140,94,35.57,4,140,,102,46,,68
+p0171,Keon Johnson,SS,"First Presbyterian Day HS, Macon, Ga",HS,GA,commitment: Vanderbilt; bat/throw: R/R,828801,116,93.92,93.5,71,114,43,21.01,4,114,,73,71,,114
+p0162,Denton Lord,RHP,"South Walton (Santa Rosa Beach, FL)",HS,FL,commitment: Mississippi State; bat/throw: R/R,833685,117,94.72,80.5,68,139,71,28.26,4,139,,89,68,,72
+p0118,Ethan Norby,LHP,East Carolina,College,NC,B/T: R/L,825275,118,94.76,78.5,51,164,113,39.96,6,128,51,60,74,83,164
+p0106,Cooper Sides,RHP,Orange Lutheran,HS,CA,commit/drafted: LSU; age 18,835795,119,95.44,99,47,127,80,33.15,3,127,,,47,,99
+p0127,Sean Dunlap,C,Crown Point,HS,IN,commitment: Tennessee; bat/throw: R/R,828985,120,95.52,85.5,55,148,93,38.68,4,148,,55,59,,112
+p0134,Kyle Jones,OF,Florida,College,GA,age 21,812807,121,95.94,74,57,143,86,33.89,5,72,,143,57,74,127
+p0157,Camden Kozeal,SS,Arkansas,College,NE,"hometown: Omaha, NE; bat/throw: L/R",806498,122,97.04,90.5,65,132,67,26.12,4,105,65,,76,,132
+p0117,Tyson LeBlanc,SS,Kansas,College,LA,"hometown: Maurice, LA; bat/throw: R/R",840371,123,97.56,103,51,130,79,32.79,3,103,,,51,,130
+p0145,Wilson Andersen,RHP,"Jesuit HS (Tampa, Fla.)",HS,FL,commitment: Mississippi State; bat/throw: R/R,813397,124,98.41,108,62,138,76,28.45,5,138,,108,62,67,108
+p0235,Beau Bryans,LHP,Jacksonville State,College,MS,"Madison, MS; 22.5 SR",,125,99.0,99,99,99,0,0.0,1,,99,,,,
+p0179,Tre Phelps,3B,Georgia,College,GA,age 22,804569,126,100.7,99.0,74,120,46,20.25,4,120,74,,82,,116
+p0128,Carson Kerce,SS,Georgia Tech,College,GA,age 21.7,812668,127,100.75,109,55,131,76,26.74,5,116,,109,55,84,131
+p0170,Carson Wiggins,RHP,Arkansas,College,OK,age 21.0,815164,128,101.06,84,71,145,74,28.32,5,119,,145,77,71,84
+p0092,Trey Beard,LHP,Florida State,College,FL,"hometown: Dunedin, FL; bat/throw: L/L",804295,129,101.16,111.0,41,129,88,33.83,6,129,41,126,65,96,126
+p0068,Trey Ebel,SS,"Corona (Rancho Cucamonga, CA)",HS,CA,commitment: Texas A&M; bat/throw: R/R,821931,130,102.0,108.5,30,142,112,41.29,4,142,,104,30,,113
+p0108,Tommy LaPour,RHP,TCU,College,MO,B/T: R/R,815080,131,103.33,91,47,152,105,39.67,5,74,47,140,91,,152
+p0056,Henry Ford,3B,Tennessee,College,VA,"hometown: Charlottesville, VA; bat/throw: R/R",814822,132,104.1,111,24,145,121,46.05,5,143,24,111,71,,145
+p0160,Matt Ponatoski,RHP,"Archbishop Moeller HS, Cincinnati, Ohio",HS,OH,Kentucky commit; age 18.4,,133,104.32,90,66,146,80,33.52,3,146,,90,66,,
+p0136,Nathan Taylor,RHP,Cincinnati,College,OH,"hometown: Amelia, OH; bat/throw: L/R",,134,104.59,96,58,144,86,35.19,3,144,58,,96,,
+p0202,Ryan Marohn,LHP,North Carolina State,College,VA,commit/drafted: Guardians ’23 (20); age 21,811317,135,105.0,89,85,147,62,28.33,3,89,,85,,,147
+p0125,Kade Lewis,3B,Wake Forest,College,MN,"Sartell, MN; 20.9 JR",832392,136,105.5,104,54,149,95,31.35,5,149,54,114,86,,104
+p0098,Kyle Johnson,LHP,Virginia,College,VA,age 21,702973,137,106.0,133,43,148,105,46.37,3,133,,,,43,148
+p0105,Gavin Gallaher,2B,North Carolina,College,NC,"Apex, NC; 20.7 JR",703555,138,106.13,81.5,46,198,152,59.59,4,104,46,,59,,198
+p0169,Tyler Fay,RHP,Alabama,College,NE,age 22,,139,106.17,101.0,70,132,62,31.0,2,132,,,70,,
+p0122,Julian Garcia,RHP,"St. John Bosco HS, Bellflower, Calif",HS,CA,commitment: Long Beach State; bat/throw: R/R,838190,140,106.61,117,53,136,83,35.51,3,136,,,53,,117
+p0091,Jack Slightom,RHP,Lyons Township,HS,IL,Cincinnati commit; age 18.2,840030,141,107.0,107.5,41,151,110,40.81,4,151,,123,41,,92
+p0082,Dominic Santarelli,1B,"St. Joseph’s (Pleasant Prarire, WI)",HS,WI,commit/drafted: LSU; age 18,835674,142,107.28,117.5,37,141,104,41.33,4,141,,100,37,,135
+p0120,Jaxon Willits,SS,Oklahoma,College,OK,"Fort Cobb, OK; 21.5 JR",806261,143,108.17,109.0,52,146,94,37.03,4,131,52,,87,,146
+p0121,Bryce Hill,RHP,"Greenwich Country Day (Greenwich, CT)",HS,CT,Stanford commit; age 18.3,835612,144,108.68,109.5,52,154,102,36.83,4,100,,119,52,,154
+p0164,Garrett Wright,OF,Tennessee,College,OH,"hometown: Massillon, OH; bat/throw: R/R",835226,145,110.72,75,68,188,120,54.99,3,75,,,68,,188
+p0131,Elliot Lascelles,SS,"Upper Canada College HS, Toronto, Ont",HS,ON,commitment: Yale; bat/throw: L/R,828900,146,111.17,113,56,155,99,40.57,3,113,,,56,,155
+p0219,Gannon Grant,RHP,"Center Grove (Greenwood, IN)",HS,,commit/drafted: Tennessee; age 19,,147,111.25,108.5,92,125,33,16.5,2,125,,,92,,
+p0142,Gary Morse,RHP,Orange Lutheran,HS,CA,commit/drafted: Tennessee; age 19,828988,148,112.0,114.5,61,147,86,34.72,4,147,,92,61,,137
+p0143,Eric Segura,RHP,Oregon State,College,CA,"hometown: Soledad, CA; bat/throw: R/R",,149,112.41,93,61,163,102,42.59,3,163,61,,93,,
+p0188,Maxx Yehl,LHP,West Virginia,College,NY,"Portville, NY; 21.9 RJR",,150,113.38,107.5,78,144,66,26.15,4,124,91,144,78,,
+p0150,Lucas Nawrocki,LHP,"Aledo (Aledo, TX)",HS,TX,commit/drafted: LSU; age 18,835861,151,114.92,118.0,63,151,88,31.67,4,121,,115,63,,151
+p0139,Trey Rangel,RHP,The Colony (Texas) HS,HS,TX,commit/drafted: Texas; age 19,835713,152,116.67,126,60,153,93,39.06,3,126,,,60,,153
+p0115,Tate McKee,RHP,Georgia Tech,College,GA,age 21,,153,117.08,107.5,50,165,115,57.5,2,165,50,,,,
+p0165,Tyler Putnam,RHP,"Battle HS, Columbia, Mo",HS,MO,commitment: Tennessee; bat/throw: R/R,836577,154,117.24,107.5,69,177,108,43.23,4,177,,,81,69,134
+p0095,Lucas Moore,OF,Louisville,College,OH,"Hamilton, OH; 21.0 JR",,155,117.25,106.5,42,171,129,64.5,2,171,42,,,,
+p0158,Dawson Montesa,RHP,West Virginia,College,,B/T: R/R,840223,156,118.35,130,65,167,102,42.16,3,130,,,,65,167
+p0079,Martin Shelar,OF,Marist,HS,GA,commitment: Mississippi State; bat/throw: R/R,835678,157,121.78,122,36,193,157,64.19,3,122,,,36,,193
+p0192,Alex Hernandez,OF,Georgia Tech,College,GA,"Cumming, GA; 20.8 SO",815415,158,122.0,135,81,143,62,24.19,5,135,81,136,100,,143
+p0101,Dylan Bowen,SS,Hanover Central,HS,IN,commit/drafted: Oklahoma State; age 19,835728,159,122.12,127.5,45,164,119,46.43,4,164,,150,45,,105
+p0186,Anthony Murphy,OF,Corona,HS,CA,commitment: Louisiana State; bat/throw: R/R,821939,160,125.36,126.5,77,155,78,31.28,4,155,,146,77,,107
+p0155,Carson Bailey,LHP,McLennan JC (TX),College,TX,Uncommitted; age 21.4,826053,161,125.9,77,65,227,162,73.7,3,227,,77,,,65
+p0112,Jake Carbaugh,RHP,Plant City HS (FL),HS,FL,commitment: Mississippi State; bat/throw: R/R,,162,126.0,127,49,180,131,53.8,3,180,,127,49,,
+p0123,LJ Mercurius,RHP,Oklahoma,College,NV,age 21,702969,163,126.04,128.0,53,172,119,48.73,4,161,53,,95,,172
+p0185,Aidan Knaak,RHP,Clemson,College,FL,"Fort Myers, FL; 21.6 JR",,164,127.15,109.0,76,200,124,48.29,4,200,76,129,,89,
+p0201,Dalton Wentz,3B,Wake Forest,College,VA,"Madison Heights, VA; 20.7 SO",807275,165,128.06,138,85,167,82,30.15,5,167,85,138,,98,142
+p0109,Cameron Johnson,LHP,Oklahoma,College,TX,commit/drafted: Cardinals ’23 (20); age 21,825128,166,128.68,132.5,48,184,136,54.23,4,184,,,48,99,166
+p0233,Kolby Stringer,RHP,West Marion HS (MS),HS,MS,LSU commit; age 18.3,840217,167,128.68,122.0,99,162,63,22.72,4,162,,124,99,,120
+p0073,Alex Weingartner,OF,"St. Augustine Preparatory (Berlin, NJ)",HS,NJ,Penn State commit; age 18.5,836659,168,130.0,128.5,33,206,173,64.34,4,206,,101,33,,156
+p0209,Nathaneal Davis,OF,Bishop Moore HS (FL),HS,FL,commit/drafted: LSU; age 18,,169,131.84,125,88,170,82,33.53,3,170,,125,88,,
+p0173,Ryan Cooney,2B,Oregon,College,OR,age 21,807721,170,132.0,133,72,174,102,41.91,3,174,,,72,,133
+p0225,Jaxon Jelkin,RHP,Kentucky,College,NE,B/T: R/R,801210,171,132.0,129.0,96,162,66,33.0,2,,96,,,,162
+p0110,James Tronstein,OF,Harvard-Westlake,HS,CA,Stanford commit; age 18.3,828814,172,133.32,148.5,48,169,121,48.82,4,166,,131,48,,169
+p0239,Calvin Proskey,RHP,UC Santa Barbara,,,age 21,,173,134.0,134,134,134,0,0.0,1,134,,,,,
+p0184,Andruw Giles,OF,"Basic HS, Henderson, Nev",HS,,commit/drafted: Oregon; age 18,,174,134.33,126.0,76,176,100,50.0,2,176,,,76,,
+p0197,Deiten LaChance,C,Oklahoma,College,QC,"hometown: Sherbrook, QC; bat/throw: R/R",,175,134.92,127.5,83,172,89,44.5,2,172,,,83,,
+p0187,Jason Amalbert,SS,"DePaul Catholic HS, Wayne, N.J",HS,NJ,commit/drafted: Oklahoma; age 18,828734,176,135.44,157,78,158,80,37.48,3,158,,,78,,157
+p0214,Alex Conover,OF,Oklahoma State,College,OK,"hometown: Tuttle, OK; bat/throw: L/R",,177,135.5,129.0,90,168,78,39.0,2,168,,,90,,
+p0078,Jack Brenner,C,"Fond Du Lac (Fond Du Lac, WI)",HS,,commit/drafted: Oklahoma; age 18,,178,136.5,122.0,35,209,174,87.0,2,209,,,35,,
+p0234,Jake McCoy,LHP,South Carolina,College,SC,"hometown: Fort Mill, SC; bat/throw: L/L",811690,179,136.61,150,99,152,53,24.53,3,152,,,99,,150
+p0175,Carson Jasa,RHP,Nebraska,College,CO,age 21,814215,180,137.17,154,73,171,98,42.76,3,154,,,73,,171
+p0222,Brady Harris,OF,Trinity Christian,HS,FL,B/T: R/R,826207,181,137.78,150,94,160,66,29.04,3,150,,,94,,160
+p0240,Nathaneal Davis-Cleary,OF,Bishop Moore,HS,FL,B/T: L/L,835875,182,138.0,138,138,138,0,0.0,1,,,,,,138
+p0210,Brayden Dowd,OF,Florida State,College,MI,age 20.9,804053,183,139.56,141.0,89,178,89,40.21,4,178,,106,89,,176
+p0111,Caden Ferraro,OF,Texas Tech,College,TX,age 21,821299,184,139.72,151.0,49,189,140,53.55,4,169,,133,49,,189
+p0174,James Jorgensen,RHP,Jesuit HS (TX),HS,TX,commit/drafted: Texas; age 18,828802,185,139.96,141.0,72,190,118,45.32,4,190,,117,72,,165
+p0151,Dominic Voegele,RHP,Kansas,College,IL,commit/drafted: D-Backs (20) ’23; age 21,,186,140.58,129.5,63,196,133,66.5,2,196,63,,,,
+p0217,Russell Sandefer,RHP,Florida,College,FL,age 21,824531,187,141.48,134.5,92,182,90,42.83,4,182,94,,92,,175
+p0227,Steele Murdock,RHP,UC San Diego,College,UT,age 21.3,835217,188,142.48,133.0,97,193,96,34.53,4,193,,130,97,,136
+p0228,Robbie Lavey,C,George Washington,College,,age 20.8,835215,189,143.48,148.5,97,186,89,32.1,4,156,,141,,97,186
+p0218,Duncan Marsten,RHP,Wake Forest,College,CA,age 21.0,824024,190,144.0,142.0,92,192,100,35.53,4,137,92,147,,,192
+p0147,Landon Brown,RHP,"Iowa Colony HS, Rosharon, Tex",HS,TX,commit/drafted: Mississippi State; age 18,828884,191,145.28,65.5,63,353,290,124.86,4,353,,,67,64,63
+p0208,Rylan Lujo,OF,Georgia,College,FL,age 21,803863,192,147.83,157,88,187,99,41.45,3,157,,,88,,187
+p0140,Braden Holcomb,OF,Vanderbilt,College,FL,"Orlando, FL; 21.5 JR",,193,148.08,135.5,60,211,151,75.5,2,211,60,,,,
+p0132,Owen Kramkowski,RHP,Arizona,College,AZ,"Sahuarita, AZ; 20.8 JR",822648,194,152.89,174,56,204,148,63.88,3,204,56,,,,174
+p0204,Deven Sheerin,RHP,LSU,College,,B/T: R/R,828822,195,152.9,141,86,230,144,59.33,3,230,,86,,,141
+p0223,John Abraham,RHP,Florida State,College,FL,age 21,,196,152.92,144.5,94,195,101,50.5,2,195,,,94,,
+p0246,Rintaro Sasaki,1B,Stanford,,,age 21.2,,197,153.0,153,153,153,0,0.0,1,,,153,,,
+p0247,Chase Kiker,RHP,"Metrolina Christian Academy, Indian Trail, N.C",HS,,commit/drafted: Clemson; age 18,,198,153.0,153,153,153,0,0.0,1,153,,,,,
+p0221,Dylan Vigue,RHP,Georgia,College,MA,age 22,815068,199,154.39,160,93,199,106,43.77,3,160,93,,,,199
+p0190,Cooper Webb,RHP,"Lake Travis (Spicewood, TX)",HS,,commit/drafted: Texas; age 18,,200,155.42,144.5,79,210,131,65.5,2,210,,,79,,
+p0195,Shawn Sullivan,RHP,"Walsh Jesuit HS, Cuyahoga Falls, Ohio",HS,OH,B/T: R/R,835765,201,156.77,151.5,83,220,137,68.5,2,220,,,,,83
+p0146,Maddox Molony,SS,Oregon,College,OR,age 21,814829,202,158.36,144.5,62,257,195,72.22,4,257,62,116,,,173
+p0250,Wyatt Clatur,RHP,Nolensville (Tenn.) HS,HS,,commit/drafted: Virginia; age 18,,203,159.0,159,159,159,0,0.0,1,159,,,,,
+p0087,Brady Ballinger,1B,Kansas,College,NV,"Henderson, NV; 20.9 JR",,204,159.17,142.0,39,245,206,103.0,2,245,39,,,,
+p0100,Blake Morningstar,RHP,Wake Forest,College,PA,"Wyalusing, PA; 21.1 JR",,205,159.5,143.0,44,242,198,99.0,2,242,44,,,,
+p0205,Ryan Harwood,OF,"Casteel (Chandler, AZ)",HS,,commit/drafted: Texas A&M; age 18,,206,159.5,149.0,86,212,126,63.0,2,212,,,86,,
+p0231,Trevor Hansen,RHP,UC Irvine,College,CA,age 21,814145,207,160.5,177,98,191,93,40.94,3,191,,,98,,177
+p0216,CJ Weinstein,"2B,SS","Orange Lutheran (Newport Beach, CA)",HS,CA,commitment: Louisiana State; bat/throw: L/R,828815,208,162.83,149,91,226,135,55.3,3,226,,,91,,149
+p0193,Coleton Brady,RHP,"TXNL Academy (North Collins, NY)",HS,FL,UCF commit; age 17.8,835808,209,163.56,157.5,82,236,154,56.35,4,236,,137,82,,178
+p0168,AJ Rice,RHP,"Pickens County (Jasper, GA)",HS,GA,commitment: Auburn; bat/throw: R/R,840029,210,165.56,121,70,272,202,85.77,3,272,,,70,,121
+p0103,Nathan Aceves,RHP,UC Santa Barbara,College,CA,"Huntington Beach, CA; 20.8 SO",,211,166.92,149.5,45,254,209,104.5,2,254,45,,,,
+p0229,Wessley Roberson,OF,"Glynn Academy (Brunswick, GA)",HS,,commitment: Louisiana State; bat/throw: L/R,,212,167.0,157.0,97,217,120,60.0,2,217,,,97,,
+p0220,Jack Dugan,SS,Lipscomb Academy,HS,TN,commitment: Tennessee; bat/throw: L/R,835830,213,167.8,127.5,93,293,200,79.4,4,293,,149,93,,106
+p0163,Ethan McElvain,LHP,Arkansas,College,TN,age 21,806155,214,169.39,140,68,267,199,82.27,3,267,68,,,,140
+p0252,Jacob Madrid,C,Notre Dame,HS,CA,B/T: R/R,835436,215,170.0,170,170,170,0,0.0,1,,,,,,170
+p0232,Alain Gómez-Gudiño,C,"Saguaro HS, Scottsdale, Ariz",HS,,commitment: South Carolina; bat/throw: S/R,,216,171.5,161.0,98,224,126,63.0,2,224,,,98,,
+p0172,Macon Winslow,C,North Carolina,College,NC,"Hertford, NC; 21.2 JR",,217,171.92,157.5,71,244,173,86.5,2,244,71,,,,
+p0253,Eric Nachtsheim,RHP,McNeese State,,,age 22,,218,173.0,173,173,173,0,0.0,1,173,,,,,
+p0206,Grayson Willoughby,RHP,Trinity,HS,KY,B/T: L/R,835701,219,173.44,197,87,215,128,56.58,3,215,,,87,,197
+p0135,Ricky Ojeda,LHP,UC Irvine,College,CA,"Valencia, CA; 20.5 JR",,220,174.25,157.5,57,258,201,100.5,2,258,57,,,,
+p0129,Brady Snow,RHP,"American Heritage (North Palm Beach, FL)",HS,FL,B/T: R/R,835796,221,174.72,168,55,266,211,86.21,3,266,,,55,,168
+p0254,Cole Tryba,LHP,UC Santa Barbara,,,age 21,,222,175.0,175,175,175,0,0.0,1,175,,,,,
+p0166,Noah Danza,SS,"Gloucester Catholic (Turnersville, NJ)",HS,NJ,commitment: Mississippi State; bat/throw: R/R,,223,175.11,112,69,314,245,106.81,3,314,,112,69,,
+p0241,Luke McNeillie,RHP,Florida,College,GA,B/T: L/R,703667,224,176.0,183,139,207,68,28.16,3,207,,139,,,183
+p0200,Logan Georges,RHP,Clovis,HS,CA,commit/drafted: TCU; age 19,835751,225,176.28,122,85,288,203,88.28,3,288,,,85,,122
+p0256,Michael Addari,RHP,Illinois State,,,age 22,,226,179.0,179,179,179,0,0.0,1,179,,,,,
+p0191,Cody Boshell,1B,Bishop Snyder HS (FL),HS,FL,Tennessee commit; age 19.2,,227,179.47,155,80,275,195,80.31,3,275,,155,80,,
+p0258,Michael Harpster,RHP,East Tennessee State,,,,,228,181.0,181,181,181,0,0.0,1,181,,,,,
+p0059,Robert Omidi,3B,"St. Martin (Mississauga, ON)",HS,,commitment: Kentucky; bat/throw: L/R,,229,182.33,160.0,26,294,268,134.0,2,294,,,26,,
+p0260,Grant Govel,RHP,Southern California,,,,,230,183.0,183,183,183,0,0.0,1,183,,,,,
+p0263,Sherman Johnson,3B,NC State,,,age 21,,231,185.0,185,185,185,0,0.0,1,185,,,,,
+p0264,Matthew Thomas,OF,Cal State Northridge,,,age 20,,232,186.0,186,186,186,0,0.0,1,186,,,,,
+p0265,Erik Paulsen,1B,North Carolina,,,age 21,,233,187.0,187,187,187,0,0.0,1,187,,,,,
+p0213,Alex Sosa,C,Miami,College,FL,B/T: L/R,806227,234,187.56,161,90,280,190,78.39,3,280,90,,,,161
+p0266,Kenny Ishikawa,LHP,Georgia,,,age 22,,235,188.0,188,188,188,0,0.0,1,188,,,,,
+p0267,Thomas Burns,RHP,Texas,,,age 21,,236,189.0,189,189,189,0,0.0,1,189,,,,,
+p0269,Cody New,LHP,California Baptist,,,age 21,,237,192.0,192,192,192,0,0.0,1,192,,,,,
+p0268,Cal Scolari,RHP,Oregon,College,,age 22,822302,238,192.62,192.5,191,194,3,1.5,2,194,,,,,191
+p0251,Isaac Morton,RHP,Minnesota,College,MN,commit/drafted: Brewers ’23 (19); age 21,814819,239,193.15,191.0,163,219,56,28.0,2,219,,,,,163
+p0211,Griffin Long,RHP,"Sonoraville HS, Calhoun, Ga",HS,,commitment: Kennesaw State; bat/throw: R/R,,240,194.58,179.5,89,270,181,90.5,2,270,,,89,,
+p0243,Joe Tiroly,2B,Virginia,College,,age 21,840332,241,194.62,191.0,144,238,94,47.0,2,238,,,,,144
+p0271,Josh McDevitt,RHP,Missouri,,,age 22,,242,197.0,197,197,197,0,0.0,1,197,,,,,
+p0248,Chris McHugh,1B,NC State,,,age 21.0,,243,197.5,197.5,154,241,87,43.5,2,241,,154,,,
+p0272,Hudson Calhoun,RHP,Ole Miss,,,age 21,,244,198.0,198,198,198,0,0.0,1,198,,,,,
+p0273,Ethan Sutton,RHP,South Florida,,,age 21,,245,199.0,199,199,199,0,0.0,1,199,,,,,
+p0275,Bo Rhudy,RHP,Tennessee,,,age 21,,246,201.0,201,201,201,0,0.0,1,201,,,,,
+p0276,Alex Harrington,SS,"Cathedral Catholic HS, San Diego",HS,,commit/drafted: Stanford; age 19,,247,202.0,202,202,202,0,0.0,1,202,,,,,
+p0277,Ryan Novak,OF,Miami (Ohio),,,age 21,,248,203.0,203,203,203,0,0.0,1,203,,,,,
+p0278,Ryan Piech,RHP,Xavier,,,age 20,,249,205.0,205,205,205,0,0.0,1,205,,,,,
+p0203,Ty Horn,RHP,Nebraska,College,KS,"hometown: Halstead, KS; bat/throw: L/R",,250,205.17,188.0,85,291,206,103.0,2,291,,,85,,
+p0245,Justin LeGuernic,LHP,Clemson,,,age 20.8,,251,206.0,206.0,151,261,110,55.0,2,261,,151,,,
+p0279,Rookie Shepard,SS,"Faith Lutheran HS, Las Vegas, Nev",HS,,commit/drafted: Miami; age 18,,252,208.0,208,208,208,0,0.0,1,208,,,,,
+p0249,Kyle Casteel,RHP,Butler (Pa.) Area Senior HS,HS,PA,commit/drafted: West Virginia; age 18,840220,253,208.54,205.0,159,251,92,46.0,2,251,,,,,159
+p0153,Ryne Barker,3B,"Casteel (Gilbert, AZ)",HS,AZ,commit/drafted: Texas Tech; age 19,837063,254,208.78,195,64,324,260,106.15,3,324,,,64,,195
+p0176,Jet Berry,SS,Queen Creek (Ariz.) HS,HS,AZ,commit/drafted: Arizona State; age 19,835829,255,209.22,190,73,323,250,102.13,3,323,,,73,,190
+p0280,Haiden Leffew,LHP,Texas,,,age 21,,256,213.0,213,213,213,0,0.0,1,213,,,,,
+p0281,Collin Bland,1B,"Houston HS, Germantown, Tenn",HS,,commit/drafted: Vanderbilt; age 18,,257,214.0,214,214,214,0,0.0,1,214,,,,,
+p0196,Graham Schlicht,RHP,"De La Salle HS, Concord, Calif",HS,CA,commit/drafted: Stanford; age 18,840219,258,214.44,139,83,373,290,125.61,3,373,,,83,,139
+p0282,Tyson Grulkowski,RHP,Muskego (Wisc.) HS,HS,,commit/drafted: South Florida; age 18,,259,216.0,216,216,216,0,0.0,1,216,,,,,
+p0181,Kam Durnin,SS,Missouri,College,MO,"hometown: Kansas City, MO; bat/throw: R/R",,260,217.92,197.5,75,320,245,122.5,2,320,,,75,,
+p0283,John Stowers,C,"St. Paul’s Episcopal HS, Mobile, Ala",HS,,commit/drafted: Auburn; age 18,,261,218.0,218,218,218,0,0.0,1,218,,,,,
+p0274,Jorvorskie Lane Jr.,OF,Grapevine (Tex.) HS,HS,TX,commit/drafted: Arkansas; age 18,828580,262,218.31,217.0,200,234,34,17.0,2,234,,,,,200
+p0284,Zane Adams,LHP,Alabama,,,age 22,,263,221.0,221,221,221,0,0.0,1,221,,,,,
+p0285,Rhett Britt,RHP,"Topsail HS, Hampstead, N.C",HS,,commit/drafted: North Carolina; age 18,,264,222.0,222,222,222,0,0.0,1,222,,,,,
+p0286,Hunter Carns,C,Florida State,,,commit/drafted: D-Backs ’24 (20); age 21,,265,223.0,223,223,223,0,0.0,1,223,,,,,
+p0287,Brayden Martin,3B,Maryland,,,age 20,,266,225.0,225,225,225,0,0.0,1,225,,,,,
+p0288,Alejandro Garza,3B,Cal Poly,,,age 21,,267,228.0,228,228,228,0,0.0,1,228,,,,,
+p0289,Ryan Kucherak,SS,Northwestern,,,age 21,,268,229.0,229,229,229,0,0.0,1,229,,,,,
+p0262,Sawyer Nelson,SS,South Salem,HS,OR,B/T: L/R,840037,269,229.69,226.5,185,268,83,41.5,2,268,,,,,185
+p0290,Jerek Turlij,RHP,North East (Pa.) HS,HS,,commit/drafted: Penn State; age 18,,270,231.0,231,231,231,0,0.0,1,231,,,,,
+p0291,Luke Nixon,2B,NC State,,,age 21,,271,232.0,232,232,232,0,0.0,1,232,,,,,
+p0292,Cashel Dugger,C,UCLA,,,age 20,,272,233.0,233,233,233,0,0.0,1,233,,,,,
+p0194,Amp Phillips,RHP,South Carolina,College,SC,"Lancaster, SC; 21.8 JR",,273,233.08,211.5,82,341,259,129.5,2,341,82,,,,
+p0180,Will Plunkett,SS,Mamaroneck,HS,NY,commitment: Binghamton; bat/throw: R/R,836672,274,234.06,196,74,381,307,126.21,3,381,,,74,,196
+p0293,Cameron Jackson,SS,"Georgia Premier Academy, Statesboro, Ga",HS,,commit/drafted: Oklahoma; age 18,,275,235.0,235,235,235,0,0.0,1,235,,,,,
+p0237,Jarren Purify,2B,Clemson,College,MI,"Detroit, MI; 20.5 JR",,276,236.5,217.0,100,334,234,117.0,2,334,100,,,,
+p0294,Brandon Arvidson,LHP,Tennessee,,,age 22,,277,237.0,237,237,237,0,0.0,1,237,,,,,
+p0295,Tryston McCladdie,OF,Clemson,,,age 20,,278,239.0,239,239,239,0,0.0,1,239,,,,,
+p0296,Cash Scarborough,RHP,"Memorial HS, Houston",HS,,commit/drafted: Oklahoma State; age 18,,279,240.0,240,240,240,0,0.0,1,240,,,,,
+p0236,Isaiah Galason,SS,"Houston County (Kathleen, GA)",HS,,commitment: Georgia Tech; bat/throw: R/R,,280,242.33,222.0,100,344,244,122.0,2,344,,,100,,
+p0297,Mark Quatrani,C,Notre Dame,,,age 21,,281,243.0,243,243,243,0,0.0,1,243,,,,,
+p0230,Lorenzo Carrier,OF,Pittsburgh,College,DE,"Bear, DE; 22.9 RSR",,282,243.42,222.5,97,348,251,125.5,2,348,97,,,,
+p0215,Hunter Brown,RHP,"North Hunterdon HS, Annandale, N.J",HS,,commitment: Penn State; bat/throw: R/R,,283,245.17,223.0,90,356,266,133.0,2,356,,,90,,
+p0298,Sam Harris,1B,Virginia,,,age 21,,284,246.0,246,246,246,0,0.0,1,246,,,,,
+p0299,Ethan Surowiec,3B,Florida,,,age 21,,285,247.0,247,247,247,0,0.0,1,247,,,,,
+p0242,Cole Dennis,RHP,Bishop Snyder HS (FL),HS,FL,commit/drafted: Jacksonville; age 17,,286,248.0,248.0,142,354,212,106.0,2,354,,142,,,
+p0300,P.J. Moutzouridis,SS,Arizona State,,,age 21,,287,248.0,248,248,248,0,0.0,1,248,,,,,
+p0301,Javar Williams,OF,Wake Forest,,,age 22,,288,249.0,249,249,249,0,0.0,1,249,,,,,
+p0154,Cole Stokes,RHP,Florida State,College,CA,age 21,,289,249.5,223.0,64,382,318,159.0,2,382,64,,,,
+p0302,Nu'u Contrades,3B,Arizona State,,,age 22,,290,250.0,250,250,250,0,0.0,1,250,,,,,
+p0303,Brandon McCraine,SS,Auburn,,,age 21,,291,252.0,252,252,252,0,0.0,1,252,,,,,
+p0304,Collin Jennings,OF,Illinois,,,age 21,,292,253.0,253,253,253,0,0.0,1,253,,,,,
+p0305,Judah Ota,OF,"Iolani HS, Honolulu, Hawaii",HS,,commit/drafted: Arkansas; age 18,,293,255.0,255,255,255,0,0.0,1,255,,,,,
+p0306,Griffin Graves,LHP,Auburn,,,age 21,,294,256.0,256,256,256,0,0.0,1,256,,,,,
+p0307,Connor Fennell,RHP,Vanderbilt,,,age 21,,295,259.0,259,259,259,0,0.0,1,259,,,,,
+p0207,Tyler Minick,3B,Connecticut,College,PA,"Reading, PA; 21.5 JR",,296,259.67,235.0,87,383,296,148.0,2,383,87,,,,
+p0308,Hunter Possehl,LHP,Florida Gulf Coast,,,age 21,,297,260.0,260,260,260,0,0.0,1,260,,,,,
+p0309,Alfredo Capacete,RHP,Cal Baptist,,,age 21,,298,262.0,262,262,262,0,0.0,1,262,,,,,
+p0310,Michael Anderson,1B,Penn State,,,age 22,,299,263.0,263,263,263,0,0.0,1,263,,,,,
+p0311,Colin Barczi,C,Vanderbilt,,,age 21,,300,264.0,264,264,264,0,0.0,1,264,,,,,
+p0312,Owen Kelly,RHP,Ole Miss,,,age 21,,301,265.0,265,265,265,0,0.0,1,265,,,,,
+p0244,Landon Thiel,LHP,Jackson HS (OH),HS,OH,B/T: R/L,840036,302,265.35,181,148,455,307,137.6,3,455,,148,,,181
+p0313,Colin Fisher,LHP,Arkansas,,,age 21,,303,269.0,269,269,269,0,0.0,1,269,,,,,
+p0314,Donovan Thiery,RHP,"Coral Shores HS, Tavernier, Fla",HS,,commit/drafted: Florida State; age 18,,304,271.0,271,271,271,0,0.0,1,271,,,,,
+p0255,Wil Libbert,LHP,Mississippi,College,MO,age 21,806143,305,271.62,265.0,179,351,172,86.0,2,351,,,,,179
+p0315,Matthew Sharman,RHP,"Etowah HS, Woodstock, Ga",HS,,commit/drafted: Georgia; age 18,,306,273.0,273,273,273,0,0.0,1,273,,,,,
+p0316,Gavin Van Kempen,RHP,East Carolina,,,commit/drafted: Cardinals ’22 (20); age 21,,307,274.0,274,274,274,0,0.0,1,274,,,,,
+p0317,Anthony Del Angel,3B,"Cleveland HS, Rio Ranch, N.M",HS,,commit/drafted: Oklahoma; age 18,,308,276.0,276,276,276,0,0.0,1,276,,,,,
+p0318,Clayton Freshcorn,RHP,Texas A&M,,,age 21,,309,277.0,277,277,277,0,0.0,1,277,,,,,
+p0319,David Hinojosa,RHP,"Poly Prep Country Day HS, Brooklyn, N.Y",HS,,commit/drafted: Vanderbilt; age 18,,310,278.0,278,278,278,0,0.0,1,278,,,,,
+p0320,AJ Curry,OF,"University City HS, San Diego, Calif",HS,,commit/drafted: Tennessee; age 18,,311,279.0,279,279,279,0,0.0,1,279,,,,,
+p0321,Ty Burnham,RHP,Rogers (Ark.) HS,HS,,commit/drafted: Arkansas; age 18,,312,281.0,281,281,281,0,0.0,1,281,,,,,
+p0322,Bryson Moore,RHP,Florida State,,,age 21,,313,282.0,282,282,282,0,0.0,1,282,,,,,
+p0199,Vincent Lombardo,OF,Fairfield (Conn.) Prep,HS,,commitment: Connecticut; bat/throw: R/R,,314,282.92,254.5,84,425,341,170.5,2,425,,,84,,
+p0323,Sean Loggie,LHP,"Christian Brothers Academy, Lincroft, N.J",HS,,commit/drafted: Virginia; age 18,,315,283.0,283,283,283,0,0.0,1,283,,,,,
+p0324,Josh Gunther,RHP,South Carolina,,,age 21,,316,284.0,284,284,284,0,0.0,1,284,,,,,
+p0270,Spencer Evans,LHP,TNXL Academy,HS,FL,commit/drafted: LSU; age 18,829221,317,285.0,278.5,194,363,169,84.5,2,363,,,,,194
+p0325,Isaiah Hearn,OF,"Chaminade HS, West Hills, Calif",HS,,commit/drafted: Oregon; age 18,,318,285.0,285,285,285,0,0.0,1,285,,,,,
+p0326,Ethan Wheeler,RHP,"Trinity Christian Academy, Jacksonville, Fla",HS,,commit/drafted: Florida; age 18,,319,286.0,286,286,286,0,0.0,1,286,,,,,
+p0327,Hayes Holton,RHP,Loranger (La.) HS,HS,,commit/drafted: Texas; age 18,,320,287.0,287,287,287,0,0.0,1,287,,,,,
+p0328,AJ Krodel,RHP,UC Santa Barbara,,,age 21,,321,289.0,289,289,289,0,0.0,1,289,,,,,
+p0329,Griffin Stieg,RHP,Virginia Tech,,,age 22,,322,290.0,290,290,290,0,0.0,1,290,,,,,
+p0177,AJ Evasco,OF,Kansas State,College,NE,"Lincoln, NE; 20.8 SO",,323,291.17,260.0,73,447,374,187.0,2,447,73,,,,
+p0330,Dylan Blomker,RHP,"La Cueva HS, Albuquerque, N.M",HS,,commit/drafted: LSU; age 18,,324,292.0,292,292,292,0,0.0,1,292,,,,,
+p0331,Grayson Fitzwater,1B,VMI,,,age 22,,325,295.0,295,295,295,0,0.0,1,295,,,,,
+p0332,Colin Linder,RHP,Arizona State,,,age 22,,326,296.0,296,296,296,0,0.0,1,296,,,,,
+p0333,Anthony Potestio,SS,UC San Diego,,,age 21,,327,297.0,297,297,297,0,0.0,1,297,,,,,
+p0334,Colin White,LHP,"Harrison HS, Kennesaw, Ga",HS,,commit/drafted: Florida; age 19,,328,298.0,298,298,298,0,0.0,1,298,,,,,
+p0335,Cooper Moore,RHP,LSU,,,age 22,,329,299.0,299,299,299,0,0.0,1,299,,,,,
+p0336,Colin Driffill,RHP,"Millard North HS, Omaha, Neb",HS,,commit/drafted: Kansas State; age 18,,330,300.0,300,300,300,0,0.0,1,300,,,,,
+p0337,Hudson Barrett,LHP,Oklahoma State,,,age 22,,331,301.0,301,301,301,0,0.0,1,301,,,,,
+p0238,Josiah Morris,SS,Clayton Valley,HS,CA,commit/drafted: Oklahoma State; age 18,837268,332,301.23,288.5,123,454,331,165.5,2,454,,,,,123
+p0338,Connor Marshburn,RHP,UNC Wilmington,,,age 21,,333,302.0,302,302,302,0,0.0,1,302,,,,,
+p0339,Dean West,OF,UCLA,,,age 21,,334,303.0,303,303,303,0,0.0,1,303,,,,,
+p0340,Matt Conte,C,Wake Forest,,,age 21,,335,304.0,304,304,304,0,0.0,1,304,,,,,
+p0341,Jacob Bean,RHP,Louisville,,,age 21,,336,305.0,305,305,305,0,0.0,1,305,,,,,
+p0342,Christian Doty,SS,"Magnolia Heights HS, Senatobia, Miss",HS,,commit/drafted: Ole Miss; age 19,,337,306.0,306,306,306,0,0.0,1,306,,,,,
+p0343,Luke Pettitte,RHP,Dallas Baptist,,,age 21,,338,307.0,307,307,307,0,0.0,1,307,,,,,
+p0344,Brett Lanman,LHP,Abilene Christian,HS,,age 21,,339,308.0,308,308,308,0,0.0,1,308,,,,,
+p0345,Tyler Pitzer,RHP,Mississippi State,,,age 21,,340,309.0,309,309,309,0,0.0,1,309,,,,,
+p0346,Grayden Seuferling,RHP,Blue Springs (Mo.) South HS,HS,,commit/drafted: Wake Forest; age 18,,341,310.0,310,310,310,0,0.0,1,310,,,,,
+p0347,Cameron Tarkenton,RHP,"Cardinal Gibbons HS, Raleigh, N.C",HS,,commit/drafted: North Carolina; age 18,,342,311.0,311,311,311,0,0.0,1,311,,,,,
+p0348,Josiah Kemp,OF,"Westmoore HS, Oklahoma City, Okla",HS,,commit/drafted: Oklahoma; age 18,,343,312.0,312,312,312,0,0.0,1,312,,,,,
+p0349,Aidan Weaver,RHP,Duke,,,age 22,,344,313.0,313,313,313,0,0.0,1,313,,,,,
+p0259,Jason Jutronich,LHP,Torrey Pines,HS,CA,commit/drafted: UC Santa Barbara; age 18,840027,345,313.38,304.0,182,426,244,122.0,2,426,,,,,182
+p0350,Alex Petrovic,RHP,Auburn,,,age 22,,346,315.0,315,315,315,0,0.0,1,315,,,,,
+p0351,Jack Beck,SS,Columbia (Tenn.) Central HS,HS,,commit/drafted: Georgia Southern; age 18,,347,316.0,316,316,316,0,0.0,1,316,,,,,
+p0352,Christian Chatterton,RHP,,,,age 21,,348,317.0,317,317,317,0,0.0,1,317,,,,,
+p0353,Jake Long,OF,Utah,,,age 21,,349,318.0,318,318,318,0,0.0,1,318,,,,,
+p0198,Ryan Zuckerman,3B,Georgia Tech,College,PA,"Yardley, PA; 21.5 JR",,350,318.67,285.0,83,487,404,202.0,2,487,83,,,,
+p0354,Jaxon Matthews,OF,"Hough HS, Cornelius, N.C",HS,,commit/drafted: Clemson; age 19,,351,319.0,319,319,319,0,0.0,1,319,,,,,
+p0224,Teagan Scott,C,South Salem (Ore.) HS,HS,,commitment: Oregon State; bat/throw: R/R,,352,320.75,288.5,95,482,387,193.5,2,482,,,95,,
+p0355,Carson Turnquist,RHP,Cal Poly,,,age 22,,353,321.0,321,321,321,0,0.0,1,321,,,,,
+p0356,Gunnar Alm,OF,"Polk County HS, Columbus, N.C",HS,,commit/drafted: North Carolina State; age 19,,354,322.0,322,322,322,0,0.0,1,322,,,,,
+p0357,Aidan Teel,OF,Mississippi State,,,age 21,,355,325.0,325,325,325,0,0.0,1,325,,,,,
+p0226,Matthew Kelley,SS,"Basic HS, Henderson, Nev",HS,,commitment: Texas A&M; bat/throw: R/R,,356,325.25,292.5,96,489,393,196.5,2,489,,,96,,
+p0358,Drew Titsworth,RHP,Clemson,,,age 21,,357,326.0,326,326,326,0,0.0,1,326,,,,,
+p0359,Matt Scott,RHP,Georgia,,,commit/drafted: Rangers ’22 (20); age 22,,358,327.0,327,327,327,0,0.0,1,327,,,,,
+p0360,Landon Koenig,RHP,Ole Miss,,,age 21,,359,328.0,328,328,328,0,0.0,1,328,,,,,
+p0361,Dominic Battista,OF,Oswego (Ill.) East HS,HS,,commit/drafted: Illinois-Chicago; age 18,,360,329.0,329,329,329,0,0.0,1,329,,,,,
+p0257,Kaleb LaFavor,RHP,Bishop Heelan,HS,IA,commit/drafted: Iowa; age 18,842190,361,329.69,319.0,180,458,278,139.0,2,458,,,,,180
+p0362,Selden Kolkebeck,RHP,Old Tappan (N.J.) HS,HS,,commit/drafted: Columbia; age 18,,362,330.0,330,330,330,0,0.0,1,330,,,,,
+p0363,Devin Diaz,C,"Iona Prep HS, New Rochelle, N.Y",HS,,commit/drafted: Miami; age 18,,363,331.0,331,331,331,0,0.0,1,331,,,,,
+p0364,Declan Dahl,RHP,Louisiana Tech,,,,,364,332.0,332,332,332,0,0.0,1,332,,,,,
+p0365,Micah Worley,LHP,Stony Brook,,,age 22,,365,333.0,333,333,333,0,0.0,1,333,,,,,
+p0366,Erick Dessens,OF,Sacramento State,,,age 21,,366,335.0,335,335,335,0,0.0,1,335,,,,,
+p0367,Keller Bradley,RHP,"Pennsbury HS, Fairless Hills, Penn",HS,,commit/drafted: Vanderbilt; age 18,,367,336.0,336,336,336,0,0.0,1,336,,,,,
+p0368,Carlos Martinez,RHP,Hofstra,,,age 21,,368,337.0,337,337,337,0,0.0,1,337,,,,,
+p0369,Julian Sabourin,RHP,"Bishop Tonnos Catholic HS, Hamilton, Ontario",HS,,commit/drafted: Oregon State; age 17,,369,338.0,338,338,338,0,0.0,1,338,,,,,
+p0370,Bear Harrison,C,Texas A&M,,,age 21,,370,339.0,339,339,339,0,0.0,1,339,,,,,
+p0371,Dillon Moss,C,"IMG Academy, Bradenton, Fla",HS,,commit/drafted: Stanford; age 18,,371,340.0,340,340,340,0,0.0,1,340,,,,,
+p0372,Adam Troy,RHP,Southern California,,,age 22,,372,342.0,342,342,342,0,0.0,1,342,,,,,
+p0373,Gage Peterson,RHP,Appalachian State,,,age 21,,373,343.0,343,343,343,0,0.0,1,343,,,,,
+p0374,Aidan Keenan,RHP,Stanford,,,age 21,,374,345.0,345,345,345,0,0.0,1,345,,,,,
+p0375,Max Bayles,RHP,Santa Clara,,,age 21,,375,346.0,346,346,346,0,0.0,1,346,,,,,
+p0376,Fabio Bundi,RHP,Monterey Peninsula (Calif.) JC,JUCO,,commit/drafted: UCLA; age 22,,376,347.0,347,347,347,0,0.0,1,347,,,,,
+p0377,Noah Sullivan,1B,Mississippi State,,,age 23,,377,349.0,349,349,349,0,0.0,1,349,,,,,
+p0378,Hideki Prather,C,California,,,age 21,,378,350.0,350,350,350,0,0.0,1,350,,,,,
+p0379,Jon Mora,OF,"Somorset Academy, Pembroke Pines, Fla",HS,,commit/drafted: Miami; age 19,,379,352.0,352,352,352,0,0.0,1,352,,,,,
+p0261,Genson Veras,OF,TNXL Academy,HS,FL,commit/drafted: Florida State; age 18,835940,380,353.08,341.0,184,498,314,157.0,2,498,,,,,184
+p0380,Brady Neal,C,Alabama,,,commit/drafted: Brewers ’22 (17); age 21,,381,355.0,355,355,355,0,0.0,1,355,,,,,
+p0381,Weston Moss,RHP,Texas A&M,,,age 22,,382,357.0,357,357,357,0,0.0,1,357,,,,,
+p0382,Michael Malki,RHP,Cal Baptist,,,age 20,,383,358.0,358,358,358,0,0.0,1,358,,,,,
+p0383,Ty Tillery,RHP,"Morgan County HS, Madison, Ga",HS,,commit/drafted: Auburn; age 18,,384,359.0,359,359,359,0,0.0,1,359,,,,,
+p0384,Ned Frutchey,RHP,Sacramento City (Calif.) JC,JUCO,,commit/drafted: Arkansas,,385,360.0,360,360,360,0,0.0,1,360,,,,,
+p0385,Kyle McDaniel,2B,Utah Tech,,,age 21,,386,361.0,361,361,361,0,0.0,1,361,,,,,
+p0386,Brayden Harris,RHP,"St. Johns Country Day HS, Orange Park, Fla",HS,,commit/drafted: Florida State; age 19,,387,362.0,362,362,362,0,0.0,1,362,,,,,
+p0387,Zach Stevens,RHP,South Alabama,,,age 21,,388,364.0,364,364,364,0,0.0,1,364,,,,,
+p0388,Chase Meyer,RHP,No School,,,age 21,,389,365.0,365,365,365,0,0.0,1,365,,,,,
+p0389,Cole Hansen,C,California Baptist,,,age 23,,390,366.0,366,366,366,0,0.0,1,366,,,,,
+p0390,Matthew Maxon,RHP,Carmal (Calif.) HS,HS,,commit/drafted: Stanford; age 18,,391,367.0,367,367,367,0,0.0,1,367,,,,,
+p0391,Stone Lawless,C,Tennessee,,,age 21,,392,368.0,368,368,368,0,0.0,1,368,,,,,
+p0392,Paul Contreras,OF,Cal State Fullerton,,,age 20,,393,369.0,369,369,369,0,0.0,1,369,,,,,
+p0393,Parker Ishee,RHP,Copiah-Lincoln (MS) JC,JUCO,,commit/drafted: Oklahoma,,394,370.0,370,370,370,0,0.0,1,370,,,,,
+p0394,RJ Cope,1B,"Georgia Premier Academy, Statesboro, Ga",HS,,commit/drafted: Vanderbilt; age 19,,395,371.0,371,371,371,0,0.0,1,371,,,,,
+p0395,Reese Chapman,OF,Tennessee,,,age 22,,396,372.0,372,372,372,0,0.0,1,372,,,,,
+p0396,Ethan Offing,OF,"Dutch Fork HS, Irmo, S.C",HS,,commit/drafted: Clemson; age 18,,397,374.0,374,374,374,0,0.0,1,374,,,,,
+p0397,Caleb Trugman,RHP,"Ayala HS, Chino Hills, Calif",HS,,commit/drafted: UC Santa Barbara; age 18,,398,375.0,375,375,375,0,0.0,1,375,,,,,
+p0398,Wyatt Danilowicz,LHP,Louisville,,,age 22,,399,376.0,376,376,376,0,0.0,1,376,,,,,
+p0399,Josh Skowronski,OF,Winthrop,,,age 21,,400,377.0,377,377,377,0,0.0,1,377,,,,,
+p0400,Cider Canon,C,Duke,,,age 21,,401,378.0,378,378,378,0,0.0,1,378,,,,,
+p0401,Chris Diaz,RHP,Florida Gulf Coast,,,age 21,,402,379.0,379,379,379,0,0.0,1,379,,,,,
+p0402,Zach Edwards,RHP,Oregon State,,,age 21,,403,380.0,380,380,380,0,0.0,1,380,,,,,
+p0403,Ethan Lay,RHP,Sacramento State,,,age 22,,404,384.0,384,384,384,0,0.0,1,384,,,,,
+p0404,Taden Krogsgaard,RHP,Temecula (Calif.) Valley HS,HS,,commit/drafted: UCLA; age 18,,405,385.0,385,385,385,0,0.0,1,385,,,,,
+p0405,Eli Pillsbury,LHP,Jacksonville State,,,age 22,,406,386.0,386,386,386,0,0.0,1,386,,,,,
+p0406,Michael Benzor,LHP,Dallas Baptist,,,age 22,,407,387.0,387,387,387,0,0.0,1,387,,,,,
+p0407,Brady Murrietta,C,Orange (Calif.) Lutheran HS,HS,,commit/drafted: Texas; age 19,,408,388.0,388,388,388,0,0.0,1,388,,,,,
+p0408,Julian Cazares,RHP,Los Banos (Calif.) HS,HS,,commit/drafted: Stanford; age 18,,409,389.0,389,389,389,0,0.0,1,389,,,,,
+p0409,Deacon Nelson,SS,"University School, Chagrin Falls, Ohio",,,commit/drafted: Auburn; age 18,,410,390.0,390,390,390,0,0.0,1,390,,,,,
+p0410,Matthew Mansbery,SS,"Walsh Jesuit HS, Cuyahoga Falls, Ohio",HS,,commit/drafted: Michigan; age 18,,411,391.0,391,391,391,0,0.0,1,391,,,,,
+p0411,Luke Ekdall,RHP,Blinn (Texas) JC,JUCO,,commit/drafted: Texas A&M,,412,392.0,392,392,392,0,0.0,1,392,,,,,
+p0412,Devin Long,RHP,"Chaparral HS, Scottsdale, Ariz",HS,,commit/drafted: Ole Miss; age 19,,413,393.0,393,393,393,0,0.0,1,393,,,,,
+p0413,Jacob Johnson,OF,Saint Mary’s,,,age 20,,414,394.0,394,394,394,0,0.0,1,394,,,,,
+p0414,Tyler Kapa,RHP,Virginia,,,age 22,,415,395.0,395,395,395,0,0.0,1,395,,,,,
+p0415,Jaxson Wood,SS,Hoover (Ala.) HS,HS,,commit/drafted: Tennessee; age 18,,416,396.0,396,396,396,0,0.0,1,396,,,,,
+p0416,Kamden Scobey,SS,South Carolina,,,age 21,,417,397.0,397,397,397,0,0.0,1,397,,,,,
+p0417,Landon Schutte,RHP,Oakdale (Calif.) HS,HS,,commit/drafted: Georgia; age 18,,418,398.0,398,398,398,0,0.0,1,398,,,,,
+p0418,Derek Schaefer,RHP,Arizona State,,,age 20,,419,399.0,399,399,399,0,0.0,1,399,,,,,
+p0419,Taylor Casson,RHP,"Landmark Christian HS, Fairburn, Ga",HS,,commit/drafted: South Florida; age 18,,420,400.0,400,400,400,0,0.0,1,400,,,,,
+p0420,Max Knight,LHP,Missouri State,,,age 21,,421,401.0,401,401,401,0,0.0,1,401,,,,,
+p0421,Michael Catalano,RHP,Oklahoma,,,age 21,,422,402.0,402,402,402,0,0.0,1,402,,,,,
+p0422,Adam Agresti,C,St. John’s,,,age 21,,423,403.0,403,403,403,0,0.0,1,403,,,,,
+p0423,Max Kaufer,C,Wichita State,,,age 21,,424,404.0,404,404,404,0,0.0,1,404,,,,,
+p0424,Camden Wicker,RHP,Central Florida,,,age 21,,425,405.0,405,405,405,0,0.0,1,405,,,,,
+p0425,Drew Whalen,RHP,Auburn,,,age 21,,426,406.0,406,406,406,0,0.0,1,406,,,,,
+p0426,Trey Hawsey,1B,Louisiana Tech,,,age 21,,427,407.0,407,407,407,0,0.0,1,407,,,,,
+p0427,Caleb Klein,OF,Southeastern Missouri State,,,,,428,408.0,408,408,408,0,0.0,1,408,,,,,
+p0428,Mathew Farner,SS,North Florida,,,age 21,,429,409.0,409,409,409,0,0.0,1,409,,,,,
+p0429,Trevor Lucas,3B,UNC Wilmington,,,age 21,,430,410.0,410,410,410,0,0.0,1,410,,,,,
+p0430,Gabe Camacho,1B,UC San Diego,,,age 20,,431,411.0,411,411,411,0,0.0,1,411,,,,,
+p0431,Gavin King,RHP,Middle Tennessee State,,,age 20,,432,412.0,412,412,412,0,0.0,1,412,,,,,
+p0432,Tate McGuire,RHP,Arkansas,,,age 21,,433,413.0,413,413,413,0,0.0,1,413,,,,,
+p0433,Jake Lambdin,SS,Duke,,,age 21,,434,414.0,414,414,414,0,0.0,1,414,,,,,
+p0434,Jake Bennett,C,Dallas Baptist,,,age 25,,435,415.0,415,415,415,0,0.0,1,415,,,,,
+p0435,Alex Overbay,RHP,Arizona State,,,age 21,,436,416.0,416,416,416,0,0.0,1,416,,,,,
+p0436,Jaden Bastian,OF,Florida,,,age 21,,437,417.0,417,417,417,0,0.0,1,417,,,,,
+p0437,Damian Ruiz,OF,Arkansas,,,age 22,,438,418.0,418,418,418,0,0.0,1,418,,,,,
+p0438,Tanner Marsh,SS,Liberty,,,age 21,,439,419.0,419,419,419,0,0.0,1,419,,,,,
+p0439,Ben Davis,RHP,Mississippi State,,,age 21,,440,420.0,420,420,420,0,0.0,1,420,,,,,
+p0440,Ben Cleary,SS,Santa Clara,,,age 21,,441,421.0,421,421,421,0,0.0,1,421,,,,,
+p0441,Louis Hernandez,SS,Lake Mary (Fla.) HS,HS,,commit/drafted: Clemson; age 18,,442,422.0,422,422,422,0,0.0,1,422,,,,,
+p0442,Keenan Dolan,RHP,"Bishop Manogue Catholic HS, Reno, Nev",HS,,commit/drafted: Uncommitted; age 18,,443,423.0,423,423,423,0,0.0,1,423,,,,,
+p0443,Duke McCarron,RHP,St. Joseph’s,,,age 21,,444,424.0,424,424,424,0,0.0,1,424,,,,,
+p0444,Mason Eckelman,C,Ohio State,,,age 21,,445,427.0,427,427,427,0,0.0,1,427,,,,,
+p0445,Gavin Michaels,SS,Normal (Ill.) Community HS,HS,,commit/drafted: Cincinnati; age 18,,446,428.0,428,428,428,0,0.0,1,428,,,,,
+p0446,Caden McDonald,RHP,Florida,,,age 21,,447,429.0,429,429,429,0,0.0,1,429,,,,,
+p0447,Noah Scott,RHP,Oregon State,,,age 21,,448,430.0,430,430,430,0,0.0,1,430,,,,,
+p0448,Ethan Mendoza,2B,Texas,,,age 21,,449,431.0,431,431,431,0,0.0,1,431,,,,,
+p0449,Reece Moroney,SS,Rhode Island,,,age 21,,450,432.0,432,432,432,0,0.0,1,432,,,,,
+p0450,Connor Finn,LHP,Mahtomedi (Minn.) HS,HS,,commit/drafted: Texas Tech; age 18,,451,433.0,433,433,433,0,0.0,1,433,,,,,
+p0451,Daniel Kellis,RHP,Radnor (Pa.) HS,HS,,commit/drafted: Wake Forest; age 18,,452,434.0,434,434,434,0,0.0,1,434,,,,,
+p0452,Bryce Collins,RHP,Kelso (Wash.) HS,HS,,commit/drafted: Ole Miss; age 18,,453,435.0,435,435,435,0,0.0,1,435,,,,,
+p0453,Dominic Longo,OF,Arizona State,,,age 22,,454,436.0,436,436,436,0,0.0,1,436,,,,,
+p0454,Rallin Covey,RHP,"Sacred Heart Prep, Atherton, Calif",HS,,commit/drafted: Southern California; age 18,,455,437.0,437,437,437,0,0.0,1,437,,,,,
+p0455,Tate Troxell,RHP,"St. Theodore Guerin HS, Noblesville, Ind",HS,,commit/drafted: Alabama; age 18,,456,438.0,438,438,438,0,0.0,1,438,,,,,
+p0456,Ryan Castillo,RHP,New Mexico,,,,,457,439.0,439,439,439,0,0.0,1,439,,,,,
+p0457,Kide Adetuyi,LHP,Florida Atlantic,,,age 20,,458,440.0,440,440,440,0,0.0,1,440,,,,,
+p0458,Rob Czarniecki,OF,Chesterton (Ind.) HS,HS,,commit/drafted: Kentucky; age 19,,459,441.0,441,441,441,0,0.0,1,441,,,,,
+p0459,Mikey Bell,3B,Gonzaga,,,age 22,,460,442.0,442,442,442,0,0.0,1,442,,,,,
+p0460,Diego Castellanos,OF,Saint Mary’s,,,age 21,,461,443.0,443,443,443,0,0.0,1,443,,,,,
+p0461,Aiden Smith,RHP,Shelbyville (Ind.) HS,HS,,commit/drafted: Kentucky; age 18,,462,444.0,444,444,444,0,0.0,1,444,,,,,
+p0462,Brady Marconi,C,Charlotte (N.C.) Catholic HS,HS,,commit/drafted: College of Charleston; age 18,,463,445.0,445,445,445,0,0.0,1,445,,,,,
+p0463,Brayden Bakes,OF,Illinois State,,,age 21,,464,446.0,446,446,446,0,0.0,1,446,,,,,
+p0464,Phinn Beaird,LHP,"Briarcrest Christian HS, Eads, Tenn",HS,,commit/drafted: Texas; age 19,,465,448.0,448,448,448,0,0.0,1,448,,,,,
+p0465,Ryder Olson,RHP,"Pennridge HS, Perkasie, Pa",HS,,commit/drafted: Coastal Carolina; age 19,,466,449.0,449,449,449,0,0.0,1,449,,,,,
+p0466,Ezekiel Lara,OF,"Mater Dei HS, Santa Ana, Calif",HS,,commit/drafted: Georgia Tech; age 19,,467,450.0,450,450,450,0,0.0,1,450,,,,,
+p0467,Ethan Thomas,RHP,TCU,,,age 21,,468,451.0,451,451,451,0,0.0,1,451,,,,,
+p0468,Griffin Bourland,RHP,"Eaton HS, Fort Worth, Texas",HS,,commit/drafted: Baylor; age 18,,469,452.0,452,452,452,0,0.0,1,452,,,,,
+p0469,Gavin Eddy,RHP,California,,,age 21,,470,453.0,453,453,453,0,0.0,1,453,,,,,
+p0470,Brody Schumaker,SS,Santa Margarita (Calif.) Catholic HS,HS,,commit/drafted: TCU; age 18,,471,456.0,456,456,456,0,0.0,1,456,,,,,
+p0471,Walker Cox,RHP,Easley (S.C.) HS,HS,,commit/drafted: South Carolina; age 18,,472,457.0,457,457,457,0,0.0,1,457,,,,,
+p0472,Caden Sivrich,RHP,"Norwin HS, North Huntington, Pa",HS,,commit/drafted: Pittsburgh; age 18,,473,459.0,459,459,459,0,0.0,1,459,,,,,
+p0473,Alex Philpott,RHP,South Carolina,,,age 21,,474,460.0,460,460,460,0,0.0,1,460,,,,,
+p0474,Conner Griffin,RHP,Binghamton,,,age 21,,475,461.0,461,461,461,0,0.0,1,461,,,,,
+p0475,Jimmy Anderson,SS,Heartland (Ill.) JC,JUCO,,commit/drafted: Orioles ’25 (19); age 20,,476,462.0,462,462,462,0,0.0,1,462,,,,,
+p0476,Juriel Collazo,OF,"Christian Military Academy, Vega Baja P.R",HS,,commit/drafted: Western Kentucky; age 17,,477,463.0,463,463,463,0,0.0,1,463,,,,,
+p0477,Matt Sauser,RHP,Central Florida,,,age 21,,478,464.0,464,464,464,0,0.0,1,464,,,,,
+p0478,Damarcus Rideout-Carter,RHP,"Heart Lake Secondary HS, Brampton, Ont",HS,,commit/drafted: Uncommitted; age 18,,479,465.0,465,465,465,0,0.0,1,465,,,,,
+p0479,Dylan Hicks,RHP,Everett (Wash.) JC,JUCO,,commit/drafted: Oregon State,,480,466.0,466,466,466,0,0.0,1,466,,,,,
+p0480,Aaron Dierks,RHP,"West Springfield HS, Springfield, Va",HS,,commit/drafted: South Carolina; age 18,,481,467.0,467,467,467,0,0.0,1,467,,,,,
+p0481,Sammy Swank,RHP,"McCutcheon HS, Lafayette, Ind",HS,,commit/drafted: Kentucky; age 18,,482,468.0,468,468,468,0,0.0,1,468,,,,,
+p0482,Brady Stewart,SS,"St. Thomas Aquinas HS, Overland Park, Kan",HS,,commit/drafted: Uncommitted; age 18,,483,469.0,469,469,469,0,0.0,1,469,,,,,
+p0483,Max Holland,C,Conway (Ark.) HS,HS,,commit/drafted: Arkansas; age 19,,484,470.0,470,470,470,0,0.0,1,470,,,,,
+p0484,Joseph Raimonda,LHP,"Monsignor Farrell HS, Staten Island, N.Y",HS,,commit/drafted: Central Florida; age 18,,485,471.0,471,471,471,0,0.0,1,471,,,,,
+p0485,Parker Loew,SS,"Trinity Christian Academy, Jacksonville, Fla",HS,,commit/drafted: LSU; age 18,,486,472.0,472,472,472,0,0.0,1,472,,,,,
+p0486,Gavin Swartz,RHP,Normal (Ill.) Community HS,HS,,commit/drafted: Indiana; age 18,,487,473.0,473,473,473,0,0.0,1,473,,,,,
+p0487,Joey Lawson,RHP,Bishop Verot Catholic HS,HS,,commit/drafted: University of North Carolina; age 19,,488,474.0,474,474,474,0,0.0,1,474,,,,,
+p0488,Jake Escalante,LHP,Soquel (Calif.) HS,HS,,commit/drafted: Cal State Fullerton; age 18,,489,475.0,475,475,475,0,0.0,1,475,,,,,
+p0489,Cameron Hanes,RHP,"TNXL Academy, Ocoee, Fla",HS,,commit/drafted: Florida; age 18,,490,476.0,476,476,476,0,0.0,1,476,,,,,
+p0490,Gavin Guy,RHP,"Newport Harbor HS, Newport Beach, Calif",HS,,commit/drafted: UC Santa Barbara; age 18,,491,477.0,477,477,477,0,0.0,1,477,,,,,
+p0491,Declan Fitzgerald,RHP,Fullerton (Calif.) Union HS,HS,,commit/drafted: Arizona State; age 18,,492,478.0,478,478,478,0,0.0,1,478,,,,,
+p0492,Dominic Pellegrin,SS,"Holy Cross HS, New Orleans",HS,,commit/drafted: Tulane; age 19,,493,479.0,479,479,479,0,0.0,1,479,,,,,
+p0493,Logan Sorrel,RHP,"Parkview Baptist HS, Baton Rouge, La",HS,,commit/drafted: Kentucky; age 18,,494,480.0,480,480,480,0,0.0,1,480,,,,,
+p0494,Gabe Jones,RHP,Enterprise (Ala.) JC,JUCO,,,,495,481.0,481,481,481,0,0.0,1,481,,,,,
+p0495,Parker Van Engelenhoven,RHP,"Olentangy Liberty HS, Powell, Ohio",HS,,commit/drafted: Louisville; age 18,,496,483.0,483,483,483,0,0.0,1,483,,,,,
+p0496,Ben Hanley,RHP,Mason (Ohio) HS,HS,,commit/drafted: Kent State; age 18,,497,484.0,484,484,484,0,0.0,1,484,,,,,
+p0497,Dustin Dunwoody,RHP,"Royal HS, Simi Valley, Calif",HS,,commit/drafted: Southern California; age 18,,498,485.0,485,485,485,0,0.0,1,485,,,,,
+p0498,Austin Fawley,C,Ole Miss,,,age 23,,499,486.0,486,486,486,0,0.0,1,486,,,,,
+p0499,Griffin Loy,RHP,South Walton HS,HS,,commit/drafted: Virginia ; age 19,,500,488.0,488,488,488,0,0.0,1,488,,,,,
+p0500,Yodelkis Quevedo,3B,"Mater Academy, Hialeah Gardens, Fla",HS,,commit/drafted: Florida State; age 18,,501,490.0,490,490,490,0,0.0,1,490,,,,,
+p0501,Nolan Stefaniak,RHP,Butler (Pa.) HS,HS,,commit/drafted: Penn State; age 19,,502,491.0,491,491,491,0,0.0,1,491,,,,,
+p0502,Andrew Gette,RHP,"Mounds View HS, Arden Hills, Minn",HS,,commit/drafted: Miami; age 18,,503,492.0,492,492,492,0,0.0,1,492,,,,,
+p0503,Alex Hoffman,RHP,Charlotte (N.C.) Catholic HS,HS,,commit/drafted: Virginia Tech; age 18,,504,493.0,493,493,493,0,0.0,1,493,,,,,
+p0504,Isaiah James,LHP,"South Central HS, Winterville, N.C",HS,,commit/drafted: Duke; age 18,,505,494.0,494,494,494,0,0.0,1,494,,,,,
+p0505,Ryan Ventrelle,SS,Fairfield (Conn.) Prep,HS,,commit/drafted: Notre Dame; age 18,,506,495.0,495,495,495,0,0.0,1,495,,,,,
+p0506,Carter Perdue,RHP,"St. Paul VI Catholic HS, Chantilly, Va",HS,,commit/drafted: East Carolina; age 18,,507,496.0,496,496,496,0,0.0,1,496,,,,,
+p0507,Wyatt Williams,RHP,"Thompson HS, Alabaster, Ala",HS,,commit/drafted: Alabama; age 18,,508,497.0,497,497,497,0,0.0,1,497,,,,,
+p0508,Grady Saunders,RHP,"Thurston HS, Springfield, Ore",HS,,commit/drafted: Oregon State; age 19,,509,499.0,499,499,499,0,0.0,1,499,,,,,
+p0509,Andrew Wiggins,OF,NC State,,,age 21,,510,500.0,500,500,500,0,0.0,1,500,,,,,

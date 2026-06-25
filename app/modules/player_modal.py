@@ -92,6 +92,14 @@ def player_modal(player_name: str) -> ui.Tag:
             elif tool_chips:
                 parts.append(ui.HTML(f'<div class="chip-row">{tool_chips}</div>'))
 
+            # Physical info row (height / weight / B-T)
+            ht = str(gr.get("height", "")).strip()
+            wt = str(gr.get("weight", "")).strip()
+            bt = "/".join(x for x in (str(gr.get("bats", "")), str(gr.get("throws", ""))) if x and x != "nan")
+            phys_parts = [p for p in (ht if ht != "nan" else "", f"{wt} lbs" if wt and wt != "nan" else "", f"B/T: {bt}" if bt else "") if p]
+            if phys_parts:
+                parts.append(ui.p(" · ".join(phys_parts), class_="muted", style="font-size:.83rem;margin:.25rem 0;"))
+
             if commits and commits != "nan":
                 parts.append(ui.p(f"Committed to: {commits}", class_="muted",
                                   style="font-size:.83rem;margin:.3rem 0;"))
