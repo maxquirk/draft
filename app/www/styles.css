@@ -94,8 +94,8 @@ strong { color: var(--ink); }
 }
 .modal-header .btn-close { filter: invert(.7) brightness(1.6); }
 .modal-title { font-size: .9rem; font-weight: 700; color: var(--ink); }
-.modal-body { padding: 1.2rem 1.4rem; max-height: 80vh; overflow-y: auto; }
-.modal-dialog { max-height: 90vh; margin-top: 5vh; }
+.modal-body { padding: 1.2rem 1.4rem; max-height: calc(100dvh - 180px); overflow-y: auto; }
+.modal-dialog { margin: 1.5rem auto; }
 
 /* ── Chips ──────────────────────────────────────────────── */
 .chip-row { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .4rem; }
@@ -321,3 +321,56 @@ label, .control-label {
   background: var(--surface3, var(--surface2));
   border-color: var(--accent);
 }
+
+/* ── Community Draft Cards ──────────────────────────────── */
+.cd-list { display: flex; flex-direction: column; gap: .75rem; }
+.cd-card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .8rem 1rem;
+}
+.cd-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-bottom: .4rem;
+}
+.cd-meta { flex: 1; min-width: 0; }
+.cd-title { font-weight: 700; color: var(--ink); font-size: .92rem; }
+.cd-byline { font-size: .8rem; }
+.cd-actions { display: flex; gap: .4rem; flex-shrink: 0; align-items: center; }
+.cd-vote {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: .78rem;
+  padding: .2rem .55rem;
+  cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+  transition: border-color .12s, color .12s;
+}
+.cd-up:hover { border-color: var(--good); color: var(--good); }
+.cd-dn:hover { border-color: var(--bad); color: var(--bad); }
+.cd-expand {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--accent);
+  font-size: .78rem;
+  padding: .2rem .55rem;
+  cursor: pointer;
+  transition: border-color .12s;
+}
+.cd-expand:hover { border-color: var(--accent); }
+.cd-preview {
+  font-size: .82rem;
+  color: var(--muted);
+  line-height: 1.6;
+  border-top: 1px solid var(--border);
+  padding-top: .4rem;
+}
+.cd-detail { margin-top: .6rem; }

@@ -36,7 +36,15 @@ def _token_ok() -> bool:
     return bool(GITHUB_TOKEN) and GITHUB_TOKEN != "DRAFT_PAT_PLACEHOLDER"
 
 
-_FIELDS = ["draft_id", "draft_name", "author", "saved_at", "mode", "seed", "picks_json"]
+_FIELDS = ["draft_id", "draft_name", "author", "saved_at", "mode", "seed", "picks_json",
+           "upvotes", "downvotes"]
+
+
+def _safe_int(v, default=0) -> int:
+    try:
+        return int(v)
+    except (TypeError, ValueError):
+        return default
 
 
 def _parse_csv(text: str) -> list[dict]:
@@ -48,6 +56,17 @@ def _parse_csv(text: str) -> list[dict]:
     except Exception:
         pass
     return rows
+
+
+def _rows_to_csv(rows: list[dict]) -> str:
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=_FIELDS, extrasaction="ignore", lineterminator="\n")
+    w.writeheader()
+    for row in rows:
+        row.setdefault("upvotes", "0")
+        row.setdefault("downvotes", "0")
+        w.writerow(row)
+    return buf.getvalue()
 
 
 def _row_to_csv_line(row: dict) -> str:
@@ -100,6 +119,8 @@ async def save_draft(
         "mode": mode,
         "seed": seed,
         "picks_json": json.dumps(picks),
+        "upvotes": "0",
+        "downvotes": "0",
     }
 
     if not _in_pyodide():
@@ -150,3 +171,63 @@ async def save_draft(
         return False, f"GitHub error: {msg}"
     except Exception as e:
         return False, f"Save failed: {e}"
+
+
+async def vote_draft(draft_id: str, direction: str) -> tuple[bool, str]:
+    """Increment upvote or downvote for a draft. direction: 'up' or 'down'."""
+    if not _token_ok():
+        return False, "Token missing"
+    if not _in_pyodide():
+        return False, "Voting only works in the deployed browser app."
+
+    from pyodide.http import pyfetch
+
+    try:
+        get_resp = await pyfetch(
+            _API, method="GET",
+            headers={"Authorization": f"token {GITHUB_TOKEN}",
+                     "Accept": "application/vnd.github.v3+json"},
+        )
+        data = await get_resp.json()
+        if isinstance(data, dict) and "message" in data:
+            return False, f"GitHub error: {data['message']}"
+        sha = data["sha"]
+        raw_b64 = data.get("content", "").replace("\n", "").replace("\r", "")
+        current_text = base64.b64decode(raw_b64).decode("utf-8")
+    except Exception as e:
+        return False, str(e)
+
+    rows = _parse_csv(current_text)
+    updated = False
+    for row in rows:
+        if row.get("draft_id") == draft_id:
+            field = "upvotes" if direction == "up" else "downvotes"
+            row[field] = str(_safe_int(row.get(field, 0)) + 1)
+            updated = True
+            break
+
+    if not updated:
+        return False, "Draft not found"
+
+    new_text = _rows_to_csv(rows)
+    put_body = json.dumps({
+        "message": f"Vote on draft {draft_id}",
+        "content": base64.b64encode(new_text.encode("utf-8")).decode("ascii"),
+        "sha": sha,
+        "branch": GITHUB_BRANCH,
+    })
+    try:
+        put_resp = await pyfetch(
+            _API, method="PUT",
+            headers={"Authorization": f"token {GITHUB_TOKEN}",
+                     "Accept": "application/vnd.github.v3+json",
+                     "Content-Type": "application/json"},
+            body=put_body,
+        )
+        result = await put_resp.json()
+        if isinstance(result, dict) and "content" in result:
+            return True, "ok"
+        msg = result.get("message", "error") if isinstance(result, dict) else str(result)
+        return False, msg
+    except Exception as e:
+        return False, str(e)

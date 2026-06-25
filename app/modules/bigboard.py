@@ -37,6 +37,8 @@ def bigboard_ui():
 
 @module.server
 def bigboard_server(input, output, session):
+    input_id = session.ns("select_player")
+
     @render.ui
     def matrix():
         if not len(_DF):
@@ -49,9 +51,12 @@ def bigboard_server(input, output, session):
         for _, r in d.iterrows():
             cr = int(r["consensus_rank"])
             cells = "".join(_cell(r.get(f"src_{k}"), cr) for k in _KEYS)
+            safe_name = str(r["player"]).replace("'", "\\'").replace('"', '\\"')
             body.append(
                 f'<tr><td class="bb-rank">{cr}</td>'
-                f'<td class="bb-name">{r["player"]}</td>'
+                f'<td class="bb-name" style="cursor:pointer" '
+                f'onclick="Shiny.setInputValue(\'{input_id}\', \'{safe_name}\', {{priority:\'event\'}});">'
+                f'{r["player"]}</td>'
                 f'<td class="bb-pos">{r["position"]}</td>{cells}'
                 f'<td class="bb-sd">{float(r["stdev"]):.1f}</td></tr>'
             )
@@ -72,10 +77,17 @@ def bigboard_server(input, output, session):
 
     @render.ui
     def modal_host():
+        # Name click from matrix table
+        try:
+            name = input.select_player()
+            if name:
+                ui.modal_show(player_modal(name))
+                return ui.div()
+        except Exception:
+            pass
+        # Row selection from disagree grid
         sel = disagree.data_view(selected=True)
         if sel is None or not len(sel):
             return ui.div()
-        name = sel.iloc[0]["player"]
-        m = player_modal(name)
-        ui.modal_show(m)
+        ui.modal_show(player_modal(sel.iloc[0]["player"]))
         return ui.div()
