@@ -6,6 +6,7 @@ Runs both natively and in the browser (shinylive/Pyodide).
 from __future__ import annotations
 
 import ast
+import json
 from functools import lru_cache
 from pathlib import Path
 
@@ -85,6 +86,11 @@ def team_tendencies() -> dict:
         for k, v in list(rec.items()):
             if k.startswith("pct_") and isinstance(v, (int, float)) and v > 1.0:
                 rec[k] = v / 100.0
+            if k == "position_breakdown" and isinstance(v, str):
+                try:
+                    rec[k] = json.loads(v)
+                except (ValueError, TypeError):
+                    rec[k] = {}
         out[rec.get("team", "")] = rec
     return out
 
