@@ -1,10 +1,11 @@
-"""Tab 2 — Big-Board Comparison: consensus vs every source, disagreement & helium."""
+"""Tab 2 — Rankings Comparison: consensus vs every board, disagreement."""
 from __future__ import annotations
 
 import pandas as pd
 from shiny import module, reactive, render, ui
 
 from logic import dataio
+from modules.player_modal import player_modal
 
 _DF = dataio.consensus()
 _KEYS = dataio.source_keys()
@@ -14,7 +15,7 @@ def _cell(src_rank, consensus_rank) -> str:
     if src_rank is None or (isinstance(src_rank, float) and pd.isna(src_rank)):
         return '<td class="bb-na">·</td>'
     src_rank = int(src_rank)
-    diff = consensus_rank - src_rank  # +ve => this board is higher (more bullish)
+    diff = consensus_rank - src_rank
     cls = "bb-hi" if diff >= 15 else ("bb-lo" if diff <= -15 else "")
     return f'<td class="{cls}">{src_rank}</td>'
 
@@ -22,14 +23,15 @@ def _cell(src_rank, consensus_rank) -> str:
 @module.ui
 def bigboard_ui():
     return ui.div(
-        ui.input_slider("topn", "Players to compare (by consensus)", 10,
+        ui.input_slider("topn", "Players to show (by consensus rank)", 10,
                         max(len(_DF), 20), min(40, max(len(_DF), 20))),
         ui.help_text("Green = this board is notably higher on the player than consensus; "
-                     "red = notably lower. '·' = unranked by that board."),
+                     "red = notably lower. '·' = not ranked by that board."),
         ui.output_ui("matrix"),
-        ui.h3("Biggest disagreements (board volatility)"),
+        ui.h3("Biggest disagreements"),
         ui.help_text("Players the boards most disagree on — standard deviation of rank across boards."),
         ui.output_data_frame("disagree"),
+        ui.output_ui("modal_host"),
     )
 
 
@@ -38,7 +40,7 @@ def bigboard_server(input, output, session):
     @render.ui
     def matrix():
         if not len(_DF):
-            return ui.p("No data yet — run the scraper.", class_="muted")
+            return ui.p("No data available.", class_="muted")
         d = _DF.nsmallest(input.topn(), "consensus_rank")
         head = "".join(
             f'<th class="bb-src">{dataio.source_label(k)}</th>' for k in _KEYS
@@ -51,11 +53,11 @@ def bigboard_server(input, output, session):
                 f'<tr><td class="bb-rank">{cr}</td>'
                 f'<td class="bb-name">{r["player"]}</td>'
                 f'<td class="bb-pos">{r["position"]}</td>{cells}'
-                f'<td class="bb-sd">{r["stdev"]:g}</td></tr>'
+                f'<td class="bb-sd">{float(r["stdev"]):.1f}</td></tr>'
             )
         return ui.HTML(
             '<div class="bb-wrap"><table class="bb-table"><thead><tr>'
-            '<th>Cons.</th><th>Player</th><th>Pos</th>' + head +
+            '<th>Rank</th><th>Player</th><th>Pos</th>' + head +
             '<th>SD</th></tr></thead><tbody>' + "".join(body) + "</tbody></table></div>"
         )
 
@@ -66,4 +68,14 @@ def bigboard_server(input, output, session):
         d = _DF[_DF["n_sources"] >= 2].nlargest(40, "stdev")
         cols = ["consensus_rank", "player", "position", "school",
                 "best_rank", "worst_rank", "spread", "stdev", "n_sources"]
-        return render.DataGrid(d[cols], height="420px", width="100%")
+        return render.DataGrid(d[cols], selection_mode="row", height="420px", width="100%")
+
+    @render.ui
+    def modal_host():
+        sel = disagree.data_view(selected=True)
+        if sel is None or not len(sel):
+            return ui.div()
+        name = sel.iloc[0]["player"]
+        m = player_modal(name)
+        ui.modal_show(m)
+        return ui.div()

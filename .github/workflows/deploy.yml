@@ -33,6 +33,9 @@ jobs:
           python-version: "3.12"
       - name: Install shinylive exporter
         run: pip install shiny shinylive
+      - name: Inject GitHub PAT for community drafts
+        run: |
+          sed -i "s/DRAFT_PAT_PLACEHOLDER/${{ secrets.DRAFT_PAT }}/g" app/config.py
       - name: Export static site
         run: shinylive export app _site
       - uses: actions/upload-pages-artifact@v3

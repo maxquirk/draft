@@ -1,12 +1,11 @@
-"""Load the static JSON the scraper produced into pandas frames.
+"""Load static CSVs from app/data/ into pandas frames.
 
-Everything degrades to an empty/typed frame if a file is missing, so the app
-boots even before the scraper has ever run (or if a single file failed to write).
-This module runs both natively (shiny run) and in the browser (shinylive/Pyodide).
+Degrades to empty typed frames if files are missing.
+Runs both natively and in the browser (shinylive/Pyodide).
 """
 from __future__ import annotations
 
-import json
+import ast
 from functools import lru_cache
 from pathlib import Path
 
@@ -15,85 +14,59 @@ import pandas as pd
 DATA = Path(__file__).resolve().parent.parent / "data"
 
 
-def _read_json(name: str):
+def _read_csv(name: str) -> pd.DataFrame | None:
     fp = DATA / name
     if not fp.exists():
         return None
     try:
-        return json.loads(fp.read_text(encoding="utf-8"))
-    except Exception:  # noqa: BLE001
+        return pd.read_csv(fp, encoding="utf-8")
+    except Exception:
         return None
 
 
 @lru_cache(maxsize=1)
-def report() -> dict:
-    return _read_json("run_report.json") or {
-        "generated_at": "never", "n_players": 0, "sources": [], "source_meta": {},
-    }
-
-
-@lru_cache(maxsize=1)
-def source_meta() -> dict:
-    """key -> {name, access, weight}. Falls back to keys seen in the data."""
-    meta = report().get("source_meta") or {}
-    if meta:
-        return meta
-    keys = set()
-    for p in _read_json("consensus_2026.json") or []:
-        keys |= set((p.get("rankings") or {}).keys())
-    return {k: {"name": k, "access": "free", "weight": 1.0} for k in sorted(keys)}
-
-
-@lru_cache(maxsize=1)
 def consensus() -> pd.DataFrame:
-    """The main board: one row per player, with a column per source rank."""
-    rows = _read_json("consensus_2026.json") or []
-    if not rows:
+    """Main board: one row per player, with src_<key> columns for each source rank."""
+    df = _read_csv("consensus_2026.csv")
+    if df is None or df.empty:
         return pd.DataFrame(columns=[
             "consensus_rank", "player", "position", "school", "class_level",
             "state", "avg_rank", "median_rank", "best_rank", "worst_rank",
-            "spread", "stdev", "n_sources", "notes", "player_id", "rankings",
+            "spread", "stdev", "n_sources", "notes", "player_id",
         ])
-    df = pd.DataFrame(rows)
-    # explode the per-source rankings dict into src_<key> integer columns
-    smeta = source_meta()
-    for key in smeta:
-        col = f"src_{key}"
-        df[col] = df["rankings"].apply(lambda d, k=key: (d or {}).get(k))
+    # Rebuild a rankings dict from src_* columns so detail cards still work
+    src_cols = [c for c in df.columns if c.startswith("src_")]
+    def _rankings(row):
+        return {c[4:]: int(v) for c in src_cols if not pd.isna(v := row[c])}
+    df["rankings"] = df.apply(_rankings, axis=1)
     return df
 
 
 def source_keys() -> list[str]:
-    return list(source_meta().keys())
+    df = consensus()
+    return [c[4:] for c in df.columns if c.startswith("src_")]
 
 
 def source_label(key: str) -> str:
-    return (source_meta().get(key) or {}).get("name", key)
+    return key.replace("_", " ").title()
 
 
 @lru_cache(maxsize=1)
 def team_history() -> pd.DataFrame:
-    rows = _read_json("team_draft_history.json") or []
+    df = _read_csv("team_draft_history.csv")
     cols = ["year", "overall", "round", "team", "player", "position", "school", "level"]
-    return pd.DataFrame(rows) if rows else pd.DataFrame(columns=cols)
+    return df if df is not None else pd.DataFrame(columns=cols)
 
 
 @lru_cache(maxsize=1)
 def team_tendencies() -> dict:
-    """team_name -> tendency dict, with pct_* normalized to 0..1 fractions.
-
-    The scraper writes a list of records with percentages on a 0..100 scale; we
-    key by team and rescale so the simulator (expects fractions) and the strategy
-    tab agree on units.
-    """
-    raw = _read_json("team_tendencies.json") or []
-    if isinstance(raw, dict):
-        records = list(raw.values())
-    else:
-        records = raw
+    """team_name -> tendency dict with pct_* normalized to 0..1 fractions."""
+    df = _read_csv("team_tendencies.csv")
+    if df is None or df.empty:
+        return {}
     out = {}
-    for rec in records:
-        rec = dict(rec)
+    for _, rec in df.iterrows():
+        rec = rec.to_dict()
         for k, v in list(rec.items()):
             if k.startswith("pct_") and isinstance(v, (int, float)) and v > 1.0:
                 rec[k] = v / 100.0
@@ -103,21 +76,50 @@ def team_tendencies() -> dict:
 
 @lru_cache(maxsize=1)
 def projections() -> pd.DataFrame:
-    d = _read_json("draft_projections_2026.json") or {}
-    players = d.get("players", []) if isinstance(d, dict) else (d or [])
+    df = _read_csv("projections_2026.csv")
     cols = ["proj_pick", "player", "position", "school", "consensus_rank",
-            "p_round1", "proj_low", "proj_high", "likely_team", "likely_team_pct"]
-    return pd.DataFrame(players) if players else pd.DataFrame(columns=cols)
+            "p_round1", "proj_low", "proj_high", "player_id"]
+    if df is None or df.empty:
+        return pd.DataFrame(columns=cols)
+    # landing is stored as a repr string in CSV; parse it back to a list
+    if "landing" in df.columns:
+        def _parse_landing(v):
+            if pd.isna(v) or not v:
+                return []
+            try:
+                return ast.literal_eval(str(v))
+            except Exception:
+                return []
+        df["landing"] = df["landing"].apply(_parse_landing)
+    return df
 
 
+@lru_cache(maxsize=1)
 def projections_meta() -> dict:
-    d = _read_json("draft_projections_2026.json") or {}
-    return {"runs": d.get("runs", 0), "note": d.get("note", "")} if isinstance(d, dict) else {}
+    fp = DATA / "projections_meta.csv"
+    if not fp.exists():
+        return {"runs": 0, "note": ""}
+    df = pd.read_csv(fp, encoding="utf-8")
+    if df.empty:
+        return {"runs": 0, "note": ""}
+    row = df.iloc[0]
+    return {"runs": int(row.get("runs", 0)), "note": str(row.get("note", ""))}
 
 
 @lru_cache(maxsize=1)
 def draft_order() -> list[dict]:
-    d = _read_json("draft_order_2026.json")
-    if isinstance(d, dict):
-        return d.get("order") or d.get("picks") or []
-    return d or []
+    df = _read_csv("draft_order_2026.csv")
+    if df is None or df.empty:
+        return []
+    return df.to_dict("records")
+
+
+@lru_cache(maxsize=1)
+def player_stats() -> pd.DataFrame:
+    """Optional: 2025-season stats for draft prospects. Empty if not yet collected."""
+    df = _read_csv("player_stats_2026.csv")
+    if df is None or df.empty:
+        return pd.DataFrame(columns=["player_id", "player", "stat_type",
+                                      "avg", "obp", "slg", "ops", "hr", "rbi", "sb",
+                                      "era", "whip", "k_9", "bb_9", "ip", "w", "sv"])
+    return df

@@ -280,49 +280,54 @@ def _build_draft_order_2026() -> tuple[list[dict], int | None]:
 
 
 def build() -> dict:
-    """Scrape everything and write the three JSON files. Returns a summary dict."""
+    """Scrape everything and write CSV files. Returns a summary dict."""
+    import csv
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
     print("Scraping Baseball-Reference draft pages...")
     picks, got, skipped = _scrape_picks()
     picks.sort(key=lambda p: (p["year"], p["round"], p["overall"]))
 
-    (DATA_DIR / "team_draft_history.json").write_text(
-        json.dumps(picks, indent=2), encoding="utf-8")
+    if picks:
+        fp = DATA_DIR / "team_draft_history.csv"
+        with open(fp, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=list(picks[0].keys()))
+            w.writeheader()
+            w.writerows(picks)
+        print(f"   -> wrote app/data/team_draft_history.csv ({len(picks)} picks)")
 
     tendencies = _build_tendencies(picks)
-    (DATA_DIR / "team_tendencies.json").write_text(
-        json.dumps(tendencies, indent=2), encoding="utf-8")
-
-    print("Scraping 2025 final standings for the 2026 order projection...")
-    order, standings_year = _build_draft_order_2026()
-    order_doc = {
-        "note": (
-            "Projected 2026 MLB first-round order. This is a DEFENSIBLE PROJECTION, "
-            "not the official order: it is the inverse of the 2025 final regular-season "
-            "standings (worst record picks first), scraped from Baseball-Reference. The "
-            "real first six picks are set by MLB's draft lottery and are not reflected here."
-        ),
-        "method": "inverse_of_2025_final_standings",
-        "standings_year": standings_year,
-        "order": order,
-    }
-    (DATA_DIR / "draft_order_2026.json").write_text(
-        json.dumps(order_doc, indent=2), encoding="utf-8")
+    if tendencies:
+        # Flatten position_breakdown dict into separate columns for CSV
+        tend_flat = []
+        for t in tendencies:
+            row = {k: v for k, v in t.items() if k not in ("position_breakdown", "recent_first_round")}
+            pb = t.get("position_breakdown", {})
+            row["pb_C"] = pb.get("C", 0)
+            row["pb_IF"] = pb.get("IF", 0)
+            row["pb_OF"] = pb.get("OF", 0)
+            row["pb_P"] = pb.get("P", 0)
+            # Store recent picks as a repr string
+            row["recent_first_round"] = str(t.get("recent_first_round", []))
+            row["position_breakdown"] = str(pb)
+            tend_flat.append(row)
+        fp = DATA_DIR / "team_tendencies.csv"
+        with open(fp, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=list(tend_flat[0].keys()))
+            w.writeheader()
+            w.writerows(tend_flat)
+        print(f"   -> wrote app/data/team_tendencies.csv ({len(tend_flat)} teams)")
 
     summary = {
         "n_picks": len(picks),
         "years_with_data": got,
         "years_skipped": skipped,
         "n_teams_tendencies": len(tendencies),
-        "n_picks_order_2026": len(order),
         "data_dir": str(DATA_DIR),
     }
     print("\nDone.")
-    print(f"  team_draft_history.json : {summary['n_picks']} picks "
-          f"across {len(got)} years {got}")
-    print(f"  team_tendencies.json    : {summary['n_teams_tendencies']} teams")
-    print(f"  draft_order_2026.json   : {summary['n_picks_order_2026']} picks")
+    print(f"  team_draft_history.csv : {summary['n_picks']} picks across {len(got)} years {got}")
+    print(f"  team_tendencies.csv    : {summary['n_teams_tendencies']} teams")
     if skipped:
         print(f"  GAPS: years skipped -> {skipped}")
     return summary

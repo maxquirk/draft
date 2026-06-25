@@ -11,6 +11,7 @@ Covers the full first round (1-25), Prospect Promotion Incentive / penalty picks
 """
 from __future__ import annotations
 
+import csv
 import json
 from pathlib import Path
 
@@ -60,16 +61,14 @@ ORDER_2026: list[tuple[int, str, str]] = [
 
 def build() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    payload = {
-        "note": "Actual 2026 MLB Draft first-round order (post Dec 9, 2025 lottery), "
-                "including PPI/penalty picks and Competitive Balance Round A.",
-        "source": "MLB.com draft order + 2026 MLB Draft (Wikipedia)",
-        "order": [{"pick": p, "team": t, "note": n} for p, t, n in ORDER_2026],
-    }
-    (DATA_DIR / "draft_order_2026.json").write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    print(f"   -> wrote app/data/draft_order_2026.json ({len(ORDER_2026)} picks, real order)")
+    rows = [{"pick": p, "team": t, "note": n} for p, t, n in ORDER_2026]
+
+    fp = DATA_DIR / "draft_order_2026.csv"
+    with open(fp, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=["pick", "team", "note"])
+        w.writeheader()
+        w.writerows(rows)
+    print(f"   -> wrote app/data/draft_order_2026.csv ({len(ORDER_2026)} picks, real order)")
 
 
 if __name__ == "__main__":

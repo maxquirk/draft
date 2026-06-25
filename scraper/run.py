@@ -1,14 +1,12 @@
-"""Orchestrate every source adapter -> normalize -> consensus -> write app/data/*.json.
+"""Orchestrate every source adapter -> normalize -> consensus -> write app/data/*.csv.
 
 Run from the project root:  .venv/Scripts/python.exe -m scraper.run
-A source whose module is missing, errors, or returns nothing is skipped and noted
-in run_report.json so coverage is always explicit (the app surfaces it).
 """
 from __future__ import annotations
 
+import csv
 import datetime as dt
 import importlib
-import json
 import traceback
 from pathlib import Path
 
@@ -21,11 +19,17 @@ DATA_DIR = ROOT.parent / "app" / "data"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def _write(name: str, obj) -> None:
-    (DATA_DIR / name).write_text(
-        json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    print(f"   -> wrote app/data/{name}")
+def _write_csv(name: str, rows: list[dict], fieldnames: list[str] | None = None) -> None:
+    if not rows:
+        print(f"   -> (no rows) skipped {name}")
+        return
+    fp = DATA_DIR / name
+    keys = fieldnames or list(rows[0].keys())
+    with open(fp, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=keys, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(rows)
+    print(f"   -> wrote app/data/{name}  ({len(rows)} rows)")
 
 
 def main() -> None:
@@ -33,13 +37,13 @@ def main() -> None:
     report: list[dict] = []
 
     for modname, meta in SOURCES:
-        print(f"\n== {meta.name} [{meta.access}] ==")
+        print(f"\n== {meta.name} ==")
         status, count, error = "ok", 0, ""
         try:
             mod = importlib.import_module(f"scraper.sources.{modname}")
             rows = mod.fetch() or []
             for r in rows:
-                r["source"] = meta.key  # authoritative
+                r["source"] = meta.key
             all_rows.extend(rows)
             count = len(rows)
             if count == 0:
@@ -48,29 +52,42 @@ def main() -> None:
         except ModuleNotFoundError:
             status, error = "missing", "adapter module not found"
             print("   ! adapter not built yet — skipping")
-        except Exception as e:  # noqa: BLE001 — never let one source kill the run
+        except Exception as e:
             status, error = "error", f"{type(e).__name__}: {e}"
             print(f"   ! {error}")
             traceback.print_exc()
         report.append({
-            "key": meta.key, "name": meta.name, "access": meta.access,
-            "weight": meta.weight, "status": status, "rows": count, "error": error,
+            "key": meta.key, "name": meta.name,
+            "status": status, "rows": count, "error": error,
         })
 
-    # clean up the shared headless browser if any source spun it up
     try:
         from .base import quit_driver
         quit_driver()
-    except Exception:  # noqa: BLE001
+    except Exception:
         pass
 
-    print(f"\n== Normalizing {len(all_rows)} rows across "
-          f"{len({r['source'] for r in all_rows})} sources ==")
+    print(f"\n== Normalizing {len(all_rows)} rows ==")
     players = merge_players(all_rows)
     consensus = build_consensus(players, SOURCE_WEIGHTS)
     print(f"   {len(consensus)} unique players on the consensus board")
 
-    # Optional: refresh team draft history if that module is present.
+    # Flatten per-source rankings into src_* columns
+    src_keys = sorted({k for p in consensus for k in (p.get("rankings") or {})})
+    base_cols = ["player_id", "player", "position", "school", "class_level", "state",
+                 "notes", "consensus_rank", "avg_rank", "median_rank", "best_rank",
+                 "worst_rank", "spread", "stdev", "n_sources"]
+    src_col_names = [f"src_{k}" for k in src_keys]
+    rows_flat = []
+    for p in consensus:
+        row = {c: p.get(c, "") for c in base_cols}
+        ranks = p.get("rankings") or {}
+        for k in src_keys:
+            row[f"src_{k}"] = ranks.get(k, "")
+        rows_flat.append(row)
+    _write_csv("consensus_2026.csv", rows_flat, base_cols + src_col_names)
+
+    # Team draft history
     try:
         th = importlib.import_module("scraper.team_history")
         if hasattr(th, "build"):
@@ -78,37 +95,29 @@ def main() -> None:
             th.build()
     except ModuleNotFoundError:
         print("\n   (team_history not built yet — skipping)")
-    except Exception as e:  # noqa: BLE001
+    except Exception as e:
         print(f"   ! team_history failed: {e}")
 
-    # Real post-lottery 2026 order — written last so it supersedes any projection
-    # team_history may have produced.
+    # Real 2026 order
     try:
         from . import draft_order
         print("\n== Writing actual 2026 draft order ==")
         draft_order.build()
-    except Exception as e:  # noqa: BLE001
+    except Exception as e:
         print(f"   ! draft_order failed: {e}")
 
-    _write("consensus_2026.json", consensus)
-
-    # Monte Carlo draft projections (needs consensus + order + tendencies on disk).
+    # Monte Carlo projections
     try:
         from . import projections
         print("\n== Projecting the draft (Monte Carlo) ==")
         projections.build()
-    except Exception as e:  # noqa: BLE001
+    except Exception as e:
         print(f"   ! projections failed: {e}")
 
-    _write("run_report.json", {
+    _write_csv("run_report.csv", [{
         "generated_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "n_players": len(consensus),
-        "sources": report,
-        "source_meta": {
-            k: {"name": SOURCE_NAMES[k], "access": SOURCE_ACCESS[k], "weight": SOURCE_WEIGHTS[k]}
-            for k in SOURCE_NAMES
-        },
-    })
+    }])
 
     ok = [r["name"] for r in report if r["status"] == "ok"]
     bad = [f"{r['name']} ({r['status']})" for r in report if r["status"] != "ok"]
