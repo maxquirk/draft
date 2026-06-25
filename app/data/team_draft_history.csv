@@ -1,0 +1,318 @@
+year,overall,round,team,player,position,school,level
+2018,1,1,Detroit Tigers,Casey Mize,RHP,Auburn University,College
+2018,2,1,San Francisco Giants,Joey Bart,C,Georgia Institute of Technology,College
+2018,3,1,Philadelphia Phillies,Alec Bohm,3B,Wichita State University,College
+2018,4,1,Chicago White Sox,Nick Madrigal,SS,Oregon State University,College
+2018,5,1,Cincinnati Reds,Jonathan India,3B,University of Florida,College
+2018,6,1,New York Mets,Jarred Kelenic,OF,Waukesha West HS,HS
+2018,7,1,San Diego Padres,Ryan Weathers,LHP,Loretto HS,HS
+2018,8,1,Atlanta Braves,Carter Stewart,RHP,Eau Gallie HS,HS
+2018,9,1,Athletics,Kyler Murray,CF,University of Oklahoma,College
+2018,10,1,Pittsburgh Pirates,Travis Swaggerty,OF,University of South Alabama,College
+2018,11,1,Baltimore Orioles,Grayson Rodriguez,RHP,Central Heights HS,HS
+2018,12,1,Toronto Blue Jays,Jordan Groshans,SS,Magnolia HS,HS
+2018,13,1,Miami Marlins,Connor Scott,OF,H. B. Plant HS,HS
+2018,14,1,Seattle Mariners,Logan Gilbert,RHP,Stetson University,College
+2018,15,1,Texas Rangers,Cole Winn,RHP,Orange Lutheran HS,HS
+2018,16,1,Tampa Bay Rays,Matthew Liberatore,LHP,Mountain Ridge HS,HS
+2018,17,1,Los Angeles Angels,Jordyn Adams,OF,Green Hope HS,HS
+2018,18,1,Kansas City Royals,Brady Singer,RHP,University of Florida,College
+2018,19,1,St. Louis Cardinals,Nolan Gorman,3B,Sandra Day O'Connor HS,HS
+2018,20,1,Minnesota Twins,Trevor Larnach,RF,Oregon State University,College
+2018,21,1,Milwaukee Brewers,Brice Turang,SS,Santiago HS,HS
+2018,22,1,Colorado Rockies,Ryan Rolison,LHP,University of Mississippi,College
+2018,23,1,New York Yankees,Anthony Seigler,C,Cartersville HS,HS
+2018,24,1,Chicago Cubs,Nico Hoerner,SS,Stanford University,College
+2018,25,1,Arizona Diamondbacks,Matt McLain,2B,Arnold O. Beckman HS,HS
+2018,26,1,Boston Red Sox,Triston Casas,3B,American Heritage HS,HS
+2018,27,1,Washington Nationals,Mason Denaburg,RHP,Merritt Island HS,HS
+2018,28,1,Houston Astros,Seth Beer,OF,Clemson University,College
+2018,29,1,Cleveland Guardians,Bo Naylor,C,St. Joan of Arc Catholic SS,HS
+2018,30,1,Los Angeles Dodgers,J.T. Ginn,RHP,Brandon HS,HS
+2018,31,1,Tampa Bay Rays,Shane McClanahan,LHP,University of South Florida,College
+2018,32,1,Tampa Bay Rays,Nick Schnell,CF,Roncalli HS,HS
+2018,33,1,Kansas City Royals,Jackson Kowar,RHP,University of Florida,College
+2018,34,1,Kansas City Royals,Daniel Lynch IV,LHP,University of Virginia,College
+2018,35,1,Cleveland Guardians,Ethan Hankins,RHP,Forsyth Central HS,HS
+2018,36,1,Pittsburgh Pirates,Gunnar Hoglund,RHP,Fivay HS,HS
+2018,37,1,Baltimore Orioles,Cadyn Grenier,SS,Oregon State University,College
+2018,38,1,San Diego Padres,Xavier Edwards,SS,North Broward Preparatory School,HS
+2018,39,1,Arizona Diamondbacks,Jake McCarthy,OF,University of Virginia,College
+2018,40,1,Kansas City Royals,Kris Bubic,LHP,Stanford University,College
+2018,41,1,Cleveland Guardians,Lenny Torres,RHP,Beacon HS,HS
+2018,42,1,Colorado Rockies,Grant Lavigne,1B,Bedford HS,HS
+2018,43,1,St. Louis Cardinals,Griffin Roberts,RHP,Wake Forest University,College
+2019,1,1,Baltimore Orioles,Adley Rutschman,C,Oregon State University,College
+2019,2,1,Kansas City Royals,Bobby Witt Jr.,SS,Colleyville Heritage HS,HS
+2019,3,1,Chicago White Sox,Andrew Vaughn,1B,"University of California, Berkeley",College
+2019,4,1,Miami Marlins,JJ Bleday,OF,Vanderbilt University,College
+2019,5,1,Detroit Tigers,Riley Greene,OF,Paul J. Hagerty HS,HS
+2019,6,1,San Diego Padres,CJ Abrams,SS,Blessed Trinity Catholic HS,HS
+2019,7,1,Cincinnati Reds,Nick Lodolo,P,Texas Christian University,College
+2019,8,1,Texas Rangers,Josh Jung,3B,Texas Tech University,College
+2019,9,1,Atlanta Braves,Shea Langeliers,C,Baylor University,College
+2019,10,1,San Francisco Giants,Hunter Bishop,OF,Arizona State University,College
+2019,11,1,Toronto Blue Jays,Alek Manoah,P,West Virginia University,College
+2019,12,1,New York Mets,Brett Baty,3B,Lake Travis HS,HS
+2019,13,1,Minnesota Twins,Keoni Cavaco,SS,Eastlake HS,HS
+2019,14,1,Philadelphia Phillies,Bryson Stott,SS,"University of Nevada, Las Vegas",College
+2019,15,1,Los Angeles Angels,Will Wilson,SS,North Carolina State University,College
+2019,16,1,Arizona Diamondbacks,Corbin Carroll,CF,Lakeside School,HS
+2019,17,1,Washington Nationals,Jackson Rutledge,P,"San Jacinto College, North Campus",JUCO
+2019,18,1,Pittsburgh Pirates,Quinn Priester,P,Cary-Grove HS,HS
+2019,19,1,St. Louis Cardinals,Zack Thompson,P,University of Kentucky,College
+2019,20,1,Seattle Mariners,George Kirby,P,Elon University,College
+2019,21,1,Atlanta Braves,Braden Shewmake,SS,Texas A&M University,College
+2019,22,1,Tampa Bay Rays,Greg Jones,SS,University of North Carolina at Wilmington,College
+2019,23,1,Colorado Rockies,Michael Toglia,1B,"University of California, Los Angeles",College
+2019,24,1,Cleveland Guardians,Daniel Espino,P,Georgia Premier Academy,HS
+2019,25,1,Los Angeles Dodgers,Kody Hoese,3B,Tulane University,College
+2019,26,1,Arizona Diamondbacks,Blake Walston,P,New Hanover HS,HS
+2019,27,1,Chicago Cubs,Ryan Jensen,P,"California State University, Fresno",College
+2019,28,1,Milwaukee Brewers,Ethan Small,P,Mississippi State University,College
+2019,29,1,Athletics,Logan Davidson,SS,Clemson University,College
+2019,30,1,New York Yankees,Anthony Volpe,SS,Delbarton School,HS
+2019,31,1,Los Angeles Dodgers,Michael Busch,2B,University of North Carolina at Chapel Hill,College
+2019,32,1,Houston Astros,Korey Lee,C,"University of California, Berkeley",College
+2019,33,1,Arizona Diamondbacks,Brennan Malone,P,IMG Academy,HS
+2019,34,1,Arizona Diamondbacks,Drey Jameson,P,Ball State University,College
+2019,35,1,Miami Marlins,Kameron Misner,CF,University of Missouri,College
+2019,36,1,Tampa Bay Rays,JJ Goss,P,Cypress Ranch HS,HS
+2019,37,1,Pittsburgh Pirates,Sammy Siani,CF,William Penn Charter School,HS
+2019,38,1,New York Yankees,T.J. Sikkema,P,University of Missouri,College
+2019,39,1,Minnesota Twins,Matt Wallner,RF,University of Southern Mississippi,College
+2019,40,1,Tampa Bay Rays,Seth Johnson,P,Campbell University,College
+2019,41,1,Texas Rangers,Davis Wendzel,3B,Baylor University,College
+2020,1,1,Detroit Tigers,Spencer Torkelson,3B,Arizona State University,College
+2020,2,1,Baltimore Orioles,Heston Kjerstad,OF,University of Arkansas,College
+2020,3,1,Miami Marlins,Max Meyer,P,University of Minnesota,College
+2020,4,1,Kansas City Royals,Asa Lacy,P,Texas A&M University,College
+2020,5,1,Toronto Blue Jays,Austin Martin,SS,Vanderbilt University,College
+2020,6,1,Seattle Mariners,Emerson Hancock,P,University of Georgia,College
+2020,7,1,Pittsburgh Pirates,Nick Gonzales,SS,New Mexico State University,College
+2020,8,1,San Diego Padres,Robert Hassell III,OF,Independence HS,HS
+2020,9,1,Colorado Rockies,Zac Veen,OF,Spruce Creek HS,HS
+2020,10,1,Los Angeles Angels,Reid Detmers,P,University of Louisville,College
+2020,11,1,Chicago White Sox,Garrett Crochet,P,University of Tennessee,College
+2020,12,1,Cincinnati Reds,Austin Hendrick,OF,West Allegheny HS,HS
+2020,13,1,San Francisco Giants,Patrick Bailey,C,North Carolina State University,College
+2020,14,1,Texas Rangers,Justin Foscue,2B,Mississippi State University,College
+2020,15,1,Philadelphia Phillies,Mick Abel,P,Jesuit HS,HS
+2020,16,1,Chicago Cubs,Ed Howard,SS,Mount Carmel HS,HS
+2020,17,1,Boston Red Sox,Nick Yorke,2B,Archbishop Mitty HS,HS
+2020,18,1,Arizona Diamondbacks,Bryce Jarvis,P,Duke University,College
+2020,19,1,New York Mets,Pete Crow-Armstrong,OF,Harvard-Westlake HS,HS
+2020,20,1,Milwaukee Brewers,Garrett Mitchell,OF,"University of California, Los Angeles",College
+2020,21,1,St. Louis Cardinals,Jordan Walker,3B,Decatur HS,HS
+2020,22,1,Washington Nationals,Cade Cavalli,P,University of Oklahoma,College
+2020,23,1,Cleveland Guardians,Carson Tucker,SS,Mountain Pointe HS,HS
+2020,24,1,Tampa Bay Rays,Nick Bitsko,P,Central Bucks HS East,HS
+2020,25,1,Atlanta Braves,Jared Shuster,P,Wake Forest University,College
+2020,26,1,Athletics,Tyler Soderstrom,C,Turlock HS,HS
+2020,27,1,Minnesota Twins,Aaron Sabato,1B,University of North Carolina at Chapel Hill,College
+2020,28,1,New York Yankees,Austin Wells,C,University of Arizona,College
+2020,29,1,Los Angeles Dodgers,Bobby Miller,P,University of Louisville,College
+2020,30,1,Baltimore Orioles,Jordan Westburg,SS,Mississippi State University,College
+2020,31,1,Pittsburgh Pirates,Carmen Mlodzinski,P,University of South Carolina,College
+2020,32,1,Kansas City Royals,Nick Loftin,SS,Baylor University,College
+2020,33,1,Arizona Diamondbacks,Slade Cecconi,P,University of Miami,College
+2020,34,1,San Diego Padres,Justin Lange,P,Llano HS,HS
+2020,35,1,Colorado Rockies,Drew Romo,C,The Woodlands HS,HS
+2020,36,1,Cleveland Guardians,Tanner Burns,P,Auburn University,College
+2020,37,1,Tampa Bay Rays,Alika Williams,SS,Arizona State University,College
+2021,1,1,Pittsburgh Pirates,Henry Davis,C,University of Louisville,College
+2021,2,1,Texas Rangers,Jack Leiter,P,Vanderbilt University,College
+2021,3,1,Detroit Tigers,Jackson Jobe,P,Heritage Hall School,HS
+2021,4,1,Boston Red Sox,Marcelo Mayer,SS,Eastlake HS,HS
+2021,5,1,Baltimore Orioles,Colton Cowser,OF,Sam Houston State University,College
+2021,6,1,Arizona Diamondbacks,Jordan Lawlar,SS,Jesuit College Preparatory School of Dallas,HS
+2021,7,1,Kansas City Royals,Frank Mozzicato,P,East Catholic HS,HS
+2021,8,1,Colorado Rockies,Benny Montgomery,OF,Red Land HS,HS
+2021,9,1,Los Angeles Angels,Sam Bachman,P,Miami University of Ohio,College
+2021,10,1,New York Mets,Kumar Rocker,P,Vanderbilt University,College
+2021,11,1,Washington Nationals,Brady House,SS,Winder-Barrow HS,HS
+2021,12,1,Seattle Mariners,Harry Ford,C,North Cobb HS,HS
+2021,13,1,Philadelphia Phillies,Andrew Painter,P,Calvary Christian Academy,HS
+2021,14,1,San Francisco Giants,Will Bednar,P,Mississippi State University,College
+2021,15,1,Milwaukee Brewers,Sal Frelick,OF,Boston College,College
+2021,16,1,Miami Marlins,Kahlil Watson,SS,Wake Forest HS,HS
+2021,17,1,Cincinnati Reds,Matt McLain,SS,"University of California, Los Angeles",College
+2021,18,1,St. Louis Cardinals,Michael McGreevy,P,"University of California, Santa Barbara",College
+2021,19,1,Toronto Blue Jays,Gunnar Hoglund,P,University of Mississippi,College
+2021,20,1,New York Yankees,Trey Sweeney,SS,Eastern Illinois University,College
+2021,21,1,Chicago Cubs,Jordan Wicks,P,Kansas State University,College
+2021,22,1,Chicago White Sox,Colson Montgomery,SS,Southridge HS,HS
+2021,23,1,Cleveland Guardians,Gavin Williams,P,East Carolina University,College
+2021,24,1,Atlanta Braves,Ryan Cusick,P,Wake Forest University,College
+2021,25,1,Athletics,Max Muncy,SS,Thousand Oaks HS,HS
+2021,26,1,Minnesota Twins,Chase Petty,P,Mainland Regional HS,HS
+2021,27,1,San Diego Padres,Jackson Merrill,SS,Severna Park HS,HS
+2021,28,1,Tampa Bay Rays,Carson Williams,SS,Torrey Pines HS,HS
+2021,29,1,Los Angeles Dodgers,Maddux Bruns,P,UMS-Wright Prep,HS
+2021,30,1,Cincinnati Reds,Jay Allen,OF,John Carroll Catholic HS,HS
+2021,31,1,Miami Marlins,Joe Mack,C,Williamsville East HS,HS
+2021,32,1,Detroit Tigers,Ty Madden,P,University of Texas at Austin,College
+2021,33,1,Milwaukee Brewers,Tyler Black,2B,Wright State University,College
+2021,34,1,Tampa Bay Rays,Cooper Kinney,2B,Baylor School,HS
+2021,35,1,Cincinnati Reds,Mat Nelson,C,Florida State University,College
+2021,36,1,Minnesota Twins,Noah Miller,SS,Ozaukee HS,HS
+2022,1,1,Baltimore Orioles,Jackson Holliday,SS,Stillwater HS,HS
+2022,2,1,Arizona Diamondbacks,Druw Jones,OF,Wesleyan School,HS
+2022,3,1,Texas Rangers,Kumar Rocker,P,,
+2022,4,1,Pittsburgh Pirates,Termarr Johnson,SS,Benjamin E. Mays HS,HS
+2022,5,1,Washington Nationals,Elijah Green,OF,IMG Academy,HS
+2022,6,1,Miami Marlins,Jacob Berry,3B,Louisiana State University,College
+2022,7,1,Chicago Cubs,Cade Horton,P,University of Oklahoma,College
+2022,8,1,Minnesota Twins,Brooks Lee,SS,"California Polytechnic State University, San Luis Obispo",College
+2022,9,1,Kansas City Royals,Gavin Cross,OF,Virginia Polytechnic Institute and State University,College
+2022,10,1,Colorado Rockies,Gabriel Hughes,P,Gonzaga University,College
+2022,11,1,New York Mets,Kevin Parada,C,Georgia Institute of Technology,College
+2022,12,1,Detroit Tigers,Jace Jung,2B,Texas Tech University,College
+2022,13,1,Los Angeles Angels,Zach Neto,SS,Campbell University,College
+2022,14,1,New York Mets,Jett Williams,SS,Rockwall-Heath HS,HS
+2022,15,1,San Diego Padres,Dylan Lesko,P,Buford HS,HS
+2022,16,1,Cleveland Guardians,Chase DeLauter,OF,James Madison University,College
+2022,17,1,Philadelphia Phillies,Justin Crawford,OF,Bishop Gorman HS,HS
+2022,18,1,Cincinnati Reds,Cam Collier,3B,Chipola College,JUCO
+2022,19,1,Athletics,Daniel Susac,C,University of Arizona,College
+2022,20,1,Atlanta Braves,Owen Murphy,P,Riverside-Brookfield HS,HS
+2022,21,1,Seattle Mariners,Cole Young,SS,North Allegheny HS,HS
+2022,22,1,St. Louis Cardinals,Cooper Hjerpe,P,Oregon State University,College
+2022,23,1,Toronto Blue Jays,Brandon Barriera,P,American Heritage HS,HS
+2022,24,1,Boston Red Sox,Mikey Romero,SS,Orange Lutheran HS,HS
+2022,25,1,New York Yankees,Spencer Jones,OF,Vanderbilt University,College
+2022,26,1,Chicago White Sox,Noah Schultz,P,Oswego East HS,HS
+2022,27,1,Milwaukee Brewers,Eric Brown,SS,Coastal Carolina University,College
+2022,28,1,Houston Astros,Drew Gilbert,OF,University of Tennessee,College
+2022,29,1,Tampa Bay Rays,Xavier Isaac,1B,East Forsyth HS,HS
+2022,30,1,San Francisco Giants,Reggie Crawford,TWP,University of Connecticut,College
+2022,31,1,Colorado Rockies,Sterlin Thompson,OF,University of Florida,College
+2022,32,1,Cincinnati Reds,Sal Stewart,3B,Westminster Christian School,HS
+2022,33,1,Baltimore Orioles,Dylan Beavers,OF,"University of California, Berkeley",College
+2022,34,1,Arizona Diamondbacks,Landon Sims,P,Mississippi State University,College
+2022,35,1,Atlanta Braves,JR Ritchie,P,Bainbridge HS,HS
+2022,36,1,Pittsburgh Pirates,Tom Harrington,P,Campbell University,College
+2022,37,1,Cleveland Guardians,Justin Campbell,P,Oklahoma State University,College
+2022,38,1,Colorado Rockies,Jordan Beck,OF,University of Tennessee,College
+2022,39,1,San Diego Padres,Robby Snelling,P,Robert McQueen HS,HS
+2023,1,1,Pittsburgh Pirates,Paul Skenes,P,Louisiana State University,College
+2023,2,1,Washington Nationals,Dylan Crews,OF,Louisiana State University,College
+2023,3,1,Detroit Tigers,Max Clark,OF,Franklin Community HS,HS
+2023,4,1,Texas Rangers,Wyatt Langford,OF,University of Florida,College
+2023,5,1,Minnesota Twins,Walker Jenkins,OF,South Brunswick HS,HS
+2023,6,1,Athletics,Jacob Wilson,SS,Grand Canyon University,College
+2023,7,1,Cincinnati Reds,Rhett Lowder,P,Wake Forest University,College
+2023,8,1,Kansas City Royals,Blake Mitchell,C,Sinton HS,HS
+2023,9,1,Colorado Rockies,Chase Dollander,P,University of Tennessee,College
+2023,10,1,Miami Marlins,Noble Meyer,P,Jesuit HS,HS
+2023,11,1,Los Angeles Angels,Nolan Schanuel,1B,Florida Atlantic University,College
+2023,12,1,Arizona Diamondbacks,Tommy Troy,SS,Stanford University,College
+2023,13,1,Chicago Cubs,Matt Shaw,SS,University of Maryland,College
+2023,14,1,Boston Red Sox,Kyle Teel,C,University of Virginia,College
+2023,15,1,Chicago White Sox,Jacob Gonzalez,SS,University of Mississippi,College
+2023,16,1,San Francisco Giants,Bryce Eldridge,TWP,James Madison HS,HS
+2023,17,1,Baltimore Orioles,Enrique Bradfield,OF,Vanderbilt University,College
+2023,18,1,Milwaukee Brewers,Brock Wilken,3B,Wake Forest University,College
+2023,19,1,Tampa Bay Rays,Brayden Taylor,SS,Texas Christian University,College
+2023,20,1,Toronto Blue Jays,Arjun Nimmala,SS,Strawberry Crest HS,HS
+2023,21,1,St. Louis Cardinals,Chase Davis,OF,University of Arizona,College
+2023,22,1,Seattle Mariners,Colt Emerson,SS,John Glenn HS,HS
+2023,23,1,Cleveland Guardians,Ralphy Velazquez,C,Huntington Beach HS,HS
+2023,24,1,Atlanta Braves,Hurston Waldrep,P,University of Florida,College
+2023,25,1,San Diego Padres,Dillon Head,OF,Homewood-Flossmoor Community HS,HS
+2023,26,1,New York Yankees,George Lombard Jr.,SS,Gulliver Preparatory School,HS
+2023,27,1,Philadelphia Phillies,Aidan Miller,SS,J. W. Mitchell HS,HS
+2023,28,1,Houston Astros,Brice Matthews,SS,University of Nebraska-Lincoln,College
+2023,29,1,Seattle Mariners,Jonny Farmelo,OF,Westfield HS,HS
+2023,30,1,Seattle Mariners,Tai Peete,SS,Trinity Christian School,HS
+2023,31,1,Tampa Bay Rays,Adrian Santana,SS,Doral Academy Preparatory School,HS
+2023,32,1,New York Mets,Colin Houck,SS,Parkview HS,HS
+2023,33,1,Milwaukee Brewers,Josh Knoth,P,Patchogue-Medford HS,HS
+2023,34,1,Minnesota Twins,Charlee Soto,P,Reborn Christian Academy,HS
+2023,35,1,Miami Marlins,Thomas White,P,Phillips Academy Andover,HS
+2023,36,1,Los Angeles Dodgers,Kendall George,OF,Atascocita HS,HS
+2023,37,1,Detroit Tigers,Kevin McGonigle,SS,Monsignor Bonner and Archbishop Prendergast HS,HS
+2023,38,1,Cincinnati Reds,Ty Floyd,P,Louisiana State University,College
+2023,39,1,Athletics,Myles Naylor,3B,St. Joan of Arc Catholic SS,HS
+2024,1,1,Cleveland Guardians,Travis Bazzana,2B,Oregon State University,College
+2024,2,1,Cincinnati Reds,Chase Burns,P,Wake Forest University,College
+2024,3,1,Colorado Rockies,Charlie Condon,OF,University of Georgia,College
+2024,4,1,Athletics,Nick Kurtz,1B,Wake Forest University,College
+2024,5,1,Chicago White Sox,Hagen Smith,P,University of Arkansas,College
+2024,6,1,Kansas City Royals,Jac Caglianone,TWP,University of Florida,College
+2024,7,1,St. Louis Cardinals,JJ Wetherholt,SS,West Virginia University,College
+2024,8,1,Los Angeles Angels,Christian Moore,2B,University of Tennessee,College
+2024,9,1,Pittsburgh Pirates,Konnor Griffin,SS,Jackson Preparatory School,HS
+2024,10,1,Washington Nationals,Seaver King,SS,Wake Forest University,College
+2024,11,1,Detroit Tigers,Bryce Rainer,SS,Harvard-Westlake HS,HS
+2024,12,1,Boston Red Sox,Braden Montgomery,OF,Texas A&M University,College
+2024,13,1,San Francisco Giants,James Tibbs III,OF,Florida State University,College
+2024,14,1,Chicago Cubs,Cam Smith,3B,Florida State University,College
+2024,15,1,Seattle Mariners,Jurrangelo Cijntje,P,Mississippi State University,College
+2024,16,1,Miami Marlins,PJ Morlando,OF,Summerville HS,HS
+2024,17,1,Milwaukee Brewers,Braylon Payne,OF,Lawrence E. Elkins HS,HS
+2024,18,1,Tampa Bay Rays,Theo Gillen,OF,Westlake HS,HS
+2024,19,1,New York Mets,Carson Benge,OF,Oklahoma State University,College
+2024,20,1,Toronto Blue Jays,Trey Yesavage,P,East Carolina University,College
+2024,21,1,Minnesota Twins,Kaelen Culpepper,SS,Kansas State University,College
+2024,22,1,Baltimore Orioles,Vance Honeycutt,OF,University of North Carolina at Chapel Hill,College
+2024,23,1,Los Angeles Dodgers,Kellon Lindsey,SS,Hardee HS,HS
+2024,24,1,Atlanta Braves,Cam Caminiti,P,Saguaro HS,HS
+2024,25,1,San Diego Padres,Kash Mayfield,P,Elk City HS,HS
+2024,26,1,New York Yankees,Ben Hess,P,University of Alabama,College
+2024,27,1,Philadelphia Phillies,Dante Nori,OF,Northville HS,HS
+2024,28,1,Houston Astros,Walker Janek,C,Sam Houston State University,College
+2024,29,1,Arizona Diamondbacks,Slade Caldwell,OF,Valley View HS,HS
+2024,30,1,Texas Rangers,Malcolm Moore,C,Stanford University,College
+2024,31,1,Arizona Diamondbacks,Ryan Waldschmidt,OF,University of Kentucky,College
+2024,32,1,Baltimore Orioles,Griff O'Ferrall,SS,University of Virginia,College
+2024,33,1,Minnesota Twins,Kyle DeBarge,SS,University of Louisiana at Lafayette,College
+2024,34,1,Milwaukee Brewers,Blake Burke,1B,University of Tennessee,College
+2024,35,1,Arizona Diamondbacks,JD Dix,SS,Whitefish Bay HS,HS
+2024,36,1,Cleveland Guardians,Braylon Doughty,P,Chaparral HS,HS
+2024,37,1,Pittsburgh Pirates,Levi Sterling,P,Notre Dame HS,HS
+2024,38,1,Colorado Rockies,Brody Brecht,P,University of Iowa,College
+2024,39,1,Washington Nationals,Caleb Lomavita,C,"University of California, Berkeley",College
+2025,1,1,Washington Nationals,Eli Willits,SS,Fort Cobb-Broxton HS,HS
+2025,2,1,Los Angeles Angels,Tyler Bremner,P,"University of California, Santa Barbara",College
+2025,3,1,Seattle Mariners,Kade Anderson,P,Louisiana State University,College
+2025,4,1,Colorado Rockies,Ethan Holliday,SS,Stillwater HS,HS
+2025,5,1,St. Louis Cardinals,Liam Doyle,P,University of Tennessee,College
+2025,6,1,Pittsburgh Pirates,Seth Hernandez,P,Corona HS,HS
+2025,7,1,Miami Marlins,Aiva Arquette,SS,Oregon State University,College
+2025,8,1,Toronto Blue Jays,JoJo Parker,SS,Purvis HS,HS
+2025,9,1,Cincinnati Reds,Steele Hall,SS,Hewitt-Trussville HS,HS
+2025,10,1,Chicago White Sox,Billy Carlson,SS,Corona HS,HS
+2025,11,1,Athletics,Jamie Arnold,P,Florida State University,College
+2025,12,1,Texas Rangers,Gavin Fien,SS,Great Oak HS,HS
+2025,13,1,San Francisco Giants,Gavin Kilen,SS,University of Tennessee,College
+2025,14,1,Tampa Bay Rays,Daniel Pierce,SS,Mill Creek HS,HS
+2025,15,1,Boston Red Sox,Kyson Witherspoon,P,University of Oklahoma,College
+2025,16,1,Minnesota Twins,Marek Houston,SS,Wake Forest University,College
+2025,17,1,Chicago Cubs,Ethan Conrad,OF,Wake Forest University,College
+2025,18,1,Arizona Diamondbacks,Kayson Cunningham,SS,Lady Bird Johnson HS,HS
+2025,19,1,Baltimore Orioles,Ike Irish,C,Auburn University,College
+2025,20,1,Milwaukee Brewers,Andrew Fischer,3B,University of Tennessee,College
+2025,21,1,Houston Astros,Xavier Neyens,SS,Mount Vernon HS,HS
+2025,22,1,Atlanta Braves,Tate Southisene,SS,Basic HS,HS
+2025,23,1,Kansas City Royals,Sean Gamble,OF,IMG Academy,HS
+2025,24,1,Detroit Tigers,Jordan Yost,SS,Walter L. Sickles HS,HS
+2025,25,1,San Diego Padres,Kruz Schoolcraft,P,Sunset HS,HS
+2025,26,1,Philadelphia Phillies,Gage Wood,P,University of Arkansas,College
+2025,27,1,Cleveland Guardians,Jace LaViolette,OF,Texas A&M University,College
+2025,28,1,Kansas City Royals,Josh Hammond,SS,Wesleyan Christian Academy,HS
+2025,29,1,Arizona Diamondbacks,Patrick Forbes,P,University of Louisville,College
+2025,30,1,Baltimore Orioles,Caden Bodine,C,Coastal Carolina University,College
+2025,31,1,Baltimore Orioles,Wehiwa Aloy,SS,University of Arkansas,College
+2025,32,1,Milwaukee Brewers,Brady Ebel,SS,Corona HS,HS
+2025,33,1,Boston Red Sox,Marcus Phillips,P,University of Tennessee,College
+2025,34,1,Detroit Tigers,Michael Oliveto,C,Hauppauge HS,HS
+2025,35,1,Seattle Mariners,Luke Stevenson,C,University of North Carolina at Chapel Hill,College
+2025,36,1,Minnesota Twins,Riley Quick,P,University of Alabama,College
+2025,37,1,Baltimore Orioles,Slater de Brun,OF,Summit HS,HS
+2025,38,1,New York Mets,Mitch Voit,TWP,University of Michigan,College
+2025,39,1,New York Yankees,Dax Kilby,SS,Newnan HS,HS
+2025,40,1,Los Angeles Dodgers,Zach Root,P,University of Arkansas,College
+2025,41,1,Los Angeles Dodgers,Charles Davalan,OF,University of Arkansas,College
+2025,42,1,Tampa Bay Rays,Brendan Summerhill,OF,University of Arizona,College
+2025,43,1,Miami Marlins,Cam Cannarella,OF,Clemson University,College
