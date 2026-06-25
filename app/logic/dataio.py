@@ -47,7 +47,7 @@ def source_keys() -> list[str]:
     df = consensus()
     keys = [c[4:] for c in df.columns if c.startswith("src_")]
     # MLB Pipeline first, Baseball America second
-    priority = ["mlb_pipeline", "baseball_america"]
+    priority = ["mlb_pipeline", "baseball_america", "overslot"]
     rest = [k for k in keys if k not in priority]
     return [k for k in priority if k in keys] + rest
 
@@ -60,6 +60,7 @@ _SOURCE_LABELS = {
     "just_baseball": "Just Baseball",
     "perfect_game": "Perfect Game",
     "fangraphs": "FanGraphs",
+    "overslot": "Overslot",
 }
 
 
