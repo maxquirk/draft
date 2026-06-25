@@ -29,8 +29,6 @@ def projections_ui():
             ui.input_slider("maxpick", "Max projected pick",
                             5, max(_ALL_ROUNDS, 6), _ALL_ROUNDS),
             ui.input_selectize("team", "Filter by landing team", ["(all)"] + _TEAMS),
-            ui.input_slider("min_r1", "Min round-1 probability (%)", 0, 100, 0),
-            ui.help_text("Round-1 % = share of simulations the player went in round 1."),
             width=300,
         ),
         ui.output_ui("table"),
@@ -45,9 +43,6 @@ def projections_server(input, output, session):
     @reactive.calc
     def filtered():
         d = _DF[_DF["proj_pick"] <= input.maxpick()]
-        min_r1 = input.min_r1() / 100.0
-        if min_r1 > 0:
-            d = d[d["p_round1"] >= min_r1]
         if input.team() and input.team() != "(all)":
             d = d[d["landing"].apply(
                 lambda v: input.team() in [l["team"] for l in _landing_list(v)])]
@@ -60,7 +55,6 @@ def projections_server(input, output, session):
             return ui.p("No players match.", class_="muted")
         rows = []
         for _, r in d.iterrows():
-            pr1 = int(round(100 * float(r["p_round1"])))
             spots = " · ".join(
                 f"<b>#{l['pick']}</b> {l['team']} "
                 f"<span class='muted'>{int(round(100 * l['pct']))}%</span>"
@@ -77,10 +71,6 @@ def projections_server(input, output, session):
                 f"<td style='text-align:left'>{r['school']}</td>"
                 f"<td>{int(r['consensus_rank'])}</td>"
                 f"<td>{int(r['proj_low'])}-{int(r['proj_high'])}</td>"
-                f"<td>"
-                f"<span class='p1-track'><span class='p1-fill' style='width:{pr1}%'></span></span>"
-                f"<span class='p1-num'>{pr1}%</span>"
-                f"</td>"
                 f"<td style='text-align:left;font-size:.82rem'>{spots}</td>"
                 "</tr>"
             )
@@ -89,7 +79,7 @@ def projections_server(input, output, session):
         return ui.HTML(
             note + "<div class='sim-wrap'><table class='sim-table'><thead><tr>"
             "<th>Proj.</th><th>Player</th><th>Pos</th><th>School</th><th>Cons.</th>"
-            "<th>Range</th><th>Round-1 %</th><th>Top landing spots</th>"
+            "<th>Range</th><th>Top landing spots</th>"
             "</tr></thead><tbody>" + "".join(rows) + "</tbody></table></div>"
         )
 
