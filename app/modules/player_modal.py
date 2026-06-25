@@ -164,7 +164,7 @@ def player_modal(player_name: str) -> ui.Tag:
             )
             stats_section = ui.div(
                 ui.hr(),
-                ui.h4(f"2025 Stats ({stat_type})", style="font-size:.95rem;margin-bottom:.5rem;"),
+                ui.h4(f"2026 Stats ({stat_type})", style="font-size:.95rem;margin-bottom:.5rem;"),
                 ui.HTML(f'<div class="stat-row">{stat_html}</div>'),
             )
 
