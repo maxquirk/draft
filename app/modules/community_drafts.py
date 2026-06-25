@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 
-from shiny import module, reactive, render, ui
+from shiny import module, reactive, render, req, ui
 
 
 def _safe_int(v, default=0) -> int:
@@ -131,37 +131,32 @@ def community_drafts_server(input, output, session):
             drafts.set([])
 
     @reactive.effect
+    @reactive.event(input.expand_draft)
     def _on_expand():
-        try:
-            did = input.expand_draft()
-        except Exception:
-            return
+        did = input.expand_draft()
         if not did:
             return
-        expanded_id.set(None if expanded_id() == did else did)
+        with reactive.isolate():
+            current = expanded_id()
+        expanded_id.set(None if current == did else did)
 
     @reactive.effect
+    @reactive.event(input.upvote)
     async def _on_upvote():
-        try:
-            did = input.upvote()
-        except Exception:
-            return
+        did = input.upvote()
         if not did:
             return
         from logic.github_storage import vote_draft, load_drafts
         await vote_draft(did, "up")
-        # reload so counts are fresh
         try:
             drafts.set(await load_drafts())
         except Exception:
             pass
 
     @reactive.effect
+    @reactive.event(input.downvote)
     async def _on_downvote():
-        try:
-            did = input.downvote()
-        except Exception:
-            return
+        did = input.downvote()
         if not did:
             return
         from logic.github_storage import vote_draft, load_drafts

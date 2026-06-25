@@ -89,6 +89,18 @@ def explorer_server(input, output, session):
             ui.div(*rows, class_="player-card-grid"),
         )
 
+    @reactive.effect
+    @reactive.event(input.select_player)
+    def _update_recent():
+        try:
+            name = input.select_player()
+        except Exception:
+            return
+        if not name:
+            return
+        rec = [n for n in recent.get() if n != name]
+        recent.set([name] + rec[:7])
+
     @render.ui
     def modal_host():
         try:
@@ -97,9 +109,5 @@ def explorer_server(input, output, session):
             return ui.div()
         if not name:
             return ui.div()
-
-        rec = [n for n in recent.get() if n != name]
-        recent.set([name] + rec[:7])
-
         ui.modal_show(player_modal(name))
         return ui.div()

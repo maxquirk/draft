@@ -94,7 +94,7 @@ strong { color: var(--ink); }
 }
 .modal-header .btn-close { filter: invert(.7) brightness(1.6); }
 .modal-title { font-size: .9rem; font-weight: 700; color: var(--ink); }
-.modal-body { padding: 1.2rem 1.4rem; max-height: calc(100dvh - 180px); overflow-y: auto; }
+.modal-body { padding: 1.2rem 1.4rem; max-height: min(70vh, calc(100dvh - 180px)); overflow-y: auto; }
 .modal-dialog { margin: 1.5rem auto; }
 
 /* ── Chips ──────────────────────────────────────────────── */

@@ -75,17 +75,18 @@ def bigboard_server(input, output, session):
                 "best_rank", "worst_rank", "spread", "stdev", "n_sources"]
         return render.DataGrid(d[cols], selection_mode="row", height="420px", width="100%")
 
-    @render.ui
-    def modal_host():
-        # Name click from matrix table
+    @reactive.effect
+    @reactive.event(input.select_player)
+    def _modal_from_matrix():
         try:
             name = input.select_player()
-            if name:
-                ui.modal_show(player_modal(name))
-                return ui.div()
         except Exception:
-            pass
-        # Row selection from disagree grid
+            return
+        if name:
+            ui.modal_show(player_modal(name))
+
+    @render.ui
+    def modal_host():
         sel = disagree.data_view(selected=True)
         if sel is None or not len(sel):
             return ui.div()
