@@ -165,6 +165,7 @@ strong { color: var(--ink); }
   color: var(--ink);
 }
 .bb-pos { color: var(--muted); font-size: .77rem; font-weight: 500; }
+.pj-name:hover { color: var(--accent); }
 .bb-na  { color: var(--dim); }
 .bb-hi  { background: var(--good-bg); color: var(--good); font-weight: 600; }
 .bb-lo  { background: var(--bad-bg);  color: var(--bad); }

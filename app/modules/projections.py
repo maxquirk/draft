@@ -4,6 +4,7 @@ from __future__ import annotations
 from shiny import module, reactive, render, ui
 
 from logic import dataio
+from modules.player_modal import player_modal
 
 _DF = dataio.projections()
 _META = dataio.projections_meta()
@@ -33,11 +34,14 @@ def projections_ui():
             width=300,
         ),
         ui.output_ui("table"),
+        ui.output_ui("modal_host"),
     )
 
 
 @module.server
 def projections_server(input, output, session):
+    input_id = session.ns("select_player")
+
     @reactive.calc
     def filtered():
         d = _DF[_DF["proj_pick"] <= input.maxpick()]
@@ -62,10 +66,13 @@ def projections_server(input, output, session):
                 f"<span class='muted'>{int(round(100 * l['pct']))}%</span>"
                 for l in _landing_list(r.get("landing", []))
             )
+            safe_name = str(r['player']).replace("'", "\\'").replace('"', '\\"')
             rows.append(
                 "<tr>"
                 f"<td class='pj-pick'>{int(r['proj_pick'])}</td>"
-                f"<td class='pj-name'>{r['player']}</td>"
+                f"<td class='pj-name' style='cursor:pointer' "
+                f"onclick=\"Shiny.setInputValue('{input_id}', '{safe_name}', {{priority:'event'}});\">"
+                f"{r['player']}</td>"
                 f"<td>{r['position']}</td>"
                 f"<td style='text-align:left'>{r['school']}</td>"
                 f"<td>{int(r['consensus_rank'])}</td>"
@@ -85,3 +92,14 @@ def projections_server(input, output, session):
             "<th>Range</th><th>Round-1 %</th><th>Top landing spots</th>"
             "</tr></thead><tbody>" + "".join(rows) + "</tbody></table></div>"
         )
+
+    @render.ui
+    def modal_host():
+        try:
+            name = input.select_player()
+        except Exception:
+            return ui.div()
+        if not name:
+            return ui.div()
+        ui.modal_show(player_modal(name))
+        return ui.div()
